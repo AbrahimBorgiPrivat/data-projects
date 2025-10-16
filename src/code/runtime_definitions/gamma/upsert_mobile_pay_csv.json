@@ -1,0 +1,63 @@
+{
+  "schema": "gamma_db",
+  "table_name": "mobilepay",
+  "create_table_if_not_exist": true,
+  "fields_dict": {
+    "id":               { "type": "TEXT", "primary_key": true, "autoincrement": false },
+    "date":             { "type": "DATE" },
+    "timestamp_iso":    { "type": "TIMESTAMP" },
+    "amount":           { "type": "DOUBLE_PRECISION" },
+    "message":          { "type": "TEXT" },
+    "transaction_type": { "type": "TEXT" },
+    "transfer_ref":     { "type": "TEXT" },
+    "transfer_date":    { "type": "DATE" },
+    "merchant_name":    { "type": "TEXT" },
+    "receiver_acct":    { "type": "TEXT" },
+    "payment_tx_id":    { "type": "TEXT" }
+  },
+  "update_fields": [
+    "date",
+    "timestamp_iso",
+    "amount",
+    "message",
+    "transaction_type",
+    "transfer_ref",
+    "transfer_date",
+    "merchant_name",
+    "receiver_acct",
+    "payment_tx_id"
+  ],
+  "not_included_in_update_fields": [],
+  "path": "gamma/csv/mobilepay-1.1.2024-16.10.2025.csv",
+  "delimiter": ";",
+  "subset": [
+    "Date",
+    "Timestamp",
+    "Amount",
+    "Message",
+    "Transaction Type",
+    "Transfer Reference",
+    "Transfer Date",
+    "Merchant Name",
+    "Receiver Account",
+    "Payment Transaction ID"
+  ],
+  "mapping": [
+    { "former_key": "Date",                   "new_key": "date",             "type": "date_iso",      "fmt": "%d-%m-%Y" },
+    { "former_key": "Timestamp",              "new_key": "timestamp_iso",    "type": "datetime_iso" },
+    { "former_key": "Amount",                 "new_key": "amount",           "type": "dk_decimal" },
+    { "former_key": "Message",                "new_key": "message",          "type": "text" },
+    { "former_key": "Transaction Type",       "new_key": "transaction_type", "type": "string" },
+    { "former_key": "Transfer Reference",     "new_key": "transfer_ref",     "type": "string" },
+    { "former_key": "Transfer Date",          "new_key": "transfer_date",    "type": "date_iso",      "fmt": "%d-%m-%Y" },
+    { "former_key": "Merchant Name",          "new_key": "merchant_name",    "type": "string" },
+    { "former_key": "Receiver Account",       "new_key": "receiver_acct",    "type": "string" },
+    { "former_key": "Payment Transaction ID", "new_key": "payment_tx_id",    "type": "string" }
+  ],
+  "pk_from": ["payment_tx_id", "transaction_type"],
+  "pk_name": "id",
+  "defaults": { "source": "mobilepay" },
+  "use_fields_dict_order": true,
+  "column_order": null,
+  "strict_columns": true
+}
