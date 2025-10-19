@@ -3,7 +3,7 @@ from datetime import datetime
 from collections import OrderedDict
 from decimal import Decimal, InvalidOperation
 from classes.database_client import DatabaseClient
-from packages.upsert_data import upsert_insert, build_client
+from packages.upsert_data import upsert_insert
 from utils.csv_convert import convert_csv_to_dict
 
 def _to_string(v):
@@ -131,7 +131,7 @@ def map_rows(
     return out
 
 
-def bank_account_to_client_upsert(client: DatabaseClient, upsert_runtime_vars: dict):
+def csv_to_client_upsert(client: DatabaseClient, upsert_runtime_vars: dict):
     new_data = convert_csv_to_dict(
         upsert_runtime_vars["path"],
         delimiter=upsert_runtime_vars.get("delimiter", "\t"),

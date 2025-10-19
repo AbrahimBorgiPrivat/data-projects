@@ -1,4 +1,10 @@
-{"schema": "gamma_db",
+{"client":{"db_name": "POSTGRES_DB",
+                "username": "POSTGRES_USERNAME",
+                "password": "POSTGRES_PASSWORD",
+                "server": "POSTGRES_HOST",
+                "port":"POSTGRES_PORT",
+                "db_type":"DB_TYPE"},
+"schema": "gamma_db",
 "table_name": "bank_account",
 "create_table_if_not_exist": true,
 "fields_dict": {

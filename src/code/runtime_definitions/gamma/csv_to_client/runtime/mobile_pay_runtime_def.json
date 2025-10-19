@@ -1,4 +1,9 @@
-{
+{ "client":{"db_name": "POSTGRES_DB",
+                "username": "POSTGRES_USERNAME",
+                "password": "POSTGRES_PASSWORD",
+                "server": "POSTGRES_HOST",
+                "port":"POSTGRES_PORT",
+                "db_type":"DB_TYPE"},
   "schema": "gamma_db",
   "table_name": "mobilepay",
   "create_table_if_not_exist": true,
@@ -13,7 +18,9 @@
     "transfer_date":    { "type": "DATE" },
     "merchant_name":    { "type": "TEXT" },
     "receiver_acct":    { "type": "TEXT" },
-    "payment_tx_id":    { "type": "TEXT" }
+    "payment_tx_id":    { "type": "TEXT" },
+    "payner_name":      { "type": "TEXT" },
+    "payer_phone":      { "type": "TEXT" }
   },
   "update_fields": [
     "date",
@@ -25,7 +32,9 @@
     "transfer_date",
     "merchant_name",
     "receiver_acct",
-    "payment_tx_id"
+    "payment_tx_id",
+    "payner_name",
+    "payer_phone"
   ],
   "not_included_in_update_fields": [],
   "path": "gamma/csv/mobilepay-1.1.2024-16.10.2025.csv",
@@ -40,7 +49,9 @@
     "Transfer Date",
     "Merchant Name",
     "Receiver Account",
-    "Payment Transaction ID"
+    "Payment Transaction ID",
+    "User Name",
+    "User Phone Number"
   ],
   "mapping": [
     { "former_key": "Date",                   "new_key": "date",             "type": "date_iso",      "fmt": "%d-%m-%Y" },
@@ -52,7 +63,9 @@
     { "former_key": "Transfer Date",          "new_key": "transfer_date",    "type": "date_iso",      "fmt": "%d-%m-%Y" },
     { "former_key": "Merchant Name",          "new_key": "merchant_name",    "type": "string" },
     { "former_key": "Receiver Account",       "new_key": "receiver_acct",    "type": "string" },
-    { "former_key": "Payment Transaction ID", "new_key": "payment_tx_id",    "type": "string" }
+    { "former_key": "Payment Transaction ID", "new_key": "payment_tx_id",    "type": "string" },
+    { "former_key": "User Name",              "new_key": "payner_name",      "type": "string" },
+    { "former_key": "User Phone Number",      "new_key": "payer_phone",      "type": "string" }
   ],
   "pk_from": ["payment_tx_id", "transaction_type"],
   "pk_name": "id",

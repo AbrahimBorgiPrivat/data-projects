@@ -59,12 +59,3 @@ def upsert_insert(client: DatabaseClient,
                             pk=primary_keys,
                             update_fields=upsert_runtime_vars["update_fields"],
                             not_included_in_update_fields=upsert_runtime_vars["not_included_in_update_fields"])
-                            
-def from_client_to_client_upsert(old_client: DatabaseClient, 
-                                 new_client: DatabaseClient, 
-                                 upsert_runtime_vars: dict):
-    new_data = old_client.get_data(upsert_runtime_vars["sql_query"])
-    upsert_insert(client = new_client,
-                  upsert_runtime_vars = upsert_runtime_vars,
-                  new_data=new_data)
-    
