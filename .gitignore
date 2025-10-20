@@ -4,6 +4,8 @@
 
 # Ignore environment and cache files
 .env
+.env.local 
+.env.prod
 .venv
 **/__pycache__**
 logs/

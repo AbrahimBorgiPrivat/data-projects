@@ -1,5 +1,5 @@
 import csv
-from utils import path_config
+from libraries.utils import path_config
 from pathlib import Path
 
 def convert_csv_to_dict(

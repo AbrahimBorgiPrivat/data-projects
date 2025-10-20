@@ -1,5 +1,5 @@
-from classes.database_client import DatabaseClient
-from utils.db_types import BIGINT, JSONB, INTEGER, TEXT, TIMESTAMP, BOOLEAN, ARRAY, Date, Float, DOUBLE_PRECISION
+from libraries.classes.database_client import DatabaseClient
+from libraries.utils.db_types import BIGINT, JSONB, INTEGER, TEXT, TIMESTAMP, BOOLEAN, ARRAY, Date, Float, DOUBLE_PRECISION
 
 def build_client(
     db_name: str, username: str, password: str, server: str, port: int, db_type: str

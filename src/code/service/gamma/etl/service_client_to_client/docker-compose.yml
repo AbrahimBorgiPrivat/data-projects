@@ -1,0 +1,41 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: gamma_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "55432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USERNAME} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  client_to_client:
+    build:
+      context: ../../../..                    
+      dockerfile: service/gamma/etl/service_client_to_client/Dockerfile
+    container_name: gamma_client_to_client
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      PYTHONPATH: /app              
+      ENV_MODE: docker
+      SERVICE_NAME: service_client_to_client
+    volumes:
+      - ./app:/app/app   
+      - ../../../../../../res:/app/res                      
+    command: ["python", "app/main.py"]
+    restart: always
+
+volumes:
+  postgres_data:
