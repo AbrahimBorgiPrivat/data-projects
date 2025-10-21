@@ -9,10 +9,12 @@ services:
     environment:
       PYTHONPATH: /app              
       ENV_MODE: docker
-      SERVICE_NAME: service_client_to_client
+      SERVICE_NAME: service_csv_to_client
     volumes:
       - ./app:/app/app   
-      - ../../../../../../res:/app/res                      
+      - ../../../../../../res:/app/res  
+    networks:
+      - gamma_network                    
     command: ["python", "app/main.py"]
     deploy:
       restart_policy:

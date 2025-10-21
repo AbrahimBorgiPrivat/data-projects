@@ -8,7 +8,7 @@
 "table_name": "bank_account",
 "create_table_if_not_exist": true,
 "fields_dict": {
-    "id": { "type": "TEXT", "primary_key": true, "autoincrement": true},
+    "id": { "type": "TEXT", "primary_key": true, "autoincrement": false},
     "date": { "type": "DATE"},
     "text": { "type": "TEXT" },
     "amount": { "type": "DOUBLE_PRECISION"},

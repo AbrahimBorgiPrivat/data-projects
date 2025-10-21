@@ -2,6 +2,7 @@ import os
 import importlib
 from pathlib import Path
 from libraries.utils import runtime
+from libraries.packages.upsert_data import build_client
 
 def run_runner(module_path: str, runtime_json_path: Path):
     print(f"\n[main] 🚀 Running {module_path} using {runtime_json_path}")
@@ -15,7 +16,7 @@ def run_runner(module_path: str, runtime_json_path: Path):
 
 if __name__ == "__main__":
     CURRENT_DIR = Path(__file__).resolve().parent
-    RUNTIME_BASE = CURRENT_DIR.parent / "runtime_definitions" / "gamma" / "client_to_client" / "runtime"
+    RUNTIME_BASE = CURRENT_DIR.parent / "runtime_definitions" / "gamma" / "csv_to_client" / "runtime"
     runner_module = os.getenv("RUNNER_MODULE", "libraries.runners.client_to_client")
     runtime_files_env = os.getenv("RUNTIME_FILES", "users_runtime_def.json")
     runtime_files = [f.strip() for f in runtime_files_env.split(",") if f.strip()]

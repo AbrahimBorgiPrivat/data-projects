@@ -29,3 +29,4 @@ networks:
   gamma_network:               
     name: gamma_network
     driver: bridge
+    attachable: true 
