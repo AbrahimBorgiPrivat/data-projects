@@ -1,9 +1,9 @@
 services:
-  client_to_client:
+  csv_to_client:
     build:
       context: ../../../..                    
       dockerfile: service/gamma/etl/service_client_to_client/Dockerfile
-    container_name: gamma_client_to_client
+    container_name: gamma_csv_to_client
     env_file:
       - .env
     environment:
