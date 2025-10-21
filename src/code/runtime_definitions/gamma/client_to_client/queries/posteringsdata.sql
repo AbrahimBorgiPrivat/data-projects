@@ -8,8 +8,8 @@ SELECT
         ELSE mp.date 
     END AS date,
     CASE 
-        WHEN mp.id IS NULL THEN bac.text 
-        ELSE CONCAT(mp.transaction_type,'-',mp.message,'-',mp.merchant_name) 
+        WHEN mp.id IS NULL THEN CONCAT('BANK:',bac.text) 
+        ELSE CONCAT('MP TRANS: ', mp.transaction_type,'/',mp.message,'/',mp.payner_name) 
     END AS text, 
     CASE 
         WHEN mp.id IS NULL THEN bac.amount 
@@ -20,4 +20,4 @@ SELECT
     '' AS user_id,
     '' AS account_number
 FROM gamma_db.bank_account bac
-LEFT JOIN gamma_db.mobilepay mp ON mp.transfer_ref = bac.text ORDER BY bac.date DESC;
+LEFT JOIN gamma_db.mobilepay mp ON mp.transfer_ref = bac.text ORDER BY bac.date ASC;
