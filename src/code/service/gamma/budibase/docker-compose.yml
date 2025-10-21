@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  couchdb:
+    image: couchdb:3
+    container_name: gamma_couchdb
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - COUCHDB_USER=${COUCHDB_USER}
+      - COUCHDB_PASSWORD=${COUCHDB_PASSWORD}
+    volumes:
+      - couchdata:/opt/couchdb/data
+    networks:
+      - gamma_network
+
+  budibase:
+    image: budibase/budibase:latest
+    container_name: gamma_budibase
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "${BUDIBASE_PORT}:80"
+    depends_on:
+      - couchdb
+    environment:
+      - COUCHDB_URL=http://${COUCHDB_USER}:${COUCHDB_PASSWORD}@gamma_couchdb:5984
+      - INTERNAL_DB=COUCHDB
+    volumes:
+      - ./app-data:/data
+    networks:
+      - gamma_network
+
+volumes:
+  couchdata:
+
+networks:
+  gamma_network:
+    external: true
