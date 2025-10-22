@@ -37,7 +37,7 @@
     "payer_phone"
   ],
   "not_included_in_update_fields": [],
-  "path": "gamma/csv/mobilepay-1.1.2024-16.10.2025.csv",
+  "path": "gamma/csv/mobilepay.csv",
   "delimiter": ";",
   "subset": [
     "Date",

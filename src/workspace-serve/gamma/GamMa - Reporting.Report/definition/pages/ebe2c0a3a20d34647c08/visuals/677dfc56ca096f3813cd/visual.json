@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "677dfc56ca096f3813cd",
   "position": {
-    "x": 165.45654565456545,
-    "y": 89.41694169416941,
+    "x": 317.48275623428458,
+    "y": 15.118226487346883,
     "z": 2,
-    "height": 584.37843784378435,
-    "width": 356.96369636963692,
+    "height": 682.20997024152814,
+    "width": 927.881150660915,
     "tabOrder": 2
   },
   "visual": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "POSTERINGSGRUPPE"
+                      "Entity": "GAMMA - ACCOUNT"
                     }
                   },
-                  "Property": "posting_group"
+                  "Property": "main_account"
                 }
               },
-              "queryRef": "POSTERINGSGRUPPE.posting_group",
-              "nativeQueryRef": "posting_group",
+              "queryRef": "GAMMA - ACCOUNT.main_account",
+              "nativeQueryRef": "main_account",
               "active": true
             },
             {
@@ -35,7 +35,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ACCOUNT"
+                      "Entity": "GAMMA - ACCOUNT"
                     }
                   },
                   "Property": "context"
@@ -56,7 +56,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "POSTERINGER"
+                          "Entity": "GAMMA - POSTERINGER"
                         }
                       },
                       "Property": "amount"
@@ -80,7 +80,7 @@
         "levels": [
           {
             "queryRefs": [
-              "POSTERINGSGRUPPE.posting_group"
+              "GAMMA - ACCOUNT.main_account"
             ],
             "isPinned": true
           },
@@ -107,7 +107,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "POSTERINGER"
+                    "Entity": "GAMMA - POSTERINGER"
                   }
                 },
                 "Property": "amount"
@@ -119,29 +119,29 @@
         "type": "Advanced"
       },
       {
-        "name": "1adc40ea6c0fe385b89d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "POSTERINGSGRUPPE"
-              }
-            },
-            "Property": "posting_group"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "677864796e73c0cac314",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "ACCOUNT"
+                "Entity": "GAMMA - ACCOUNT"
               }
             },
             "Property": "context"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b1258f790be86f36049f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - ACCOUNT"
+              }
+            },
+            "Property": "main_account"
           }
         },
         "type": "Categorical"

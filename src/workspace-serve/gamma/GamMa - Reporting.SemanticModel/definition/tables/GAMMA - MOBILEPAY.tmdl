@@ -1,4 +1,4 @@
-table MOBILEPAY
+table 'GAMMA - MOBILEPAY'
 	lineageTag: b9c7000e-0dfa-4c6f-9d4f-e5ef0227aaa6
 
 	column id
@@ -114,7 +114,7 @@ table MOBILEPAY
 
 		annotation SummarizationSetBy = Automatic
 
-	partition MOBILEPAY = m
+	partition 'GAMMA - MOBILEPAY' = m
 		mode: import
 		source =
 				let

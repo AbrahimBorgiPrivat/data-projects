@@ -14,6 +14,6 @@ def main(upsert_runtime_vars: dict):
                                   upsert_runtime_vars=upsert_runtime_vars)
     
 if __name__ == "__main__":
-    path = path_config.RUNTIME_PATH / "gamma" / "csv_to_client" / "runtime" / "accounts_runtime_def.json"
+    path = path_config.RUNTIME_PATH / "gamma" / "csv_to_client" / "runtime" / "mobile_pay_runtime_def.json"
     upsert_runtime_vars = runtime.load_runtime_vars(JSON_PATH=path)
     main(upsert_runtime_vars)

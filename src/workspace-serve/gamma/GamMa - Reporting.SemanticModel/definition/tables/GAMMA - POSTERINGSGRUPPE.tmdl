@@ -1,4 +1,4 @@
-table POSTERINGSGRUPPE
+table 'GAMMA - POSTERINGSGRUPPE'
 	lineageTag: 9e13c4ac-9352-4cb3-9b15-f658cd09e0aa
 
 	column id
@@ -60,7 +60,7 @@ table POSTERINGSGRUPPE
 
 		annotation SummarizationSetBy = Automatic
 
-	partition POSTERINGSGRUPPE = m
+	partition 'GAMMA - POSTERINGSGRUPPE' = m
 		mode: import
 		source =
 				let

@@ -1,4 +1,4 @@
-table ACCOUNT
+table 'GAMMA - ACCOUNT'
 	lineageTag: 8988e2b7-c32a-4769-9c05-24564a898b84
 
 	column id
@@ -60,7 +60,7 @@ table ACCOUNT
 
 		annotation SummarizationSetBy = Automatic
 
-	partition ACCOUNT = m
+	partition 'GAMMA - ACCOUNT' = m
 		mode: import
 		source =
 				let

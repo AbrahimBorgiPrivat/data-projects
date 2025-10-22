@@ -19,7 +19,7 @@
 "update_fields": ["date","text","amount","balance","status","reconciled"],
 "not_included_in_update_fields": [],
 "path": "gamma/csv/danskebank.csv",
-"delimiter": "\t",
+"delimiter": ";",
 "subset": null,
 "mapping": [{ "former_key": "Dato",    "new_key": "date",       "type": "date_iso",  "fmt": "%d.%m.%Y" },
             { "former_key": "Tekst",   "new_key": "text",       "type": "string" },

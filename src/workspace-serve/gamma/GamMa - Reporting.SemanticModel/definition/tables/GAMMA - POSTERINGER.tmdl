@@ -1,4 +1,4 @@
-table POSTERINGER
+table 'GAMMA - POSTERINGER'
 	lineageTag: c07c7634-bd41-4fd2-a644-1ea35b17a5f6
 
 	column id
@@ -86,7 +86,7 @@ table POSTERINGER
 
 		annotation SummarizationSetBy = Automatic
 
-	partition POSTERINGER = m
+	partition 'GAMMA - POSTERINGER' = m
 		mode: import
 		source =
 				let

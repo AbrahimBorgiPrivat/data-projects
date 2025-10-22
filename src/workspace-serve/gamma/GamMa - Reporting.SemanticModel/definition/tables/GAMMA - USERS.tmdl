@@ -1,4 +1,4 @@
-table USERS
+table 'GAMMA - USERS'
 	lineageTag: fad97f1a-3efe-4da3-8237-6a01c1be4275
 
 	column id
@@ -68,7 +68,7 @@ table USERS
 
 		annotation SummarizationSetBy = Automatic
 
-	partition USERS = m
+	partition 'GAMMA - USERS' = m
 		mode: import
 		source =
 				let

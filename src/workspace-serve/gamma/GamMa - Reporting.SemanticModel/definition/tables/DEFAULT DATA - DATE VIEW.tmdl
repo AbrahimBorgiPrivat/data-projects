@@ -1,0 +1,392 @@
+table 'DEFAULT DATA - DATE VIEW'
+	lineageTag: 018fab78-4d4e-4eba-809e-1c8c3d8457fc
+
+	column date_dim_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d6444ed-58d8-4c16-8c04-2d9b4f4eabd9
+		summarizeBy: none
+		sourceColumn: date_dim_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_actual
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b8a8918f-3a85-4ec0-81d3-987378d467f1
+		summarizeBy: none
+		sourceColumn: date_actual
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column day_name
+		dataType: string
+		lineageTag: ec6fc30a-b4c6-4918-9545-1ff4d3f8f4d5
+		summarizeBy: none
+		sourceColumn: day_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_week
+		dataType: int64
+		formatString: 0
+		lineageTag: cf2ce4ca-852f-4ed9-bf80-6f3f951a6e12
+		summarizeBy: none
+		sourceColumn: day_of_week
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 402b45be-043d-46dc-9d62-2439d2a08e5e
+		summarizeBy: none
+		sourceColumn: day_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 8892c393-2873-4181-9ab1-e85fb93142b3
+		summarizeBy: none
+		sourceColumn: day_of_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_year
+		dataType: int64
+		formatString: 0
+		lineageTag: a8251f6c-d2fc-4007-9f3b-b98df2a6f3ff
+		summarizeBy: none
+		sourceColumn: day_of_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_of_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 81889942-bd28-443b-84ff-2f2d47ebc4fe
+		summarizeBy: none
+		sourceColumn: week_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_of_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 12a3986f-e990-49dc-a5b3-8e6fa7f914e7
+		summarizeBy: none
+		sourceColumn: week_of_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_of_year_conv
+		dataType: int64
+		formatString: 0
+		lineageTag: 90e6572e-5f93-4bdc-8167-dc6732b0f2d9
+		summarizeBy: none
+		sourceColumn: week_of_year_conv
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_year
+		dataType: string
+		lineageTag: a7f36fae-7896-45cf-a307-c16359e326ef
+		summarizeBy: none
+		sourceColumn: week_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_actual
+		dataType: int64
+		formatString: 0
+		lineageTag: 63f4d200-36a9-4e84-af54-9e090e0d8c15
+		summarizeBy: none
+		sourceColumn: month_actual
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name
+		dataType: string
+		lineageTag: 227d987c-eda2-4bfc-a52b-336810c06340
+		summarizeBy: none
+		sourceColumn: month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter_actual
+		dataType: int64
+		formatString: 0
+		lineageTag: cd23a442-66e1-4a98-9a15-dda815cd6370
+		summarizeBy: none
+		sourceColumn: quarter_actual
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter_name
+		dataType: string
+		lineageTag: 2419cc9e-909f-4e7c-8f83-1a2e8d2b8caf
+		summarizeBy: none
+		sourceColumn: quarter_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter
+		dataType: string
+		lineageTag: 94ba10e0-873f-4397-a764-1093369c15c4
+		summarizeBy: none
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_actual
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c0137ef-e1ce-42d3-be86-082431938cec
+		summarizeBy: none
+		sourceColumn: year_actual
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_day_of_week
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3fce9cc3-1cc3-407c-9eb9-217589b95a1d
+		summarizeBy: none
+		sourceColumn: first_day_of_week
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column last_day_of_week
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4dd9491e-6924-420c-8be6-c1b837099dd3
+		summarizeBy: none
+		sourceColumn: last_day_of_week
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column first_day_of_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7ca850bf-3fd7-405f-8333-eb75db0cb12d
+		summarizeBy: none
+		sourceColumn: first_day_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column last_day_of_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6543e16c-d458-4dd9-816d-d3b9fa0406c4
+		summarizeBy: none
+		sourceColumn: last_day_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column first_day_of_quarter
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 20c33550-fc3c-4852-80c8-f5f58af23bd5
+		summarizeBy: none
+		sourceColumn: first_day_of_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column last_day_of_quarter
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d48cef23-17ad-4fb0-95b9-163b23d3678d
+		summarizeBy: none
+		sourceColumn: last_day_of_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column first_day_of_year
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: de8180d7-a646-4641-917b-d5aa542de0d9
+		summarizeBy: none
+		sourceColumn: first_day_of_year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column last_day_of_year
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f59bc838-8fd4-438c-a7e2-047dc22c95a0
+		summarizeBy: none
+		sourceColumn: last_day_of_year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column mmyyyy
+		dataType: string
+		lineageTag: 0072d3f2-0e65-4a0b-8168-77ca6b401077
+		summarizeBy: none
+		sourceColumn: mmyyyy
+
+		annotation SummarizationSetBy = Automatic
+
+	column yyyymm
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a060b1a-15c8-4e09-8328-5578ca60634b
+		summarizeBy: none
+		sourceColumn: yyyymm
+
+		annotation SummarizationSetBy = Automatic
+
+	column mmddyyyy
+		dataType: string
+		lineageTag: 9bb16e1c-6b1b-4f41-b4fb-d615fd36bd2f
+		summarizeBy: none
+		sourceColumn: mmddyyyy
+
+		annotation SummarizationSetBy = Automatic
+
+	column weekend_indr
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c141461a-ce17-41c8-9032-c1c4ea06ba70
+		summarizeBy: none
+		sourceColumn: weekend_indr
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_today
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b7d229b-5ab1-439e-ab74-1802a6f9e4e4
+		summarizeBy: none
+		sourceColumn: is_today
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_yesterday
+		dataType: int64
+		formatString: 0
+		lineageTag: a801cb54-de6b-4466-862a-a20b8597be91
+		summarizeBy: none
+		sourceColumn: is_yesterday
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_this_week
+		dataType: int64
+		formatString: 0
+		lineageTag: 7492861d-8c6c-4b4e-a931-f8da44214984
+		summarizeBy: none
+		sourceColumn: is_this_week
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_or_thisweek
+		dataType: string
+		lineageTag: b06edb21-faf1-4e1f-893a-76f421978328
+		summarizeBy: none
+		sourceColumn: last_or_thisweek
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_this_month
+		dataType: int64
+		formatString: 0
+		lineageTag: e7b7d02f-54a4-4a11-a997-6705fc99634b
+		summarizeBy: none
+		sourceColumn: is_this_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_last_month
+		dataType: int64
+		formatString: 0
+		lineageTag: e3a7a1eb-444d-4ba4-a3ae-8b101a952451
+		summarizeBy: none
+		sourceColumn: is_last_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_or_thismonth
+		dataType: string
+		lineageTag: 2da23acd-2a85-4385-8d4a-0fcf0aa6787e
+		summarizeBy: none
+		sourceColumn: last_or_thismonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_this_quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 17f29f97-b748-4af9-91da-d5db538f5545
+		summarizeBy: none
+		sourceColumn: is_this_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_this_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 6db19cbb-b38b-4f50-89e6-9b18662e2377
+		summarizeBy: none
+		sourceColumn: is_this_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_last_two_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 84c4f411-4e47-4817-846b-b8189c1c243a
+		summarizeBy: none
+		sourceColumn: is_last_two_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_past
+		dataType: int64
+		formatString: 0
+		lineageTag: c50dbcd9-476c-43ec-a714-ddbe80ee34a3
+		summarizeBy: none
+		sourceColumn: is_past
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_before_next_month
+		dataType: int64
+		formatString: 0
+		lineageTag: f851bb30-8b28-4241-a255-f4bde187d112
+		summarizeBy: none
+		sourceColumn: is_before_next_month
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DEFAULT DATA - DATE VIEW' = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
+				    default_data_date_view = Kilde{[Schema="default_data",Item="date_view"]}[Data]
+				in
+				    default_data_date_view
+
+	changedProperty = Name
+

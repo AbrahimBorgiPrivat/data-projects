@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "0be0625b857afc132cac",
   "position": {
-    "x": 0,
-    "y": 0,
+    "x": 39.685344529285572,
+    "y": 92.59913723499966,
     "z": 1,
-    "height": 166.32218844984803,
-    "width": 240.24316109422494,
+    "height": 166.30049136081573,
+    "width": 240.00184548663177,
     "tabOrder": 1
   },
   "visual": {
@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ACCOUNT"
+                      "Entity": "GAMMA - ACCOUNT"
                     }
                   },
                   "Property": "main_account"
@@ -64,7 +64,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "ACCOUNT"
+                "Entity": "GAMMA - ACCOUNT"
               }
             },
             "Property": "main_account"
