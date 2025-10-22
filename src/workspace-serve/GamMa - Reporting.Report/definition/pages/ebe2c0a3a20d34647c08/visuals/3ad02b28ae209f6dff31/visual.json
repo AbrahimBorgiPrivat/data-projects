@@ -1,0 +1,223 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "3ad02b28ae209f6dff31",
+  "position": {
+    "x": 535.093509350935,
+    "y": 106.31463146314631,
+    "z": 3,
+    "height": 613.94939493949391,
+    "width": 744.90649064906484,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "POSTERINGER"
+                    }
+                  },
+                  "Property": "id"
+                }
+              },
+              "queryRef": "POSTERINGER.id",
+              "nativeQueryRef": "id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "POSTERINGSGRUPPE"
+                    }
+                  },
+                  "Property": "posting_group"
+                }
+              },
+              "queryRef": "POSTERINGSGRUPPE.posting_group",
+              "nativeQueryRef": "posting_group"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "POSTERINGER"
+                    }
+                  },
+                  "Property": "date"
+                }
+              },
+              "queryRef": "POSTERINGER.date",
+              "nativeQueryRef": "date"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "POSTERINGER"
+                        }
+                      },
+                      "Property": "amount"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(POSTERINGER.amount)",
+              "nativeQueryRef": "Sum af amount"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACCOUNT"
+                    }
+                  },
+                  "Property": "context"
+                }
+              },
+              "queryRef": "ACCOUNT.context",
+              "nativeQueryRef": "context"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "175.0769790583729D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "POSTERINGER.id"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "102.22554255385396D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(POSTERINGER.amount)"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ce001a7c4683780e1941",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "POSTERINGER"
+              }
+            },
+            "Property": "id"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c53464b7769e50d6f9fa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "POSTERINGSGRUPPE"
+              }
+            },
+            "Property": "posting_group"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dd7d355075b87b031a93",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "POSTERINGER"
+              }
+            },
+            "Property": "date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f68020d7c972e976d94a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "POSTERINGER"
+                  }
+                },
+                "Property": "amount"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "51fda1038143152a0464",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "ACCOUNT"
+              }
+            },
+            "Property": "context"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "677dfc56ca096f3813cd",
+  "position": {
+    "x": 165.45654565456545,
+    "y": 89.41694169416941,
+    "z": 2,
+    "height": 584.37843784378435,
+    "width": 356.96369636963692,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "POSTERINGSGRUPPE"
+                    }
+                  },
+                  "Property": "posting_group"
+                }
+              },
+              "queryRef": "POSTERINGSGRUPPE.posting_group",
+              "nativeQueryRef": "posting_group",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACCOUNT"
+                    }
+                  },
+                  "Property": "context"
+                }
+              },
+              "queryRef": "ACCOUNT.context",
+              "nativeQueryRef": "context",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "POSTERINGER"
+                        }
+                      },
+                      "Property": "amount"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(POSTERINGER.amount)",
+              "nativeQueryRef": "Sum af amount"
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "POSTERINGSGRUPPE.posting_group"
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "ACCOUNT.context"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f0bb29ca3f56efa91a0e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "POSTERINGER"
+                  }
+                },
+                "Property": "amount"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1adc40ea6c0fe385b89d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "POSTERINGSGRUPPE"
+              }
+            },
+            "Property": "posting_group"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "677864796e73c0cac314",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "ACCOUNT"
+              }
+            },
+            "Property": "context"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
