@@ -15,8 +15,8 @@ def run_runner(module_path: str, runtime_json_path: Path):
 
 if __name__ == "__main__":
     CURRENT_DIR = Path(__file__).resolve().parent
-    RUNTIME_BASE = CURRENT_DIR.parent / "runtime_definitions" / "gamma" / "csv_to_client" / "runtime"
-    runner_module = os.getenv("RUNNER_MODULE", "libraries.runners.csv_to_client")
+    RUNTIME_BASE = CURRENT_DIR.parent / "runtime_definitions" / "gamma" / "create_table" / "runtime"
+    runner_module = os.getenv("RUNNER_MODULE", "libraries.runners.create_table")
     runtime_files_env = os.getenv("RUNTIME_FILES", "users_runtime_def.json")
     runtime_files = [f.strip() for f in runtime_files_env.split(",") if f.strip()]
     for filename in runtime_files:

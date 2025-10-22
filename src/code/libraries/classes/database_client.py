@@ -222,7 +222,7 @@ class DatabaseClient:
                 )
         else: 
             logger.info(f"Schema '{schema_name}' exists: {exists}")
-    
+
     def check_table_exist(self, 
                             schema_name: str,
                             table_name: str,
@@ -285,6 +285,27 @@ class DatabaseClient:
             logger.info(
                 f"Created table '{schema_name}.{table_name}' with columns: {list(fields_dict.keys())}"
             )
+
+    def delete_table_if_ecist(self, 
+                    schema_name: str,
+                    table_name: str):
+        engine = self.get_engine()
+        table_result = self.get_data(
+            sql_query=f"""
+            SELECT table_name 
+            FROM information_schema.tables 
+            WHERE table_schema = '{schema_name}' 
+            AND table_name = '{table_name}';
+            """
+        )
+        table_exists = len(table_result) != 0
+        if table_exists:
+            logger.info(f"Dropping table '{schema_name}.{table_name}'...")
+            with engine.begin() as connection:
+                connection.execute(text(f"DROP TABLE IF EXISTS {schema_name}.{table_name} CASCADE;"))
+            logger.info(f"Table '{schema_name}.{table_name}' dropped successfully.")
+        else:
+            logger.info(f"Table '{schema_name}.{table_name}' does not exist — nothing to drop.")
         
     def ensure_table_structure(
         self,

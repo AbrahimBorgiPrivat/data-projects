@@ -39,16 +39,37 @@ def parse_fields_dict_from_json(fields_json):
         parsed[col_name] = field_config
     return parsed
     
+def check_if_table_exist(client: DatabaseClient, 
+                         upsert_runtime_vars: dict):
+    fields_dict = parse_fields_dict_from_json(upsert_runtime_vars["fields_dict"])
+    if upsert_runtime_vars.get("overwrite_table", False):
+        try:
+            passed = client.ensure_table_structure(schema_name=upsert_runtime_vars["schema"],
+                                                table_name=upsert_runtime_vars["table_name"],
+                                                fields_dict=fields_dict,
+                                                create_tale_if_not_exist=upsert_runtime_vars.get("create_table_if_not_exist", False)
+                                                )
+        except Exception as e:
+            client.delete_table_if_ecist(schema_name=upsert_runtime_vars["schema"],
+                                        table_name=upsert_runtime_vars["table_name"])
+            passed = client.ensure_table_structure(schema_name=upsert_runtime_vars["schema"],
+                                                    table_name=upsert_runtime_vars["table_name"],
+                                                    fields_dict=fields_dict,
+                                                    create_tale_if_not_exist=upsert_runtime_vars.get("create_table_if_not_exist", False)
+                                                    )
+    else:
+        passed = client.ensure_table_structure(schema_name=upsert_runtime_vars["schema"],
+                                                table_name=upsert_runtime_vars["table_name"],
+                                                fields_dict=fields_dict,
+                                                create_tale_if_not_exist=upsert_runtime_vars.get("create_table_if_not_exist", False)
+                                                )
+    return passed
+
 def upsert_insert(client: DatabaseClient, 
                   upsert_runtime_vars: dict, 
                   new_data: list[dict]):
-    
-    fields_dict = parse_fields_dict_from_json(upsert_runtime_vars["fields_dict"])
-    passed = client.ensure_table_structure(schema_name=upsert_runtime_vars["schema"],
-                                           table_name=upsert_runtime_vars["table_name"],
-                                           fields_dict=fields_dict,
-                                           create_tale_if_not_exist=upsert_runtime_vars.get("create_table_if_not_exist", False)
-                                           )
+    passed = check_if_table_exist(client=client, 
+                                    upsert_runtime_vars= upsert_runtime_vars)
     if not passed:
         raise RuntimeError("Target table structure validation failed.")
     

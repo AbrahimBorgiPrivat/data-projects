@@ -2,14 +2,14 @@ services:
   csv_to_client:
     build:
       context: ../../../..                    
-      dockerfile: service/gamma/etl/service_csv_to_client/Dockerfile
-    container_name: gamma_csv_to_client
+      dockerfile: service/gamma/etl/service_create_empty_table/Dockerfile
+    container_name: service_create_empty_table
     env_file:
       - .env
     environment:
       PYTHONPATH: /app              
       ENV_MODE: docker
-      SERVICE_NAME: service_csv_to_client
+      SERVICE_NAME: service_create_empty_table
     volumes:
       - ./app:/app/app   
       - ../../../../../../res:/app/res  

@@ -1,0 +1,20 @@
+{"client":{"db_name": "POSTGRES_DB",
+                "username": "POSTGRES_USERNAME",
+                "password": "POSTGRES_PASSWORD",
+                "server": "POSTGRES_HOST",
+                "port":"POSTGRES_PORT",
+                "db_type":"DB_TYPE"},
+"schema": "gamma_db",
+"table_name": "postering_group",
+"create_table_if_not_exist": true,
+"overwrite_table": true,
+"fields_dict": {
+    "id": { "type": "TEXT", "primary_key": true, "autoincrement": false},
+    "posting_group": { "type": "TEXT" },
+    "posting_group_key": { "type": "BIGINT"},
+    "posting_sub_group": { "type": "TEXT" },
+    "posting_sub_group_key": { "type": "BIGINT"},
+    "context": { "type": "TEXT" },
+    "context_key": { "type": "BIGINT"}
+    }
+}
