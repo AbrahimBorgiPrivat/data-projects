@@ -14,3 +14,4 @@ systemd/pid
 # Ignore editor and session-specific files
 .vscode
 nohup.out
+
