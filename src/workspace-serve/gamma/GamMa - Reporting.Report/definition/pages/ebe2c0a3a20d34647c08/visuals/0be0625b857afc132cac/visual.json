@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "0be0625b857afc132cac",
   "position": {
-    "x": 39.685344529285572,
-    "y": 92.59913723499966,
+    "x": 25.449775629962026,
+    "y": 200,
     "z": 1,
-    "height": 166.30049136081573,
-    "width": 240.00184548663177,
+    "height": 100,
+    "width": 250,
     "tabOrder": 1
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "ACCOUNT.main_account",
-              "nativeQueryRef": "main_account",
-              "active": true
+              "nativeQueryRef": "Konto",
+              "active": true,
+              "displayName": "Konto"
             }
           ]
         }
@@ -41,16 +42,79 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Basic'"
+                  "Value": "'Dropdown'"
                 }
               }
             }
           }
         }
       ],
-      "general": [
+      "header": [
         {
-          "properties": {}
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
         }
       ]
     },

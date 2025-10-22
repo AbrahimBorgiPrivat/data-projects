@@ -69,7 +69,5 @@ table 'GAMMA - ACCOUNT'
 				in
 				    gamma_db_account
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

@@ -114,6 +114,9 @@ table 'DEFAULT DATA - DATE VIEW'
 		lineageTag: 227d987c-eda2-4bfc-a52b-336810c06340
 		summarizeBy: none
 		sourceColumn: month_name
+		sortByColumn: month_actual
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -379,6 +382,21 @@ table 'DEFAULT DATA - DATE VIEW'
 
 		annotation SummarizationSetBy = Automatic
 
+	hierarchy 'year_actual Hierarki'
+		lineageTag: f7d01334-a580-4bd2-a996-b209d85c1cb0
+
+		level year_actual
+			lineageTag: 958ff3ea-03da-427d-99b5-8b03da0dbeda
+			column: year_actual
+
+		level month_name
+			lineageTag: 3223e8c6-cf0f-477b-9181-0d71882621eb
+			column: month_name
+
+		level date_actual
+			lineageTag: a29e1282-5d8b-4a59-93ac-11b860c5c0c6
+			column: date_actual
+
 	partition 'DEFAULT DATA - DATE VIEW' = m
 		mode: import
 		source =
@@ -387,6 +405,4 @@ table 'DEFAULT DATA - DATE VIEW'
 				    default_data_date_view = Kilde{[Schema="default_data",Item="date_view"]}[Data]
 				in
 				    default_data_date_view
-
-	changedProperty = Name
 

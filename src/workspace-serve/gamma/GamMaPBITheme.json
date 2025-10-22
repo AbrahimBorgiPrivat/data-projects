@@ -1,0 +1,59 @@
+{
+  "name": "GamMaTheme",
+  "dataColors": [
+    "#007A8C",  
+    "#00B2A9",  
+    "#004F5A",  
+    "#5AC8C8",  
+    "#1A1A1A",  
+    "#A3E2DC",  
+    "#6EC6CA",  
+    "#BDBDBD"   
+  ],
+  "good": "#00B894",
+  "neutral": "#9E9E9E",
+  "bad": "#E53935",
+  "maximum": "#007A8C",
+  "center": "#00B2A9",
+  "minimum": "#BDBDBD",
+  "null": "#F0F0F0",
+  "background": "#FFFFFF",
+  "foreground": "#1A1A1A",
+  "tableAccent": "#007A8C",
+  "textClasses": {
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 9
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10
+    },
+    "title": {
+      "fontFace": "Segoe UI",
+      "fontSize": 12
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 10
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "general": [
+          {
+            "border": true,
+            "backgroundColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "outlineColor": "#E0E0E0",
+            "outlineWeight": 1
+          }
+        ]
+      }
+    }
+  }
+}

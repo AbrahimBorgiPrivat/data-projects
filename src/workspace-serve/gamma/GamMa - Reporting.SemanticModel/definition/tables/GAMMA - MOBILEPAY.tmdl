@@ -123,7 +123,5 @@ table 'GAMMA - MOBILEPAY'
 				in
 				    gamma_db_mobilepay
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

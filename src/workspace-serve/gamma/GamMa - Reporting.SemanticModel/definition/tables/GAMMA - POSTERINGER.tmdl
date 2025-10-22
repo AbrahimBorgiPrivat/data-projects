@@ -95,7 +95,5 @@ table 'GAMMA - POSTERINGER'
 				in
 				    gamma_db_posteringer
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "677dfc56ca096f3813cd",
+  "name": "ee231001f2da55955cca",
   "position": {
-    "x": 320,
-    "y": 20,
-    "z": 2,
-    "height": 680,
-    "width": 480,
-    "tabOrder": 2
+    "x": 820.75526406627534,
+    "y": 20.677942699344147,
+    "z": 5,
+    "height": 410,
+    "width": 450.14290645495339,
+    "tabOrder": 5
   },
   "visual": {
     "visualType": "pivotTable",
@@ -27,9 +27,8 @@
                 }
               },
               "queryRef": "GAMMA - ACCOUNT.context",
-              "nativeQueryRef": "Udgift/Indtægt",
-              "active": true,
-              "displayName": "Udgift/Indtægt"
+              "nativeQueryRef": "context1",
+              "active": true
             }
           ]
         },
@@ -40,32 +39,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
+                      "Entity": "GAMMA - POSTERINGSGRUPPE"
                     }
                   },
-                  "Property": "main_account"
+                  "Property": "context"
                 }
               },
-              "queryRef": "GAMMA - ACCOUNT.main_account",
-              "nativeQueryRef": "Konto",
+              "queryRef": "GAMMA - POSTERINGSGRUPPE.context",
+              "nativeQueryRef": " ",
               "active": true,
-              "displayName": "Konto"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
-                    }
-                  },
-                  "Property": "sub_account"
-                }
-              },
-              "queryRef": "GAMMA - ACCOUNT.sub_account",
-              "nativeQueryRef": "Underkonto",
-              "active": true,
-              "displayName": "Underkonto"
+              "displayName": " "
             }
           ]
         },
@@ -87,71 +70,18 @@
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(POSTERINGER.amount)",
+              "queryRef": "Sum(GAMMA - POSTERINGER.amount)",
               "nativeQueryRef": "Sum af amount"
             }
           ]
         }
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Rows"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "GAMMA - ACCOUNT.main_account"
-            ],
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
-                    }
-                  },
-                  "Property": "main_account"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "GAMMA - ACCOUNT.sub_account"
-            ],
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
-                    }
-                  },
-                  "Property": "sub_account"
-                }
-              }
-            ],
-            "isPinned": true
-          }
-        ],
-        "root": {}
-      }
-    ],
     "objects": {
-      "blankRows": [
+      "grid": [
         {
           "properties": {
-            "showBlankRows": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showBorder": {
+            "gridHorizontal": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -187,19 +117,6 @@
           }
         }
       ],
-      "subTotals": [
-        {
-          "properties": {
-            "rowSubtotalsPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Bottom'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "columnWidth": [
         {
           "properties": {
@@ -214,12 +131,85 @@
           "selector": {
             "metadata": "GAMMA - ACCOUNT.main_account"
           }
-        }
-      ],
-      "grid": [
+        },
         {
           "properties": {
-            "gridHorizontal": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80.63412282382308D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GAMMA - ACCOUNT"
+                          }
+                        },
+                        "Property": "context"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Udgift'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.26855231137961D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "total": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GAMMA - ACCOUNT"
+                        }
+                      },
+                      "Property": "context"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "blankRows": [
+        {
+          "properties": {
+            "showBlankRows": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showBorder": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -231,13 +221,33 @@
       ]
     },
     "visualContainerObjects": {
-      "stylePreset": [
+      "title": [
         {
           "properties": {
-            "name": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "'None'"
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -270,6 +280,19 @@
               "expr": {
                 "Literal": {
                   "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
                 }
               }
             }

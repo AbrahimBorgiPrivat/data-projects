@@ -69,7 +69,5 @@ table 'GAMMA - POSTERINGSGRUPPE'
 				in
 				    gamma_db_postering_group
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

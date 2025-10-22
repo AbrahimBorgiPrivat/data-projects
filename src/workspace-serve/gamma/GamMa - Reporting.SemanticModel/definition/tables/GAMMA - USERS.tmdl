@@ -77,7 +77,5 @@ table 'GAMMA - USERS'
 				in
 				    gamma_db_users
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 
