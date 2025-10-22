@@ -21,9 +21,11 @@
     "bank_account_key": { "type": "TEXT" },
     "mp_key": { "type": "TEXT" },
     "user_id": { "type": "TEXT" },
-    "account_number": { "type": "TEXT" }
+    "account_number": { "type": "TEXT" },
+    "posting_group_id": { "type": "TEXT" },
+    "document": { "type": "TEXT" }
     },
-"update_fields": ["date","text", "amount", "bank_account_key", "mp_key", "user_id", "account_number"],
-"not_included_in_update_fields": [ "user_id", "account_number"],
+"update_fields": ["date","text", "amount", "bank_account_key", "mp_key", "user_id", "account_number","posting_group_id","document"],
+"not_included_in_update_fields": [ "user_id", "account_number","posting_group_id","document"],
 "sql_query": "gamma/client_to_client/queries/posteringsdata.sql"
 }

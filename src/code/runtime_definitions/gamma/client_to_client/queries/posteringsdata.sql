@@ -17,7 +17,14 @@ SELECT
     END AS amount,
     bac.id AS bank_account_key,
     mp.id AS mp_key,
-    '' AS user_id,
-    '' AS account_number
+	CASE 
+        WHEN us.name IS NULL THEN ''
+        ELSE us.name
+    END AS user_id,
+    '' AS account_number,
+    '' AS posting_group_id,
+    '' AS document
 FROM gamma_db.bank_account bac
-LEFT JOIN gamma_db.mobilepay mp ON mp.transfer_ref = bac.text ORDER BY bac.date ASC;
+LEFT JOIN gamma_db.mobilepay mp ON mp.transfer_ref = bac.text 
+LEFT JOIN gamma_db.users us ON us.name = mp.payner_name
+ORDER BY bac.date ASC;
