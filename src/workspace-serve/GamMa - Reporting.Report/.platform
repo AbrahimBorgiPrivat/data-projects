@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "GamMa - Reporting"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1be2f0fc-2f1e-49bc-a9ce-3d684f1d3178"
+  }
+}

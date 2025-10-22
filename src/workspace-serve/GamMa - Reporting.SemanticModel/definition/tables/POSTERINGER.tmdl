@@ -1,0 +1,101 @@
+table POSTERINGER
+	lineageTag: c07c7634-bd41-4fd2-a644-1ea35b17a5f6
+
+	column id
+		dataType: string
+		lineageTag: 676d30e0-4e33-4ab6-b08d-848d31de3edb
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 811ba676-17a5-4248-9d68-957dc1f6c59c
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column text
+		dataType: string
+		lineageTag: cac66727-57cf-4390-a07e-e2edf32c0473
+		summarizeBy: none
+		sourceColumn: text
+
+		annotation SummarizationSetBy = Automatic
+
+	column amount
+		dataType: double
+		lineageTag: 39069437-de19-4e3a-a72d-0573b097bd50
+		summarizeBy: sum
+		sourceColumn: amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bank_account_key
+		dataType: string
+		lineageTag: ec5dacc7-98ba-4ffb-b02c-0991462c813d
+		summarizeBy: none
+		sourceColumn: bank_account_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column mp_key
+		dataType: string
+		lineageTag: 72697d50-d35c-4a95-8958-30b701efa1ef
+		summarizeBy: none
+		sourceColumn: mp_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: string
+		lineageTag: 41bbc683-af3e-42e3-907f-b84f5a285e60
+		summarizeBy: none
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_number
+		dataType: string
+		lineageTag: ba656827-6021-4440-af21-0f613da92d31
+		summarizeBy: none
+		sourceColumn: account_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column posting_group_id
+		dataType: string
+		lineageTag: a940471e-1ec2-4e86-90dd-2adc5c2d4f0b
+		summarizeBy: none
+		sourceColumn: posting_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column document
+		dataType: string
+		lineageTag: 0da07e2a-1cd3-462d-80d8-809d847ac143
+		summarizeBy: none
+		sourceColumn: document
+
+		annotation SummarizationSetBy = Automatic
+
+	partition POSTERINGER = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
+				    gamma_db_posteringer = Kilde{[Schema="gamma_db",Item="posteringer"]}[Data]
+				in
+				    gamma_db_posteringer
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

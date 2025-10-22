@@ -1,0 +1,98 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 74.999999999999986
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 298,
+            "y": 356
+          },
+          "nodeIndex": "BANK ACCOUNT",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 299,
+            "y": 0
+          },
+          "nodeIndex": "MOBILEPAY",
+          "nodeLineageTag": "b9c7000e-0dfa-4c6f-9d4f-e5ef0227aaa6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 984,
+            "y": 0
+          },
+          "nodeIndex": "POSTERINGSGRUPPE",
+          "nodeLineageTag": "9e13c4ac-9352-4cb3-9b15-f658cd09e0aa",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 641,
+            "y": 108
+          },
+          "nodeIndex": "POSTERINGER",
+          "nodeLineageTag": "c07c7634-bd41-4fd2-a644-1ea35b17a5f6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 967,
+            "y": 367
+          },
+          "nodeIndex": "ACCOUNT",
+          "nodeLineageTag": "8988e2b7-c32a-4769-9c05-24564a898b84",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 632.18277069345754,
+            "y": 535.45326447839125
+          },
+          "nodeIndex": "USERS",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Alle tabeller",
+      "zoomValue": 100.00000000000003,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Alle tabeller",
+  "defaultDiagram": "Alle tabeller"
+}

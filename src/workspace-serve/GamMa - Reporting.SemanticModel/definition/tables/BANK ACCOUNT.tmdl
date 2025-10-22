@@ -1,0 +1,79 @@
+table 'BANK ACCOUNT'
+	lineageTag: 6f232609-a32d-4ed9-8068-e08cf1aeff87
+
+	column id
+		dataType: string
+		lineageTag: e431640d-a9e4-4405-895e-5e98a701327e
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0e7ff534-7563-4f3e-9819-b6db180e9d81
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column text
+		dataType: string
+		lineageTag: cf9fd216-6e49-4687-ad71-c1bcf38a6b43
+		summarizeBy: none
+		sourceColumn: text
+
+		annotation SummarizationSetBy = Automatic
+
+	column amount
+		dataType: double
+		lineageTag: 969ad93e-0a3a-456f-a5f5-f4d14b85897a
+		summarizeBy: none
+		sourceColumn: amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column balance
+		dataType: double
+		lineageTag: 744a555c-2298-4797-b984-d6d2624e3cc0
+		summarizeBy: none
+		sourceColumn: balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column status
+		dataType: string
+		lineageTag: f80c0317-7427-4261-a312-5eb0699ba031
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column reconciled
+		dataType: string
+		lineageTag: d715a1f0-72a2-4e8f-b953-c469008fbae9
+		summarizeBy: none
+		sourceColumn: reconciled
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'BANK ACCOUNT' = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
+				    gamma_db_bank_account = Kilde{[Schema="gamma_db",Item="bank_account"]}[Data]
+				in
+				    gamma_db_bank_account
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

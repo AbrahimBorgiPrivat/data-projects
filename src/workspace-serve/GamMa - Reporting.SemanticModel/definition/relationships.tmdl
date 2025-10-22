@@ -1,0 +1,20 @@
+relationship cadbaec3-6197-ff47-c626-18143682f429
+	fromColumn: POSTERINGER.mp_key
+	toColumn: MOBILEPAY.id
+
+relationship 4a3c0eb1-297a-0d5b-a47c-eac6131e7ff1
+	fromColumn: POSTERINGER.bank_account_key
+	toColumn: 'BANK ACCOUNT'.id
+
+relationship d7961908-9423-d228-e93f-f55363a204d5
+	fromColumn: POSTERINGER.account_number
+	toColumn: ACCOUNT.id
+
+relationship 329a5b12-22c1-5ffe-1d7a-22eee020a636
+	fromColumn: POSTERINGER.posting_group_id
+	toColumn: POSTERINGSGRUPPE.id
+
+relationship 942440e2-b948-2c1f-e828-80f6894df837
+	fromColumn: POSTERINGER.user_id
+	toColumn: USERS.id
+

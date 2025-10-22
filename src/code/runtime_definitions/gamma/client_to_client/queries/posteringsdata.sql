@@ -18,8 +18,8 @@ SELECT
     bac.id AS bank_account_key,
     mp.id AS mp_key,
 	CASE 
-        WHEN us.name IS NULL THEN ''
-        ELSE us.name
+        WHEN us.id IS NULL THEN ''
+        ELSE us.id
     END AS user_id,
     '' AS account_number,
     '' AS posting_group_id,

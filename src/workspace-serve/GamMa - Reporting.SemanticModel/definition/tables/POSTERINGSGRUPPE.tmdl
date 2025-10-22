@@ -1,0 +1,75 @@
+table POSTERINGSGRUPPE
+	lineageTag: 9e13c4ac-9352-4cb3-9b15-f658cd09e0aa
+
+	column id
+		dataType: string
+		lineageTag: 157be08e-a2f1-419a-8ac0-65ddda8a0d05
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column posting_group
+		dataType: string
+		lineageTag: cd04f752-aefd-40b1-925b-c0c7edfb8b5f
+		summarizeBy: none
+		sourceColumn: posting_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column posting_group_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b63f10d-d8d1-4476-a1ba-356cb1ce137a
+		summarizeBy: none
+		sourceColumn: posting_group_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column posting_sub_group
+		dataType: string
+		lineageTag: ea889fd3-b5a3-4d7a-83b8-f227535b9aca
+		summarizeBy: none
+		sourceColumn: posting_sub_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column posting_sub_group_key
+		dataType: int64
+		formatString: 0
+		lineageTag: ada3bec8-c752-4512-9e6c-acef857b9f8e
+		summarizeBy: none
+		sourceColumn: posting_sub_group_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column context
+		dataType: string
+		lineageTag: 2ee05194-d133-4389-aa46-65c066f478ba
+		summarizeBy: none
+		sourceColumn: context
+
+		annotation SummarizationSetBy = Automatic
+
+	column context_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 66b0bc28-a0df-47fe-ba3b-b3313b85bba3
+		summarizeBy: none
+		sourceColumn: context_key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition POSTERINGSGRUPPE = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
+				    gamma_db_postering_group = Kilde{[Schema="gamma_db",Item="postering_group"]}[Data]
+				in
+				    gamma_db_postering_group
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

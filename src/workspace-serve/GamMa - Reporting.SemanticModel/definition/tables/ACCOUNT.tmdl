@@ -1,0 +1,75 @@
+table ACCOUNT
+	lineageTag: 8988e2b7-c32a-4769-9c05-24564a898b84
+
+	column id
+		dataType: string
+		lineageTag: 6867c9db-e4ae-4664-84f6-6df4eb90b84d
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column main_account
+		dataType: string
+		lineageTag: 91341284-0fd7-4941-bee8-6b764fc8ab5c
+		summarizeBy: none
+		sourceColumn: main_account
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e2db393-f51c-4b97-bcc3-0740b4923498
+		summarizeBy: none
+		sourceColumn: account_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub_account
+		dataType: string
+		lineageTag: 83d5591d-367b-4c55-85dd-3e7774713e18
+		summarizeBy: none
+		sourceColumn: sub_account
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub_account_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 8abc29de-ab6f-4125-8b71-c4b84928ffe3
+		summarizeBy: none
+		sourceColumn: sub_account_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column context
+		dataType: string
+		lineageTag: 674ec1c2-2c88-4001-8687-6d62b637cf1b
+		summarizeBy: none
+		sourceColumn: context
+
+		annotation SummarizationSetBy = Automatic
+
+	column context_key
+		dataType: int64
+		formatString: 0
+		lineageTag: e4aae4db-d9fd-472a-a111-bce5b2765e9b
+		summarizeBy: none
+		sourceColumn: context_key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ACCOUNT = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
+				    gamma_db_account = Kilde{[Schema="gamma_db",Item="account"]}[Data]
+				in
+				    gamma_db_account
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

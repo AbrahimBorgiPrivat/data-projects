@@ -1,0 +1,23 @@
+model Model
+	culture: da-DK
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: da-DK
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["ACCOUNT","BANK ACCOUNT","MOBILEPAY","POSTERINGSGRUPPE","USERS","POSTERINGER"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table ACCOUNT
+ref table 'BANK ACCOUNT'
+ref table MOBILEPAY
+ref table POSTERINGSGRUPPE
+ref table USERS
+ref table POSTERINGER
+
+ref cultureInfo da-DK
+
