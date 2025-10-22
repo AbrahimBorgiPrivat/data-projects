@@ -15,3 +15,7 @@ systemd/pid
 .vscode
 nohup.out
 
+# Ignore everything under Budibase app-data except CouchDB (actual app data)
+**/app-data/*
+ !/app-data/couch/
+ !/app-data/.keep
