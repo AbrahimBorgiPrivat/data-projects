@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "0be0625b857afc132cac",
+  "name": "85770e70f37b671f5843",
   "position": {
     "x": 25.449775629962026,
-    "y": 200.41698308595096,
-    "z": 0,
+    "y": 300.62547462892644,
+    "z": 4000,
     "height": 100.20849154297548,
-    "width": 250
+    "width": 249.7259233690024,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -19,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
+                      "Entity": "GAMMA - POSTERINGSGRUPPE"
                     }
                   },
-                  "Property": "main_account"
+                  "Property": "context"
                 }
               },
-              "queryRef": "ACCOUNT.main_account",
-              "nativeQueryRef": "Konto",
-              "active": true,
-              "displayName": "Konto"
+              "queryRef": "GAMMA - POSTERINGSGRUPPE.context",
+              "nativeQueryRef": "context",
+              "active": true
             }
           ]
         }
@@ -59,6 +59,19 @@
               }
             },
             "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "selfFilterEnabled": {
               "expr": {
                 "Literal": {
                   "Value": "true"

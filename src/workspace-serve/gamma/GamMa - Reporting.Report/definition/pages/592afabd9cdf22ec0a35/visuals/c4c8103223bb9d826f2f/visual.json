@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "677dfc56ca096f3813cd",
+  "name": "c4c8103223bb9d826f2f",
   "position": {
     "x": 320,
     "y": 20,
@@ -10,11 +10,55 @@
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "pivotTable",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Rows": {
+        "Values": {
           "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - POSTERINGER"
+                    }
+                  },
+                  "Property": "date"
+                }
+              },
+              "queryRef": "GAMMA - POSTERINGER.date",
+              "nativeQueryRef": "Dato",
+              "displayName": "Dato"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - POSTERINGER"
+                    }
+                  },
+                  "Property": "amount"
+                }
+              },
+              "queryRef": "Sum(GAMMA - POSTERINGER.amount)",
+              "nativeQueryRef": "Beløb",
+              "displayName": "Beløb"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - POSTERINGER"
+                    }
+                  },
+                  "Property": "text"
+                }
+              },
+              "queryRef": "GAMMA - POSTERINGER.text",
+              "nativeQueryRef": "text"
+            },
             {
               "field": {
                 "Column": {
@@ -28,7 +72,6 @@
               },
               "queryRef": "GAMMA - ACCOUNT.main_account",
               "nativeQueryRef": "Konto",
-              "active": true,
               "displayName": "Konto"
             },
             {
@@ -44,7 +87,6 @@
               },
               "queryRef": "GAMMA - ACCOUNT.sub_account",
               "nativeQueryRef": "Underkonto",
-              "active": true,
               "displayName": "Underkonto"
             },
             {
@@ -52,118 +94,38 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
+                      "Entity": "GAMMA - POSTERINGSGRUPPE"
                     }
                   },
                   "Property": "context"
                 }
               },
-              "queryRef": "GAMMA - ACCOUNT.context",
-              "nativeQueryRef": "Udgift/Indtægt",
-              "active": true,
-              "displayName": "Udgift/Indtægt"
-            }
-          ]
-        },
-        "Values": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GAMMA - POSTERINGER"
-                        }
-                      },
-                      "Property": "amount"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(POSTERINGER.amount)",
-              "nativeQueryRef": "Sum af amount"
+              "queryRef": "GAMMA - POSTERINGSGRUPPE.context",
+              "nativeQueryRef": "Arrangement",
+              "displayName": "Arrangement"
             }
           ]
         }
-      }
-    },
-    "expansionStates": [
-      {
-        "roles": [
-          "Rows"
-        ],
-        "levels": [
+      },
+      "sortDefinition": {
+        "sort": [
           {
-            "queryRefs": [
-              "GAMMA - ACCOUNT.main_account"
-            ],
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
-                    }
-                  },
-                  "Property": "main_account"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "GAMMA - ACCOUNT.sub_account"
-            ],
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
-                    }
-                  },
-                  "Property": "sub_account"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "GAMMA - ACCOUNT.context"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          }
-        ],
-        "root": {}
-      }
-    ],
-    "objects": {
-      "blankRows": [
-        {
-          "properties": {
-            "showBlankRows": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "GAMMA - POSTERINGER"
+                  }
+                },
+                "Property": "date"
               }
             },
-            "showBorder": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
+            "direction": "Descending"
           }
-        }
-      ],
+        ]
+      }
+    },
+    "objects": {
       "columnHeaders": [
         {
           "properties": {
@@ -190,13 +152,13 @@
           }
         }
       ],
-      "subTotals": [
+      "grid": [
         {
           "properties": {
-            "rowSubtotalsPosition": {
+            "gridHorizontal": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bottom'"
+                  "Value": "true"
                 }
               }
             }
@@ -209,26 +171,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "176.53055768793857D"
+                  "Value": "78.43753542688799D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "GAMMA - ACCOUNT.main_account"
-          }
-        }
-      ],
-      "grid": [
-        {
-          "properties": {
-            "gridHorizontal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
+            "metadata": "Sum(GAMMA - POSTERINGER.amount)"
           }
         }
       ]
@@ -285,7 +234,63 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "2d4d83b87c00896d8688",
+        "name": "cd916b626ec6433564df",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGER"
+              }
+            },
+            "Property": "date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b2012bf1849efdde6b9e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGSGRUPPE"
+              }
+            },
+            "Property": "context"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "56c236ce4ea1a0bb1cc0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGER"
+              }
+            },
+            "Property": "text"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2313f39ff4b37c69b888",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGER"
+              }
+            },
+            "Property": "amount"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8c574133f086ab4f438d",
         "field": {
           "Column": {
             "Expression": {
@@ -299,7 +304,7 @@
         "type": "Categorical"
       },
       {
-        "name": "3e71f9a55d6a1769fa56",
+        "name": "4e59d72d62212fd23223",
         "field": {
           "Column": {
             "Expression": {
@@ -311,25 +316,6 @@
           }
         },
         "type": "Categorical"
-      },
-      {
-        "name": "d5acba802101cc7a4d44",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "GAMMA - POSTERINGER"
-                  }
-                },
-                "Property": "amount"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

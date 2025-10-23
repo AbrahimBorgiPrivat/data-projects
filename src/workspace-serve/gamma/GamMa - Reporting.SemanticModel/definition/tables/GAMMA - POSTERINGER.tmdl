@@ -30,13 +30,14 @@ table 'GAMMA - POSTERINGER'
 
 	column amount
 		dataType: double
+		formatString: #,0.00\ "kr.";-#,0.00\ "kr.";#,0.00\ "kr."
 		lineageTag: 39069437-de19-4e3a-a72d-0573b097bd50
 		summarizeBy: sum
 		sourceColumn: amount
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"da-DK"}
 
 	column bank_account_key
 		dataType: string

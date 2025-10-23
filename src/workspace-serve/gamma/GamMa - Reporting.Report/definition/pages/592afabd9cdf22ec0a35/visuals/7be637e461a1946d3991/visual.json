@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "0be0625b857afc132cac",
+  "name": "7be637e461a1946d3991",
   "position": {
     "x": 25.449775629962026,
-    "y": 200.41698308595096,
+    "y": 200,
     "z": 0,
-    "height": 100.20849154297548,
+    "height": 100,
     "width": 250
   },
   "visual": {
@@ -29,11 +29,76 @@
               "nativeQueryRef": "Konto",
               "active": true,
               "displayName": "Konto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - ACCOUNT"
+                    }
+                  },
+                  "Property": "sub_account"
+                }
+              },
+              "queryRef": "GAMMA - ACCOUNT.sub_account",
+              "nativeQueryRef": "Underkonto",
+              "active": true,
+              "displayName": "Underkonto"
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "ACCOUNT.main_account"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - ACCOUNT"
+                    }
+                  },
+                  "Property": "main_account"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "GAMMA - ACCOUNT.sub_account"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Kontigent'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "data": [
         {
@@ -64,8 +129,20 @@
                   "Value": "true"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Konto'"
+                }
+              }
             }
           }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
         }
       ]
     },

@@ -1,80 +1,67 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "ee231001f2da55955cca",
+  "name": "33055ee4fc47305b63fa",
   "position": {
     "x": 820.75526406627534,
     "y": 20.677942699344147,
-    "z": 4000,
-    "height": 410,
+    "z": 3000,
+    "height": 680.7814981014842,
     "width": 450.14290645495339,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
-    "visualType": "pivotTable",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Columns": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
-                    }
-                  },
-                  "Property": "context"
-                }
-              },
-              "queryRef": "GAMMA - ACCOUNT.context",
-              "nativeQueryRef": "context1",
-              "active": true
-            }
-          ]
-        },
-        "Rows": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GAMMA - POSTERINGSGRUPPE"
-                    }
-                  },
-                  "Property": "context"
-                }
-              },
-              "queryRef": "GAMMA - POSTERINGSGRUPPE.context",
-              "nativeQueryRef": " ",
-              "active": true,
-              "displayName": " "
-            }
-          ]
-        },
         "Values": {
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GAMMA - POSTERINGER"
-                        }
-                      },
-                      "Property": "amount"
+                    "SourceRef": {
+                      "Entity": "GAMMA - USERS"
                     }
                   },
-                  "Function": 0
+                  "Property": "name"
                 }
               },
-              "queryRef": "Sum(GAMMA - POSTERINGER.amount)",
-              "nativeQueryRef": "Sum af amount"
+              "queryRef": "GAMMA - USERS.name",
+              "nativeQueryRef": "name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - USERS"
+                    }
+                  },
+                  "Property": "status"
+                }
+              },
+              "queryRef": "GAMMA - USERS.status",
+              "nativeQueryRef": "status"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "GAMMA - USERS"
+                  }
+                },
+                "Property": "status"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -111,6 +98,13 @@
               "expr": {
                 "Literal": {
                   "Value": "9D"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -197,25 +191,33 @@
               }
             ]
           }
-        }
-      ],
-      "blankRows": [
+        },
         {
           "properties": {
-            "showBlankRows": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showBorder": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "165.04804641071593D"
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "GAMMA - USERS.name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "54.14285076061938D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GAMMA - USERS.status"
           }
         }
       ]
@@ -305,48 +307,29 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "cd800771349de68a90ce",
+        "name": "833e74107fcedde4e8e2",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "GAMMA - ACCOUNT"
+                "Entity": "GAMMA - USERS"
               }
             },
-            "Property": "context"
+            "Property": "name"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "51d674bad22f96cc6cd6",
+        "name": "9ef2b76000f93eff5777",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "GAMMA - POSTERINGSGRUPPE"
+                "Entity": "GAMMA - USERS"
               }
             },
-            "Property": "context"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "363a7831501d5ebfb559",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "GAMMA - POSTERINGER"
-                  }
-                },
-                "Property": "amount"
-              }
-            },
-            "Function": 0
+            "Property": "status"
           }
         },
         "type": "Advanced"

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "a5c2c347aca4686c3684",
+  "name": "067837e4184a20e2bf64",
   "position": {
-    "x": 25,
-    "y": 100,
-    "z": 3000,
-    "height": 100,
-    "width": 250,
-    "tabOrder": 3000
+    "x": 24.567118041938684,
+    "y": 500.79125239336554,
+    "z": 6000,
+    "height": 100.1582504786731,
+    "width": 249.45073704122359,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,97 +20,29 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DEFAULT DATA - DATE VIEW"
+                      "Entity": "GAMMA - USERS"
                     }
                   },
-                  "Property": "date_actual"
+                  "Property": "status"
                 }
               },
-              "queryRef": "DEFAULT DATA - DATE VIEW.date_actual",
-              "nativeQueryRef": "Periode",
-              "active": true,
-              "displayName": "Periode"
+              "queryRef": "GAMMA - USERS.status",
+              "nativeQueryRef": "status",
+              "active": true
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DEFAULT DATA - DATE VIEW"
-                  }
-                },
-                "Property": "date_actual"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
       "data": [
         {
           "properties": {
-            "startDate": {
-              "expr": {
-                "Literal": {
-                  "Value": "datetime'2025-01-01T00:00:00'"
-                }
-              }
-            },
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Between'"
+                  "Value": "'Dropdown'"
                 }
-              }
-            }
-          }
-        }
-      ],
-      "general": [
-        {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "d",
-                    "Entity": "DEFAULT DATA - DATE VIEW",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "Comparison": {
-                        "ComparisonKind": 2,
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "d"
-                              }
-                            },
-                            "Property": "date_actual"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "datetime'2025-01-01T00:00:00'"
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
               }
             }
           }
@@ -122,7 +54,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "9D"
                 }
               }
             },
@@ -136,10 +68,63 @@
           }
         }
       ],
-      "slider": [
+      "general": [
         {
           "properties": {
-            "show": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "selfFilter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "g",
+                    "Entity": "GAMMA - USERS",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Contains": {
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "name"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'jen'"
+                          }
+                        }
+                      }
+                    },
+                    "Annotations": {
+                      "PowerBI.MParameterBehavior": 1
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -148,8 +133,59 @@
             }
           }
         }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b1d0f164e77dcd1c05e3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - USERS"
+              }
+            },
+            "Property": "status"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
