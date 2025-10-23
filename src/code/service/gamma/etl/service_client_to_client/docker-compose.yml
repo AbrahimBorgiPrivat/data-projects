@@ -12,7 +12,7 @@ services:
       SERVICE_NAME: service_client_to_client
     volumes:
       - ./app:/app/app   
-      - ../../../../../../res:/app/res    
+      - ../../../../../../res/gamma/csv:/app/res/gamma/csv  
     networks:
       - gamma_network                    
     command: ["python", "app/main.py"]

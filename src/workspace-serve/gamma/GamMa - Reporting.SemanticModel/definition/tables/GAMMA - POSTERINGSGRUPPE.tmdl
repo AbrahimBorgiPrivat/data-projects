@@ -21,7 +21,7 @@ table 'GAMMA - POSTERINGSGRUPPE'
 		dataType: int64
 		formatString: 0
 		lineageTag: 6b63f10d-d8d1-4476-a1ba-356cb1ce137a
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: posting_group_key
 
 		annotation SummarizationSetBy = Automatic
@@ -38,7 +38,7 @@ table 'GAMMA - POSTERINGSGRUPPE'
 		dataType: int64
 		formatString: 0
 		lineageTag: ada3bec8-c752-4512-9e6c-acef857b9f8e
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: posting_sub_group_key
 
 		annotation SummarizationSetBy = Automatic
@@ -55,7 +55,7 @@ table 'GAMMA - POSTERINGSGRUPPE'
 		dataType: int64
 		formatString: 0
 		lineageTag: 66b0bc28-a0df-47fe-ba3b-b3313b85bba3
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: context_key
 
 		annotation SummarizationSetBy = Automatic

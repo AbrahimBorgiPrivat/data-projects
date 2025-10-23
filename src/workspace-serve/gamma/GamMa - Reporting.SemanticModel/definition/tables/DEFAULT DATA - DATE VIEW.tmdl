@@ -5,7 +5,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 3d6444ed-58d8-4c16-8c04-2d9b4f4eabd9
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: date_dim_id
 
 		annotation SummarizationSetBy = Automatic
@@ -33,7 +33,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: cf2ce4ca-852f-4ed9-bf80-6f3f951a6e12
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: day_of_week
 
 		annotation SummarizationSetBy = Automatic
@@ -42,7 +42,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 402b45be-043d-46dc-9d62-2439d2a08e5e
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: day_of_month
 
 		annotation SummarizationSetBy = Automatic
@@ -51,7 +51,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 8892c393-2873-4181-9ab1-e85fb93142b3
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: day_of_quarter
 
 		annotation SummarizationSetBy = Automatic
@@ -60,7 +60,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: a8251f6c-d2fc-4007-9f3b-b98df2a6f3ff
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: day_of_year
 
 		annotation SummarizationSetBy = Automatic
@@ -69,7 +69,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 81889942-bd28-443b-84ff-2f2d47ebc4fe
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: week_of_month
 
 		annotation SummarizationSetBy = Automatic
@@ -78,7 +78,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 12a3986f-e990-49dc-a5b3-8e6fa7f914e7
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: week_of_year
 
 		annotation SummarizationSetBy = Automatic
@@ -87,7 +87,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 90e6572e-5f93-4bdc-8167-dc6732b0f2d9
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: week_of_year_conv
 
 		annotation SummarizationSetBy = Automatic
@@ -104,7 +104,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 63f4d200-36a9-4e84-af54-9e090e0d8c15
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: month_actual
 
 		annotation SummarizationSetBy = Automatic
@@ -124,7 +124,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: cd23a442-66e1-4a98-9a15-dda815cd6370
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: quarter_actual
 
 		annotation SummarizationSetBy = Automatic
@@ -254,7 +254,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 1a060b1a-15c8-4e09-8328-5578ca60634b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: yyyymm
 
 		annotation SummarizationSetBy = Automatic
@@ -280,7 +280,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 9b7d229b-5ab1-439e-ab74-1802a6f9e4e4
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: is_today
 
 		annotation SummarizationSetBy = Automatic
@@ -289,7 +289,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: a801cb54-de6b-4466-862a-a20b8597be91
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: is_yesterday
 
 		annotation SummarizationSetBy = Automatic
@@ -298,7 +298,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 7492861d-8c6c-4b4e-a931-f8da44214984
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: is_this_week
 
 		annotation SummarizationSetBy = Automatic
@@ -315,7 +315,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: e7b7d02f-54a4-4a11-a997-6705fc99634b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: is_this_month
 
 		annotation SummarizationSetBy = Automatic
@@ -324,7 +324,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: e3a7a1eb-444d-4ba4-a3ae-8b101a952451
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: is_last_month
 
 		annotation SummarizationSetBy = Automatic
@@ -341,7 +341,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 17f29f97-b748-4af9-91da-d5db538f5545
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: is_this_quarter
 
 		annotation SummarizationSetBy = Automatic
@@ -350,7 +350,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 6db19cbb-b38b-4f50-89e6-9b18662e2377
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: is_this_year
 
 		annotation SummarizationSetBy = Automatic
@@ -359,7 +359,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: 84c4f411-4e47-4817-846b-b8189c1c243a
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: is_last_two_year
 
 		annotation SummarizationSetBy = Automatic
@@ -368,7 +368,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: c50dbcd9-476c-43ec-a714-ddbe80ee34a3
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: is_past
 
 		annotation SummarizationSetBy = Automatic
@@ -377,7 +377,7 @@ table 'DEFAULT DATA - DATE VIEW'
 		dataType: int64
 		formatString: 0
 		lineageTag: f851bb30-8b28-4241-a255-f4bde187d112
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: is_before_next_month
 
 		annotation SummarizationSetBy = Automatic

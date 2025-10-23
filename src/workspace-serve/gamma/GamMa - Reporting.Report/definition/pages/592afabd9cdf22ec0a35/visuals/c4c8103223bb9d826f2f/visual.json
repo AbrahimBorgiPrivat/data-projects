@@ -117,7 +117,7 @@
                     "Entity": "GAMMA - POSTERINGER"
                   }
                 },
-                "Property": "date"
+                "Property": "amount"
               }
             },
             "direction": "Descending"

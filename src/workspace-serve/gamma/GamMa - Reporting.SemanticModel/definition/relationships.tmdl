@@ -22,3 +22,16 @@ relationship 24c06520-c194-b4e5-b6de-3619cbc180ce
 	fromColumn: 'GAMMA - POSTERINGER'.date
 	toColumn: 'DEFAULT DATA - DATE VIEW'.date_actual
 
+relationship 74838226-8e5a-23f2-d4cf-9ed9a6d403d7
+	fromColumn: 'GAMMA - FORECAST'.account_id
+	toColumn: 'GAMMA - ACCOUNT'.id
+
+relationship 6d4eab0f-1b7e-b8dc-5c2f-16f87fc6c4eb
+	fromColumn: 'GAMMA - FORECAST'.postering_group_id
+	toColumn: 'GAMMA - POSTERINGSGRUPPE'.id
+
+relationship d2076eef-e1b0-592d-8b81-6216f38a700b
+	toCardinality: many
+	fromColumn: 'GAMMA - FORECAST'.year_actual
+	toColumn: 'DEFAULT DATA - DATE VIEW'.year_actual
+

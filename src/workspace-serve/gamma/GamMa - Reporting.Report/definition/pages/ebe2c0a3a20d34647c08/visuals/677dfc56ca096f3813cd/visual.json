@@ -85,6 +85,25 @@
               },
               "queryRef": "Sum(POSTERINGER.amount)",
               "nativeQueryRef": "Sum af amount"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GAMMA - FORECAST"
+                        }
+                      },
+                      "Property": "forecast"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(GAMMA - FORECAST.forecast)",
+              "nativeQueryRef": "Sum af forecast"
             }
           ]
         }

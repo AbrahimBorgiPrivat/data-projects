@@ -4,7 +4,7 @@ COPY service/gamma/etl/service_client_to_client/requirements.txt ./requirements.
 RUN pip install --no-cache-dir -r requirements.txt
 COPY service/gamma/etl/service_csv_to_client/app ./app
 COPY libraries ./libraries
-COPY runtime_definitions ./runtime_definitions
+COPY runtime_definitions/gamma/csv_to_client ./runtime_definitions/gamma/csv_to_client
 ENV PYTHONPATH=/app/libraries
 CMD ["python", "app/main.py"]
 

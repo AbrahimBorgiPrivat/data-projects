@@ -12,7 +12,7 @@ services:
       SERVICE_NAME: service_create_table_views_from_sql
     volumes:
       - ./app:/app/app   
-      - ../../../../../../res:/app/res  
+      - ../../../../../../res/gamma/csv:/app/res/gamma/csv  
     networks:
       - gamma_network                    
     command: ["python", "app/main.py"]
