@@ -23,7 +23,8 @@ SELECT
     END AS user_id,
     '' AS account_number,
     '' AS posting_group_id,
-    '' AS document
+    '' AS document,
+    false AS belongs_to_last_year
 FROM gamma_db.bank_account bac
 LEFT JOIN gamma_db.mobilepay mp ON mp.transfer_ref = bac.text 
 LEFT JOIN gamma_db.users us ON us.name = mp.payner_name

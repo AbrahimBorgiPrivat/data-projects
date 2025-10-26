@@ -82,8 +82,18 @@ table 'GAMMA - POSTERINGER'
 	column document
 		dataType: string
 		lineageTag: 0da07e2a-1cd3-462d-80d8-809d847ac143
+		dataCategory: WebUrl
 		summarizeBy: none
 		sourceColumn: document
+
+		annotation SummarizationSetBy = Automatic
+
+	column belongs_to_last_year
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 523421d9-a127-4bda-9a60-b7528f5a6d23
+		summarizeBy: none
+		sourceColumn: belongs_to_last_year
 
 		annotation SummarizationSetBy = Automatic
 

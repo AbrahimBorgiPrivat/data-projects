@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "ff7a4f586bc4fc6945ce",
+  "name": "26cdad4e66eeac6c1ae9",
   "position": {
-    "x": 25.449775629962026,
-    "y": 300.62547462892644,
-    "z": 5000,
-    "height": 100.20849154297548,
-    "width": 249.7259233690024,
-    "tabOrder": 3000
+    "x": 25.714285714285715,
+    "y": 391.92118226600985,
+    "z": 6000,
+    "height": 100.19704433497537,
+    "width": 250.04926108374386,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GAMMA - POSTERINGSGRUPPE"
+                      "Entity": "GAMMA - POSTERINGER"
                     }
                   },
-                  "Property": "posting_group"
+                  "Property": "belongs_to_last_year"
                 }
               },
-              "queryRef": "GAMMA - POSTERINGSGRUPPE.posting_group",
-              "nativeQueryRef": "Arrangement",
-              "active": true,
-              "displayName": "Arrangement"
+              "queryRef": "GAMMA - POSTERINGER.belongs_to_last_year",
+              "nativeQueryRef": "belongs_to_last_year",
+              "active": true
             }
           ]
         }
@@ -77,6 +76,47 @@
                 "Literal": {
                   "Value": "true"
                 }
+              }
+            },
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "g",
+                    "Entity": "GAMMA - POSTERINGER",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "g"
+                                }
+                              },
+                              "Property": "belongs_to_last_year"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "false"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -148,44 +188,6 @@
           }
         },
         "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "g",
-              "Entity": "GAMMA - POSTERINGER",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "Comparison": {
-                      "ComparisonKind": 0,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "g"
-                            }
-                          },
-                          "Property": "amount"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "null"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User"
       }
     ]

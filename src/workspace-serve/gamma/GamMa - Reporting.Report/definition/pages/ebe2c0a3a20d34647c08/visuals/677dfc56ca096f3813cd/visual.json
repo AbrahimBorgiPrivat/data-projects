@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 680,
     "width": 480,
-    "tabOrder": 1000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -300,56 +300,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2d4d83b87c00896d8688",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - ACCOUNT"
-              }
-            },
-            "Property": "main_account"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3e71f9a55d6a1769fa56",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - ACCOUNT"
-              }
-            },
-            "Property": "sub_account"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d5acba802101cc7a4d44",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "GAMMA - POSTERINGER"
-                  }
-                },
-                "Property": "amount"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

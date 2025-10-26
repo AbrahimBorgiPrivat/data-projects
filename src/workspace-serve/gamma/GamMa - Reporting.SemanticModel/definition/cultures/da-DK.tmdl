@@ -3697,6 +3697,16 @@ cultureInfo da-DK
 			            },
 			            "Weight": 0.714
 			          }
+			        },
+			        {
+			          "Bruger": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "NameType": "Name"
@@ -5011,6 +5021,16 @@ cultureInfo da-DK
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Bilag": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -8074,9 +8094,725 @@ cultureInfo da-DK
 			        }
 			      ],
 			      "SemanticType": "Time"
+			    },
+			    "gamma__forecast": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - FORECAST"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gamma - forecast": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "gamma forecast": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gamma - prediction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "gamma - projection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "gamma prediction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "gamma projection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "gamma - report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "gamma - estimate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "gamma report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "gamma estimate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__forecast.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - FORECAST",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "gamma__forecast.account_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - FORECAST",
+			          "ConceptualProperty": "account_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "account id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "account_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "account": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "account identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "justification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "reason": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "excuse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__forecast.postering_group_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - FORECAST",
+			          "ConceptualProperty": "postering_group_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "postering group id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "postering_group_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "postering group identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "postering group identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "postering group identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "postering group credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "postering category id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "postering organization id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "postering bracket id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "postering class id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "postering crew id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "postering team id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__forecast.year_actual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - FORECAST",
+			          "ConceptualProperty": "year_actual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "year actual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year_actual": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "actual": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "year real": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "year existent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "year tangible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "real": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "existent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "tangible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "yr actual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "gamma__forecast.forecast": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - FORECAST",
+			          "ConceptualProperty": "forecast"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "forecast": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "prediction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "projection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "estimate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "gamma__forecast_has_forecast": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "gamma__forecast.forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast.forecast"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "gamma__forecast.forecast"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_forecasts"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "gamma__forecast.id": {
+			          "Target": {
+			            "Entity": "gamma__forecast.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "gamma__forecast.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Name": {
+			              "Role": "gamma__forecast.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_gamma__forecasts"
+			        }
+			      ]
+			    },
+			    "default_data__date_view_has_year_actual_hierarki": {
+			      "Binding": {
+			        "ConceptualEntity": "DEFAULT DATA - DATE VIEW"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "default_data__date_view": {
+			          "Target": {
+			            "Entity": "default_data__date_view"
+			          }
+			        },
+			        "default_data__date_view.year_actual_hierarki": {
+			          "Target": {
+			            "Entity": "default_data__date_view.year_actual_hierarki"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "default_data__date_view"
+			            },
+			            "Object": {
+			              "Role": "default_data__date_view.year_actual_hierarki"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "default_data__date_views_have_year_actual_hierarkis"
+			        }
+			      ]
+			    },
+			    "default_data__date_view_has_is_before_next_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DEFAULT DATA - DATE VIEW"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "default_data__date_view": {
+			          "Target": {
+			            "Entity": "default_data__date_view"
+			          }
+			        },
+			        "default_data__date_view.is_before_next_month": {
+			          "Target": {
+			            "Entity": "default_data__date_view.is_before_next_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "default_data__date_view"
+			            },
+			            "Object": {
+			              "Role": "default_data__date_view.is_before_next_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "default_data__date_views_have_is_before_next_month"
+			        }
+			      ]
+			    },
 			    "default_data__date_view_has_is_past": {
 			      "Binding": {
 			        "ConceptualEntity": "DEFAULT DATA - DATE VIEW"
@@ -11439,72 +12175,6 @@ cultureInfo da-DK
 			        }
 			      ]
 			    },
-			    "default_data__date_view_has_is_before_next_month": {
-			      "Binding": {
-			        "ConceptualEntity": "DEFAULT DATA - DATE VIEW"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "default_data__date_view": {
-			          "Target": {
-			            "Entity": "default_data__date_view"
-			          }
-			        },
-			        "default_data__date_view.is_before_next_month": {
-			          "Target": {
-			            "Entity": "default_data__date_view.is_before_next_month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "default_data__date_view"
-			            },
-			            "Object": {
-			              "Role": "default_data__date_view.is_before_next_month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "default_data__date_views_have_is_before_next_month"
-			        }
-			      ]
-			    },
-			    "default_data__date_view_has_year_actual_hierarki": {
-			      "Binding": {
-			        "ConceptualEntity": "DEFAULT DATA - DATE VIEW"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "default_data__date_view": {
-			          "Target": {
-			            "Entity": "default_data__date_view"
-			          }
-			        },
-			        "default_data__date_view.year_actual_hierarki": {
-			          "Target": {
-			            "Entity": "default_data__date_view.year_actual_hierarki"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "default_data__date_view"
-			            },
-			            "Object": {
-			              "Role": "default_data__date_view.year_actual_hierarki"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "default_data__date_views_have_year_actual_hierarkis"
-			        }
-			      ]
-			    },
 			    "gamma__posteringer_has_gamma__mobilepay": {
 			      "Binding": {
 			        "ConceptualEntity": "GAMMA - POSTERINGER"
@@ -11732,6 +12402,131 @@ cultureInfo da-DK
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "default_data__date_views_have_gamma__posteringers"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_gamma__account": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "gamma__account": {
+			          "Target": {
+			            "Entity": "gamma__account"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "gamma__account"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_gamma__accounts"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__account"
+			            },
+			            "Object": {
+			              "Role": "gamma__forecast"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__accounts_have_gamma__forecasts"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_gamma__posteringsgruppe": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "gamma__posteringsgruppe": {
+			          "Target": {
+			            "Entity": "gamma__posteringsgruppe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "gamma__posteringsgruppe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_gamma__posteringsgruppes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringsgruppe"
+			            },
+			            "Object": {
+			              "Role": "gamma__forecast"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringsgruppes_have_gamma__forecasts"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_default_data__date_view": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "default_data__date_view": {
+			          "Target": {
+			            "Entity": "default_data__date_view"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "default_data__date_view"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_default_data__date_views"
 			        }
 			      ]
 			    },

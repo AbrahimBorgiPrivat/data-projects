@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "c4c8103223bb9d826f2f",
   "position": {
-    "x": 320,
-    "y": 20,
+    "x": 320.65171521708555,
+    "y": 20.334011208888352,
     "z": 1000,
-    "height": 680,
-    "width": 480,
-    "tabOrder": 1000
+    "height": 680.40729814357178,
+    "width": 951.00606269262437,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "tableEx",
@@ -44,6 +44,21 @@
               "queryRef": "Sum(GAMMA - POSTERINGER.amount)",
               "nativeQueryRef": "Beløb",
               "displayName": "Beløb"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - USERS"
+                    }
+                  },
+                  "Property": "name"
+                }
+              },
+              "queryRef": "GAMMA - USERS.name",
+              "nativeQueryRef": "Bruger",
+              "displayName": "Bruger"
             },
             {
               "field": {
@@ -103,6 +118,21 @@
               "queryRef": "GAMMA - POSTERINGSGRUPPE.context",
               "nativeQueryRef": "Arrangement",
               "displayName": "Arrangement"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - POSTERINGER"
+                    }
+                  },
+                  "Property": "document"
+                }
+              },
+              "queryRef": "GAMMA - POSTERINGER.document",
+              "nativeQueryRef": "Bilag",
+              "displayName": "Bilag"
             }
           ]
         }
@@ -117,10 +147,10 @@
                     "Entity": "GAMMA - POSTERINGER"
                   }
                 },
-                "Property": "amount"
+                "Property": "date"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -146,6 +176,13 @@
               "expr": {
                 "Literal": {
                   "Value": "9D"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -178,6 +215,76 @@
           },
           "selector": {
             "metadata": "Sum(GAMMA - POSTERINGER.amount)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "231.9583382635305D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GAMMA - POSTERINGER.text"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "84.33333333333333D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GAMMA - ACCOUNT.sub_account"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "138.35534891848545D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GAMMA - USERS.name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "164.63636714975578D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GAMMA - POSTERINGSGRUPPE.context"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "117.50327610877562D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GAMMA - POSTERINGER.date"
           }
         }
       ]
@@ -230,93 +337,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cd916b626ec6433564df",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGER"
-              }
-            },
-            "Property": "date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b2012bf1849efdde6b9e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGSGRUPPE"
-              }
-            },
-            "Property": "context"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "56c236ce4ea1a0bb1cc0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGER"
-              }
-            },
-            "Property": "text"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2313f39ff4b37c69b888",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGER"
-              }
-            },
-            "Property": "amount"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8c574133f086ab4f438d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - ACCOUNT"
-              }
-            },
-            "Property": "main_account"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4e59d72d62212fd23223",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - ACCOUNT"
-              }
-            },
-            "Property": "sub_account"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

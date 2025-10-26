@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 410,
     "width": 450.14290645495339,
-    "tabOrder": 4000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -305,7 +305,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "cd800771349de68a90ce",
+        "name": "3706aea690703c9b148b",
         "field": {
           "Column": {
             "Expression": {
@@ -319,7 +319,7 @@
         "type": "Categorical"
       },
       {
-        "name": "51d674bad22f96cc6cd6",
+        "name": "b4c9d64ec7ae1a0982be",
         "field": {
           "Column": {
             "Expression": {
@@ -333,7 +333,7 @@
         "type": "Categorical"
       },
       {
-        "name": "363a7831501d5ebfb559",
+        "name": "65fe5d9483e06ef104ff",
         "field": {
           "Aggregation": {
             "Expression": {

@@ -7,7 +7,7 @@
     "z": 6000,
     "height": 100.1582504786731,
     "width": 249.45073704122359,
-    "tabOrder": 6000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -169,23 +169,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b1d0f164e77dcd1c05e3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - USERS"
-              }
-            },
-            "Property": "status"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
