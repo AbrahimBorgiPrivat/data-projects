@@ -5,5 +5,6 @@ CREATE TABLE IF NOT EXISTS gamma_db.forecast
     postering_group_id text COLLATE pg_catalog."default",
     year_actual bigint,
     forecast double precision,
+    forecast_type text COLLATE pg_catalog."default",
     CONSTRAINT forecast_pkey PRIMARY KEY (id)
 )

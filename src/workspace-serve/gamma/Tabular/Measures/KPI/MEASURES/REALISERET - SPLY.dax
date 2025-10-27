@@ -1,0 +1,4 @@
+CALCULATE (
+    SUM ( 'GAMMA - POSTERINGER'[amount] ),
+    SAMEPERIODLASTYEAR ( 'DEFAULT DATA - DATE VIEW'[date_actual] )
+)

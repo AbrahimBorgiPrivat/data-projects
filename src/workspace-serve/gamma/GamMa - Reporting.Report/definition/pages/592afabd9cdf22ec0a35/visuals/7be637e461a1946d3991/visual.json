@@ -90,7 +90,7 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'Drift'"
+                    "Value": "'Arrangement'"
                   }
                 }
               ],
@@ -196,5 +196,94 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "619bbd208c022cb5b7f3",
+        "ordinal": 0,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "REALISERET"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "_",
+              "Entity": "_MEASURES - CUSTOM",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "_"
+                            }
+                          },
+                          "Property": "REALISERET"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "8b35213083f5a4a6169f",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - ACCOUNT"
+              }
+            },
+            "Property": "main_account"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "641fa90a7f5027aa93d7",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - ACCOUNT"
+              }
+            },
+            "Property": "sub_account"
+          }
+        },
+        "type": "Categorical"
+      }
+    ],
+    "filterSortOrder": "Custom"
   }
 }

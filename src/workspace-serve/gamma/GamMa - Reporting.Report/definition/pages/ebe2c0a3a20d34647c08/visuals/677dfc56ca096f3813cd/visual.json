@@ -69,22 +69,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GAMMA - POSTERINGER"
-                        }
-                      },
-                      "Property": "amount"
+                    "SourceRef": {
+                      "Entity": "_MEASURES - CUSTOM"
                     }
                   },
-                  "Function": 0
+                  "Property": "REALISERET"
                 }
               },
-              "queryRef": "Sum(POSTERINGER.amount)",
-              "nativeQueryRef": "Sum af amount"
+              "queryRef": "_MEASURES - CUSTOM.REALISERET",
+              "nativeQueryRef": "REALISERET"
             },
             {
               "field": {
@@ -240,15 +235,7 @@
       ],
       "grid": [
         {
-          "properties": {
-            "gridHorizontal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
@@ -259,7 +246,7 @@
             "name": {
               "expr": {
                 "Literal": {
-                  "Value": "'None'"
+                  "Value": "'Minimal'"
                 }
               }
             }

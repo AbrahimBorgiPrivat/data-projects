@@ -1,0 +1,46 @@
+table '_MEASURES - CUSTOM'
+	lineageTag: 77e58648-0c0e-4199-b086-2a18e9e15663
+
+	/// CALCULATE(SUM('GAMMA - POSTERINGER'[amount]))
+	measure REALISERET = CALCULATE(SUM('GAMMA - POSTERINGER'[amount]))
+		formatString: #,0.00\ "kr.";-#,0.00\ "kr.";#,0.00\ "kr."
+		displayFolder: "KPI "
+		lineageTag: 9a457d8b-40be-45fb-86d3-19f58feccbb3
+
+	/// CALCULATE (
+	///     SUM ( 'GAMMA - POSTERINGER'[amount] ),
+	///     SAMEPERIODLASTYEAR ( 'DEFAULT DATA - DATE VIEW'[date_actual] )
+	/// )
+	measure 'REALISERET - SPLY' =
+			CALCULATE (
+			    SUM ( 'GAMMA - POSTERINGER'[amount] ),
+			    SAMEPERIODLASTYEAR ( 'DEFAULT DATA - DATE VIEW'[date_actual] )
+			)
+		formatString: #,0.00\ "kr.";-#,0.00\ "kr.";#,0.00\ "kr."
+		displayFolder: "KPI "
+		lineageTag: f9cd314c-14e6-4789-871c-454a09936caa
+
+	/// CALCULATE(SUM('GAMMA - FORECAST'[forecast]))
+	measure FORECAST = CALCULATE(SUM('GAMMA - FORECAST'[forecast]))
+		formatString: #,0.00\ "kr.";-#,0.00\ "kr.";#,0.00\ "kr."
+		displayFolder: "KPI "
+		lineageTag: 7018f516-76c3-486b-9394-840f088003d3
+
+	/// CALCULATE([FORECAST],ALL('GAMMA - FORECAST'[forecast_type])) 
+	measure 'FORECAST - W.O. FILTER' = ```
+			CALCULATE([FORECAST],ALL('GAMMA - FORECAST'[forecast_type])) 
+			```
+		formatString: #,0.00\ "kr.";-#,0.00\ "kr.";#,0.00\ "kr."
+		displayFolder: "KPI "
+		lineageTag: 711183d4-3a96-4e24-9be1-9ef35e28a59d
+
+	column DoNotUse
+		isHidden
+		lineageTag: ba99afcc-a2df-4a18-97fa-6ccb0e3eac6e
+		isNameInferred
+		sourceColumn: [DoNotUse]
+
+	partition '_MEASURES - CUSTOM' = calculated
+		mode: import
+		source = SELECTCOLUMNS({}, "DoNotUse", 1)
+

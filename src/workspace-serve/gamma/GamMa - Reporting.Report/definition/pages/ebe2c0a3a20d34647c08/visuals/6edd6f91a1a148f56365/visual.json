@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "26cdad4e66eeac6c1ae9",
+  "name": "6edd6f91a1a148f56365",
   "position": {
     "x": 10,
-    "y": 400.85482034791988,
-    "z": 6000,
+    "y": 500,
+    "z": 6001,
     "height": 100,
     "width": 280,
-    "tabOrder": 5000
+    "tabOrder": 6001
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GAMMA - FORECAST"
+                      "Entity": "GAMMA - POSTERINGER"
                     }
                   },
-                  "Property": "forecast_type"
+                  "Property": "belongs_to_last_year"
                 }
               },
-              "queryRef": "GAMMA - FORECAST.forecast_type",
-              "nativeQueryRef": "FC",
-              "active": true,
-              "displayName": "FC"
+              "queryRef": "GAMMA - POSTERINGER.belongs_to_last_year",
+              "nativeQueryRef": "belongs_to_last_year",
+              "active": true
             }
           ]
         }
@@ -65,6 +64,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Postering tilhører sidste år'"
+                }
+              }
             }
           }
         }
@@ -85,7 +91,7 @@
                 "From": [
                   {
                     "Name": "g",
-                    "Entity": "GAMMA - FORECAST",
+                    "Entity": "GAMMA - POSTERINGER",
                     "Type": 0
                   }
                 ],
@@ -101,7 +107,7 @@
                                   "Source": "g"
                                 }
                               },
-                              "Property": "forecast_type"
+                              "Property": "belongs_to_last_year"
                             }
                           }
                         ],
@@ -109,7 +115,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'BU'"
+                                "Value": "false"
                               }
                             }
                           ]

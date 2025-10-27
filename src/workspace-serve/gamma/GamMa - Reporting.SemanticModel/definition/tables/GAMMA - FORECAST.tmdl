@@ -44,6 +44,14 @@ table 'GAMMA - FORECAST'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column forecast_type
+		dataType: string
+		lineageTag: b2d87966-56a2-4781-afb2-8a3718ca53e8
+		summarizeBy: none
+		sourceColumn: forecast_type
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'GAMMA - FORECAST' = m
 		mode: import
 		source =
