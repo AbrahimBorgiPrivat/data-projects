@@ -818,6 +818,16 @@ cultureInfo da-DK
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Indtægt/Udgift": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3813,6 +3823,16 @@ cultureInfo da-DK
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Bruger Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9214,11 +9234,1071 @@ cultureInfo da-DK
 			          "realiseret": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "AC'": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "AC": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measures__custom.realiseret__sply": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_MEASURES - CUSTOM",
+			          "ConceptualProperty": "REALISERET - SPLY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "realiseret - sply": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "realiseret sply": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "SPLY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measures__custom.forecast": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_MEASURES - CUSTOM",
+			          "ConceptualProperty": "FORECAST"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "forecast": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "prediction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "projection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "estimate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "FC": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measures__custom.forecast__w_o__filter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_MEASURES - CUSTOM",
+			          "ConceptualProperty": "FORECAST - W.O. FILTER"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "forecast - w.o. filter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "forecast w.o. filter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "prediction - w.o. filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "projection - w.o. filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "prediction w.o. filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "projection w.o. filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "report - w.o. filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "estimate - w.o. filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "report w.o. filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "estimate w.o. filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "forecast - w.o. strainer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "forecast - w.o. sifter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measures__custom.forecast__bu": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_MEASURES - CUSTOM",
+			          "ConceptualProperty": "FORECAST - BU"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "forecast - bu": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "forecast bu": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "bu": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "prediction - bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "projection - bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "prediction bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "projection bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "report - bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "estimate - bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "report bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "estimate bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measures__custom.forecast__not_bu": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_MEASURES - CUSTOM",
+			          "ConceptualProperty": "FORECAST - NOT BU"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "forecast - not bu": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "forecast not bu": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "bu": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "not bu": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "prediction - not bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "projection - not bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "prediction not bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "projection not bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "report - not bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "estimate - not bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "report not bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "estimate not bu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "FC": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measures__custom.medlemsbetalinger": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_MEASURES - CUSTOM",
+			          "ConceptualProperty": "MEDLEMSBETALINGER"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medlemsbetalinger": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measures__custom.medlemsbetalinger_ytd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_MEASURES - CUSTOM",
+			          "ConceptualProperty": "MEDLEMSBETALINGER YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medlemsbetalinger ytd": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medlemsbetalinger year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "TY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measures__custom.medlemsbetalinger__sply": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_MEASURES - CUSTOM",
+			          "ConceptualProperty": "MEDLEMSBETALINGER - SPLY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medlemsbetalinger - sply": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medlemsbetalinger sply": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measures__custom.medlemsbetalinger_ytd__sply": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_MEASURES - CUSTOM",
+			          "ConceptualProperty": "MEDLEMSBETALINGER YTD - SPLY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medlemsbetalinger ytd - sply": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medlemsbetalinger ytd sply": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "medlemsbetalinger year to date - sply": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "medlemsbetalinger year to date sply": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.498
+			          }
+			        },
+			        {
+			          "SPLY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "gamma__posteringer_has_entity__measures__custom_medlemsbetalinger_ytd__sply": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - POSTERINGER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__posteringer": {
+			          "Target": {
+			            "Entity": "gamma__posteringer"
+			          }
+			        },
+			        "entity__measures__custom.medlemsbetalinger_ytd__sply": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.medlemsbetalinger_ytd__sply"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringer"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.medlemsbetalinger_ytd__sply"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringers_have_medlemsbetalinger_ytd__sply"
+			        }
+			      ]
+			    },
+			    "default_data__date_view_has_entity__measures__custom_medlemsbetalinger_ytd__sply": {
+			      "Binding": {
+			        "ConceptualEntity": "DEFAULT DATA - DATE VIEW"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "default_data__date_view": {
+			          "Target": {
+			            "Entity": "default_data__date_view"
+			          }
+			        },
+			        "entity__measures__custom.medlemsbetalinger_ytd__sply": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.medlemsbetalinger_ytd__sply"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "default_data__date_view"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.medlemsbetalinger_ytd__sply"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "default_data__date_views_have_medlemsbetalinger_ytd__sply"
+			        }
+			      ]
+			    },
+			    "gamma__posteringer_has_entity__measures__custom_medlemsbetalinger__sply": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - POSTERINGER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__posteringer": {
+			          "Target": {
+			            "Entity": "gamma__posteringer"
+			          }
+			        },
+			        "entity__measures__custom.medlemsbetalinger__sply": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.medlemsbetalinger__sply"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringer"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.medlemsbetalinger__sply"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringers_have_medlemsbetalinger__sply"
+			        }
+			      ]
+			    },
+			    "gamma__posteringer_has_entity__measures__custom_medlemsbetalinger_ytd": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - POSTERINGER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__posteringer": {
+			          "Target": {
+			            "Entity": "gamma__posteringer"
+			          }
+			        },
+			        "entity__measures__custom.medlemsbetalinger_ytd": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.medlemsbetalinger_ytd"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringer"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.medlemsbetalinger_ytd"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringers_have_medlemsbetalinger_ytd"
+			        }
+			      ]
+			    },
+			    "default_data__date_view_has_entity__measures__custom_medlemsbetalinger_ytd": {
+			      "Binding": {
+			        "ConceptualEntity": "DEFAULT DATA - DATE VIEW"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "default_data__date_view": {
+			          "Target": {
+			            "Entity": "default_data__date_view"
+			          }
+			        },
+			        "entity__measures__custom.medlemsbetalinger_ytd": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.medlemsbetalinger_ytd"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "default_data__date_view"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.medlemsbetalinger_ytd"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "default_data__date_views_have_medlemsbetalinger_ytd"
+			        }
+			      ]
+			    },
+			    "gamma__posteringer_has_entity__measures__custom_medlemsbetalinger": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - POSTERINGER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__posteringer": {
+			          "Target": {
+			            "Entity": "gamma__posteringer"
+			          }
+			        },
+			        "entity__measures__custom.medlemsbetalinger": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.medlemsbetalinger"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringer"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.medlemsbetalinger"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringers_have_medlemsbetalinger"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_entity__measures__custom_forecast__not_bu": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "entity__measures__custom.forecast__not_bu": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.forecast__not_bu"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.forecast__not_bu"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_forecast__not_bu"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_entity__measures__custom_forecast__bu": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "entity__measures__custom.forecast__bu": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.forecast__bu"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.forecast__bu"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_forecast__bu"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_entity__measures__custom_forecast__w_o__filter": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "entity__measures__custom.forecast__w_o__filter": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.forecast__w_o__filter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.forecast__w_o__filter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_forecast__w_o__filter"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_entity__measures__custom_forecast": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "entity__measures__custom.forecast": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.forecast"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.forecast"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_forecast"
+			        }
+			      ]
+			    },
+			    "gamma__posteringer_has_entity__measures__custom_realiseret__sply": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - POSTERINGER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__posteringer": {
+			          "Target": {
+			            "Entity": "gamma__posteringer"
+			          }
+			        },
+			        "entity__measures__custom.realiseret__sply": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.realiseret__sply"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringer"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.realiseret__sply"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringers_have_realiseret__sply"
+			        }
+			      ]
+			    },
+			    "gamma__posteringer_has_entity__measures__custom_realiseret": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - POSTERINGER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__posteringer": {
+			          "Target": {
+			            "Entity": "gamma__posteringer"
+			          }
+			        },
+			        "entity__measures__custom.realiseret": {
+			          "Target": {
+			            "Entity": "entity__measures__custom.realiseret"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringer"
+			            },
+			            "Object": {
+			              "Role": "entity__measures__custom.realiseret"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringers_have_realiseret"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_forecast_type": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "gamma__forecast.forecast_type": {
+			          "Target": {
+			            "Entity": "gamma__forecast.forecast_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "gamma__forecast.forecast_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_forecast_types"
+			        }
+			      ]
+			    },
+			    "gamma__posteringer_has_belongs_to_last_year": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - POSTERINGER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__posteringer": {
+			          "Target": {
+			            "Entity": "gamma__posteringer"
+			          }
+			        },
+			        "gamma__posteringer.belongs_to_last_year": {
+			          "Target": {
+			            "Entity": "gamma__posteringer.belongs_to_last_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringer"
+			            },
+			            "Object": {
+			              "Role": "gamma__posteringer.belongs_to_last_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringers_have_belongs_to_last_year"
+			        }
+			      ]
+			    },
 			    "gamma__forecast_has_forecast": {
 			      "Binding": {
 			        "ConceptualEntity": "GAMMA - FORECAST"
@@ -12723,105 +13803,6 @@ cultureInfo da-DK
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "gamma__users_have_gamma__posteringers"
-			        }
-			      ]
-			    },
-			    "gamma__posteringer_has_belongs_to_last_year": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - POSTERINGER"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__posteringer": {
-			          "Target": {
-			            "Entity": "gamma__posteringer"
-			          }
-			        },
-			        "gamma__posteringer.belongs_to_last_year": {
-			          "Target": {
-			            "Entity": "gamma__posteringer.belongs_to_last_year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__posteringer"
-			            },
-			            "Object": {
-			              "Role": "gamma__posteringer.belongs_to_last_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__posteringers_have_belongs_to_last_year"
-			        }
-			      ]
-			    },
-			    "gamma__forecast_has_forecast_type": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - FORECAST"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__forecast": {
-			          "Target": {
-			            "Entity": "gamma__forecast"
-			          }
-			        },
-			        "gamma__forecast.forecast_type": {
-			          "Target": {
-			            "Entity": "gamma__forecast.forecast_type"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__forecast"
-			            },
-			            "Object": {
-			              "Role": "gamma__forecast.forecast_type"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__forecasts_have_forecast_types"
-			        }
-			      ]
-			    },
-			    "gamma__posteringer_has_entity__measures__custom_realiseret": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - POSTERINGER"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__posteringer": {
-			          "Target": {
-			            "Entity": "gamma__posteringer"
-			          }
-			        },
-			        "entity__measures__custom.realiseret": {
-			          "Target": {
-			            "Entity": "entity__measures__custom.realiseret"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__posteringer"
-			            },
-			            "Object": {
-			              "Role": "entity__measures__custom.realiseret"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__posteringers_have_realiseret"
 			        }
 			      ]
 			    },

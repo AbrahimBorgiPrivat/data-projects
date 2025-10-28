@@ -131,6 +131,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "posting_group",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {

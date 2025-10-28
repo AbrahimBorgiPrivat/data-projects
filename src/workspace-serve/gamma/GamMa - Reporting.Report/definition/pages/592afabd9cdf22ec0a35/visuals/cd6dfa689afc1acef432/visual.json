@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "92b5317def95526e08ff",
+  "name": "cd6dfa689afc1acef432",
   "position": {
-    "x": 25,
+    "x": 10,
     "y": 100,
-    "z": 2000,
+    "z": 6002,
     "height": 100,
-    "width": 250
+    "width": 280,
+    "tabOrder": 5001
   },
   "visual": {
     "visualType": "slicer",
@@ -59,14 +60,14 @@
             "startDate": {
               "expr": {
                 "Literal": {
-                  "Value": "datetime'2024-01-01T00:00:00'"
+                  "Value": "datetime'2025-01-01T00:00:00'"
                 }
               }
             },
             "endDate": {
               "expr": {
                 "Literal": {
-                  "Value": "datetime'2024-12-31T00:00:00'"
+                  "Value": "datetime'2025-10-28T00:00:00'"
                 }
               }
             },
@@ -112,7 +113,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "datetime'2024-01-01T00:00:00'"
+                                "Value": "datetime'2025-01-01T00:00:00'"
                               }
                             }
                           }
@@ -132,7 +133,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "datetime'2025-01-01T00:00:00'"
+                                "Value": "datetime'2025-10-29T00:00:00'"
                               }
                             }
                           }
@@ -180,6 +181,71 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "date_actual",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c94635a497062ea26708",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DEFAULT DATA - DATE VIEW"
+              }
+            },
+            "Property": "is_last_two_year"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DEFAULT DATA - DATE VIEW",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "is_last_two_year"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
+      }
+    ]
   }
 }

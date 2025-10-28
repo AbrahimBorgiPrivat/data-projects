@@ -1,0 +1,1 @@
+CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] <> "BU")

@@ -1,1 +1,1 @@
-CALCULATE([FORECAST],ALL('GAMMA - FORECAST'[forecast_type])) 
+CALCULATE([FORECAST], ALL('GAMMA - FORECAST'[forecast_type]) )

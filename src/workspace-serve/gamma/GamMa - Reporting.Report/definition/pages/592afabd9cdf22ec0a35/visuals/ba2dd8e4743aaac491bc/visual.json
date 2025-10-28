@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "7be637e461a1946d3991",
+  "name": "ba2dd8e4743aaac491bc",
   "position": {
-    "x": 25.449775629962026,
-    "y": 200,
-    "z": 0,
-    "height": 100,
-    "width": 250,
-    "tabOrder": 4000
+    "x": 10,
+    "y": 300.62547462892644,
+    "z": 6003,
+    "height": 100.20849154297548,
+    "width": 280,
+    "tabOrder": 5002
   },
   "visual": {
     "visualType": "slicer",
@@ -20,86 +20,21 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
+                      "Entity": "GAMMA - POSTERINGSGRUPPE"
                     }
                   },
-                  "Property": "main_account"
+                  "Property": "posting_group"
                 }
               },
-              "queryRef": "ACCOUNT.main_account",
-              "nativeQueryRef": "Konto",
+              "queryRef": "GAMMA - POSTERINGSGRUPPE.posting_group",
+              "nativeQueryRef": "Arrangement",
               "active": true,
-              "displayName": "Konto"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
-                    }
-                  },
-                  "Property": "sub_account"
-                }
-              },
-              "queryRef": "GAMMA - ACCOUNT.sub_account",
-              "nativeQueryRef": "Underkonto",
-              "active": true,
-              "displayName": "Underkonto"
+              "displayName": "Arrangement"
             }
           ]
         }
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Values"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "ACCOUNT.main_account"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
-                    }
-                  },
-                  "Property": "main_account"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "GAMMA - ACCOUNT.sub_account"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          }
-        ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Arrangement'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
-      }
-    ],
     "objects": {
       "data": [
         {
@@ -130,20 +65,21 @@
                   "Value": "true"
                 }
               }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Konto'"
-                }
-              }
             }
           }
         }
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -195,21 +131,25 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "posting_group",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "619bbd208c022cb5b7f3",
-        "ordinal": 0,
+        "name": "a733529c967ca813afe0",
         "field": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_MEASURES - CUSTOM"
+                "Entity": "GAMMA - POSTERINGER"
               }
             },
-            "Property": "REALISERET"
+            "Property": "amount"
           }
         },
         "type": "Advanced",
@@ -217,8 +157,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "_",
-              "Entity": "_MEASURES - CUSTOM",
+              "Name": "g",
+              "Entity": "GAMMA - POSTERINGER",
               "Type": 0
             }
           ],
@@ -230,13 +170,13 @@
                     "Comparison": {
                       "ComparisonKind": 0,
                       "Left": {
-                        "Measure": {
+                        "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Source": "_"
+                              "Source": "g"
                             }
                           },
-                          "Property": "REALISERET"
+                          "Property": "amount"
                         }
                       },
                       "Right": {
@@ -252,38 +192,7 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "8b35213083f5a4a6169f",
-        "ordinal": 1,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - ACCOUNT"
-              }
-            },
-            "Property": "main_account"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "641fa90a7f5027aa93d7",
-        "ordinal": 2,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - ACCOUNT"
-              }
-            },
-            "Property": "sub_account"
-          }
-        },
-        "type": "Categorical"
       }
-    ],
-    "filterSortOrder": "Custom"
+    ]
   }
 }

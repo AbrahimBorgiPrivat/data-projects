@@ -8,9 +8,22 @@ namespace TabularEditorCLITool
     {
         public static readonly Dictionary<string, string> FormatStrings = new()
         {
-            ["danish_currency"] = "#,0.00\\ \"kr.\";-#,0.00\\ \"kr.\";#,0.00\\ \"kr.\"",
-            ["decimal_point"]   = "0.00",
-            ["percent"]         = "0.##%"
+            ["danish_currency"]     = "#,0\\ \"kr.\";-#,0\\ \"kr.\";#,0\\ \"kr.\"",
+            ["danish_currency_dec"] = "#,0.00\\ \"kr.\";-#,0.00\\ \"kr.\";#,0.00\\ \"kr.\"",  // With decimals
+            ["decimal_point"]       = "0.00",
+            ["decimal_integer"]     = "0",
+            ["percent"]             = "0.##%",
+            ["whole_number"]        = "#,0",
+            ["number_with_2_dec"]   = "#,0.00",
+            ["number_with_1_dec"]   = "#,0.0",
+            ["scientific"]          = "0.00E+00",
+            ["date_short"]          = "dd-MM-yyyy",
+            ["date_long"]           = "dddd, d. MMMM yyyy",
+            ["datetime"]            = "dd-MM-yyyy HH:mm",
+            ["time_24hr"]           = "HH:mm",
+            ["time_12hr"]           = "hh:mm tt",
+            ["accounting"]          = "_( #,0.00_);_( (#,0.00);_(-_);_(@_)",
+            ["custom_text"]         = "@"
         };
 
         public static dynamic CheckTable(dynamic model, string tableName)

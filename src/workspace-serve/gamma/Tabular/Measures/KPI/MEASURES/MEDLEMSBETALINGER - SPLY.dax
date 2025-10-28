@@ -1,0 +1,4 @@
+CALCULATE(
+        [MEDLEMSBETALINGER],
+        SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+    )

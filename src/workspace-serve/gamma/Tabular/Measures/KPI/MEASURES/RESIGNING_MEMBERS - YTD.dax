@@ -1,0 +1,4 @@
+TOTALYTD(
+    [RESIGNING_MEMBERS],
+    'DEFAULT DATA - DATE VIEW'[date_actual]
+)

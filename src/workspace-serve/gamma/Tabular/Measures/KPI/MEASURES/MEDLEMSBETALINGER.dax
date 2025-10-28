@@ -1,0 +1,4 @@
+CALCULATE (
+    DISTINCTCOUNTNOBLANK ( 'GAMMA - POSTERINGER'[user_id] ),
+    'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
+) + 0

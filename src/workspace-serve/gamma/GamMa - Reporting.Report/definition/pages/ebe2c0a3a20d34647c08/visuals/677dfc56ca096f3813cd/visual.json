@@ -79,26 +79,38 @@
                 }
               },
               "queryRef": "_MEASURES - CUSTOM.REALISERET",
-              "nativeQueryRef": "REALISERET"
+              "nativeQueryRef": "AC'",
+              "displayName": "AC'"
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GAMMA - FORECAST"
-                        }
-                      },
-                      "Property": "forecast"
+                    "SourceRef": {
+                      "Entity": "_MEASURES - CUSTOM"
                     }
                   },
-                  "Function": 0
+                  "Property": "FORECAST"
                 }
               },
-              "queryRef": "Sum(GAMMA - FORECAST.forecast)",
-              "nativeQueryRef": "Sum af forecast"
+              "queryRef": "_MEASURES - CUSTOM.FORECAST",
+              "nativeQueryRef": "FC",
+              "displayName": "FC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES - CUSTOM"
+                    }
+                  },
+                  "Property": "REALISERET - SPLY"
+                }
+              },
+              "queryRef": "_MEASURES - CUSTOM.REALISERET - SPLY",
+              "nativeQueryRef": "SPLY",
+              "displayName": "SPLY"
             }
           ]
         }

@@ -150,7 +150,7 @@
                 "Property": "date"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }

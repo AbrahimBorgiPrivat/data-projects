@@ -1,0 +1,4 @@
+TOTALYTD(
+    [NEW_REWON MEMBERS],
+    'DEFAULT DATA - DATE VIEW'[date_actual]
+)

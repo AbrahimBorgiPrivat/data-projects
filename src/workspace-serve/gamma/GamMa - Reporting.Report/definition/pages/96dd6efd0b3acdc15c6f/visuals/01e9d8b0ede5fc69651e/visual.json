@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "a5c2c347aca4686c3684",
+  "name": "01e9d8b0ede5fc69651e",
   "position": {
     "x": 10,
     "y": 100,
-    "z": 3000,
+    "z": 1,
     "height": 100,
     "width": 280,
-    "tabOrder": 1000
+    "tabOrder": 1
   },
   "visual": {
     "visualType": "slicer",
@@ -190,20 +190,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "1ad3933b25207e36f6d3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DEFAULT DATA - DATE VIEW"
-              }
-            },
-            "Property": "date_actual"
-          }
-        },
-        "type": "RelativeDate"
-      },
       {
         "name": "c94635a497062ea26708",
         "field": {

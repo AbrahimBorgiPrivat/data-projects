@@ -3,36 +3,194 @@ table '_MEASURES - CUSTOM'
 
 	/// CALCULATE(SUM('GAMMA - POSTERINGER'[amount]))
 	measure REALISERET = CALCULATE(SUM('GAMMA - POSTERINGER'[amount]))
-		formatString: #,0.00\ "kr.";-#,0.00\ "kr.";#,0.00\ "kr."
-		displayFolder: "KPI "
-		lineageTag: 9a457d8b-40be-45fb-86d3-19f58feccbb3
+		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
+		displayFolder: KPI \ REALISERET
+		lineageTag: 219ff2ac-f7d5-4004-a44f-e23bda5b744e
 
-	/// CALCULATE (
-	///     SUM ( 'GAMMA - POSTERINGER'[amount] ),
-	///     SAMEPERIODLASTYEAR ( 'DEFAULT DATA - DATE VIEW'[date_actual] )
+	/// VAR BelongsToLastYear = SELECTEDVALUE('GAMMA - POSTERINGER'[belongs_to_last_year], FALSE)
+	/// RETURN
+	/// IF (
+	///     NOT BelongsToLastYear,
+	///     CALCULATE(
+	///         [REALISERET],
+	///         SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+	///     ) +
+	///     CALCULATE(
+	///         [REALISERET],
+	///         'GAMMA - POSTERINGER'[belongs_to_last_year] = TRUE
+	///     ),
+	///     CALCULATE(
+	///         [REALISERET],
+	///         SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+	///     )
 	/// )
 	measure 'REALISERET - SPLY' =
-			CALCULATE (
-			    SUM ( 'GAMMA - POSTERINGER'[amount] ),
-			    SAMEPERIODLASTYEAR ( 'DEFAULT DATA - DATE VIEW'[date_actual] )
+			VAR BelongsToLastYear = SELECTEDVALUE('GAMMA - POSTERINGER'[belongs_to_last_year], FALSE)
+			RETURN
+			IF (
+			    NOT BelongsToLastYear,
+			    CALCULATE(
+			        [REALISERET],
+			        SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+			    ) +
+			    CALCULATE(
+			        [REALISERET],
+			        'GAMMA - POSTERINGER'[belongs_to_last_year] = TRUE
+			    ),
+			    CALCULATE(
+			        [REALISERET],
+			        SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+			    )
 			)
-		formatString: #,0.00\ "kr.";-#,0.00\ "kr.";#,0.00\ "kr."
-		displayFolder: "KPI "
-		lineageTag: f9cd314c-14e6-4789-871c-454a09936caa
+		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
+		displayFolder: KPI \ REALISERET
+		lineageTag: 7f632cdd-b7ee-4f4e-95bb-f6a5419392c0
 
 	/// CALCULATE(SUM('GAMMA - FORECAST'[forecast]))
 	measure FORECAST = CALCULATE(SUM('GAMMA - FORECAST'[forecast]))
-		formatString: #,0.00\ "kr.";-#,0.00\ "kr.";#,0.00\ "kr."
-		displayFolder: "KPI "
-		lineageTag: 7018f516-76c3-486b-9394-840f088003d3
+		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
+		displayFolder: KPI \ FC
+		lineageTag: 84661b95-9d3d-4da4-9f82-da7680e6c032
 
-	/// CALCULATE([FORECAST],ALL('GAMMA - FORECAST'[forecast_type])) 
-	measure 'FORECAST - W.O. FILTER' = ```
-			CALCULATE([FORECAST],ALL('GAMMA - FORECAST'[forecast_type])) 
+	/// CALCULATE([FORECAST], ALL('GAMMA - FORECAST'[forecast_type]) )
+	measure 'FORECAST - W.O. FILTER' = CALCULATE([FORECAST], ALL('GAMMA - FORECAST'[forecast_type]) )
+		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
+		displayFolder: KPI \ FC
+		lineageTag: 9e4e7b84-4d24-49c6-a050-af26407f9b70
+
+	/// CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] = "BU") 
+	measure 'FORECAST - BU' = ```
+			CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] = "BU") 
 			```
-		formatString: #,0.00\ "kr.";-#,0.00\ "kr.";#,0.00\ "kr."
-		displayFolder: "KPI "
-		lineageTag: 711183d4-3a96-4e24-9be1-9ef35e28a59d
+		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
+		displayFolder: KPI \ FC
+		lineageTag: 8b3efdad-deaf-4839-ad7a-bacc95c6f95d
+
+	/// CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] <> "BU")
+	measure 'FORECAST - NOT BU' = CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] <> "BU")
+		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
+		displayFolder: KPI \ FC
+		lineageTag: 0742a443-28a7-4a64-9a85-acb2494e06f6
+
+	/// CALCULATE (
+	///     DISTINCTCOUNTNOBLANK ( 'GAMMA - POSTERINGER'[user_id] ),
+	///     'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
+	/// ) + 0
+	measure MEDLEMSBETALINGER =
+			CALCULATE (
+			    DISTINCTCOUNTNOBLANK ( 'GAMMA - POSTERINGER'[user_id] ),
+			    'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
+			) + 0
+		formatString: #,0
+		displayFolder: KPI \ MEDLEMMER
+		lineageTag: a98d919c-cad4-45a8-a96c-6bb6daa76902
+
+	/// TOTALYTD(
+	///     [MEDLEMSBETALINGER],
+	///     'DEFAULT DATA - DATE VIEW'[date_actual]
+	/// )
+	measure 'MEDLEMSBETALINGER YTD' =
+			TOTALYTD(
+			    [MEDLEMSBETALINGER],
+			    'DEFAULT DATA - DATE VIEW'[date_actual]
+			)
+		formatString: #,0
+		displayFolder: KPI \ MEDLEMMER
+		lineageTag: d793e1ba-8122-4908-b4b9-e20d63276797
+
+	/// CALCULATE(
+	///         [MEDLEMSBETALINGER],
+	///         SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+	///     )
+	measure 'MEDLEMSBETALINGER - SPLY' =
+			CALCULATE(
+			        [MEDLEMSBETALINGER],
+			        SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+			    )
+		formatString: #,0
+		displayFolder: KPI \ MEDLEMMER
+		lineageTag: f787ae1e-1c02-4d95-bd9c-0fd52eea3e17
+
+	/// TOTALYTD(
+	///     [MEDLEMSBETALINGER YTD],
+	///     SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+	/// )
+	measure 'MEDLEMSBETALINGER YTD - SPLY' =
+			TOTALYTD(
+			    [MEDLEMSBETALINGER YTD],
+			    SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+			)
+		formatString: #,0
+		displayFolder: KPI \ MEDLEMMER
+		lineageTag: 50b732cd-6402-473e-9806-c740ac3bf860
+
+	/// VAR ThisPeriodUsers =
+	///     CALCULATETABLE(
+	///         VALUES('GAMMA - POSTERINGER'[user_id]),
+	///         'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
+	///     )
+	/// VAR LastYearUsers =
+	///     CALCULATETABLE(
+	///         VALUES('GAMMA - POSTERINGER'[user_id]),
+	///         SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual]),
+	///         'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
+	///     )
+	/// VAR OnlyThisYearUsers = 
+	///     EXCEPT(ThisPeriodUsers, LastYearUsers)
+	/// RETURN 
+	/// COUNTROWS(OnlyThisYearUsers)
+	measure 'NEW_REWON MEMBERS' = ```
+			VAR ThisPeriodUsers =
+			    CALCULATETABLE(
+			        VALUES('GAMMA - POSTERINGER'[user_id]),
+			        'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
+			    )
+			VAR LastYearUsers =
+			    CALCULATETABLE(
+			        VALUES('GAMMA - POSTERINGER'[user_id]),
+			        SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual]),
+			        'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
+			    )
+			VAR OnlyThisYearUsers = 
+			    EXCEPT(ThisPeriodUsers, LastYearUsers)
+			RETURN 
+			COUNTROWS(OnlyThisYearUsers)
+			```
+		formatString: #,0
+		displayFolder: KPI \ MEDLEMMER
+		lineageTag: 45953527-eb08-40ba-81ab-682b94259fb7
+
+	/// TOTALYTD(
+	///     [NEW_REWON MEMBERS],
+	///     'DEFAULT DATA - DATE VIEW'[date_actual]
+	/// )
+	measure 'NEW_REWON MEMBERS - YTD' =
+			TOTALYTD(
+			    [NEW_REWON MEMBERS],
+			    'DEFAULT DATA - DATE VIEW'[date_actual]
+			)
+		formatString: #,0
+		displayFolder: KPI \ MEDLEMMER
+		lineageTag: 26cb9af3-ccb2-410d-bb5b-e7c08b940621
+
+	/// [MEDLEMSBETALINGER]-[NEW_REWON MEMBERS]
+	measure RESIGNING_MEMBERS = [MEDLEMSBETALINGER]-[NEW_REWON MEMBERS]
+		formatString: #,0
+		displayFolder: KPI \ MEDLEMMER
+		lineageTag: 423eddcf-d522-4916-9e92-fc8c859d776d
+
+	/// TOTALYTD(
+	///     [RESIGNING_MEMBERS],
+	///     'DEFAULT DATA - DATE VIEW'[date_actual]
+	/// )
+	measure 'RESIGNING_MEMBERS - YTD' =
+			TOTALYTD(
+			    [RESIGNING_MEMBERS],
+			    'DEFAULT DATA - DATE VIEW'[date_actual]
+			)
+		formatString: #,0
+		displayFolder: KPI \ MEDLEMMER
+		lineageTag: fbd3bbd7-2531-4d8d-a8f3-7016ec2d238b
 
 	column DoNotUse
 		isHidden

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "a505b3b487aabab6c43e",
   "position": {
-    "x": 25.449775629962026,
+    "x": 10,
     "y": 400.83396617190192,
     "z": 5000,
     "height": 100.20849154297548,
-    "width": 249.7259233690024,
+    "width": 280,
     "tabOrder": 2000
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "GAMMA - USERS.name",
-              "nativeQueryRef": "name",
-              "active": true
+              "nativeQueryRef": "Bruger",
+              "active": true,
+              "displayName": "Bruger"
             }
           ]
         }

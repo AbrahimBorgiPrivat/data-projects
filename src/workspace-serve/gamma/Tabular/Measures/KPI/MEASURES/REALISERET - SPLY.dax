@@ -1,4 +1,17 @@
-CALCULATE (
-    SUM ( 'GAMMA - POSTERINGER'[amount] ),
-    SAMEPERIODLASTYEAR ( 'DEFAULT DATA - DATE VIEW'[date_actual] )
+VAR BelongsToLastYear = SELECTEDVALUE('GAMMA - POSTERINGER'[belongs_to_last_year], FALSE)
+RETURN
+IF (
+    NOT BelongsToLastYear,
+    CALCULATE(
+        [REALISERET],
+        SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+    ) +
+    CALCULATE(
+        [REALISERET],
+        'GAMMA - POSTERINGER'[belongs_to_last_year] = TRUE
+    ),
+    CALCULATE(
+        [REALISERET],
+        SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+    )
 )

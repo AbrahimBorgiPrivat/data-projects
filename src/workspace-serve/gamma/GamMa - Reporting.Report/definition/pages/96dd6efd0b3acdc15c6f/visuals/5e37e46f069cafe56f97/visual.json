@@ -1,15 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "50a22c86f903bbbdd2cc",
+  "name": "5e37e46f069cafe56f97",
   "position": {
-    "x": 820.75526406627534,
-    "y": 450,
-    "z": 2000,
-    "height": 250,
-    "width": 450
+    "x": 329.25647221263375,
+    "y": 130.43010010355539,
+    "z": 0,
+    "height": 275.17569899896444,
+    "width": 941.641698308595
   },
   "visual": {
-    "visualType": "waterfallChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -86,11 +86,11 @@
                       "Entity": "_MEASURES - CUSTOM"
                     }
                   },
-                  "Property": "REALISERET"
+                  "Property": "MEDLEMSBETALINGER"
                 }
               },
-              "queryRef": "_MEASURES - CUSTOM.REALISERET",
-              "nativeQueryRef": "REALISERET"
+              "queryRef": "_MEASURES - CUSTOM.MEDLEMSBETALINGER",
+              "nativeQueryRef": "MEDLEMSBETALINGER"
             }
           ]
         }
@@ -127,6 +127,86 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
+            },
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "strokeLineJoin": {
+              "expr": {
+                "Literal": {
+                  "Value": "'round'"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "seriesLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "markers": [
+        {
+          "properties": {
+            "borderShow": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -225,66 +305,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "74b94dfa40b77bb3f311",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DEFAULT DATA - DATE VIEW"
-                  }
-                },
-                "Hierarchy": "year_actual Hierarki"
-              }
-            },
-            "Level": "year_actual"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5e5c890cc5cce96a87b9",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DEFAULT DATA - DATE VIEW"
-                  }
-                },
-                "Hierarchy": "year_actual Hierarki"
-              }
-            },
-            "Level": "month_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "53012dcfcf176e6b0765",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DEFAULT DATA - DATE VIEW"
-                  }
-                },
-                "Hierarchy": "year_actual Hierarki"
-              }
-            },
-            "Level": "date_actual"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

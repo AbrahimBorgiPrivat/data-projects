@@ -118,6 +118,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "main_account",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   }
 }

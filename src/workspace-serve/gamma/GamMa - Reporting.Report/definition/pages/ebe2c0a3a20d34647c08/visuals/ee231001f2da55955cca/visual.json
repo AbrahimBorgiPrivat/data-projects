@@ -13,27 +13,24 @@
     "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Columns": {
+        "Rows": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GAMMA - ACCOUNT"
+                      "Entity": "GAMMA - POSTERINGSGRUPPE"
                     }
                   },
-                  "Property": "context"
+                  "Property": "posting_group"
                 }
               },
-              "queryRef": "GAMMA - ACCOUNT.context",
-              "nativeQueryRef": "context1",
-              "active": true
-            }
-          ]
-        },
-        "Rows": {
-          "projections": [
+              "queryRef": "GAMMA - POSTERINGSGRUPPE.posting_group",
+              "nativeQueryRef": " ",
+              "active": true,
+              "displayName": " "
+            },
             {
               "field": {
                 "Column": {
@@ -46,9 +43,25 @@
                 }
               },
               "queryRef": "GAMMA - POSTERINGSGRUPPE.context",
-              "nativeQueryRef": " ",
+              "nativeQueryRef": "Arrangement",
               "active": true,
-              "displayName": " "
+              "displayName": "Arrangement"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - ACCOUNT"
+                    }
+                  },
+                  "Property": "context"
+                }
+              },
+              "queryRef": "GAMMA - ACCOUNT.context",
+              "nativeQueryRef": "Indtægt/Udgift",
+              "active": false,
+              "displayName": "Indtægt/Udgift"
             }
           ]
         },
@@ -56,27 +69,142 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GAMMA - POSTERINGER"
-                        }
-                      },
-                      "Property": "amount"
+                    "SourceRef": {
+                      "Entity": "_MEASURES - CUSTOM"
                     }
                   },
-                  "Function": 0
+                  "Property": "REALISERET"
                 }
               },
-              "queryRef": "Sum(GAMMA - POSTERINGER.amount)",
-              "nativeQueryRef": "Sum af amount"
+              "queryRef": "_MEASURES - CUSTOM.REALISERET",
+              "nativeQueryRef": "AC",
+              "displayName": "AC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES - CUSTOM"
+                    }
+                  },
+                  "Property": "REALISERET - SPLY"
+                }
+              },
+              "queryRef": "_MEASURES - CUSTOM.REALISERET - SPLY",
+              "nativeQueryRef": "SPLY",
+              "displayName": "SPLY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES - CUSTOM"
+                    }
+                  },
+                  "Property": "FORECAST - NOT BU"
+                }
+              },
+              "queryRef": "_MEASURES - CUSTOM.FORECAST - NOT BU",
+              "nativeQueryRef": "FC",
+              "displayName": "FC"
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "GAMMA - POSTERINGSGRUPPE.posting_group"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - POSTERINGSGRUPPE"
+                    }
+                  },
+                  "Property": "posting_group"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "GAMMA - POSTERINGSGRUPPE.context"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - POSTERINGSGRUPPE"
+                    }
+                  },
+                  "Property": "context"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "GAMMA - ACCOUNT.context"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Bestyrelsesmøde'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Bingo'"
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'BINGO'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "grid": [
         {
@@ -301,56 +429,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3706aea690703c9b148b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - ACCOUNT"
-              }
-            },
-            "Property": "context"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b4c9d64ec7ae1a0982be",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGSGRUPPE"
-              }
-            },
-            "Property": "context"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "65fe5d9483e06ef104ff",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "GAMMA - POSTERINGER"
-                  }
-                },
-                "Property": "amount"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

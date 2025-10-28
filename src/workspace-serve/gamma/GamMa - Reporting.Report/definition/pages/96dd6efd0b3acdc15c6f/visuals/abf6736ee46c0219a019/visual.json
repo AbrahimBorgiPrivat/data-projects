@@ -1,15 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "50a22c86f903bbbdd2cc",
+  "name": "abf6736ee46c0219a019",
   "position": {
-    "x": 820.75526406627534,
-    "y": 450,
-    "z": 2000,
-    "height": 250,
-    "width": 450
+    "x": 329.25647221263375,
+    "y": 419.92129789437348,
+    "z": 2,
+    "height": 278.35692095270969,
+    "width": 941.641698308595
   },
   "visual": {
-    "visualType": "waterfallChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -86,11 +86,27 @@
                       "Entity": "_MEASURES - CUSTOM"
                     }
                   },
-                  "Property": "REALISERET"
+                  "Property": "MEDLEMSBETALINGER YTD"
                 }
               },
-              "queryRef": "_MEASURES - CUSTOM.REALISERET",
-              "nativeQueryRef": "REALISERET"
+              "queryRef": "_MEASURES - CUSTOM.MEDLEMSBETALINGER YTD",
+              "nativeQueryRef": "TY",
+              "displayName": "TY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES - CUSTOM"
+                    }
+                  },
+                  "Property": "MEDLEMSBETALINGER YTD - SPLY"
+                }
+              },
+              "queryRef": "_MEASURES - CUSTOM.MEDLEMSBETALINGER YTD - SPLY",
+              "nativeQueryRef": "SPLY",
+              "displayName": "SPLY"
             }
           ]
         }
@@ -103,7 +119,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopCenter'"
                 }
               }
             }
@@ -132,6 +155,86 @@
                   "Value": "true"
                 }
               }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "strokeLineJoin": {
+              "expr": {
+                "Literal": {
+                  "Value": "'round'"
+                }
+              }
+            },
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "seriesLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "markers": [
+        {
+          "properties": {
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -141,17 +244,17 @@
       "title": [
         {
           "properties": {
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -225,66 +328,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "74b94dfa40b77bb3f311",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DEFAULT DATA - DATE VIEW"
-                  }
-                },
-                "Hierarchy": "year_actual Hierarki"
-              }
-            },
-            "Level": "year_actual"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5e5c890cc5cce96a87b9",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DEFAULT DATA - DATE VIEW"
-                  }
-                },
-                "Hierarchy": "year_actual Hierarki"
-              }
-            },
-            "Level": "month_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "53012dcfcf176e6b0765",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DEFAULT DATA - DATE VIEW"
-                  }
-                },
-                "Hierarchy": "year_actual Hierarki"
-              }
-            },
-            "Level": "date_actual"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

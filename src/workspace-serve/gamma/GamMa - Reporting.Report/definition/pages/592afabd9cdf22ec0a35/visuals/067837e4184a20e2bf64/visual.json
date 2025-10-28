@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "067837e4184a20e2bf64",
   "position": {
-    "x": 24.567118041938684,
+    "x": 10,
     "y": 500.79125239336554,
     "z": 6000,
     "height": 100.1582504786731,
-    "width": 249.45073704122359,
+    "width": 280,
     "tabOrder": 3000
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "GAMMA - USERS.status",
-              "nativeQueryRef": "status",
-              "active": true
+              "nativeQueryRef": "Bruger Status",
+              "active": true,
+              "displayName": "Bruger Status"
             }
           ]
         }
@@ -111,6 +112,47 @@
                     },
                     "Annotations": {
                       "PowerBI.MParameterBehavior": 1
+                    }
+                  }
+                ]
+              }
+            },
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "g",
+                    "Entity": "GAMMA - USERS",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "g"
+                                }
+                              },
+                              "Property": "status"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          ]
+                        ]
+                      }
                     }
                   }
                 ]

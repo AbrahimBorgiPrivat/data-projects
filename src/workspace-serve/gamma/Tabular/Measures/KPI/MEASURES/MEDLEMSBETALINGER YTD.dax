@@ -1,0 +1,4 @@
+TOTALYTD(
+    [MEDLEMSBETALINGER],
+    'DEFAULT DATA - DATE VIEW'[date_actual]
+)
