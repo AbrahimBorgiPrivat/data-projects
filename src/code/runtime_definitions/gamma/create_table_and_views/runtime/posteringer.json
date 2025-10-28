@@ -5,6 +5,6 @@
                 "port":"POSTGRES_PORT",
                 "db_type":"DB_TYPE"},
 "sql_queries": ["gamma/create_table_and_views/queries/schema/gamma_db.sql",
-                "gamma/create_table_and_views/queries/forecast.sql",
-                "gamma/create_table_and_views/queries/view/forecast_view.sql"]
+                "gamma/create_table_and_views/queries/table/posteringer.sql",
+                "gamma/create_table_and_views/queries/view/posteringer_view.sql"]
 }

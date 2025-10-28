@@ -1,9 +1,9 @@
 table 'GAMMA - MOBILEPAY'
-	lineageTag: b9c7000e-0dfa-4c6f-9d4f-e5ef0227aaa6
+	lineageTag: 8851f7ca-c42b-4c41-b2d5-49075f0781db
 
 	column id
 		dataType: string
-		lineageTag: 361ecff3-480d-49be-8f77-8b9a930a8906
+		lineageTag: b1ec6307-6516-4306-b218-3eed2049d759
 		summarizeBy: none
 		sourceColumn: id
 
@@ -12,7 +12,7 @@ table 'GAMMA - MOBILEPAY'
 	column date
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 4224ebce-3b8f-47ff-9b18-bd4507449235
+		lineageTag: 1158c183-5313-4606-80eb-14586493fde6
 		summarizeBy: none
 		sourceColumn: date
 
@@ -23,7 +23,7 @@ table 'GAMMA - MOBILEPAY'
 	column timestamp_iso
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 0decf983-0e9e-48ed-9297-716ae5a5c602
+		lineageTag: 75c43065-dacd-4b11-96b4-6e0751dac28a
 		summarizeBy: none
 		sourceColumn: timestamp_iso
 
@@ -31,7 +31,7 @@ table 'GAMMA - MOBILEPAY'
 
 	column amount
 		dataType: double
-		lineageTag: d4066d91-f2c5-459a-acb7-f9d14981b70c
+		lineageTag: ceba8ae0-f712-42cd-8d7e-c5f1c0b488c0
 		summarizeBy: none
 		sourceColumn: amount
 
@@ -41,7 +41,7 @@ table 'GAMMA - MOBILEPAY'
 
 	column message
 		dataType: string
-		lineageTag: 9ef0f228-75da-4ccc-82ad-922cfeeac535
+		lineageTag: 017ec463-9cc5-4199-8ed9-7e808ac2f69e
 		summarizeBy: none
 		sourceColumn: message
 
@@ -49,24 +49,16 @@ table 'GAMMA - MOBILEPAY'
 
 	column transaction_type
 		dataType: string
-		lineageTag: bc30aa74-d07d-404b-977a-25abc1bc33b3
+		lineageTag: 5bf1b59d-27cd-4824-8e5b-a7aad08b79d6
 		summarizeBy: none
 		sourceColumn: transaction_type
-
-		annotation SummarizationSetBy = Automatic
-
-	column transfer_ref
-		dataType: string
-		lineageTag: 00bc29f7-4cb1-4990-940f-10e1cb3d2883
-		summarizeBy: none
-		sourceColumn: transfer_ref
 
 		annotation SummarizationSetBy = Automatic
 
 	column transfer_date
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: d311b771-a5da-4bb8-9e0a-af273e0c99f2
+		lineageTag: 916114dd-f62c-42bd-9599-a7f8ee360b7d
 		summarizeBy: none
 		sourceColumn: transfer_date
 
@@ -74,43 +66,11 @@ table 'GAMMA - MOBILEPAY'
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column merchant_name
-		dataType: string
-		lineageTag: f8e70aba-1c95-4c64-b0e1-1c5800d325be
-		summarizeBy: none
-		sourceColumn: merchant_name
-
-		annotation SummarizationSetBy = Automatic
-
-	column receiver_acct
-		dataType: string
-		lineageTag: 1fc30611-66c5-49d9-8641-08c7dae1fed1
-		summarizeBy: none
-		sourceColumn: receiver_acct
-
-		annotation SummarizationSetBy = Automatic
-
-	column payment_tx_id
-		dataType: string
-		lineageTag: 6ea95ea5-2aa3-492b-bb37-b2f3d5b92609
-		summarizeBy: none
-		sourceColumn: payment_tx_id
-
-		annotation SummarizationSetBy = Automatic
-
 	column payner_name
 		dataType: string
-		lineageTag: f226d9b5-f8d9-4737-8be2-03597b347f88
+		lineageTag: 65bb4653-4d13-42a4-b8fb-e0fc2ae4ddd1
 		summarizeBy: none
 		sourceColumn: payner_name
-
-		annotation SummarizationSetBy = Automatic
-
-	column payer_phone
-		dataType: string
-		lineageTag: 3bf01f53-319b-4050-810e-bddfbf82a23a
-		summarizeBy: none
-		sourceColumn: payer_phone
 
 		annotation SummarizationSetBy = Automatic
 
@@ -119,9 +79,9 @@ table 'GAMMA - MOBILEPAY'
 		source =
 				let
 				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
-				    gamma_db_mobilepay = Kilde{[Schema="gamma_db",Item="mobilepay"]}[Data]
+				    gamma_db_mobilepay_view = Kilde{[Schema="gamma_db",Item="mobilepay_view"]}[Data]
 				in
-				    gamma_db_mobilepay
+				    gamma_db_mobilepay_view
 
-	annotation PBI_ResultType = Table
+	changedProperty = Name
 

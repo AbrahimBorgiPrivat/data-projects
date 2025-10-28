@@ -4,43 +4,30 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
-        "y": 106.89066838294647
+        "x": 1333.4155991539969,
+        "y": 70.17976797774574
       },
       "nodes": [
         {
           "location": {
-            "x": 860.76640284448445,
-            "y": 848.05829120993747
+            "x": 2087.8471865130832,
+            "y": 74.262040935881544
           },
-          "nodeIndex": "GAMMA - ACCOUNT",
-          "nodeLineageTag": "8988e2b7-c32a-4769-9c05-24564a898b84",
+          "nodeIndex": "DEFAULT DATA - DATE VIEW",
+          "nodeLineageTag": "018fab78-4d4e-4eba-809e-1c8c3d8457fc",
           "size": {
-            "height": 248,
+            "height": 300,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 14
         },
         {
           "location": {
-            "x": 287.4438707574127,
-            "y": 839.2231452570453
+            "x": 1256.7261888740338,
+            "y": 146.50287667124408
           },
-          "nodeIndex": "GAMMA - BANK ACCOUNT",
-          "nodeLineageTag": "6f232609-a32d-4ed9-8068-e08cf1aeff87",
-          "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 2
-        },
-        {
-          "location": {
-            "x": 288.4438707574127,
-            "y": 261.54443116271193
-          },
-          "nodeIndex": "GAMMA - MOBILEPAY",
-          "nodeLineageTag": "b9c7000e-0dfa-4c6f-9d4f-e5ef0227aaa6",
+          "nodeIndex": "_MEASURES - CUSTOM",
+          "nodeLineageTag": "77e58648-0c0e-4199-b086-2a18e9e15663",
           "size": {
             "height": 300,
             "width": 234
@@ -49,49 +36,59 @@
         },
         {
           "location": {
-            "x": 672.66838772776191,
-            "y": 468.06830409352676
+            "x": 1531.0027519136013,
+            "y": 172.9664892242148
           },
-          "nodeIndex": "GAMMA - POSTERINGER",
-          "nodeLineageTag": "c07c7634-bd41-4fd2-a644-1ea35b17a5f6",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 6
-        },
-        {
-          "location": {
-            "x": 991.03741949505843,
-            "y": 68.015395048612277
-          },
-          "nodeIndex": "GAMMA - POSTERINGSGRUPPE",
-          "nodeLineageTag": "9e13c4ac-9352-4cb3-9b15-f658cd09e0aa",
-          "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 4
-        },
-        {
-          "location": {
-            "x": 575.83718352731057,
-            "y": 841.33158921174254
-          },
-          "nodeIndex": "GAMMA - USERS",
-          "nodeLineageTag": "fad97f1a-3efe-4da3-8237-6a01c1be4275",
+          "nodeIndex": "GAMMA - BANK ACCOUNT",
+          "nodeLineageTag": "2e7ec568-a9b8-4472-a834-46a278422788",
           "size": {
             "height": 272,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 639.89286490141012,
-            "y": 98.484892719961067
+            "x": 2043.2692771569177,
+            "y": 833.0100879099349
           },
-          "nodeIndex": "DEFAULT DATA - DATE VIEW",
+          "nodeIndex": "GAMMA - ACCOUNT",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2297.446529811727,
+            "y": 472.92489210643572
+          },
+          "nodeIndex": "GAMMA - FORECAST",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1516.8326527419645,
+            "y": 769.36836999237187
+          },
+          "nodeIndex": "GAMMA - MOBILEPAY",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1790.8721045958366,
+            "y": 463.39404176614971
+          },
+          "nodeIndex": "GAMMA - POSTERINGER",
           "size": {
             "height": 300,
             "width": 234
@@ -100,20 +97,32 @@
         },
         {
           "location": {
-            "x": 1093.3275863593196,
-            "y": 504.83142463390783
+            "x": 1814.7361921813081,
+            "y": 94.136277704801387
           },
-          "nodeIndex": "GAMMA - FORECAST",
-          "nodeLineageTag": "bfc2c83d-ba03-496b-9bfe-82bbd077d515",
+          "nodeIndex": "GAMMA - POSTERINGSGRUPPE",
+          "nodeLineageTag": "85ed21f4-c4e9-4e14-af4b-cf919d5b9bd6",
           "size": {
-            "height": 200,
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1783.559809266502,
+            "y": 834.99630782984127
+          },
+          "nodeIndex": "GAMMA - USERS",
+          "size": {
+            "height": 248,
             "width": 234
           },
           "zIndex": 0
         }
       ],
       "name": "Alle tabeller",
-      "zoomValue": 44.905697313104284,
+      "zoomValue": 50.346892102823574,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

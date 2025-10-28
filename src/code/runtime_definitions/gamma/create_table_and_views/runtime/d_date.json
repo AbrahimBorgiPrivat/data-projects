@@ -4,5 +4,7 @@
                 "server": "POSTGRES_HOST",
                 "port":"POSTGRES_PORT",
                 "db_type":"DB_TYPE"},
-"sql_queries": ["gamma/create_table_and_views/queries/deafult_data_schema.sql","gamma/create_table_and_views/queries/d_date.sql","gamma/create_table_and_views/queries/date_view.sql"]
+"sql_queries": ["gamma/create_table_and_views/queries/schema/deafult_data.sql",
+                "gamma/create_table_and_views/queries/table/d_date.sql",
+                "gamma/create_table_and_views/queries/view/date_view.sql"]
 }

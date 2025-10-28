@@ -1,9 +1,9 @@
 table 'GAMMA - FORECAST'
-	lineageTag: bfc2c83d-ba03-496b-9bfe-82bbd077d515
+	lineageTag: f02c2778-c0ae-41d8-af00-b81e5a8961ee
 
 	column id
 		dataType: string
-		lineageTag: e250a52a-b7b7-4c6d-9db1-533acabedca1
+		lineageTag: 99c5a2a9-ffc4-4bf9-a74a-ee3860708f50
 		summarizeBy: none
 		sourceColumn: id
 
@@ -11,7 +11,7 @@ table 'GAMMA - FORECAST'
 
 	column account_id
 		dataType: string
-		lineageTag: bc06bfde-dfec-4d93-b1bf-146aa87fc8c1
+		lineageTag: 0ab0e5f9-9a19-4736-b807-1a0df17f9c8c
 		summarizeBy: none
 		sourceColumn: account_id
 
@@ -19,7 +19,7 @@ table 'GAMMA - FORECAST'
 
 	column postering_group_id
 		dataType: string
-		lineageTag: e95f773a-d88f-4609-bb3d-630f0cb786ca
+		lineageTag: 7a3b7b3f-7b71-452c-af2b-08505f6b0a54
 		summarizeBy: none
 		sourceColumn: postering_group_id
 
@@ -28,7 +28,7 @@ table 'GAMMA - FORECAST'
 	column year_actual
 		dataType: int64
 		formatString: 0
-		lineageTag: 370a9664-910c-4486-ab98-997fd691ce6c
+		lineageTag: f1971756-a591-4bde-95f6-79e0c64e6ce8
 		summarizeBy: none
 		sourceColumn: year_actual
 
@@ -36,7 +36,7 @@ table 'GAMMA - FORECAST'
 
 	column forecast
 		dataType: double
-		lineageTag: 168689e2-410a-4bc0-938e-76823358b2b5
+		lineageTag: a4acc93e-83a1-459d-8bbd-19e47a6766d4
 		summarizeBy: sum
 		sourceColumn: forecast
 
@@ -46,7 +46,7 @@ table 'GAMMA - FORECAST'
 
 	column forecast_type
 		dataType: string
-		lineageTag: b2d87966-56a2-4781-afb2-8a3718ca53e8
+		lineageTag: 52f63c71-7f8c-4643-b9e8-35f1ef64d56e
 		summarizeBy: none
 		sourceColumn: forecast_type
 
@@ -57,7 +57,9 @@ table 'GAMMA - FORECAST'
 		source =
 				let
 				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
-				    gamma_db_forecast = Kilde{[Schema="gamma_db",Item="forecast"]}[Data]
+				    gamma_db_forecast_view = Kilde{[Schema="gamma_db",Item="forecast_view"]}[Data]
 				in
-				    gamma_db_forecast
+				    gamma_db_forecast_view
+
+	changedProperty = Name
 

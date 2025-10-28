@@ -1,9 +1,9 @@
 table 'GAMMA - POSTERINGSGRUPPE'
-	lineageTag: 9e13c4ac-9352-4cb3-9b15-f658cd09e0aa
+	lineageTag: 85ed21f4-c4e9-4e14-af4b-cf919d5b9bd6
 
 	column id
 		dataType: string
-		lineageTag: 157be08e-a2f1-419a-8ac0-65ddda8a0d05
+		lineageTag: 945b8c54-5129-418f-9aa1-0388c6c07332
 		summarizeBy: none
 		sourceColumn: id
 
@@ -11,7 +11,7 @@ table 'GAMMA - POSTERINGSGRUPPE'
 
 	column posting_group
 		dataType: string
-		lineageTag: cd04f752-aefd-40b1-925b-c0c7edfb8b5f
+		lineageTag: cac53a89-27ac-4963-9c69-87157bbe546c
 		summarizeBy: none
 		sourceColumn: posting_group
 
@@ -20,7 +20,7 @@ table 'GAMMA - POSTERINGSGRUPPE'
 	column posting_group_key
 		dataType: int64
 		formatString: 0
-		lineageTag: 6b63f10d-d8d1-4476-a1ba-356cb1ce137a
+		lineageTag: 48c88d24-60a0-4e0b-99db-00fe370288e3
 		summarizeBy: sum
 		sourceColumn: posting_group_key
 
@@ -28,7 +28,7 @@ table 'GAMMA - POSTERINGSGRUPPE'
 
 	column posting_sub_group
 		dataType: string
-		lineageTag: ea889fd3-b5a3-4d7a-83b8-f227535b9aca
+		lineageTag: bd33c5ae-954d-462b-b66b-4f7423aeecab
 		summarizeBy: none
 		sourceColumn: posting_sub_group
 
@@ -37,7 +37,7 @@ table 'GAMMA - POSTERINGSGRUPPE'
 	column posting_sub_group_key
 		dataType: int64
 		formatString: 0
-		lineageTag: ada3bec8-c752-4512-9e6c-acef857b9f8e
+		lineageTag: 782fa9a6-9a49-4d8d-a86c-d76cae981820
 		summarizeBy: sum
 		sourceColumn: posting_sub_group_key
 
@@ -45,7 +45,7 @@ table 'GAMMA - POSTERINGSGRUPPE'
 
 	column context
 		dataType: string
-		lineageTag: 2ee05194-d133-4389-aa46-65c066f478ba
+		lineageTag: f69ba40f-87c8-4396-a4f4-6218ba7e610c
 		summarizeBy: none
 		sourceColumn: context
 
@@ -54,7 +54,7 @@ table 'GAMMA - POSTERINGSGRUPPE'
 	column context_key
 		dataType: int64
 		formatString: 0
-		lineageTag: 66b0bc28-a0df-47fe-ba3b-b3313b85bba3
+		lineageTag: d6dbe287-8e15-41ce-84ea-3c26eddd8970
 		summarizeBy: sum
 		sourceColumn: context_key
 
@@ -65,9 +65,9 @@ table 'GAMMA - POSTERINGSGRUPPE'
 		source =
 				let
 				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
-				    gamma_db_postering_group = Kilde{[Schema="gamma_db",Item="postering_group"]}[Data]
+				    gamma_db_postering_group_view = Kilde{[Schema="gamma_db",Item="postering_group_view"]}[Data]
 				in
-				    gamma_db_postering_group
+				    gamma_db_postering_group_view
 
-	annotation PBI_ResultType = Table
+	changedProperty = Name
 

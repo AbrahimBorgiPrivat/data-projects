@@ -1,9 +1,9 @@
 table 'GAMMA - ACCOUNT'
-	lineageTag: 8988e2b7-c32a-4769-9c05-24564a898b84
+	lineageTag: 5d2a1f2c-4263-4c1b-a981-1f88951c9225
 
 	column id
 		dataType: string
-		lineageTag: 6867c9db-e4ae-4664-84f6-6df4eb90b84d
+		lineageTag: 35dd0f2e-a6df-4d37-809c-394749e3df27
 		summarizeBy: none
 		sourceColumn: id
 
@@ -11,7 +11,7 @@ table 'GAMMA - ACCOUNT'
 
 	column main_account
 		dataType: string
-		lineageTag: 91341284-0fd7-4941-bee8-6b764fc8ab5c
+		lineageTag: a0a603cd-edb8-400b-9acb-2f89424a8b6e
 		summarizeBy: none
 		sourceColumn: main_account
 
@@ -20,7 +20,7 @@ table 'GAMMA - ACCOUNT'
 	column account_key
 		dataType: int64
 		formatString: 0
-		lineageTag: 7e2db393-f51c-4b97-bcc3-0740b4923498
+		lineageTag: 105bdfc1-3fb5-404e-b784-cee3355cba01
 		summarizeBy: sum
 		sourceColumn: account_key
 
@@ -28,7 +28,7 @@ table 'GAMMA - ACCOUNT'
 
 	column sub_account
 		dataType: string
-		lineageTag: 83d5591d-367b-4c55-85dd-3e7774713e18
+		lineageTag: e8c31b37-b943-4acb-b42a-1b09de050609
 		summarizeBy: none
 		sourceColumn: sub_account
 
@@ -37,7 +37,7 @@ table 'GAMMA - ACCOUNT'
 	column sub_account_key
 		dataType: int64
 		formatString: 0
-		lineageTag: 8abc29de-ab6f-4125-8b71-c4b84928ffe3
+		lineageTag: 680930a6-6c1e-4026-8c2a-dc8d1dda0433
 		summarizeBy: sum
 		sourceColumn: sub_account_key
 
@@ -45,7 +45,7 @@ table 'GAMMA - ACCOUNT'
 
 	column context
 		dataType: string
-		lineageTag: 674ec1c2-2c88-4001-8687-6d62b637cf1b
+		lineageTag: e7594e3b-c4d7-4cb0-9ab5-6aa05c6f0b7a
 		summarizeBy: none
 		sourceColumn: context
 
@@ -54,7 +54,7 @@ table 'GAMMA - ACCOUNT'
 	column context_key
 		dataType: int64
 		formatString: 0
-		lineageTag: e4aae4db-d9fd-472a-a111-bce5b2765e9b
+		lineageTag: 4628be1c-7319-49bd-b6e5-a8f738f43537
 		summarizeBy: sum
 		sourceColumn: context_key
 
@@ -65,9 +65,9 @@ table 'GAMMA - ACCOUNT'
 		source =
 				let
 				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
-				    gamma_db_account = Kilde{[Schema="gamma_db",Item="account"]}[Data]
+				    gamma_db_account_view = Kilde{[Schema="gamma_db",Item="account_view"]}[Data]
 				in
-				    gamma_db_account
+				    gamma_db_account_view
 
-	annotation PBI_ResultType = Table
+	changedProperty = Name
 

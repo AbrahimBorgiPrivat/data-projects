@@ -4,5 +4,7 @@
                 "server": "POSTGRES_HOST",
                 "port":"POSTGRES_PORT",
                 "db_type":"DB_TYPE"},
-"sql_queries": ["gamma/create_table_and_views/queries/postering_group.sql"]
+"sql_queries": ["gamma/create_table_and_views/queries/schema/gamma_db.sql",
+                "gamma/create_table_and_views/queries/table/postering_group.sql",
+                "gamma/create_table_and_views/queries/view/postering_group_view.sql"]
 }

@@ -1,9 +1,9 @@
 table 'GAMMA - POSTERINGER'
-	lineageTag: c07c7634-bd41-4fd2-a644-1ea35b17a5f6
+	lineageTag: 61c96137-9e6e-4373-8e97-d9300d5c4c35
 
 	column id
 		dataType: string
-		lineageTag: 676d30e0-4e33-4ab6-b08d-848d31de3edb
+		lineageTag: 655c8bff-4b0c-45d7-98c6-825dcf9aedbb
 		summarizeBy: none
 		sourceColumn: id
 
@@ -12,7 +12,7 @@ table 'GAMMA - POSTERINGER'
 	column date
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 811ba676-17a5-4248-9d68-957dc1f6c59c
+		lineageTag: 3fb95508-ff35-4ef4-8d39-ca41b8af15bb
 		summarizeBy: none
 		sourceColumn: date
 
@@ -22,7 +22,7 @@ table 'GAMMA - POSTERINGER'
 
 	column text
 		dataType: string
-		lineageTag: cac66727-57cf-4390-a07e-e2edf32c0473
+		lineageTag: 4d06956b-d3ac-4bb6-96d8-39896a0c4fca
 		summarizeBy: none
 		sourceColumn: text
 
@@ -30,18 +30,17 @@ table 'GAMMA - POSTERINGER'
 
 	column amount
 		dataType: double
-		formatString: #,0.00\ "kr.";-#,0.00\ "kr.";#,0.00\ "kr."
-		lineageTag: 39069437-de19-4e3a-a72d-0573b097bd50
+		lineageTag: aae0e156-55b9-4f5e-8073-ed1c6b280e50
 		summarizeBy: sum
 		sourceColumn: amount
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"currencyCulture":"da-DK"}
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column bank_account_key
 		dataType: string
-		lineageTag: ec5dacc7-98ba-4ffb-b02c-0991462c813d
+		lineageTag: 35e4d686-c366-4e11-a26c-42a3e65a29be
 		summarizeBy: none
 		sourceColumn: bank_account_key
 
@@ -49,7 +48,7 @@ table 'GAMMA - POSTERINGER'
 
 	column mp_key
 		dataType: string
-		lineageTag: 72697d50-d35c-4a95-8958-30b701efa1ef
+		lineageTag: bfbff179-bbc9-4932-90ce-5c015f6b9370
 		summarizeBy: none
 		sourceColumn: mp_key
 
@@ -57,7 +56,7 @@ table 'GAMMA - POSTERINGER'
 
 	column user_id
 		dataType: string
-		lineageTag: 41bbc683-af3e-42e3-907f-b84f5a285e60
+		lineageTag: 1d430882-ed49-46cf-ae5b-49dec22d88ef
 		summarizeBy: none
 		sourceColumn: user_id
 
@@ -65,7 +64,7 @@ table 'GAMMA - POSTERINGER'
 
 	column account_number
 		dataType: string
-		lineageTag: ba656827-6021-4440-af21-0f613da92d31
+		lineageTag: 9d0eccfb-a642-49a3-87e3-130499fb4693
 		summarizeBy: none
 		sourceColumn: account_number
 
@@ -73,7 +72,7 @@ table 'GAMMA - POSTERINGER'
 
 	column posting_group_id
 		dataType: string
-		lineageTag: a940471e-1ec2-4e86-90dd-2adc5c2d4f0b
+		lineageTag: 81a9baa6-ca08-42d0-86d0-699942da6e5f
 		summarizeBy: none
 		sourceColumn: posting_group_id
 
@@ -81,8 +80,7 @@ table 'GAMMA - POSTERINGER'
 
 	column document
 		dataType: string
-		lineageTag: 0da07e2a-1cd3-462d-80d8-809d847ac143
-		dataCategory: WebUrl
+		lineageTag: 8f2519ef-c192-42cb-a33d-841c870cb9cf
 		summarizeBy: none
 		sourceColumn: document
 
@@ -91,9 +89,28 @@ table 'GAMMA - POSTERINGER'
 	column belongs_to_last_year
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: 523421d9-a127-4bda-9a60-b7528f5a6d23
+		lineageTag: f932e6c3-8b95-4de3-bab2-1f56d416213d
 		summarizeBy: none
 		sourceColumn: belongs_to_last_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_member_payment_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a6e08a0f-f382-4ae3-a7f8-1ded96c96d81
+		summarizeBy: none
+		sourceColumn: last_member_payment_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column member_context
+		dataType: string
+		lineageTag: 7d7ddcb1-06f7-4c42-94b1-1b0f2abf3a1b
+		summarizeBy: none
+		sourceColumn: member_context
 
 		annotation SummarizationSetBy = Automatic
 
@@ -102,9 +119,9 @@ table 'GAMMA - POSTERINGER'
 		source =
 				let
 				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
-				    gamma_db_posteringer = Kilde{[Schema="gamma_db",Item="posteringer"]}[Data]
+				    gamma_db_posteringer_view = Kilde{[Schema="gamma_db",Item="posteringer_view"]}[Data]
 				in
-				    gamma_db_posteringer
+				    gamma_db_posteringer_view
 
-	annotation PBI_ResultType = Table
+	changedProperty = Name
 

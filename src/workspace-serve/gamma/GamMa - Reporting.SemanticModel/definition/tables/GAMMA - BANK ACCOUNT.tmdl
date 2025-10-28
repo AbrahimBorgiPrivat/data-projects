@@ -1,9 +1,9 @@
 table 'GAMMA - BANK ACCOUNT'
-	lineageTag: 6f232609-a32d-4ed9-8068-e08cf1aeff87
+	lineageTag: 2e7ec568-a9b8-4472-a834-46a278422788
 
 	column id
 		dataType: string
-		lineageTag: e431640d-a9e4-4405-895e-5e98a701327e
+		lineageTag: c5bb0204-bce7-4a1b-a108-eb6b430539cf
 		summarizeBy: none
 		sourceColumn: id
 
@@ -12,7 +12,7 @@ table 'GAMMA - BANK ACCOUNT'
 	column date
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 0e7ff534-7563-4f3e-9819-b6db180e9d81
+		lineageTag: c8794a39-29d1-4ba9-bc13-bf0e27cdf4a0
 		summarizeBy: none
 		sourceColumn: date
 
@@ -22,7 +22,7 @@ table 'GAMMA - BANK ACCOUNT'
 
 	column text
 		dataType: string
-		lineageTag: cf9fd216-6e49-4687-ad71-c1bcf38a6b43
+		lineageTag: 31febdce-2cc5-4437-80eb-54513ac150ff
 		summarizeBy: none
 		sourceColumn: text
 
@@ -30,7 +30,7 @@ table 'GAMMA - BANK ACCOUNT'
 
 	column amount
 		dataType: double
-		lineageTag: 969ad93e-0a3a-456f-a5f5-f4d14b85897a
+		lineageTag: aa6e5251-1fdd-40e8-9137-553dc00f1aa0
 		summarizeBy: none
 		sourceColumn: amount
 
@@ -40,7 +40,7 @@ table 'GAMMA - BANK ACCOUNT'
 
 	column balance
 		dataType: double
-		lineageTag: 744a555c-2298-4797-b984-d6d2624e3cc0
+		lineageTag: 62f6d2aa-672e-4600-b04f-6ef7bc9cccd4
 		summarizeBy: none
 		sourceColumn: balance
 
@@ -48,9 +48,19 @@ table 'GAMMA - BANK ACCOUNT'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column balance_before
+		dataType: double
+		lineageTag: 467aa49b-238f-4865-a7cf-57a457cd1da9
+		summarizeBy: none
+		sourceColumn: balance_before
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column status
 		dataType: string
-		lineageTag: f80c0317-7427-4261-a312-5eb0699ba031
+		lineageTag: 15cc86a4-01ca-4204-acf7-9929a93bbe2f
 		summarizeBy: none
 		sourceColumn: status
 
@@ -58,7 +68,7 @@ table 'GAMMA - BANK ACCOUNT'
 
 	column reconciled
 		dataType: string
-		lineageTag: d715a1f0-72a2-4e8f-b953-c469008fbae9
+		lineageTag: 3ae56234-af73-4348-88d5-a275bd6f13b6
 		summarizeBy: none
 		sourceColumn: reconciled
 
@@ -69,9 +79,9 @@ table 'GAMMA - BANK ACCOUNT'
 		source =
 				let
 				    Kilde = PostgreSQL.Database("localhost:55432", "gamma"),
-				    gamma_db_bank_account = Kilde{[Schema="gamma_db",Item="bank_account"]}[Data]
+				    gamma_db_bank_account_view = Kilde{[Schema="gamma_db",Item="bank_account_view"]}[Data]
 				in
-				    gamma_db_bank_account
+				    gamma_db_bank_account_view
 
-	annotation PBI_ResultType = Table
+	changedProperty = Name
 

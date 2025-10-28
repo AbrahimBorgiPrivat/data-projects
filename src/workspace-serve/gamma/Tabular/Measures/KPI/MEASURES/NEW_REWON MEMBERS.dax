@@ -1,15 +1,1 @@
-VAR ThisPeriodUsers =
-    CALCULATETABLE(
-        VALUES('GAMMA - POSTERINGER'[user_id]),
-        'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
-    )
-VAR LastYearUsers =
-    CALCULATETABLE(
-        VALUES('GAMMA - POSTERINGER'[user_id]),
-        SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual]),
-        'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
-    )
-VAR OnlyThisYearUsers = 
-    EXCEPT(ThisPeriodUsers, LastYearUsers)
-RETURN 
-COUNTROWS(OnlyThisYearUsers)
+CALCULATE([MEDLEMSBETALINGER],'GAMMA - POSTERINGER'[member_context]="NEW OR RELIVE")

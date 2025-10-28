@@ -8,21 +8,21 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["GAMMA - ACCOUNT","GAMMA - BANK ACCOUNT","GAMMA - MOBILEPAY","GAMMA - POSTERINGSGRUPPE","GAMMA - USERS","GAMMA - POSTERINGER","DEFAULT DATA - DATE VIEW","GAMMA - FORECAST"]
+annotation PBI_QueryOrder = ["DEFAULT DATA - DATE VIEW","GAMMA - BANK ACCOUNT","GAMMA - FORECAST","GAMMA - MOBILEPAY","GAMMA - POSTERINGER","GAMMA - USERS","GAMMA - POSTERINGSGRUPPE","GAMMA - ACCOUNT"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 annotation __TEdtr = 1
 
-ref table 'GAMMA - ACCOUNT'
-ref table 'GAMMA - BANK ACCOUNT'
-ref table 'GAMMA - MOBILEPAY'
-ref table 'GAMMA - POSTERINGSGRUPPE'
-ref table 'GAMMA - USERS'
-ref table 'GAMMA - POSTERINGER'
 ref table 'DEFAULT DATA - DATE VIEW'
-ref table 'GAMMA - FORECAST'
 ref table '_MEASURES - CUSTOM'
+ref table 'GAMMA - BANK ACCOUNT'
+ref table 'GAMMA - FORECAST'
+ref table 'GAMMA - MOBILEPAY'
+ref table 'GAMMA - POSTERINGER'
+ref table 'GAMMA - USERS'
+ref table 'GAMMA - POSTERINGSGRUPPE'
+ref table 'GAMMA - ACCOUNT'
 
 ref cultureInfo da-DK
 
