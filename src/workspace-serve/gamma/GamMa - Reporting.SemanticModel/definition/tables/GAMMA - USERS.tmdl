@@ -68,5 +68,3 @@ table 'GAMMA - USERS'
 				in
 				    gamma_db_users_view
 
-	changedProperty = Name
-

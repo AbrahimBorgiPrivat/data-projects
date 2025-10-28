@@ -61,5 +61,3 @@ table 'GAMMA - FORECAST'
 				in
 				    gamma_db_forecast_view
 
-	changedProperty = Name
-

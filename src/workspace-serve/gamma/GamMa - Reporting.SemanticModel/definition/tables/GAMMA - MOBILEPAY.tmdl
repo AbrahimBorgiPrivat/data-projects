@@ -83,5 +83,3 @@ table 'GAMMA - MOBILEPAY'
 				in
 				    gamma_db_mobilepay_view
 
-	changedProperty = Name
-

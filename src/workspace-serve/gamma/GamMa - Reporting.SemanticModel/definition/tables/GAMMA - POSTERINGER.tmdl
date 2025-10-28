@@ -123,5 +123,3 @@ table 'GAMMA - POSTERINGER'
 				in
 				    gamma_db_posteringer_view
 
-	changedProperty = Name
-

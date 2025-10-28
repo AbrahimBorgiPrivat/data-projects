@@ -1,15 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "50a22c86f903bbbdd2cc",
+  "name": "00e55f68c3e80853db0a",
   "position": {
-    "x": 820.75526406627534,
-    "y": 450,
-    "z": 2000,
-    "height": 250,
-    "width": 450
+    "x": 799.85173465928358,
+    "y": 129.60560515312466,
+    "z": 3,
+    "height": 275.874788111651,
+    "width": 470.283195841338
   },
   "visual": {
-    "visualType": "waterfallChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -86,11 +86,27 @@
                       "Entity": "_MEASURES - CUSTOM"
                     }
                   },
-                  "Property": "REALISERET"
+                  "Property": "NEW_REWON MEMBERS"
                 }
               },
-              "queryRef": "_MEASURES - CUSTOM.REALISERET",
-              "nativeQueryRef": "REALISERET"
+              "queryRef": "_MEASURES - CUSTOM.NEW_REWON MEMBERS",
+              "nativeQueryRef": "Nye/Genoplevet",
+              "displayName": "Nye/Genoplevet"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES - CUSTOM"
+                    }
+                  },
+                  "Property": "RESIGNING_MEMBERS"
+                }
+              },
+              "queryRef": "_MEASURES - CUSTOM.RESIGNING_MEMBERS",
+              "nativeQueryRef": "Gentegning",
+              "displayName": "Gentegning"
             }
           ]
         }
@@ -103,7 +119,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopCenter'"
                 }
               }
             }
@@ -117,13 +140,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
                 }
               }
             }
@@ -150,105 +166,37 @@
           }
         }
       ],
-      "y1AxisReferenceLine": [
+      "lineStyles": [
         {
           "properties": {
-            "show": {
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "strokeLineJoin": {
+              "expr": {
+                "Literal": {
+                  "Value": "'round'"
+                }
+              }
+            },
+            "showMarker": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "displayName": {
+            "lineChartType": {
               "expr": {
                 "Literal": {
-                  "Value": "'Konstantlinje for Y-akse 1'"
-                }
-              }
-            },
-            "lineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "style": {
-              "expr": {
-                "Literal": {
-                  "Value": "'solid'"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'back'"
-                }
-              }
-            },
-            "dataLabelShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "shadeShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "shadeTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "80D"
-                }
-              }
-            },
-            "shadeColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#8A4500'"
-                    }
-                  }
-                }
-              }
-            },
-            "shadeRegion": {
-              "expr": {
-                "Literal": {
-                  "Value": "'before'"
+                  "Value": "'smooth'"
                 }
               }
             }
-          },
-          "selector": {
-            "id": "1"
           }
         }
       ],
@@ -261,32 +209,30 @@
                   "Value": "true"
                 }
               }
-            },
-            "labelPosition": {
+            }
+          }
+        }
+      ],
+      "seriesLabels": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'Auto'"
+                  "Value": "false"
                 }
               }
-            },
-            "labelOrientation": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "enableBackground": {
+            }
+          }
+        }
+      ],
+      "markers": [
+        {
+          "properties": {
+            "borderShow": {
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
                 }
               }
             }
@@ -298,17 +244,17 @@
       "title": [
         {
           "properties": {
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -382,66 +328,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "74b94dfa40b77bb3f311",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DEFAULT DATA - DATE VIEW"
-                  }
-                },
-                "Hierarchy": "year_actual Hierarki"
-              }
-            },
-            "Level": "year_actual"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5e5c890cc5cce96a87b9",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DEFAULT DATA - DATE VIEW"
-                  }
-                },
-                "Hierarchy": "year_actual Hierarki"
-              }
-            },
-            "Level": "month_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "53012dcfcf176e6b0765",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DEFAULT DATA - DATE VIEW"
-                  }
-                },
-                "Hierarchy": "year_actual Hierarki"
-              }
-            },
-            "Level": "date_actual"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

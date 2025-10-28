@@ -69,5 +69,3 @@ table 'GAMMA - POSTERINGSGRUPPE'
 				in
 				    gamma_db_postering_group_view
 
-	changedProperty = Name
-

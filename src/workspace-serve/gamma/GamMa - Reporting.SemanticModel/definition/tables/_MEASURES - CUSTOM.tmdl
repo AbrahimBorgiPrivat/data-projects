@@ -139,23 +139,7 @@ table '_MEASURES - CUSTOM'
 	/// EXCEPT(ThisPeriodUsers, LastYearUsers)
 	/// RETURN
 	/// COUNTROWS(OnlyThisYearUsers)
-	measure 'NEW_REWON MEMBERS' = ```
-			VAR ThisPeriodUsers =
-			    CALCULATETABLE(
-			        VALUES('GAMMA - POSTERINGER'[user_id]),
-			        'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
-			    )
-			VAR LastYearUsers =
-			    CALCULATETABLE(
-			        VALUES('GAMMA - POSTERINGER'[user_id]),
-			        SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual]),
-			        'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
-			    )
-			VAR OnlyThisYearUsers = 
-			    EXCEPT(ThisPeriodUsers, LastYearUsers)
-			RETURN 
-			COUNTROWS(OnlyThisYearUsers)
-			```
+	measure 'NEW_REWON MEMBERS' = CALCULATE([MEDLEMSBETALINGER],'GAMMA - POSTERINGER'[member_context]="NEW OR RELIVE")
 		formatString: #,0
 		displayFolder: KPI\MEDLEMMER
 		lineageTag: 45953527-eb08-40ba-81ab-682b94259fb7
@@ -174,7 +158,7 @@ table '_MEASURES - CUSTOM'
 		lineageTag: 26cb9af3-ccb2-410d-bb5b-e7c08b940621
 
 	/// [MEDLEMSBETALINGER]-[NEW_REWON MEMBERS]
-	measure RESIGNING_MEMBERS = [MEDLEMSBETALINGER]-[NEW_REWON MEMBERS]
+	measure RESIGNING_MEMBERS = CALCULATE([MEDLEMSBETALINGER],'GAMMA - POSTERINGER'[member_context]="RESIGNING")
 		formatString: #,0
 		displayFolder: KPI\MEDLEMMER
 		lineageTag: 423eddcf-d522-4916-9e92-fc8c859d776d

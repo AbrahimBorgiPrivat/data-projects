@@ -69,5 +69,3 @@ table 'GAMMA - ACCOUNT'
 				in
 				    gamma_db_account_view
 
-	changedProperty = Name
-
