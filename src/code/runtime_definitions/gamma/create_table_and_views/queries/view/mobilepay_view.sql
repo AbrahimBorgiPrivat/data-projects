@@ -2,7 +2,8 @@ CREATE OR REPLACE VIEW gamma_db.mobilepay_view
  AS
  SELECT mobilepay.id,
     mobilepay.date,
-    mobilepay.timestamp_iso,
+    EXTRACT(hour FROM mobilepay.timestamp_iso) AS hour,
+    EXTRACT(minute FROM mobilepay.timestamp_iso) AS minutes,
     mobilepay.amount,
     mobilepay.message,
     mobilepay.transaction_type,

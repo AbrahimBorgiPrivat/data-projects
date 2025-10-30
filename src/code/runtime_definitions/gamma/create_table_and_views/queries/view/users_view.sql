@@ -1,5 +1,7 @@
 CREATE OR REPLACE VIEW gamma_db.users_view
  AS
+CREATE OR REPLACE VIEW gamma_db.users_view
+ AS
  SELECT users.id,
     users.name,
         CASE
@@ -11,6 +13,8 @@ CREATE OR REPLACE VIEW gamma_db.users_view
     users.aargang,
     users.occopation,
     users.last_payment,
-    users.created
+    EXTRACT(year FROM users.created) AS created_year,
+    EXTRACT(month FROM users.created) AS created_month,
+    EXTRACT(day FROM users.created) AS created_day
    FROM gamma_db.users
   ORDER BY users.name;
