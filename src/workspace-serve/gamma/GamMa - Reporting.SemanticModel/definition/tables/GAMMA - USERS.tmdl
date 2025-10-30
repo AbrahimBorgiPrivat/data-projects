@@ -50,14 +50,53 @@ table 'GAMMA - USERS'
 
 		annotation SummarizationSetBy = Automatic
 
-	column created
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 99028d1e-7e35-4d62-817f-a43c276a996e
+	column created_year
+		dataType: double
+		formatString: 0
+		lineageTag: e22244c9-2f6d-4d29-9c05-432c340d392d
 		summarizeBy: none
-		sourceColumn: created
+		sourceColumn: created_year
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column created_month
+		dataType: double
+		formatString: 0
+		lineageTag: ff193643-7e1f-46c6-98f9-a5ac09b96809
+		summarizeBy: none
+		sourceColumn: created_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column created_day
+		dataType: double
+		formatString: 0
+		lineageTag: d510a346-f6bb-4695-a3c1-03523d642936
+		summarizeBy: none
+		sourceColumn: created_day
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	hierarchy 'created hiracy'
+		lineageTag: c45d1da3-549d-4f17-90c7-2eff962ae816
+
+		level created_year
+			lineageTag: d64a0f08-9e3f-426e-86e4-98183ca01783
+			column: created_year
+
+		level created_month
+			lineageTag: 7709b65f-f17d-4949-9cc8-8a9b1b58ce78
+			column: created_month
+
+		level created_day
+			lineageTag: 94d12229-90ae-4d59-924f-cc7f798e89c6
+			column: created_day
 
 	partition 'GAMMA - USERS' = m
 		mode: import

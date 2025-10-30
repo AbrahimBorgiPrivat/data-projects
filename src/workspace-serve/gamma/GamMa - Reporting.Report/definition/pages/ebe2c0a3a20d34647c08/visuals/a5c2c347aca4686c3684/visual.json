@@ -6,8 +6,7 @@
     "y": 100,
     "z": 3000,
     "height": 100,
-    "width": 280,
-    "tabOrder": 1000
+    "width": 280
   },
   "visual": {
     "visualType": "slicer",
@@ -190,20 +189,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "1ad3933b25207e36f6d3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DEFAULT DATA - DATE VIEW"
-              }
-            },
-            "Property": "date_actual"
-          }
-        },
-        "type": "RelativeDate"
-      },
       {
         "name": "c94635a497062ea26708",
         "field": {

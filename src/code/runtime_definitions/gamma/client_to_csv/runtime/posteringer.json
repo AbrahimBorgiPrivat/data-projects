@@ -1,0 +1,10 @@
+{"client":{"db_name": "POSTGRES_DB",
+                "username": "POSTGRES_USERNAME",
+                "password": "POSTGRES_PASSWORD",
+                "server": "POSTGRES_HOST",
+                "port":"POSTGRES_PORT",
+                "db_type":"DB_TYPE"},
+"sql_query": "gamma/client_to_csv/queries/posteringer.sql",
+"output_dir": "../backup",
+"filename_prefix": "posteringer"
+}

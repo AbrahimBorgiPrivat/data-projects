@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 410,
     "width": 450.14290645495339,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -114,6 +114,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_MEASURES - CUSTOM"
+                  }
+                },
+                "Property": "REALISERET"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "expansionStates": [
@@ -206,19 +223,6 @@
       }
     ],
     "objects": {
-      "grid": [
-        {
-          "properties": {
-            "gridHorizontal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
       "columnHeaders": [
         {
           "properties": {
@@ -265,36 +269,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "101.40827535395053D"
+                  "Value": "83.5965195231094D"
                 }
               }
             }
           },
           "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "GAMMA - ACCOUNT"
-                          }
-                        },
-                        "Property": "context"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Udgift'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
+            "metadata": "_MEASURES - CUSTOM.REALISERET - SPLY"
           }
         },
         {
@@ -302,28 +283,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "88.26855231137961D"
+                  "Value": "87.09234987367718D"
                 }
               }
             }
           },
           "selector": {
-            "data": [
-              {
-                "total": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GAMMA - ACCOUNT"
-                        }
-                      },
-                      "Property": "context"
-                    }
-                  }
-                ]
-              }
-            ]
+            "metadata": "_MEASURES - CUSTOM.REALISERET"
           }
         }
       ],
@@ -420,7 +386,7 @@
             "name": {
               "expr": {
                 "Literal": {
-                  "Value": "'None'"
+                  "Value": "'Minimal'"
                 }
               }
             }
@@ -429,5 +395,93 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7467650b34b5e018967a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGSGRUPPE"
+              }
+            },
+            "Property": "posting_group"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "edf3df6da2053ddd0649",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGSGRUPPE"
+              }
+            },
+            "Property": "context"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6adb0d8fd6c93756a1cf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - ACCOUNT"
+              }
+            },
+            "Property": "context"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "db1ccee3da907a6b7422",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "REALISERET"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b778ecfac39b02c16331",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "REALISERET - SPLY"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2b202e7a962f2d905c69",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "FORECAST - NOT BU"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

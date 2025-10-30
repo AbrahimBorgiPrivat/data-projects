@@ -4,10 +4,10 @@
   "position": {
     "x": 10,
     "y": 500,
-    "z": 6001,
+    "z": 7000,
     "height": 100,
     "width": 280,
-    "tabOrder": 6001
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -196,6 +196,20 @@
         },
         "type": "Advanced",
         "howCreated": "User"
+      },
+      {
+        "name": "d0b781a122dc18ba69c2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGER"
+              }
+            },
+            "Property": "belongs_to_last_year"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

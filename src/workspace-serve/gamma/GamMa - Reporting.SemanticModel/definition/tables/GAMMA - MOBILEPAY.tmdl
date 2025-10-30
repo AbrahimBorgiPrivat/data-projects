@@ -20,15 +20,6 @@ table 'GAMMA - MOBILEPAY'
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column timestamp_iso
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 75c43065-dacd-4b11-96b4-6e0751dac28a
-		summarizeBy: none
-		sourceColumn: timestamp_iso
-
-		annotation SummarizationSetBy = Automatic
-
 	column amount
 		dataType: double
 		lineageTag: ceba8ae0-f712-42cd-8d7e-c5f1c0b488c0
@@ -73,6 +64,26 @@ table 'GAMMA - MOBILEPAY'
 		sourceColumn: payner_name
 
 		annotation SummarizationSetBy = Automatic
+
+	column hour
+		dataType: double
+		lineageTag: 2261b821-fe71-4f9d-a23c-1a2da49c9756
+		summarizeBy: none
+		sourceColumn: hour
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column minutes
+		dataType: double
+		lineageTag: 1bf82fbe-3052-42d2-9294-20b2eb1acd65
+		summarizeBy: none
+		sourceColumn: minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition 'GAMMA - MOBILEPAY' = m
 		mode: import

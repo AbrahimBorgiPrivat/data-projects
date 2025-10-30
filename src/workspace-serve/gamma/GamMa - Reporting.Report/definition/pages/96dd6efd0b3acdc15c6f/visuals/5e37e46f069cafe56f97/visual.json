@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "5e37e46f069cafe56f97",
   "position": {
-    "x": 312.90496101254377,
-    "y": 131.45711379816927,
+    "x": 320,
+    "y": 185,
     "z": 0,
-    "height": 275.874788111651,
-    "width": 470.283195841338
+    "height": 250,
+    "width": 620,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "lineChart",
@@ -90,7 +91,23 @@
                 }
               },
               "queryRef": "_MEASURES - CUSTOM.MEDLEMSBETALINGER",
-              "nativeQueryRef": "MEDLEMSBETALINGER"
+              "nativeQueryRef": "Dette År",
+              "displayName": "Dette År"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES - CUSTOM"
+                    }
+                  },
+                  "Property": "MEDLEMSBETALINGER - SPLY"
+                }
+              },
+              "queryRef": "_MEASURES - CUSTOM.MEDLEMSBETALINGER - SPLY",
+              "nativeQueryRef": "SPLY",
+              "displayName": "SPLY"
             }
           ]
         }
@@ -103,7 +120,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopCenter'"
                 }
               }
             }
@@ -146,17 +170,10 @@
       "lineStyles": [
         {
           "properties": {
-            "lineChartType": {
+            "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "'smooth'"
-                }
-              }
-            },
-            "showMarker": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "2D"
                 }
               }
             },
@@ -167,13 +184,34 @@
                 }
               }
             },
-            "strokeWidth": {
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "markerSize": {
               "expr": {
                 "Literal": {
                   "Value": "2D"
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "_MEASURES - CUSTOM.MEDLEMSBETALINGER - SPLY"
           }
         }
       ],
@@ -187,6 +225,83 @@
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_MEASURES - CUSTOM.MEDLEMSBETALINGER - SPLY"
+          }
+        },
+        {
+          "properties": {
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelContentLayout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'SingleLine'"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "underline": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Light'', wf_segoe-ui_light, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_MEASURES - CUSTOM.MEDLEMSBETALINGER"
           }
         }
       ],
@@ -221,6 +336,13 @@
       "title": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "titleWrap": {
               "expr": {
                 "Literal": {
@@ -228,10 +350,24 @@
                 }
               }
             },
-            "show": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'MEDLEMSBETALINGER'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -305,5 +441,94 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6e71de8067f8355da115",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DEFAULT DATA - DATE VIEW"
+                  }
+                },
+                "Hierarchy": "year_actual Hierarki"
+              }
+            },
+            "Level": "year_actual"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8423fc99bda275a0c6f5",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DEFAULT DATA - DATE VIEW"
+                  }
+                },
+                "Hierarchy": "year_actual Hierarki"
+              }
+            },
+            "Level": "month_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c4917f061d5a1ccfe9b7",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DEFAULT DATA - DATE VIEW"
+                  }
+                },
+                "Hierarchy": "year_actual Hierarki"
+              }
+            },
+            "Level": "date_actual"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7cff69729d78ffff35ec",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "MEDLEMSBETALINGER"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d5ad1a763c870f193a38",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "MEDLEMSBETALINGER - SPLY"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

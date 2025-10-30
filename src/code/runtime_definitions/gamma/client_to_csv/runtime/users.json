@@ -1,0 +1,10 @@
+{"client":{"db_name": "GAMMA_DB",
+                "username": "GAMMA_USERNAME",
+                "password": "GAMMA_PASSWORD",
+                "server": "GAMMA_HOST",
+                "port":"GAMMA_PORT",
+                "db_type":"GAMMA_DB_TYPE"},
+"sql_query": "gamma/client_to_csv/queries/users.sql",
+"output_dir": "../backup",
+"filename_prefix": "users"
+}

@@ -1,0 +1,29 @@
+services:
+  client_to_client:
+    build:
+      context: ../../../..                    
+      dockerfile: service/gamma/etl/service_client_to_csv/Dockerfile
+    container_name: gamma_client_to_csv
+    env_file:
+      - .env
+    environment:
+      PYTHONPATH: /app              
+      ENV_MODE: docker
+      SERVICE_NAME: gamma_client_to_csv
+    volumes:
+      - ./app:/app/app  
+      - ../../../../../../res/gamma/csv:/app/res/gamma/csv   
+      - ./backup:/backup
+    networks:
+      - gamma_network                    
+    command: ["python", "app/main.py"]
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 1          
+        window: 30s
+
+networks:
+  gamma_network:
+    external: true

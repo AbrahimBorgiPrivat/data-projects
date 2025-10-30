@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 680,
     "width": 480,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -299,5 +299,93 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "87ff44b6b9e0dadf80e2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - ACCOUNT"
+              }
+            },
+            "Property": "main_account"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1b2da103087b90877475",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - ACCOUNT"
+              }
+            },
+            "Property": "sub_account"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4d294143c5d517cdfa05",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - ACCOUNT"
+              }
+            },
+            "Property": "context"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bd76442c562f0c9cbee8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "REALISERET"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7cb1d46d23793feb0261",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "FORECAST"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "80a20201d30458f7be18",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "REALISERET - SPLY"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

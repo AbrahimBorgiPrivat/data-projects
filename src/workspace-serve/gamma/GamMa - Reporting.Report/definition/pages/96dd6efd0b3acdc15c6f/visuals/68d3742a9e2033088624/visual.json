@@ -1,78 +1,35 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "eea145c4a63127d324ad",
+  "name": "68d3742a9e2033088624",
   "position": {
-    "x": 799.85173465928358,
-    "y": 420.29246242513278,
-    "z": 4,
-    "height": 277.72629675669566,
-    "width": 470.283195841338
+    "x": 960,
+    "y": 185,
+    "z": 4000,
+    "height": 250,
+    "width": 300,
+    "tabOrder": 1000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DEFAULT DATA - DATE VIEW"
-                        }
-                      },
-                      "Hierarchy": "year_actual Hierarki"
+                    "SourceRef": {
+                      "Entity": "GAMMA - USERS"
                     }
                   },
-                  "Level": "year_actual"
+                  "Property": "aargang"
                 }
               },
-              "queryRef": "DEFAULT DATA - DATE VIEW.year_actual Hierarki.year_actual",
-              "nativeQueryRef": "year_actual Hierarki year_actual",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DEFAULT DATA - DATE VIEW"
-                        }
-                      },
-                      "Hierarchy": "year_actual Hierarki"
-                    }
-                  },
-                  "Level": "month_name"
-                }
-              },
-              "queryRef": "DEFAULT DATA - DATE VIEW.year_actual Hierarki.month_name",
-              "nativeQueryRef": "year_actual Hierarki month_name",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DEFAULT DATA - DATE VIEW"
-                        }
-                      },
-                      "Hierarchy": "year_actual Hierarki"
-                    }
-                  },
-                  "Level": "date_actual"
-                }
-              },
-              "queryRef": "DEFAULT DATA - DATE VIEW.year_actual Hierarki.date_actual",
-              "nativeQueryRef": "year_actual Hierarki date_actual",
-              "active": false
+              "queryRef": "GAMMA - USERS.aargang",
+              "nativeQueryRef": "Årgang",
+              "active": true,
+              "displayName": "Årgang"
             }
           ]
         },
@@ -86,11 +43,11 @@
                       "Entity": "_MEASURES - CUSTOM"
                     }
                   },
-                  "Property": "NEW_REWON MEMBERS - YTD"
+                  "Property": "NEW_REWON MEMBERS"
                 }
               },
-              "queryRef": "_MEASURES - CUSTOM.NEW_REWON MEMBERS - YTD",
-              "nativeQueryRef": "Nye/Genoplevet",
+              "queryRef": "_MEASURES - CUSTOM.NEW_REWON MEMBERS",
+              "nativeQueryRef": "Nye/Genoplevet1",
               "displayName": "Nye/Genoplevet"
             },
             {
@@ -101,15 +58,32 @@
                       "Entity": "_MEASURES - CUSTOM"
                     }
                   },
-                  "Property": "RESIGNING_MEMBERS - YTD"
+                  "Property": "RESIGNING_MEMBERS"
                 }
               },
-              "queryRef": "_MEASURES - CUSTOM.RESIGNING_MEMBERS - YTD",
+              "queryRef": "_MEASURES - CUSTOM.RESIGNING_MEMBERS",
               "nativeQueryRef": "Gentegning",
               "displayName": "Gentegning"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "GAMMA - USERS"
+                  }
+                },
+                "Property": "aargang"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -133,19 +107,6 @@
           }
         }
       ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "categoryAxis": [
         {
           "properties": {
@@ -159,41 +120,41 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "titleFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Light'', wf_segoe-ui_light, helvetica, arial, sans-serif'"
                 }
               }
             }
           }
         }
       ],
-      "lineStyles": [
+      "valueAxis": [
         {
           "properties": {
-            "strokeWidth": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "2D"
-                }
-              }
-            },
-            "strokeLineJoin": {
-              "expr": {
-                "Literal": {
-                  "Value": "'round'"
-                }
-              }
-            },
-            "showMarker": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "lineChartType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'smooth'"
+                  "Value": "false"
                 }
               }
             }
@@ -204,32 +165,6 @@
         {
           "properties": {
             "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "seriesLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "markers": [
-        {
-          "properties": {
-            "borderShow": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -328,5 +263,58 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "99024aa6f29afa5a9bb5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "MEDLEMSBETALINGER"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "_",
+              "Entity": "_MEASURES - CUSTOM",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "_"
+                        }
+                      },
+                      "Property": "MEDLEMSBETALINGER"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
   }
 }

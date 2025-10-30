@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "abf6736ee46c0219a019",
   "position": {
-    "x": 312.90496101254377,
-    "y": 420.29246242513278,
-    "z": 2,
-    "height": 277.72629675669566,
-    "width": 470.283195841338
+    "x": 320,
+    "y": 450,
+    "z": 2000,
+    "height": 250,
+    "width": 620,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "lineChart",
@@ -90,8 +91,8 @@
                 }
               },
               "queryRef": "_MEASURES - CUSTOM.MEDLEMSBETALINGER YTD",
-              "nativeQueryRef": "TY",
-              "displayName": "TY"
+              "nativeQueryRef": "Dette År",
+              "displayName": "Dette År"
             },
             {
               "field": {
@@ -247,7 +248,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -255,6 +256,27 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'MEDLEMSBETALINGER'"
                 }
               }
             }

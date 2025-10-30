@@ -3839,6 +3839,16 @@ cultureInfo da-DK
 			          "medlemsbetalinger": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Dette År": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3867,7 +3877,7 @@ cultureInfo da-DK
 			          }
 			        },
 			        {
-			          "TY": {
+			          "Dette År": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3896,6 +3906,16 @@ cultureInfo da-DK
 			          "medlemsbetalinger sply": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "SPLY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4117,16 +4137,6 @@ cultureInfo da-DK
 			            },
 			            "Weight": 0.623
 			          }
-			        },
-			        {
-			          "Nye/Genoplevet": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -4307,16 +4317,6 @@ cultureInfo da-DK
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "Gentegning": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5821,36 +5821,6 @@ cultureInfo da-DK
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "gamma__mobilepay.timestamp_iso": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "GAMMA - MOBILEPAY",
-			          "ConceptualProperty": "timestamp_iso"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "timestamp iso": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "timestamp_iso": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "iso": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        }
 			      ],
@@ -7953,6 +7923,16 @@ cultureInfo da-DK
 			          "aargang": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Årgang": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -8103,89 +8083,6 @@ cultureInfo da-DK
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "gamma__user.created": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "GAMMA - USERS",
-			          "ConceptualProperty": "created"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "created": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "shaped": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "bent": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "fashioned": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "twisted": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "formed": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "produced": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
 			          }
 			        }
 			      ],
@@ -9946,9 +9843,763 @@ cultureInfo da-DK
 			          }
 			        }
 			      ]
+			    },
+			    "gamma__mobilepay.hour": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - MOBILEPAY",
+			          "ConceptualProperty": "hour"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hour": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__mobilepay.minute": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - MOBILEPAY",
+			          "ConceptualProperty": "minutes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "minute": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "miniature": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "infinitesimal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "little": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "small": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "diminutive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "close": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "painstaking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__user.created_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - USERS",
+			          "ConceptualProperty": "created_year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created_year": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "created yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__user.created_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - USERS",
+			          "ConceptualProperty": "created_month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created_month": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "created mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__user.created_day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - USERS",
+			          "ConceptualProperty": "created_day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created_day": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__user.created_hiracy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - USERS",
+			          "Hierarchy": "created hiracy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created hiracy": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__user.created_hiracy.created_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - USERS",
+			          "Hierarchy": "created hiracy",
+			          "HierarchyLevel": "created_year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created_year": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "created yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__user.created_hiracy.created_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - USERS",
+			          "Hierarchy": "created hiracy",
+			          "HierarchyLevel": "created_month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created_month": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "created mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "gamma__user.created_hiracy.created_day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GAMMA - USERS",
+			          "Hierarchy": "created hiracy",
+			          "HierarchyLevel": "created_day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created_day": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "gamma__posteringer_has_gamma__mobilepay": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - POSTERINGER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__posteringer": {
+			          "Target": {
+			            "Entity": "gamma__posteringer"
+			          }
+			        },
+			        "gamma__mobilepay": {
+			          "Target": {
+			            "Entity": "gamma__mobilepay"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringer"
+			            },
+			            "Object": {
+			              "Role": "gamma__mobilepay"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringers_have_gamma__mobilepays"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__mobilepay"
+			            },
+			            "Object": {
+			              "Role": "gamma__posteringer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__mobilepays_have_gamma__posteringers"
+			        }
+			      ]
+			    },
+			    "gamma__posteringer_has_gamma__bank_account": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - POSTERINGER"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__posteringer": {
+			          "Target": {
+			            "Entity": "gamma__posteringer"
+			          }
+			        },
+			        "gamma__bank_account": {
+			          "Target": {
+			            "Entity": "gamma__bank_account"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringer"
+			            },
+			            "Object": {
+			              "Role": "gamma__bank_account"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringers_have_gamma__bank_accounts"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__bank_account"
+			            },
+			            "Object": {
+			              "Role": "gamma__posteringer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__bank_accounts_have_gamma__posteringers"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_gamma__account": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "gamma__account": {
+			          "Target": {
+			            "Entity": "gamma__account"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "gamma__account"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_gamma__accounts"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__account"
+			            },
+			            "Object": {
+			              "Role": "gamma__forecast"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__accounts_have_gamma__forecasts"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_default_data__date_view": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "default_data__date_view": {
+			          "Target": {
+			            "Entity": "default_data__date_view"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "default_data__date_view"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_default_data__date_views"
+			        }
+			      ]
+			    },
+			    "gamma__forecast_has_gamma__posteringsgruppe": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - FORECAST"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__forecast": {
+			          "Target": {
+			            "Entity": "gamma__forecast"
+			          }
+			        },
+			        "gamma__posteringsgruppe": {
+			          "Target": {
+			            "Entity": "gamma__posteringsgruppe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__forecast"
+			            },
+			            "Object": {
+			              "Role": "gamma__posteringsgruppe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__forecasts_have_gamma__posteringsgruppes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__posteringsgruppe"
+			            },
+			            "Object": {
+			              "Role": "gamma__forecast"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__posteringsgruppes_have_gamma__forecasts"
+			        }
+			      ]
+			    },
+			    "gamma__user_has_created_hiracy": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - USERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__user": {
+			          "Target": {
+			            "Entity": "gamma__user"
+			          }
+			        },
+			        "gamma__user.created_hiracy": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_hiracy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__users_have_created_hiracies"
+			        }
+			      ]
+			    },
+			    "gamma__user_has_created_day": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - USERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__user": {
+			          "Target": {
+			            "Entity": "gamma__user"
+			          }
+			        },
+			        "gamma__user.created_day": {
+			          "Target": {
+			            "Entity": "gamma__user.created_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__users_have_created_days"
+			        }
+			      ]
+			    },
+			    "gamma__user_has_created_month": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - USERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__user": {
+			          "Target": {
+			            "Entity": "gamma__user"
+			          }
+			        },
+			        "gamma__user.created_month": {
+			          "Target": {
+			            "Entity": "gamma__user.created_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__users_have_created_months"
+			        }
+			      ]
+			    },
+			    "gamma__user_has_created_year": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - USERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__user": {
+			          "Target": {
+			            "Entity": "gamma__user"
+			          }
+			        },
+			        "gamma__user.created_year": {
+			          "Target": {
+			            "Entity": "gamma__user.created_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__users_have_created_years"
+			        }
+			      ]
+			    },
+			    "gamma__mobilepay_has_minute": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - MOBILEPAY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__mobilepay": {
+			          "Target": {
+			            "Entity": "gamma__mobilepay"
+			          }
+			        },
+			        "gamma__mobilepay.minute": {
+			          "Target": {
+			            "Entity": "gamma__mobilepay.minute"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__mobilepay"
+			            },
+			            "Object": {
+			              "Role": "gamma__mobilepay.minute"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__mobilepays_have_minutes"
+			        }
+			      ]
+			    },
+			    "gamma__mobilepay_has_hour": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - MOBILEPAY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__mobilepay": {
+			          "Target": {
+			            "Entity": "gamma__mobilepay"
+			          }
+			        },
+			        "gamma__mobilepay.hour": {
+			          "Target": {
+			            "Entity": "gamma__mobilepay.hour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__mobilepay"
+			            },
+			            "Object": {
+			              "Role": "gamma__mobilepay.hour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gamma__mobilepays_have_hours"
+			        }
+			      ]
+			    },
 			    "gamma__account_has_context_key": {
 			      "Binding": {
 			        "ConceptualEntity": "GAMMA - ACCOUNT"
@@ -10434,39 +11085,6 @@ cultureInfo da-DK
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ids_are_names_IDs_of_gamma__posteringsgruppes"
-			        }
-			      ]
-			    },
-			    "gamma__user_has_created": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - USERS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__user": {
-			          "Target": {
-			            "Entity": "gamma__user"
-			          }
-			        },
-			        "gamma__user.created": {
-			          "Target": {
-			            "Entity": "gamma__user.created"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__user"
-			            },
-			            "Object": {
-			              "Role": "gamma__user.created"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__users_have_created"
 			        }
 			      ]
 			    },
@@ -11133,39 +11751,6 @@ cultureInfo da-DK
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "gamma__mobilepays_have_amounts"
-			        }
-			      ]
-			    },
-			    "gamma__mobilepay_has_timestamp_iso": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - MOBILEPAY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__mobilepay": {
-			          "Target": {
-			            "Entity": "gamma__mobilepay"
-			          }
-			        },
-			        "gamma__mobilepay.timestamp_iso": {
-			          "Target": {
-			            "Entity": "gamma__mobilepay.timestamp_iso"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__mobilepay"
-			            },
-			            "Object": {
-			              "Role": "gamma__mobilepay.timestamp_iso"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__mobilepays_have_timestamp_iso"
 			        }
 			      ]
 			    },
@@ -13699,48 +14284,6 @@ cultureInfo da-DK
 			        }
 			      ]
 			    },
-			    "gamma__user_is_created_on_created": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - USERS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__user": {
-			          "Target": {
-			            "Entity": "gamma__user"
-			          }
-			        },
-			        "gamma__user.created": {
-			          "Target": {
-			            "Entity": "gamma__user.created"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "When": {
-			          "Role": "gamma__user.created"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Verb": {
-			            "Verbs": [
-			              {
-			                "create": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "gamma__user"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.9,
-			          "ID": "gamma__users_are_created_on_created"
-			        }
-			      ]
-			    },
 			    "gamma__mobilepay_is_transferred_on_transfer_date": {
 			      "Binding": {
 			        "ConceptualEntity": "GAMMA - MOBILEPAY"
@@ -14017,223 +14560,6 @@ cultureInfo da-DK
 			        }
 			      ]
 			    },
-			    "gamma__forecast_has_gamma__posteringsgruppe": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - FORECAST"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__forecast": {
-			          "Target": {
-			            "Entity": "gamma__forecast"
-			          }
-			        },
-			        "gamma__posteringsgruppe": {
-			          "Target": {
-			            "Entity": "gamma__posteringsgruppe"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__forecast"
-			            },
-			            "Object": {
-			              "Role": "gamma__posteringsgruppe"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__forecasts_have_gamma__posteringsgruppes"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__posteringsgruppe"
-			            },
-			            "Object": {
-			              "Role": "gamma__forecast"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__posteringsgruppes_have_gamma__forecasts"
-			        }
-			      ]
-			    },
-			    "gamma__forecast_has_default_data__date_view": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - FORECAST"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__forecast": {
-			          "Target": {
-			            "Entity": "gamma__forecast"
-			          }
-			        },
-			        "default_data__date_view": {
-			          "Target": {
-			            "Entity": "default_data__date_view"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__forecast"
-			            },
-			            "Object": {
-			              "Role": "default_data__date_view"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__forecasts_have_default_data__date_views"
-			        }
-			      ]
-			    },
-			    "gamma__forecast_has_gamma__account": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - FORECAST"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__forecast": {
-			          "Target": {
-			            "Entity": "gamma__forecast"
-			          }
-			        },
-			        "gamma__account": {
-			          "Target": {
-			            "Entity": "gamma__account"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__forecast"
-			            },
-			            "Object": {
-			              "Role": "gamma__account"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__forecasts_have_gamma__accounts"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__account"
-			            },
-			            "Object": {
-			              "Role": "gamma__forecast"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__accounts_have_gamma__forecasts"
-			        }
-			      ]
-			    },
-			    "gamma__posteringer_has_gamma__bank_account": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - POSTERINGER"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__posteringer": {
-			          "Target": {
-			            "Entity": "gamma__posteringer"
-			          }
-			        },
-			        "gamma__bank_account": {
-			          "Target": {
-			            "Entity": "gamma__bank_account"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__posteringer"
-			            },
-			            "Object": {
-			              "Role": "gamma__bank_account"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__posteringers_have_gamma__bank_accounts"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__bank_account"
-			            },
-			            "Object": {
-			              "Role": "gamma__posteringer"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__bank_accounts_have_gamma__posteringers"
-			        }
-			      ]
-			    },
-			    "gamma__posteringer_has_gamma__mobilepay": {
-			      "Binding": {
-			        "ConceptualEntity": "GAMMA - POSTERINGER"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gamma__posteringer": {
-			          "Target": {
-			            "Entity": "gamma__posteringer"
-			          }
-			        },
-			        "gamma__mobilepay": {
-			          "Target": {
-			            "Entity": "gamma__mobilepay"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__posteringer"
-			            },
-			            "Object": {
-			              "Role": "gamma__mobilepay"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__posteringers_have_gamma__mobilepays"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gamma__mobilepay"
-			            },
-			            "Object": {
-			              "Role": "gamma__posteringer"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gamma__mobilepays_have_gamma__posteringers"
-			        }
-			      ]
-			    },
 			    "gamma__posteringer_has_gamma__account": {
 			      "Binding": {
 			        "ConceptualEntity": "GAMMA - POSTERINGER"
@@ -14468,6 +14794,237 @@ cultureInfo da-DK
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "year_actual_hierarkis_have_date_actuals"
+			        }
+			      ]
+			    },
+			    "gamma__user_created_hiracy_has_created_year": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - USERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__user.created_hiracy": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy"
+			          }
+			        },
+			        "gamma__user.created_hiracy.created_year": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy.created_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user.created_hiracy"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_hiracy.created_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_hiracies_have_created_years"
+			        }
+			      ]
+			    },
+			    "gamma__user_created_hiracy_has_created_month": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - USERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__user.created_hiracy": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy"
+			          }
+			        },
+			        "gamma__user.created_hiracy.created_month": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy.created_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user.created_hiracy"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_hiracy.created_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_hiracies_have_created_months"
+			        }
+			      ]
+			    },
+			    "gamma__user_created_hiracy_has_created_day": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - USERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__user.created_hiracy": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy"
+			          }
+			        },
+			        "gamma__user.created_hiracy.created_day": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy.created_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user.created_hiracy"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_hiracy.created_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_hiracies_have_created_days"
+			        }
+			      ]
+			    },
+			    "gamma__user_created_hiracy_created_year_has_gamma__user_created_hiracy_created_month": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - USERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__user.created_hiracy.created_year": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy.created_year"
+			          }
+			        },
+			        "gamma__user.created_hiracy.created_month": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy.created_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user.created_hiracy.created_year"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_hiracy.created_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_years_have_created_months"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user.created_hiracy.created_month"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_hiracy.created_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_months_have_created_years"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "gamma__user.created_hiracy.created_month"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "gamma__user.created_hiracy.created_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_months_are_in_created_years"
+			        }
+			      ]
+			    },
+			    "gamma__user_created_hiracy_created_month_has_gamma__user_created_hiracy_created_day": {
+			      "Binding": {
+			        "ConceptualEntity": "GAMMA - USERS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gamma__user.created_hiracy.created_month": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy.created_month"
+			          }
+			        },
+			        "gamma__user.created_hiracy.created_day": {
+			          "Target": {
+			            "Entity": "gamma__user.created_hiracy.created_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user.created_hiracy.created_month"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_hiracy.created_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_months_have_created_days"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gamma__user.created_hiracy.created_day"
+			            },
+			            "Object": {
+			              "Role": "gamma__user.created_hiracy.created_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_days_have_created_months"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "gamma__user.created_hiracy.created_day"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "gamma__user.created_hiracy.created_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_days_are_in_created_months"
 			        }
 			      ]
 			    }

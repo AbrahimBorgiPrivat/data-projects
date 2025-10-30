@@ -4,10 +4,10 @@
   "position": {
     "x": 320.65171521708555,
     "y": 20.334011208888352,
-    "z": 1000,
+    "z": 0,
     "height": 680.40729814357178,
     "width": 951.00606269262437,
-    "tabOrder": 5000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "tableEx",
@@ -337,121 +337,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3efa50d2975e7d23adab",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGER"
-              }
-            },
-            "Property": "date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "58373f921c5ca50b50e0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGER"
-              }
-            },
-            "Property": "amount"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "07f48212d88c64d9d19e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - USERS"
-              }
-            },
-            "Property": "name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "54b8555786825c6a81de",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGER"
-              }
-            },
-            "Property": "text"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9b44463daff28d360046",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - ACCOUNT"
-              }
-            },
-            "Property": "main_account"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "be786876415877b93975",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - ACCOUNT"
-              }
-            },
-            "Property": "sub_account"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "471951718808c8cd015d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGSGRUPPE"
-              }
-            },
-            "Property": "context"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "526dd7eee2e743ffb061",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGER"
-              }
-            },
-            "Property": "document"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

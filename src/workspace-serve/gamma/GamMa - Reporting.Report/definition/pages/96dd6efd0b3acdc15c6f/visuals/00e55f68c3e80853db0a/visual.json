@@ -2,80 +2,17 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "00e55f68c3e80853db0a",
   "position": {
-    "x": 799.85173465928358,
-    "y": 129.60560515312466,
-    "z": 3,
-    "height": 275.874788111651,
-    "width": 470.283195841338
+    "x": 960,
+    "y": 450,
+    "z": 3000,
+    "height": 250,
+    "width": 300,
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "pieChart",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DEFAULT DATA - DATE VIEW"
-                        }
-                      },
-                      "Hierarchy": "year_actual Hierarki"
-                    }
-                  },
-                  "Level": "year_actual"
-                }
-              },
-              "queryRef": "DEFAULT DATA - DATE VIEW.year_actual Hierarki.year_actual",
-              "nativeQueryRef": "year_actual Hierarki year_actual",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DEFAULT DATA - DATE VIEW"
-                        }
-                      },
-                      "Hierarchy": "year_actual Hierarki"
-                    }
-                  },
-                  "Level": "month_name"
-                }
-              },
-              "queryRef": "DEFAULT DATA - DATE VIEW.year_actual Hierarki.month_name",
-              "nativeQueryRef": "year_actual Hierarki month_name",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DEFAULT DATA - DATE VIEW"
-                        }
-                      },
-                      "Hierarchy": "year_actual Hierarki"
-                    }
-                  },
-                  "Level": "date_actual"
-                }
-              },
-              "queryRef": "DEFAULT DATA - DATE VIEW.year_actual Hierarki.date_actual",
-              "nativeQueryRef": "year_actual Hierarki date_actual",
-              "active": false
-            }
-          ]
-        },
         "Y": {
           "projections": [
             {
@@ -110,6 +47,24 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_MEASURES - CUSTOM"
+                  }
+                },
+                "Property": "NEW_REWON MEMBERS"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -133,73 +88,6 @@
           }
         }
       ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryAxis": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "lineStyles": [
-        {
-          "properties": {
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            },
-            "strokeLineJoin": {
-              "expr": {
-                "Literal": {
-                  "Value": "'round'"
-                }
-              }
-            },
-            "showMarker": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "lineChartType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'smooth'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "labels": [
         {
           "properties": {
@@ -209,30 +97,18 @@
                   "Value": "true"
                 }
               }
-            }
-          }
-        }
-      ],
-      "seriesLabels": [
-        {
-          "properties": {
-            "show": {
+            },
+            "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "0L"
                 }
               }
-            }
-          }
-        }
-      ],
-      "markers": [
-        {
-          "properties": {
-            "borderShow": {
+            },
+            "percentageLabelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "0L"
                 }
               }
             }
@@ -328,5 +204,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2ac3343850b82d604678",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "NEW_REWON MEMBERS"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a6dd7b87e603120c316a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "RESIGNING_MEMBERS"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
