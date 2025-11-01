@@ -8,8 +8,7 @@ Dette repository fungerer som samlingspunkt for et antal data- og analyseskabelo
 
 ### Mappestruktur
 
----
-
+```
 /data-projects
 │
 ├── /docs
@@ -48,8 +47,7 @@ Dette repository fungerer som samlingspunkt for et antal data- og analyseskabelo
 │       └── /drtv-case
 │
 └── README.txt
-
----
+```
 
 Denne struktur sikrer:
 - at dokumentation (`docs`) er opdelt pr. projektområde  
