@@ -1,10 +1,3 @@
-<p align="center">
-  <a href="README.md">🏠 Forside</a> |
-  <a href="README.GamMa.md">📊 GamMa</a> 
-</p>
-
----
-
 # GamMa – Data & Rapportering
 
 GamMa-projektet er et selvstændigt data- og rapporteringssetup under **data-projects**-samlingen.  

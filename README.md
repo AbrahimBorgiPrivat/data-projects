@@ -4,14 +4,18 @@ Dette repository fungerer som samlingspunkt for et antal data- og analyseskabelo
 
 ---
 
-## Indhold
+## 📊 Projekter
+
+- **[GamMa – Data & Rapportering](docs/gamma/)**   
+  Automatiseret databehandling og rapportering for GamMa-foreningen.  
 
 ---
 
-## 📊 Projekter
+## Indhold
 
-- **[GamMa – Data & Rapportering](README.GamMa.md)**   
-  Automatiseret databehandling og rapportering for GamMa-foreningen.  
+Dette repository fungerer som en fælles ramme for flere data- og analyseprojekter.  
+Strukturen er bygget til at understøtte genbrug af kode, ensartet dokumentation og hurtig opstart af nye cases.  
+Hvert projekt (fx **GamMa** og **TV1 Case**) har sin egen dokumentation, ressourcer og services, men deler samme bibliotek af funktioner, scripts og runtime-definitioner.
 
 ---
 
