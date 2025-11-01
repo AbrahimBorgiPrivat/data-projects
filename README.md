@@ -99,15 +99,11 @@ docker-compose up --build
 6. Åbn rapporteringsarbejdet i src/workspace-serve/<projekt> — fx Power BI fil eller tilsvarende.
 
 ## Struktur- og udviklingskonventioner
-Fælles kode (utils, runners, classes) ligger i src/code/libraries og bør designes til genbrug.
-
-Runtime-definitioner (fx JSON-filer der konfigurerer simulation eller job-kørsler) ligger i src/code/runtime_definitions/<projekt>.
-
-Services (containeriserede applikationer/kørsler) ligger i src/code/services/<projekt>.
-
-Rapportering/arbejdsrum ligger i src/workspace-serve/<projekt>.
-
-Hver projektmappe (gamma, circlek-case, drtv-case) indeholder sin egen dokumentation i docs/<projekt>.
+- Fælles kode (utils, runners, classes) ligger i src/code/libraries og bør designes til genbrug.
+- Runtime-definitioner (fx JSON-filer der konfigurerer simulation eller job-kørsler) ligger i src/code/runtime_definitions/<projekt>.
+- Services (containeriserede applikationer/kørsler) ligger i src/code/services/<projekt>.
+- Rapportering/arbejdsrum ligger i src/workspace-serve/<projekt>.
+- Hver projektmappe (gamma, circlek-case, drtv-case) indeholder sin egen dokumentation i docs/<projekt>.
 
 
 ## Licens
