@@ -3,6 +3,7 @@
   <a href="README.GamMa.md">📊 GamMa</a> 
 </p>
 
+---
 
 # GamMa – Data & Rapportering
 
