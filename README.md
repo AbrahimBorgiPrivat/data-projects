@@ -10,7 +10,7 @@ Dette repository fungerer som samlingspunkt for et antal data- og analyseskabelo
 
 ## 📊 Projekter
 
-- **[GamMa – Data & Rapportering](README_GAMMA.md)**  
+- **[GamMa – Data & Rapportering](README.GamMa.md)**   
   Automatiseret databehandling og rapportering for GamMa-foreningen.  
 
 ---
