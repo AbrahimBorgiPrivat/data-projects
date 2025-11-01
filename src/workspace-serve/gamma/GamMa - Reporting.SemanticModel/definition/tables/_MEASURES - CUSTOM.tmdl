@@ -52,20 +52,6 @@ table '_MEASURES - CUSTOM'
 		displayFolder: KPI\FC
 		lineageTag: 84661b95-9d3d-4da4-9f82-da7680e6c032
 
-	/// CALCULATE([FORECAST], ALL('GAMMA - FORECAST'[forecast_type]) )
-	measure 'FORECAST - W.O. FILTER' = CALCULATE([FORECAST], ALL('GAMMA - FORECAST'[forecast_type]) )
-		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
-		displayFolder: KPI\FC
-		lineageTag: 9e4e7b84-4d24-49c6-a050-af26407f9b70
-
-	/// CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] = "BU")
-	measure 'FORECAST - BU' = ```
-			CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] = "BU") 
-			```
-		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
-		displayFolder: KPI\FC
-		lineageTag: 8b3efdad-deaf-4839-ad7a-bacc95c6f95d
-
 	/// CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] <> "BU")
 	measure 'FORECAST - NOT BU' = CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] <> "BU")
 		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
