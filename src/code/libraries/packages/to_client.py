@@ -5,6 +5,7 @@ from libraries.utils import path_config
 from libraries.packages.csv_to_client import map_rows
 from libraries.utils.csv_convert import convert_csv_to_dict
 from sqlalchemy import text
+import json
 
 def read_sql_file(file_path: str) -> str:
     path = Path(file_path)
@@ -29,6 +30,19 @@ def run_sequence_of_queries(client: DatabaseClient,
         engine = client.get_engine()
         with engine.begin() as connection:
                     connection.execute(text(sql_query))
+
+def json_to_client(client, upsert_runtime_vars: dict):
+    json_path = path_config.RES_PATH / upsert_runtime_vars["json_path"]
+    if not json_path.exists():
+        raise FileNotFoundError(f"[ERROR] JSON file not found: {json_path}")
+    with open(json_path, "r", encoding="utf-8") as f:
+        new_data = json.load(f)
+    if not isinstance(new_data, list):
+        raise ValueError("[ERROR] Expected a JSON array (list of dicts).")
+    return upsert_insert(client=client,
+            upsert_runtime_vars=upsert_runtime_vars,
+            new_data=new_data
+        )
 
 def csv_to_client_upsert(client: DatabaseClient, upsert_runtime_vars: dict):
     new_data = convert_csv_to_dict(
