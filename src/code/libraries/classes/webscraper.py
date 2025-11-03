@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 from typing import Dict, Any, List, Optional, Callable
 from urllib.parse import urljoin
 from playwright.sync_api import sync_playwright
-from tqdm import tqdm
 
 class WebScraper:
     FieldRule = Dict[str, Any]
@@ -121,48 +120,9 @@ class WebScraper:
         if not self.soup:
             raise RuntimeError("No HTML loaded. Call load_page() first.")
         out: List[Dict[str, Any]] = []
-        for el in tqdm(self.soup.select(selector)):
+        for el in self.soup.select(selector):
             row: Dict[str, Any] = {}
             for f in fields:
                 row[f["name"]] = self._get_field_value(el, f)
             out.append(row)
         return out
-
-
-if __name__ == "__main__":
-    scraper = WebScraper(
-        base_url="https://www.dr.dk/drtv/serie/miniboernene_235859",
-        use_js=True
-    )
-    scraper.load_page(
-        wait_selector="div.d1-drtv-episode",
-        click_selector="button:has-text('Vis mere')",
-        click_until_gone=True
-    )
-    selector = "div.d1-drtv-episode"
-    fields = [
-        {
-            "name": "episode_id",
-            "source": "attr",
-            "key": "href",
-            "regex": r"_(\d+)(?:\D|$)",
-            "transform": lambda s: int(s) if s else None,
-        },
-        {
-            "name": "title",
-            "source": "text",
-            "regex": r"(.+)",
-            "transform": lambda s: s.strip() if s else None,
-        },
-        {
-            "name": "url",
-            "source": "attr",
-            "key": "href",
-            "join_base": True,
-        },
-    ]
-    episodes = scraper.extract_many("div.d1-drtv-episode a.d1-drtv-episode-title-and-details", fields)
-
-    print(f"Episodes found: {len(episodes)}")
-    for e in episodes:
-        print(e)
