@@ -3,7 +3,10 @@ WORKDIR /app
 COPY service/gamma/etl/service_create_table_views_from_sql/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY service/gamma/etl/service_create_table_views_from_sql/app ./app
-COPY libraries ./libraries
+COPY libraries/classes ./libraries/classes
+COPY libraries/packages ./libraries/packages
+COPY libraries/runners ./libraries/runners
+COPY libraries/utils ./libraries/utils
 COPY runtime_definitions/gamma/create_table_and_views ./runtime_definitions/gamma/create_table_and_views
 ENV PYTHONPATH=/app/libraries
 CMD ["python", "app/main.py"]

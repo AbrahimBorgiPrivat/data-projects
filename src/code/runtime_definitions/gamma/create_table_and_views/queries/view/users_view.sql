@@ -1,7 +1,5 @@
 CREATE OR REPLACE VIEW gamma_db.users_view
  AS
-CREATE OR REPLACE VIEW gamma_db.users_view
- AS
  SELECT users.id,
     users.name,
         CASE

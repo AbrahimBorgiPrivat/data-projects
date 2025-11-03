@@ -14,7 +14,7 @@ services:
       - ./app:/app/app   
       - ../../../../../../res/gamma/csv:/app/res/gamma/csv  
     networks:
-      - gamma_network                    
+      - data_network                    
     command: ["python", "app/main.py"]
     deploy:
       restart_policy:
@@ -24,5 +24,5 @@ services:
         window: 30s
 
 networks:
-  gamma_network:
+  data_network:
     external: true

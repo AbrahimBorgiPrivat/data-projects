@@ -1,5 +1,5 @@
 from libraries.packages.upsert_data import build_client
-from libraries.packages.client_to_client import from_client_to_client_upsert
+from libraries.packages.to_client import from_client_to_client_upsert
 from libraries.utils import runtime, path_config
 
 def main(upsert_runtime_vars: dict):
@@ -20,6 +20,6 @@ def main(upsert_runtime_vars: dict):
                                  upsert_runtime_vars=upsert_runtime_vars)
 
 if __name__ == "__main__":
-    path = path_config.RUNTIME_PATH / "gamma" / "client_to_client" / "runtime" / "posteringsdata_runtime_def.json"
+    path = path_config.RUNTIME_PATH / "gamma" / "client_to_client" / "runtime" / "users_runtime_def.json"
     upsert_runtime_vars = runtime.load_runtime_vars(JSON_PATH=path)
     main(upsert_runtime_vars)

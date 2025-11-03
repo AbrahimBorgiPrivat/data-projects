@@ -1,6 +1,5 @@
 from libraries.classes.database_client import DatabaseClient
-from libraries.packages.client_to_client import read_sql_file
-from libraries.packages.upsert_data import upsert_insert
+from libraries.packages.to_client import read_sql_file
 from libraries.utils import path_config
 from datetime import datetime
 import os

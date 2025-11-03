@@ -1,5 +1,5 @@
 from libraries.packages.upsert_data import build_client
-from libraries.packages.csv_to_client import csv_to_client_upsert
+from libraries.packages.to_client import csv_to_client_upsert
 from libraries.utils import runtime,path_config
 from libraries.utils.env import POSTGRES_DB
 

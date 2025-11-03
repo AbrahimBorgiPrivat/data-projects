@@ -1,0 +1,490 @@
+[
+  {
+    "program_id": 242021,
+    "title": "Anna og Lotte",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/anna-og-lotte_242021",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='242021'&Width=270&Height=152&ImageId='52956745'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 6590,
+    "title": "Bamse og Kylling",
+    "category": "Ramasjang ø",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/bamse-og-kylling_6590",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='6590'&Width=270&Height=152&ImageId='54045895'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 440031,
+    "title": "Bamses Billedbog",
+    "category": "Gensyn",
+    "seasons": 7,
+    "url": "https://www.dr.dk/drtv/serie/bamses-billedbog_440031",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='440031'&Width=270&Height=152&ImageId='51935034'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 235714,
+    "title": "Bamses Lillebitte Billedbog",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/bamses-lillebitte-billedbog_235714",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='235714'&Width=270&Height=152&ImageId='52808850'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 491343,
+    "title": "Bevæg dig med Børste",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/bevaeg-dig-med-boerste_491343",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='491343'&Width=270&Height=152&ImageId='59418969'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 242208,
+    "title": "Blå ko",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/blaa-ko_242208",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='242208'&Width=270&Height=152&ImageId='9731295'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 489186,
+    "title": "BooSnoo",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/boosnoo_489186",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='489186'&Width=270&Height=152&ImageId='58816387'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 244224,
+    "title": "Børste",
+    "category": "Tegnefilm",
+    "seasons": 2,
+    "url": "https://www.dr.dk/drtv/serie/boerste_244224",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='244224'&Width=270&Height=152&ImageId='56496280'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 528477,
+    "title": "Børste og bondegården",
+    "category": "Dyr",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/boerste-og-bondegaarden_528477",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='528477'&Width=270&Height=152&ImageId='69818598'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 407822,
+    "title": "Børste og vuggestuen",
+    "category": "Fakta",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/boerste-og-vuggestuen_407822",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='407822'&Width=270&Height=152&ImageId='56487671'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 547526,
+    "title": "Børste show",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/boerste-show_547526",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='547526'&Width=270&Height=152&ImageId='72610191'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 478297,
+    "title": "Børstes rim og remser",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/boerstes-rim-og-remser_478297",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='478297'&Width=270&Height=152&ImageId='56144412'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 238549,
+    "title": "Cirkeline",
+    "category": "Gensyn",
+    "seasons": 2,
+    "url": "https://www.dr.dk/drtv/serie/cirkeline_238549",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='238549'&Width=270&Height=152&ImageId='51951339'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 528222,
+    "title": "Dragen og følelserne",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/dragen-og-foelelserne_528222",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='528222'&Width=270&Height=152&ImageId='69876829'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 321279,
+    "title": "Drillepind",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/drillepind_321279",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='321279'&Width=270&Height=152&ImageId='41270969'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 175805,
+    "title": "Dyreunger",
+    "category": "Dyr",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/dyreunger_175805",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='175805'&Width=270&Height=152&ImageId='4421010'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 300862,
+    "title": "Dyttelidyr",
+    "category": "Tegnefilm",
+    "seasons": 2,
+    "url": "https://www.dr.dk/drtv/serie/dyttelidyr_300862",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='300862'&Width=270&Height=152&ImageId='62268953'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 420835,
+    "title": "Familien Fløjtemus",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/familien-floejtemus_420835",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='420835'&Width=270&Height=152&ImageId='52958318'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 242207,
+    "title": "Fantorangens verden",
+    "category": null,
+    "seasons": 3,
+    "url": "https://www.dr.dk/drtv/serie/fantorangens-verden_242207",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='242207'&Width=270&Height=152&ImageId='71874894'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 506563,
+    "title": "Fantus Musikantus",
+    "category": "Musik",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/fantus-musikantus_506563",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='506563'&Width=270&Height=152&ImageId='64853112'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 318656,
+    "title": "Fantus og dyrene",
+    "category": "Dyr",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/fantus-og-dyrene_318656",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='318656'&Width=270&Height=152&ImageId='17727687'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 278022,
+    "title": "Fantus og maskinerne",
+    "category": null,
+    "seasons": 3,
+    "url": "https://www.dr.dk/drtv/serie/fantus-og-maskinerne_278022",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='278022'&Width=270&Height=152&ImageId='59067280'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 473648,
+    "title": "Fantus og værktøjet",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/fantus-og-vaerktoejet_473648",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='473648'&Width=270&Height=152&ImageId='54058936'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 388724,
+    "title": "Filurerne",
+    "category": "Krea",
+    "seasons": 2,
+    "url": "https://www.dr.dk/drtv/serie/filurerne_388724",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='388724'&Width=270&Height=152&ImageId='52314051'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 7190,
+    "title": "Gurli Gris",
+    "category": "Tegnefilm",
+    "seasons": 3,
+    "url": "https://www.dr.dk/drtv/serie/gurli-gris_7190",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='7190'&Width=270&Height=152&ImageId='52356028'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 146813,
+    "title": "Hey Duggee",
+    "category": null,
+    "seasons": 2,
+    "url": "https://www.dr.dk/drtv/serie/hey-duggee_146813",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='146813'&Width=270&Height=152&ImageId='51923444'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 6582,
+    "title": "Hunden Ib",
+    "category": "Tegnefilm",
+    "seasons": 2,
+    "url": "https://www.dr.dk/drtv/serie/hunden-ib_6582",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='6582'&Width=270&Height=152&ImageId='53040078'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 520408,
+    "title": "Hvis jeg var et dyr",
+    "category": "Dyr",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/hvis-jeg-var-et-dyr_520408",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='520408'&Width=270&Height=152&ImageId='68736313'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 6959,
+    "title": "Kaj og Andrea",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/kaj-og-andrea_6959",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='6959'&Width=270&Height=152&ImageId='52095870'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 510952,
+    "title": "Lenas bondegård",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/lenas-bondegaard_510952",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='510952'&Width=270&Height=152&ImageId='64366350'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 394400,
+    "title": "Lille Robot oplever verden",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/lille-robot-oplever-verden_394400",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='394400'&Width=270&Height=152&ImageId='48324254'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 236780,
+    "title": "Lille Tiger",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/lille-tiger_236780",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='236780'&Width=270&Height=152&ImageId='8778584'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 442755,
+    "title": "Lille Tut",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/lille-tut_442755",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='442755'&Width=270&Height=152&ImageId='51922866'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 154868,
+    "title": "Lillefinger",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/lillefinger_154868",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='154868'&Width=270&Height=152&ImageId='8686682'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 427801,
+    "title": "Lu og insektvennerne",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/lu-og-insektvennerne_427801",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='427801'&Width=270&Height=152&ImageId='60250532'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 490133,
+    "title": "Læs med Orm",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/laes-med-orm_490133",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='490133'&Width=270&Height=152&ImageId='59559885'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 536478,
+    "title": "Mad i Minisjang",
+    "category": "Krea",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/mad-i-minisjang_536478",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='536478'&Width=270&Height=152&ImageId='71201809'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 237363,
+    "title": "Manda",
+    "category": "Dyr",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/manda_237363",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='237363'&Width=270&Height=152&ImageId='8857750'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 321247,
+    "title": "Mariehøne og Bi",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/mariehoene-og-bi_321247",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='321247'&Width=270&Height=152&ImageId='47955797'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 235859,
+    "title": "Minibørnene",
+    "category": "Krea",
+    "seasons": 3,
+    "url": "https://www.dr.dk/drtv/serie/miniboernene_235859",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='235859'&Width=270&Height=152&ImageId='45227465'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 395414,
+    "title": "Misser og Vaps",
+    "category": "Dyr",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/misser-og-vaps_395414",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='395414'&Width=270&Height=152&ImageId='48631987'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 235838,
+    "title": "Mit kludetæppe",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/mit-kludetaeppe_235838",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='235838'&Width=270&Height=152&ImageId='45227462'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 237365,
+    "title": "Mægtige maskiner",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/maegtige-maskiner_237365",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='237365'&Width=270&Height=152&ImageId='64171689'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 505346,
+    "title": "Ordleg med Børste",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/ordleg-med-boerste_505346",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='505346'&Width=270&Height=152&ImageId='62966565'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 453376,
+    "title": "Samsyngerne",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/samsyngerne_453376",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='453376'&Width=270&Height=152&ImageId='52798254'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 484913,
+    "title": "Sandkassen",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/sandkassen_484913",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='484913'&Width=270&Height=152&ImageId='57631663'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 244222,
+    "title": "Sange fra Minisjang",
+    "category": "Musik",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/sange-fra-minisjang_244222",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='244222'&Width=270&Height=152&ImageId='59265170'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 6620,
+    "title": "Sange med Bamse",
+    "category": "Musik",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/sange-med-bamse_6620",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='6620'&Width=270&Height=152&ImageId='63699675'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 506060,
+    "title": "Sange med Fantus",
+    "category": "Musik",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/sange-med-fantus_506060",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='506060'&Width=270&Height=152&ImageId='63762114'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 6840,
+    "title": "Sange med Kaj og Andrea",
+    "category": "Musik",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/sange-med-kaj-og-andrea_6840",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='6840'&Width=270&Height=152&ImageId='63463395'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 536458,
+    "title": "Sigrid og smågrisene",
+    "category": "Dyr",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/sigrid-og-smaagrisene_536458",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='536458'&Width=270&Height=152&ImageId='72261598'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 117304,
+    "title": "Simon",
+    "category": "Tegnefilm",
+    "seasons": 3,
+    "url": "https://www.dr.dk/drtv/serie/simon_117304",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='117304'&Width=270&Height=152&ImageId='51492384'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 528458,
+    "title": "Skal vi lege?",
+    "category": "Fakta",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/skal-vi-lege_528458",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='528458'&Width=270&Height=152&ImageId='69818394'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 237362,
+    "title": "Små kartofler",
+    "category": "Musik",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/smaa-kartofler_237362",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='237362'&Width=270&Height=152&ImageId='64326429'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 461890,
+    "title": "Små mirakler",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/smaa-mirakler_461890",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='461890'&Width=270&Height=152&ImageId='54029853'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 235829,
+    "title": "Tik Tak",
+    "category": "Krea",
+    "seasons": 2,
+    "url": "https://www.dr.dk/drtv/serie/tik-tak_235829",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='235829'&Width=270&Height=152&ImageId='59420549'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 317751,
+    "title": "Trumle på tur",
+    "category": null,
+    "seasons": 2,
+    "url": "https://www.dr.dk/drtv/serie/trumle-paa-tur_317751",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='317751'&Width=270&Height=152&ImageId='45559133'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 547529,
+    "title": "Tvist og Tot",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/tvist-og-tot_547529",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='547529'&Width=270&Height=152&ImageId='72922103'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 318642,
+    "title": "Vidunderligt Værktøj",
+    "category": null,
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/vidunderligt-vaerktoej_318642",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='318642'&Width=270&Height=152&ImageId='70577897'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 453404,
+    "title": "Vilddyr",
+    "category": "Tegnefilm",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/vilddyr_453404",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='453404'&Width=270&Height=152&ImageId='53305461'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  },
+  {
+    "program_id": 334386,
+    "title": "Visselulleland",
+    "category": "Musik",
+    "seasons": 1,
+    "url": "https://www.dr.dk/drtv/serie/visselulleland_334386",
+    "image": "https://prod95-static.dr-massive.com/api/shain/v1/dataservice/ResizeImage/$value?Format='jpg'&Quality=75&EntityType='Item'&EntityId='334386'&Width=270&Height=152&ImageId='72803755'&ResizeAction='fill'&HorizontalAlignment='center'&VerticalAlignment='top'"
+  }
+]

@@ -1,5 +1,5 @@
 from libraries.packages.upsert_data import build_client
-from libraries.packages.create_table_and_views import run_sequence_of_queries
+from libraries.packages.to_client import run_sequence_of_queries
 from libraries.utils import runtime, path_config
 
 def main(upsert_runtime_vars: dict):

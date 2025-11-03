@@ -20,13 +20,13 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - gamma_network
+      - data_network   
 
 volumes:
   postgres_data:
 
 networks:
-  gamma_network:               
-    name: gamma_network
+  data_network:               
+    name: data_network 
     driver: bridge
     attachable: true 

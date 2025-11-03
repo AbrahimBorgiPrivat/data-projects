@@ -2,9 +2,6 @@ import hashlib
 from datetime import datetime
 from collections import OrderedDict
 from decimal import Decimal, InvalidOperation
-from libraries.classes.database_client import DatabaseClient
-from libraries.packages.upsert_data import upsert_insert
-from libraries.utils.csv_convert import convert_csv_to_dict
 
 def _to_string(v):
     return "" if v is None else str(v).strip()
@@ -129,29 +126,3 @@ def map_rows(
         else:
             out.append(new_r)
     return out
-
-
-def csv_to_client_upsert(client: DatabaseClient, upsert_runtime_vars: dict):
-    new_data = convert_csv_to_dict(
-        upsert_runtime_vars["path"],
-        delimiter=upsert_runtime_vars.get("delimiter", "\t"),
-        subset=upsert_runtime_vars.get("subset"),
-    )
-    column_order = upsert_runtime_vars.get("column_order")
-    if column_order is None and upsert_runtime_vars.get("use_fields_dict_order"):
-        column_order = list(upsert_runtime_vars["fields_dict"].keys())
-    new_data = map_rows(
-        new_data,
-        upsert_runtime_vars["mapping"],
-        defaults=upsert_runtime_vars.get("defaults"),
-        pk_from=upsert_runtime_vars.get("pk_from"),
-        pk_name=upsert_runtime_vars.get("pk_name", "id"),
-        column_order=column_order,
-        strict_columns=upsert_runtime_vars.get("strict_columns", True),
-    )
-    upsert_insert(
-        client=client,
-        upsert_runtime_vars=upsert_runtime_vars,
-       new_data=new_data
-    )
-

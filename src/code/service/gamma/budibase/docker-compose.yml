@@ -30,11 +30,11 @@ services:
     volumes:
       - ./app-data:/data
     networks:
-      - gamma_network
+      - data_network
 
 volumes:
   couchdata:
 
 networks:
-  gamma_network:
+  data_network:
     external: true
