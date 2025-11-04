@@ -314,6 +314,48 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "c77fa7881898a0e5a5fa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - USERS"
+              }
+            },
+            "Property": "aargang"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f7a81ebc64c9464675de",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "NEW_REWON MEMBERS"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7428d74e3e10f19829d9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_MEASURES - CUSTOM"
+              }
+            },
+            "Property": "RESIGNING_MEMBERS"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

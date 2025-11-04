@@ -192,6 +192,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "f3189d5bd534416fd124",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGSGRUPPE"
+              }
+            },
+            "Property": "posting_group"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

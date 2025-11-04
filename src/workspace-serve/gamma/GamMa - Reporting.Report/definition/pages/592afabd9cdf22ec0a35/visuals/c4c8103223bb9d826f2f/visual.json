@@ -337,5 +337,121 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3f3177b324aac3f5c10d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGER"
+              }
+            },
+            "Property": "date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ad06751fe8b78befcb9f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGER"
+              }
+            },
+            "Property": "amount"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7bd327614aa8c2c2e405",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - USERS"
+              }
+            },
+            "Property": "name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "323fd08618859316402a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGER"
+              }
+            },
+            "Property": "text"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6e467d3bc0395df7922e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - ACCOUNT"
+              }
+            },
+            "Property": "main_account"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4f785048a8f349b1df12",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - ACCOUNT"
+              }
+            },
+            "Property": "sub_account"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e903faebfd416a4c9b0c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGSGRUPPE"
+              }
+            },
+            "Property": "context"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "49d7b480a7ced94c7bf1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GAMMA - POSTERINGER"
+              }
+            },
+            "Property": "document"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -12,7 +12,7 @@ services:
     volumes:
       - couchdata:/opt/couchdb/data
     networks:
-      - gamma_network
+      - data_network
 
   budibase:
     image: budibase/budibase:latest

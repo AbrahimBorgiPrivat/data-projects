@@ -30,6 +30,21 @@
               "nativeQueryRef": "Konto",
               "active": true,
               "displayName": "Konto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - ACCOUNT"
+                    }
+                  },
+                  "Property": "sub_account"
+                }
+              },
+              "queryRef": "GAMMA - ACCOUNT.sub_account",
+              "nativeQueryRef": "sub_account",
+              "active": false
             }
           ]
         }
@@ -67,6 +82,11 @@
               }
             }
           }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
         }
       ]
     },
