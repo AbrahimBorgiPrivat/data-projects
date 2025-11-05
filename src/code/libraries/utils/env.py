@@ -14,6 +14,7 @@ else:
         print("[env.py] No local .env.local found")
 
 POSTGRES_DB = os.getenv("POSTGRES_DB")
+TV_OME_DB = os.getenv("TV_OME_DB")
 POSTGRES_HOST = os.getenv("POSTGRES_HOST")
 POSTGRES_PORT = os.getenv("POSTGRES_PORT")
 POSTGRES_USERNAME = os.getenv("POSTGRES_USERNAME")

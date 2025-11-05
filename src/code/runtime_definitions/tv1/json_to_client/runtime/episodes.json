@@ -1,0 +1,38 @@
+{"client":{"db_name": "TV_OME_DB",
+                "username": "POSTGRES_USERNAME",
+                "password": "POSTGRES_PASSWORD",
+                "server": "POSTGRES_HOST",
+                "port":"POSTGRES_PORT",
+                "db_type":"DB_TYPE"},
+"schema": "tv_one",
+"table_name": "episodes",
+"create_table_if_not_exist": true,
+"fields_dict": {
+    "episode_id": { "type": "BIGINT", "primary_key": true, "autoincrement": false},
+    "program_id": { "type": "BIGINT"},
+    "season_id": { "type": "BIGINT" },
+    "title": { "type": "TEXT" },
+    "details": { "type": "TEXT"},
+    "url": { "type": "TEXT"},
+    "description": { "type": "TEXT"},
+    "image": { "type": "TEXT"}
+    },
+"update_fields": ["program_id","season_id","title","details","url","description","image"],
+"not_included_in_update_fields": [],
+"path": "tv1/json/drtv_episodes.json",
+  "subset": ["episode_id","program_id","season_id","title","details","url","description","image"],
+  "mapping": [
+    { "former_key": "episode_id",               "new_key": "episode_id",      "type": "int"},
+    { "former_key": "program_id",               "new_key": "program_id",      "type": "int" },
+    { "former_key": "season_id",                "new_key": "season_id",       "type": "int" },
+    { "former_key": "title",                    "new_key": "title",           "type": "text" },
+    { "former_key": "details",                  "new_key": "details",         "type": "text" },
+    { "former_key": "url",                      "new_key": "url",             "type": "text" },
+    { "former_key": "description",              "new_key": "description",     "type": "text" },
+    { "former_key": "image",                    "new_key": "image",           "type": "text" }
+  ],
+  "defaults": { "source": "drtv_episodes" },
+  "use_fields_dict_order": true,
+  "column_order": null,
+  "strict_columns": true
+}

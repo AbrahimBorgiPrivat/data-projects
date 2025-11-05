@@ -1,0 +1,41 @@
+{"client":{"db_name": "TV_OME_DB",
+                "username": "POSTGRES_USERNAME",
+                "password": "POSTGRES_PASSWORD",
+                "server": "POSTGRES_HOST",
+                "port":"POSTGRES_PORT",
+                "db_type":"DB_TYPE"},
+"schema": "tv_one",
+"table_name": "programs",
+"create_table_if_not_exist": true,
+"fields_dict": {
+    "program_id": { "type": "BIGINT", "primary_key": true, "autoincrement": false},
+    "title": { "type": "TEXT"},
+    "category": { "type": "TEXT" },
+    "seasons": { "type": "BIGINT" },
+    "url": { "type": "TEXT"},
+    "image": { "type": "TEXT"}
+    },
+"update_fields": ["title","category","seasons","url","image"],
+"not_included_in_update_fields": [],
+"path": "tv1/json/drtv_programs.json",
+  "subset": [
+    "program_id",
+    "title",
+    "category",
+    "seasons",
+    "url",
+    "image"
+  ],
+  "mapping": [
+    { "former_key": "program_id",               "new_key": "program_id",        "type": "int"},
+    { "former_key": "title",                    "new_key": "title",             "type": "text" },
+    { "former_key": "category",                 "new_key": "category",          "type": "text" },
+    { "former_key": "seasons",                  "new_key": "seasons",           "type": "int" },
+    { "former_key": "url",                      "new_key": "url",               "type": "text" },
+    { "former_key": "image",                    "new_key": "image",             "type": "text" }
+  ],
+  "defaults": { "source": "drtv_programs" },
+  "use_fields_dict_order": true,
+  "column_order": null,
+  "strict_columns": true
+}

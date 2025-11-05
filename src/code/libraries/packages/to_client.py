@@ -31,14 +31,27 @@ def run_sequence_of_queries(client: DatabaseClient,
         with engine.begin() as connection:
                     connection.execute(text(sql_query))
 
-def json_to_client(client, upsert_runtime_vars: dict):
-    json_path = path_config.RES_PATH / upsert_runtime_vars["json_path"]
+def json_to_client(client: DatabaseClient, 
+                   upsert_runtime_vars: dict):
+    json_path = path_config.RES_PATH / upsert_runtime_vars["path"]
     if not json_path.exists():
         raise FileNotFoundError(f"[ERROR] JSON file not found: {json_path}")
     with open(json_path, "r", encoding="utf-8") as f:
         new_data = json.load(f)
     if not isinstance(new_data, list):
         raise ValueError("[ERROR] Expected a JSON array (list of dicts).")
+    column_order = upsert_runtime_vars.get("column_order")
+    if column_order is None and upsert_runtime_vars.get("use_fields_dict_order"):
+        column_order = list(upsert_runtime_vars["fields_dict"].keys())
+    new_data = map_rows(
+        new_data,
+        upsert_runtime_vars["mapping"],
+        defaults=upsert_runtime_vars.get("defaults"),
+        pk_from=upsert_runtime_vars.get("pk_from"),
+        pk_name=upsert_runtime_vars.get("pk_name", "id"),
+        column_order=column_order,
+        strict_columns=upsert_runtime_vars.get("strict_columns", True),
+    )
     return upsert_insert(client=client,
             upsert_runtime_vars=upsert_runtime_vars,
             new_data=new_data

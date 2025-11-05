@@ -77,8 +77,8 @@ def map_rows(
         defaults: dict | None = None,
         pk_from: list[str] | None = None,
         pk_name: str = "id",
-        column_order: list[str] | None = None,   # NEW
-        strict_columns: bool = True,             # NEW: only return columns in column_order
+        column_order: list[str] | None = None,   
+        strict_columns: bool = True,            
     ) -> list[dict]:
     _TYPE_REGISTRY = {
         "string": lambda v, **kw: _to_string(v),

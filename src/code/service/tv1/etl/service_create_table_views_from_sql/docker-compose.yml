@@ -1,0 +1,28 @@
+services:
+  create_from_sql_tv1:
+    build:
+      context: ../../../..                    
+      dockerfile: service/tv1/etl/service_create_table_views_from_sql/Dockerfile
+    container_name: service_create_table_views_from_sql_tv1
+    env_file:
+      - .env
+    environment:
+      PYTHONPATH: /app              
+      ENV_MODE: docker
+      SERVICE_NAME: service_create_table_views_from_sql_tv1
+    volumes:
+      - ./app:/app/app   
+      - ../../../../../../res/tv1/json:/app/res/tv1/json
+    networks:
+      - data_network                    
+    command: ["python", "app/main.py"]
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 1          
+        window: 30s
+
+networks:
+  data_network:
+    external: true
