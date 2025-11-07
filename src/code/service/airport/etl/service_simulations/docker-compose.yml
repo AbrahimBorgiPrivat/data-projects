@@ -1,0 +1,28 @@
+services:
+  service_simulations_airport:
+    build:
+      context: ../../../..                    
+      dockerfile: service/airport/etl/service_simulations/Dockerfile
+    container_name: service_simulations_airport
+    env_file:
+      - .env
+    environment:
+      PYTHONPATH: /app              
+      ENV_MODE: docker
+      SERVICE_NAME: service_simulations_airport
+    volumes:
+      - ./app:/app/app   
+      - ../../../../../../res/airport/json:/app/res/airport/json
+    networks:
+      - data_network                    
+    command: ["python", "app/main.py"]
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 1          
+        window: 30s
+
+networks:
+  data_network:
+    external: true
