@@ -1,0 +1,38 @@
+{
+  "module_name": "libraries.service_specifik.tv1.simulations.users",
+  "function_name": "generate_danish_households",
+
+  "client":{"db_name": "TV_OME_DB",
+              "username": "POSTGRES_USERNAME",
+              "password": "POSTGRES_PASSWORD",
+              "server": "POSTGRES_HOST",
+              "port":"POSTGRES_PORT",
+              "db_type":"DB_TYPE"},
+  "schema": "tv_one",
+  "table_name": "users",
+  "create_table_if_not_exist": true,
+
+  "fields_dict": {
+    "user_id": { "type": "BIGINT", "primary_key": true, "autoincrement": false },
+    "age_group": { "type": "TEXT" },
+    "household_size": { "type": "INTEGER" },
+    "region": { "type": "TEXT" },
+    "children_under5": { "type": "BOOLEAN" },
+    "segment_id": { "type": "BIGINT" }
+  },
+  "update_fields": [
+    "age_group",
+    "household_size",
+    "region",
+    "children_under5",
+    "segment_id"
+  ],
+  "not_included_in_update_fields": [],
+  "number_of_simulations": 10000,
+  "defaults": {
+    "source": "simulation_danish_households"
+  },
+  "use_fields_dict_order": true,
+  "column_order": null,
+  "strict_columns": true
+}

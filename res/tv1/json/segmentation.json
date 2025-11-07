@@ -1,0 +1,183 @@
+[
+  {
+    "segment_id": 1,
+    "segment_key": "young_families",
+    "name": "Young Families",
+    "description": "Parents in their 20s-30s with young children (under 6).",
+    "activity_level": "High",
+    "child_focus": true,
+    "preferred_platform_weights": { "TV": 0.45, "Mobile": 0.35, "Tablet": 0.20 },
+    "weekday_time_windows": [
+      { "start": "06:30", "end": "08:00", "weight": 0.25 },
+      { "start": "16:30", "end": "19:00", "weight": 0.45 },
+      { "start": "20:00", "end": "21:30", "weight": 0.30 }
+    ],
+    "weekend_time_windows": [
+      { "start": "07:00", "end": "10:00", "weight": 0.35 },
+      { "start": "16:00", "end": "20:00", "weight": 0.45 },
+      { "start": "20:30", "end": "22:00", "weight": 0.20 }
+    ],
+    "avg_daily_minutes_weekday": { "mean": 65, "std": 15, "min": 30, "max": 110 },
+    "avg_daily_minutes_weekend": { "mean": 85, "std": 20, "min": 40, "max": 140 },
+    "avg_session_minutes": { "mean": 22, "std": 8, "min": 8, "max": 45 },
+    "kids_content_share": 0.65
+  },
+  {
+    "segment_id": 2,
+    "segment_key": "established_families",
+    "name": "Established Families",
+    "description": "Parents 40-60 with children in school age.",
+    "activity_level": "Medium",
+    "child_focus": true,
+    "preferred_platform_weights": { "TV": 0.55, "Mobile": 0.25, "Tablet": 0.20 },
+    "weekday_time_windows": [
+      { "start": "06:30", "end": "08:00", "weight": 0.20 },
+      { "start": "18:00", "end": "21:00", "weight": 0.60 },
+      { "start": "21:00", "end": "22:30", "weight": 0.20 }
+    ],
+    "weekend_time_windows": [
+      { "start": "09:00", "end": "11:00", "weight": 0.25 },
+      { "start": "17:00", "end": "21:30", "weight": 0.55 },
+      { "start": "21:30", "end": "23:00", "weight": 0.20 }
+    ],
+    "avg_daily_minutes_weekday": { "mean": 75, "std": 20, "min": 35, "max": 130 },
+    "avg_daily_minutes_weekend": { "mean": 95, "std": 25, "min": 45, "max": 160 },
+    "avg_session_minutes": { "mean": 28, "std": 10, "min": 10, "max": 55 },
+    "kids_content_share": 0.45
+  },
+  {
+    "segment_id": 3,
+    "segment_key": "young_couples",
+    "name": "Young Couples",
+    "description": "Adults 18-40 without kids in the household.",
+    "activity_level": "Medium",
+    "child_focus": false,
+    "preferred_platform_weights": { "TV": 0.40, "Mobile": 0.40, "Tablet": 0.20 },
+    "weekday_time_windows": [
+      { "start": "07:00", "end": "08:30", "weight": 0.15 },
+      { "start": "18:30", "end": "20:30", "weight": 0.35 },
+      { "start": "20:30", "end": "23:00", "weight": 0.50 }
+    ],
+    "weekend_time_windows": [
+      { "start": "10:00", "end": "12:00", "weight": 0.20 },
+      { "start": "18:00", "end": "23:30", "weight": 0.80 }
+    ],
+    "avg_daily_minutes_weekday": { "mean": 70, "std": 25, "min": 20, "max": 150 },
+    "avg_daily_minutes_weekend": { "mean": 110, "std": 35, "min": 35, "max": 210 },
+    "avg_session_minutes": { "mean": 32, "std": 14, "min": 8, "max": 80 },
+    "kids_content_share": 0.05
+  },
+  {
+    "segment_id": 4,
+    "segment_key": "seniors",
+    "name": "Seniors",
+    "description": "Adults 60+ often retired or part-time.",
+    "activity_level": "Medium",
+    "child_focus": false,
+    "preferred_platform_weights": { "TV": 0.75, "Mobile": 0.15, "Tablet": 0.10 },
+    "weekday_time_windows": [
+      { "start": "08:30", "end": "11:00", "weight": 0.25 },
+      { "start": "16:00", "end": "19:00", "weight": 0.35 },
+      { "start": "19:00", "end": "22:00", "weight": 0.40 }
+    ],
+    "weekend_time_windows": [
+      { "start": "09:00", "end": "12:00", "weight": 0.30 },
+      { "start": "17:00", "end": "21:00", "weight": 0.50 },
+      { "start": "21:00", "end": "22:30", "weight": 0.20 }
+    ],
+    "avg_daily_minutes_weekday": { "mean": 95, "std": 25, "min": 45, "max": 170 },
+    "avg_daily_minutes_weekend": { "mean": 110, "std": 30, "min": 50, "max": 190 },
+    "avg_session_minutes": { "mean": 35, "std": 12, "min": 12, "max": 75 },
+    "kids_content_share": 0.02
+  },
+  {
+    "segment_id": 5,
+    "segment_key": "single_adults",
+    "name": "Single Adults",
+    "description": "Single households, 26-60, no children.",
+    "activity_level": "Medium",
+    "child_focus": false,
+    "preferred_platform_weights": { "TV": 0.55, "Mobile": 0.30, "Tablet": 0.15 },
+    "weekday_time_windows": [
+      { "start": "07:00", "end": "08:30", "weight": 0.15 },
+      { "start": "18:00", "end": "20:00", "weight": 0.30 },
+      { "start": "20:00", "end": "23:30", "weight": 0.55 }
+    ],
+    "weekend_time_windows": [
+      { "start": "11:00", "end": "14:00", "weight": 0.25 },
+      { "start": "19:00", "end": "24:00", "weight": 0.75 }
+    ],
+    "avg_daily_minutes_weekday": { "mean": 80, "std": 30, "min": 25, "max": 170 },
+    "avg_daily_minutes_weekend": { "mean": 120, "std": 40, "min": 35, "max": 230 },
+    "avg_session_minutes": { "mean": 36, "std": 18, "min": 10, "max": 95 },
+    "kids_content_share": 0.03
+  },
+  {
+    "segment_id": 6,
+    "segment_key": "students",
+    "name": "Students",
+    "description": "Primarily 18-25; flexible schedules, heavy evening/night usage.",
+    "activity_level": "High",
+    "child_focus": false,
+    "preferred_platform_weights": { "TV": 0.35, "Mobile": 0.50, "Tablet": 0.15 },
+    "weekday_time_windows": [
+      { "start": "12:00", "end": "15:00", "weight": 0.25 },
+      { "start": "18:00", "end": "20:00", "weight": 0.25 },
+      { "start": "20:00", "end": "01:00", "weight": 0.50 }
+    ],
+    "weekend_time_windows": [
+      { "start": "12:00", "end": "15:00", "weight": 0.20 },
+      { "start": "18:00", "end": "02:00", "weight": 0.80 }
+    ],
+    "avg_daily_minutes_weekday": { "mean": 95, "std": 35, "min": 30, "max": 210 },
+    "avg_daily_minutes_weekend": { "mean": 140, "std": 45, "min": 40, "max": 280 },
+    "avg_session_minutes": { "mean": 34, "std": 16, "min": 8, "max": 90 },
+    "kids_content_share": 0.01
+  },
+  {
+    "segment_id": 7,
+    "segment_key": "large_families",
+    "name": "Large Families",
+    "description": "Household size 5+, broad mix of ages.",
+    "activity_level": "High",
+    "child_focus": true,
+    "preferred_platform_weights": { "TV": 0.50, "Mobile": 0.25, "Tablet": 0.25 },
+    "weekday_time_windows": [
+      { "start": "06:30", "end": "08:30", "weight": 0.25 },
+      { "start": "17:00", "end": "20:00", "weight": 0.55 },
+      { "start": "20:00", "end": "22:00", "weight": 0.20 }
+    ],
+    "weekend_time_windows": [
+      { "start": "08:00", "end": "11:00", "weight": 0.35 },
+      { "start": "15:00", "end": "20:00", "weight": 0.50 },
+      { "start": "20:00", "end": "22:00", "weight": 0.15 }
+    ],
+    "avg_daily_minutes_weekday": { "mean": 90, "std": 25, "min": 45, "max": 160 },
+    "avg_daily_minutes_weekend": { "mean": 120, "std": 30, "min": 60, "max": 190 },
+    "avg_session_minutes": { "mean": 27, "std": 10, "min": 10, "max": 60 },
+    "kids_content_share": 0.55
+  },
+  {
+    "segment_id": 8,
+    "segment_key": "new_parents",
+    "name": "New Parents",
+    "description": "Infant/toddler in the home; fragmented sessions.",
+    "activity_level": "Medium",
+    "child_focus": true,
+    "preferred_platform_weights": { "TV": 0.40, "Mobile": 0.40, "Tablet": 0.20 },
+    "weekday_time_windows": [
+      { "start": "06:00", "end": "08:00", "weight": 0.25 },
+      { "start": "12:00", "end": "14:00", "weight": 0.15 },
+      { "start": "19:00", "end": "22:00", "weight": 0.60 }
+    ],
+    "weekend_time_windows": [
+      { "start": "07:00", "end": "10:00", "weight": 0.30 },
+      { "start": "15:00", "end": "20:00", "weight": 0.50 },
+      { "start": "20:00", "end": "22:30", "weight": 0.20 }
+    ],
+    "avg_daily_minutes_weekday": { "mean": 70, "std": 20, "min": 30, "max": 120 },
+    "avg_daily_minutes_weekend": { "mean": 95, "std": 25, "min": 40, "max": 150 },
+    "avg_session_minutes": { "mean": 20, "std": 7, "min": 6, "max": 40 },
+    "kids_content_share": 0.70
+  }
+]

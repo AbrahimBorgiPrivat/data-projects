@@ -1,4 +1,8 @@
-{"client":{"db_name": "TV_OME_DB",
+{
+  "module_name": "libraries.packages.to_client",
+  "function_name": "json_to_client",
+  
+"client":{"db_name": "TV_OME_DB",
                 "username": "POSTGRES_USERNAME",
                 "password": "POSTGRES_PASSWORD",
                 "server": "POSTGRES_HOST",

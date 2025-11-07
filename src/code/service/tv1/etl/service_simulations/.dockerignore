@@ -1,0 +1,10 @@
+# Ignore unnecessary files
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.env
+venv/
+.git/
+.gitignore
+.DS_Store

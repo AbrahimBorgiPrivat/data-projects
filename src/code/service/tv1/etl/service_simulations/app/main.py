@@ -15,9 +15,9 @@ def run_runner(module_path: str, runtime_json_path: Path):
 
 if __name__ == "__main__":
     CURRENT_DIR = Path(__file__).resolve().parent
-    RUNTIME_BASE = CURRENT_DIR.parent / "runtime_definitions" / "tv1" / "json_to_client" / "runtime"
+    RUNTIME_BASE = CURRENT_DIR.parent / "runtime_definitions" / "tv1" / "simulations" / "runtime"
     runner_module = os.getenv("RUNNER_MODULE", "libraries.runners.runners")
-    runtime_files_env = os.getenv("RUNTIME_FILES", "seasons.json")
+    runtime_files_env = os.getenv("RUNTIME_FILES", "passports.json")
     runtime_files = [f.strip() for f in runtime_files_env.split(",") if f.strip()]
     for filename in runtime_files:
         runtime_json = RUNTIME_BASE / filename

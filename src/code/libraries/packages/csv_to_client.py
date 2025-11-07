@@ -1,73 +1,8 @@
 import hashlib
-from datetime import datetime
 from collections import OrderedDict
-from decimal import Decimal, InvalidOperation
-
-def _to_string(v):
-    return "" if v is None else str(v).strip()
-
-def _to_int(v):
-    s = _to_string(v)
-    return None if s == "" else int(s)
-
-def _to_float(v):
-    s = _to_string(v)
-    return None if s == "" else float(s)
-
-def _to_decimal(v) -> Decimal | None:
-    s = _to_string(v)
-    return None if s == "" else Decimal(s)
-
-def _dk_decimal(v) -> float | None:
-    s = _to_string(v)
-    if s == "":
-        return None
-    s = s.replace(".", "").replace(",", ".")
-    try:
-        return float(Decimal(s))
-    except (InvalidOperation, ValueError):
-        return None
-
-def _to_bool(v):
-    s = _to_string(v).lower()
-    if s in {"true", "1", "yes", "ja", "y"}:
-        return True
-    if s in {"false", "0", "no", "nej", "n"}:
-        return False
-    return None
-
-def _date_iso(v, fmt: str | None = None) -> str | None:
-    s = _to_string(v)
-    if s == "":
-        return None
-    fmts = [fmt] if fmt else ["%Y-%m-%d", "%d.%m.%Y", "%d-%m-%Y", "%d/%m/%Y"]
-    for f in fmts:
-        try:
-            return datetime.strptime(s, f).date().isoformat()
-        except ValueError:
-            continue
-    return None
-
-def _datetime_iso(v, fmt: str | None = None) -> str | None:
-    s = _to_string(v)
-    if s == "":
-        return None
-    if fmt:
-        try:
-            return datetime.strptime(s, fmt).isoformat(timespec="seconds")
-        except ValueError:
-            return None
-    try:
-        return datetime.fromisoformat(s).isoformat(timespec="seconds")
-    except ValueError:
-        pass
-    # try a few DK combos
-    for f in ("%d-%m-%Y %H:%M", "%d.%m.%Y %H:%M", "%d/%m/%Y %H:%M", "%Y-%m-%d %H:%M"):
-        try:
-            return datetime.strptime(s, f).isoformat(timespec="seconds")
-        except ValueError:
-            continue
-    return None
+import json
+import hashlib
+from collections import OrderedDict
 
 
 def map_rows(
@@ -77,9 +12,36 @@ def map_rows(
         defaults: dict | None = None,
         pk_from: list[str] | None = None,
         pk_name: str = "id",
-        column_order: list[str] | None = None,   
-        strict_columns: bool = True,            
+        column_order: list[str] | None = None,
+        strict_columns: bool = True,
     ) -> list[dict]:
+    def _to_string(v): return None if v is None else str(v)
+    def _to_int(v): 
+        try: return int(v)
+        except Exception: return None
+    def _to_float(v): 
+        try: return float(v)
+        except Exception: return None
+    def _to_bool(v):
+        if isinstance(v, bool): return v
+        if isinstance(v, str): return v.strip().lower() in ("true", "1", "yes", "y")
+        return bool(v)
+    def _to_decimal(v):
+        try: return float(v)
+        except Exception: return None
+    def _to_json(v):
+        if v is None:
+            return None
+        if isinstance(v, (dict, list)):
+            return v
+        if isinstance(v, str):
+            try:
+                return json.loads(v)
+            except json.JSONDecodeError:
+                # return as-is if it’s not valid JSON text
+                return v
+        return v
+
     _TYPE_REGISTRY = {
         "string": lambda v, **kw: _to_string(v),
         "text":   lambda v, **kw: _to_string(v),
@@ -88,10 +50,12 @@ def map_rows(
         "double": lambda v, **kw: _to_float(v),
         "decimal":lambda v, **kw: _to_decimal(v),
         "bool":   lambda v, **kw: _to_bool(v),
-        "dk_decimal":   lambda v, **kw: _dk_decimal(v),
-        "date_iso":     lambda v, **kw: _date_iso(v, fmt=kw.get("fmt")),
-        "datetime_iso": lambda v, **kw: _datetime_iso(v, fmt=kw.get("fmt")),
+        "json":   lambda v, **kw: _to_json(v),     
+        "dk_decimal":   lambda v, **kw: _to_decimal(v),
+        "date_iso":     lambda v, **kw: _to_string(v),  
+        "datetime_iso": lambda v, **kw: _to_string(v)
     }
+
     out = []
     for r in rows:
         new_r = {}
@@ -114,10 +78,7 @@ def map_rows(
         if column_order:
             ordered = OrderedDict()
             for k in column_order:
-                if k in new_r:
-                    ordered[k] = new_r[k]
-                else:
-                    ordered[k] = None  
+                ordered[k] = new_r.get(k)
             if not strict_columns:
                 for k, v in new_r.items():
                     if k not in ordered:
