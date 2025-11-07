@@ -1,0 +1,63 @@
+{ "module_name": "libraries.packages.to_client",
+  "function_name": "api_fetch_paginated_to_client_upser",
+
+  "schema": "cph_airport",
+  "table_name": "airports",
+  "create_table_if_not_exist": true,
+  "fields_dict": {
+    "icao": { "type": "TEXT", "primary_key": true, "autoincrement": false },
+    "name": { "type": "TEXT" },
+    "city": { "type": "TEXT" },
+    "country": { "type": "TEXT" },
+    "country_code": { "type": "TEXT" },
+    "latitude": { "type": "NUMERIC" },
+    "longitude": { "type": "NUMERIC" },
+    "world_area_code": { "type": "BIGINT" },
+    "city_name_geo_name_id": { "type": "BIGINT" },
+    "country_name_geo_name_id": { "type": "BIGINT" }
+  },
+  "update_fields": [
+    "name",
+    "city",
+    "country",
+    "country_code",
+    "latitude",
+    "longitude",
+    "world_area_code",
+    "city_name_geo_name_id",
+    "country_name_geo_name_id"
+  ],
+  "not_included_in_update_fields": [],
+  "client":{"db_name": "CPH_AIRPORT_DB",
+              "username": "POSTGRES_USERNAME",
+              "password": "POSTGRES_PASSWORD",
+              "server": "POSTGRES_HOST",
+              "port":"POSTGRES_PORT",
+              "db_type":"DB_TYPE"},
+
+  "base_url": "https://public.opendatasoft.com/api/records/1.0/search/",
+  "headers": {
+    "accept": "application/json"
+  },
+  "endpoint_params": {
+    "dataset": "airports-code@public"
+  },
+  "record_path": ["records"],
+  "record_transform": {
+                        "path": "airport/api_to_client/response_handlers/airport_record_transform.py",
+                        "func": "record_transform"
+                      },
+  "mapping": {
+    "column_1": "icao",
+    "airport_name": "name",
+    "city_name": "city",
+    "country_name": "country",
+    "country_code": "country_code",
+    "latitude": "latitude",
+    "longitude": "longitude",
+    "world_area_code": "world_area_code",
+    "city_name_geo_name_id": "city_name_geo_name_id",
+    "country_name_geo_name_id": "country_name_geo_name_id"
+  },
+  "limit": 200
+}

@@ -1,0 +1,59 @@
+{ "module_name": "libraries.packages.to_client",
+  "function_name": "json_to_client",
+
+  "client": {
+    "db_name": "CPH_AIRPORT_DB",
+    "username": "POSTGRES_USERNAME",
+    "password": "POSTGRES_PASSWORD",
+    "server": "POSTGRES_HOST",
+    "port": "POSTGRES_PORT",
+    "db_type": "DB_TYPE"
+  },
+  "schema": "cph_airport",
+  "table_name": "aircraft_models",
+  "create_table_if_not_exist": true,
+  "fields_dict": {
+    "aircraft_model": { "type": "TEXT", "primary_key": true, "autoincrement": false },
+    "manufacturer": { "type": "TEXT" },
+    "country": { "type": "TEXT" },
+    "seats": { "type": "BIGINT" },
+    "range_km": { "type": "BIGINT" },
+    "engine_type": { "type": "TEXT" },
+    "icao_code": { "type": "TEXT" },
+    "iata_code": { "type": "TEXT" }
+  },
+  "update_fields": [
+    "manufacturer",
+    "country",
+    "seats",
+    "range_km",
+    "engine_type",
+    "icao_code",
+    "iata_code"
+  ],
+  "not_included_in_update_fields": [],
+  
+  "path": "airport/json/aircraft_models_structured_full.json",
+  "subset": [
+    "aircraft_model",
+    "manufacturer",
+    "country",
+    "seats",
+    "range_km",
+    "engine_type",
+    "icao_code",
+    "iata_code"
+  ],
+  "mapping": [{ "former_key": "aircraft_model", "new_key": "aircraft_model", "type": "text" },
+    { "former_key": "manufacturer", "new_key": "manufacturer", "type": "text" },
+    { "former_key": "country", "new_key": "country", "type": "text" },
+    { "former_key": "seats", "new_key": "seats", "type": "int" },
+    { "former_key": "range_km", "new_key": "range_km", "type": "int" },
+    { "former_key": "engine_type", "new_key": "engine_type", "type": "text" },
+    { "former_key": "icao_code", "new_key": "icao_code", "type": "text" },
+    { "former_key": "iata_code", "new_key": "iata_code", "type": "text" }],
+  "defaults": {"source": "aircraft_models_structured_full"},
+  "use_fields_dict_order": true,
+  "column_order": null,
+  "strict_columns": true
+}

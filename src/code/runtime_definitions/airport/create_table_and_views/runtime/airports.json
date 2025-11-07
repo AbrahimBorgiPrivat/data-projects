@@ -1,0 +1,12 @@
+{   "module_name": "libraries.packages.to_client",
+    "function_name": "run_sequence_of_queries",
+    "client":{"db_name": "CPH_AIRPORT_DB",
+                "username": "POSTGRES_USERNAME",
+                "password": "POSTGRES_PASSWORD",
+                "server": "POSTGRES_HOST",
+                "port":"POSTGRES_PORT",
+                "db_type":"DB_TYPE"},
+    "sql_queries": ["airport/create_table_and_views/queries/schema/cph_airport.sql",
+                    "airport/create_table_and_views/queries/table/airports.sql",
+                    "airport/create_table_and_views/queries/view/airports_view.sql"]
+}

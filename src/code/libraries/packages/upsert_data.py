@@ -1,5 +1,5 @@
 from libraries.classes.database_client import DatabaseClient
-from libraries.utils.db_types import BIGINT, JSONB, INTEGER, TEXT, TIMESTAMP, BOOLEAN, ARRAY, Date, Float, DOUBLE_PRECISION
+from libraries.utils.db_types import BIGINT, JSONB, INTEGER, TEXT, TIMESTAMP, BOOLEAN, ARRAY, Date, Float, DOUBLE_PRECISION, Numeric
 
 def build_client(
     db_name: str, username: str, password: str, server: str, port: int, db_type: str
@@ -24,7 +24,8 @@ def parse_fields_dict_from_json(fields_json):
         "TIMESTAMP": TIMESTAMP,
         "ARRAY": ARRAY,
         "DATE": Date,
-        "FLOAT": Float
+        "FLOAT": Float,
+        "NUMERIC": Numeric
     }
     parsed = {}
     for col_name, props in fields_json.items():

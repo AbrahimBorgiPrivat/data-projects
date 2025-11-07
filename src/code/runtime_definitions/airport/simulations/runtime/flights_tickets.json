@@ -1,0 +1,45 @@
+{
+  "module_name": "libraries.service_specifik.airport.simulations.flights_tickets",
+  "function_name": "simulate_tickets",
+
+  "client": {
+    "db_name": "CPH_AIRPORT_DB",
+    "username": "POSTGRES_USERNAME",
+    "password": "POSTGRES_PASSWORD",
+    "server": "POSTGRES_HOST",
+    "port": "POSTGRES_PORT",
+    "db_type": "DB_TYPE"
+  },
+
+  "schema": "cph_airport",
+  "table_name": "flight_tickets",
+  "create_table_if_not_exist": true,
+  "fields_dict": {
+    "unique_id":           { "type": "TEXT", "primary_key": true, "autoincrement": false },
+    "transaction_id":      { "type": "TEXT" },
+    "seat_number":         { "type": "BIGINT" },
+    "passport_number":     { "type": "TEXT" },
+    "check_in_type":       { "type": "TEXT" },
+    "checkin_time":        { "type": "TIMESTAMP" },
+    "passed_security_time":{ "type": "TIMESTAMP" }
+  },
+  "update_fields": [
+    "transaction_id",
+    "seat_number",
+    "passport_number",
+    "check_in_type",
+    "checkin_time",
+    "passed_security_time"
+  ],
+  "not_included_in_update_fields": [],
+
+  "cooldown_days": 2,
+  "force_fill": true,
+
+  "defaults": {
+    "source": "simulation_flights_tickets"
+  },
+  "use_fields_dict_order": true,
+  "column_order": null,
+  "strict_columns": true
+}

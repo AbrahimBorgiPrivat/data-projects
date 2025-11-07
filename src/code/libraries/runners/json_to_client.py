@@ -13,6 +13,6 @@ def main(upsert_runtime_vars: dict):
                     upsert_runtime_vars=upsert_runtime_vars) 
     
 if __name__ == "__main__":
-    path = path_config.RUNTIME_PATH / "tv1" / "json_to_client" / "runtime" / "episodes.json" 
+    path = path_config.RUNTIME_PATH / "airport" / "json_to_client" / "runtime" / "aircraft_models.json" 
     upsert_runtime_vars = runtime.load_runtime_vars(JSON_PATH=path)
     main(upsert_runtime_vars)
