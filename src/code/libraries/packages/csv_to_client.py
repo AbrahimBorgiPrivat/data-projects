@@ -1,9 +1,8 @@
-import hashlib
-from collections import OrderedDict
 import json
 import hashlib
 from collections import OrderedDict
-
+from datetime import datetime
+from decimal import Decimal, InvalidOperation
 
 def map_rows(
         rows: list[dict],
@@ -29,6 +28,15 @@ def map_rows(
     def _to_decimal(v):
         try: return float(v)
         except Exception: return None
+    def _dk_decimal(v) -> float | None:
+        s = _to_string(v)
+        if s == "":
+            return None
+        s = s.replace(".", "").replace(",", ".")
+        try:
+            return float(Decimal(s))
+        except (InvalidOperation, ValueError):
+            return None
     def _to_json(v):
         if v is None:
             return None
@@ -38,9 +46,39 @@ def map_rows(
             try:
                 return json.loads(v)
             except json.JSONDecodeError:
-                # return as-is if it’s not valid JSON text
                 return v
         return v
+    def _date_iso(v, fmt: str | None = None) -> str | None:
+        s = _to_string(v)
+        if s == "":
+            return None
+        fmts = [fmt] if fmt else ["%Y-%m-%d", "%d.%m.%Y", "%d-%m-%Y", "%d/%m/%Y"]
+        for f in fmts:
+            try:
+                return datetime.strptime(s, f).date().isoformat()
+            except ValueError:
+                continue
+        return None
+    def _datetime_iso(v, fmt: str | None = None) -> str | None:
+        s = _to_string(v)
+        if s == "":
+            return None
+        if fmt:
+            try:
+                return datetime.strptime(s, fmt).isoformat(timespec="seconds")
+            except ValueError:
+                return None
+        try:
+            return datetime.fromisoformat(s).isoformat(timespec="seconds")
+        except ValueError:
+            pass
+        # try a few DK combos
+        for f in ("%d-%m-%Y %H:%M", "%d.%m.%Y %H:%M", "%d/%m/%Y %H:%M", "%Y-%m-%d %H:%M"):
+            try:
+                return datetime.strptime(s, f).isoformat(timespec="seconds")
+            except ValueError:
+                continue
+        return None
 
     _TYPE_REGISTRY = {
         "string": lambda v, **kw: _to_string(v),
@@ -51,9 +89,9 @@ def map_rows(
         "decimal":lambda v, **kw: _to_decimal(v),
         "bool":   lambda v, **kw: _to_bool(v),
         "json":   lambda v, **kw: _to_json(v),     
-        "dk_decimal":   lambda v, **kw: _to_decimal(v),
-        "date_iso":     lambda v, **kw: _to_string(v),  
-        "datetime_iso": lambda v, **kw: _to_string(v)
+        "dk_decimal":   lambda v, **kw: _dk_decimal(v),
+        "date_iso":     lambda v, **kw: _date_iso(v, fmt=kw.get("fmt")),
+        "datetime_iso": lambda v, **kw: _datetime_iso(v, fmt=kw.get("fmt"))
     }
 
     out = []
