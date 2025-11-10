@@ -75,9 +75,21 @@ def upsert_insert(client: DatabaseClient,
         raise RuntimeError("Target table structure validation failed.")
     
     primary_keys = [k for k, v in upsert_runtime_vars["fields_dict"].items() if v.get("primary_key")]
-    client.update_insert_dw(schema=upsert_runtime_vars["schema"],
+    if not upsert_runtime_vars.get("chunk_size"):
+        client.update_insert_dw(schema=upsert_runtime_vars["schema"],
                             table=upsert_runtime_vars["table_name"],
                             new_data=new_data,
                             pk=primary_keys,
                             update_fields=upsert_runtime_vars["update_fields"],
                             not_included_in_update_fields=upsert_runtime_vars["not_included_in_update_fields"])
+        return
+    total = len(new_data)
+    for i in range(0, total, upsert_runtime_vars.get("chunk_size")):
+        chunk = new_data[i:i + upsert_runtime_vars.get("chunk_size")]
+        client.update_insert_dw(schema=upsert_runtime_vars["schema"],
+                            table=upsert_runtime_vars["table_name"],
+                            new_data=chunk,
+                            pk=primary_keys,
+                            update_fields=upsert_runtime_vars["update_fields"],
+                            not_included_in_update_fields=upsert_runtime_vars["not_included_in_update_fields"])
+        

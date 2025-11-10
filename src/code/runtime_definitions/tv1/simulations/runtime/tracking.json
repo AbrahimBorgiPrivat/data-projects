@@ -1,0 +1,51 @@
+{
+  "module_name": "libraries.service_specifik.tv1.simulations.tracking",
+  "function_name": "generate_streaming_behavior",
+  "client": {
+    "db_name": "TV_OME_DB",
+    "username": "POSTGRES_USERNAME",
+    "password": "POSTGRES_PASSWORD",
+    "server": "POSTGRES_HOST",
+    "port": "POSTGRES_PORT",
+    "db_type": "DB_TYPE"
+  },
+  "schema": "tv_one",
+  "table_name": "tracking",
+  "create_table_if_not_exist": true,
+  "fields_dict": {
+    "tracking_id": { "type": "BIGINT", "primary_key": true, "autoincrement": false },
+    "tracking_time": { "type": "TIMESTAMP" },
+    "type": { "type": "TEXT" },
+    "session_id": { "type": "BIGINT" },
+    "target_id": { "type": "BIGINT" },
+    "platform": { "type": "TEXT" },
+    "context": { "type": "JSONB" },
+    "user_id": { "type": "BIGINT" }
+  },
+  "update_fields": [
+    "tracking_time",
+    "type",
+    "session_id",
+    "target_id",
+    "platform",
+    "context",
+    "user_id"
+  ],
+  "not_included_in_update_fields": [],
+
+  "number_of_simulations": 5000,
+  "date_from": "2025-01-01",
+  "date_to": "2025-01-15",
+  "defaults": {
+    "source": "simulation_streaming_behavior"
+  },
+  "dependencies": {
+    "users_table": "tv_one.users",
+    "segmentation_table": "tv_one.segmentation",
+    "episodes_table": "tv_one.episodes_view"
+  },
+  "use_fields_dict_order": true,
+  "column_order": null,
+  "strict_columns": true,
+  "chunk_size": 100000
+}
