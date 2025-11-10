@@ -1,0 +1,12 @@
+{"module_name": "libraries.packages.to_client",
+    "function_name": "run_sequence_of_queries",
+    "client":{"db_name": "TV_OME_DB",
+                "username": "POSTGRES_USERNAME",
+                "password": "POSTGRES_PASSWORD",
+                "server": "POSTGRES_HOST",
+                "port":"POSTGRES_PORT",
+                "db_type":"DB_TYPE"},
+"sql_queries": ["tv1/create_table_and_views/queries/schema/deafult_data.sql",
+                "tv1/create_table_and_views/queries/table/d_date.sql",
+                "tv1/create_table_and_views/queries/view/date_view.sql"]
+}

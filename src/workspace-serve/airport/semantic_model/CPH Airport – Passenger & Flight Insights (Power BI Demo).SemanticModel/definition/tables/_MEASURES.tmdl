@@ -110,7 +110,7 @@ table _MEASURES
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'PASSENGERS THROUGH SEQ' = CALCULATE(COUNT(TICKETS[unique_id]),TICKETS[passed_security__before_schedule (MIN)] <> BLANK())
+	measure 'PASSENGERS THROUGH SEQ' = CALCULATE(COUNT(TICKETS[unique_id]),TICKETS[passed_security_before_schedule_min] <> BLANK())
 		formatString: #,0
 		displayFolder: PAGE 2: PASSENGER FLOW & TIMING
 		lineageTag: be7b036f-d160-4678-869a-491edcfb576a
@@ -118,7 +118,7 @@ table _MEASURES
 	measure 'PASSENGERS THROUGH SEQ IN GOOD TIME' =
 			
 			VAR goodtime = 60
-			VAR ret_val = CALCULATE(COUNT(TICKETS[unique_id]),TICKETS[passed_security__before_schedule (MIN)] <> BLANK() && TICKETS[passed_security__before_schedule (MIN)] > goodtime)
+			VAR ret_val = CALCULATE(COUNT(TICKETS[unique_id]),TICKETS[passed_security_before_schedule_min] <> BLANK() && TICKETS[passed_security_before_schedule_min] > goodtime)
 			RETURN ret_val
 		formatString: #,0
 		displayFolder: PAGE 2: PASSENGER FLOW & TIMING
@@ -149,7 +149,7 @@ table _MEASURES
 
 	measure 'MEDIAN CHECKIN UNTIL TRAVEL (TEXT)' =
 			
-			VAR median_time = CALCULATE(MEDIAN(TICKETS[check_in_before_schedule (MIN)]))
+			VAR median_time = CALCULATE(MEDIAN(TICKETS[check_in_before_schedule_min]))
 			VAR median_time_hour = ROUNDDOWN(DIVIDE(median_time,60,0),0)
 			VAR ret_val = median_time_hour & ":" & median_time-60*median_time_hour
 			RETURN ret_val
@@ -158,7 +158,7 @@ table _MEASURES
 
 	measure 'MEDIAN SECURITY UNTIL TRAVEL (TEXT)' =
 			
-			VAR median_time = CALCULATE(MEDIAN(TICKETS[passed_security__before_schedule (MIN)]))
+			VAR median_time = CALCULATE(MEDIAN(TICKETS[passed_security_before_schedule_min]))
 			VAR median_time_hour = ROUNDDOWN(DIVIDE(median_time,60,0),0)
 			VAR ret_val = median_time_hour & ":" & median_time-60*median_time_hour
 			RETURN ret_val
@@ -192,21 +192,21 @@ table _MEASURES
 		displayFolder: PAGE 2: PASSENGER FLOW & TIMING
 		lineageTag: dde1a4d2-d4c3-484d-a72f-ae3349f10786
 
-	measure 'MEDIAN CHECKIN UNTIL TRAVEL (MIN)' = CALCULATE(MEDIAN(TICKETS[check_in_before_schedule (MIN)]))
+	measure 'MEDIAN CHECKIN UNTIL TRAVEL (MIN)' = CALCULATE(MEDIAN(TICKETS[check_in_before_schedule_min]))
 		formatString: 0
 		displayFolder: PAGE 2: PASSENGER FLOW & TIMING
 		lineageTag: 1e939f63-eb9c-4eda-84fc-4d8cad6a2dfe
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'MEDIAN SECURITY UNTIL TRAVEL (MIN)' = CALCULATE(MEDIAN(TICKETS[passed_security__before_schedule (MIN)]))
+	measure 'MEDIAN SECURITY UNTIL TRAVEL (MIN)' = CALCULATE(MEDIAN(TICKETS[passed_security_before_schedule_min]))
 		formatString: 0
 		displayFolder: PAGE 2: PASSENGER FLOW & TIMING
 		lineageTag: ea576f45-c0a6-41b4-815e-0442aee62599
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure SEATS = CALCULATE(SUM(FLIGHTS[Seats]))
+	measure SEATS = CALCULATE(SUM(FLIGHTS[seats]))
 		formatString: #,0
 		lineageTag: 55756d32-4cbb-44b7-8c3b-c7078c5e4d95
 
@@ -274,7 +274,7 @@ table _MEASURES
 		formatString: 0
 		lineageTag: fa243536-7dd1-426c-831f-0c6a0ddcbce5
 
-	measure 'MEDIAN SEATS' = CALCULATE(MEDIAN(FLIGHTS[Seats]))
+	measure 'MEDIAN SEATS' = CALCULATE(MEDIAN(FLIGHTS[seats]))
 		lineageTag: cbdb717d-92b1-4f98-a980-710cee73b609
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}

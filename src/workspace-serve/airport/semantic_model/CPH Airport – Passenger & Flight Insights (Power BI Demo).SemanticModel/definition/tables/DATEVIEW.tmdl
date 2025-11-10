@@ -1,10 +1,10 @@
 table DATEVIEW
-	lineageTag: 8cf42738-4666-4654-9488-9947f5f6d3dc
+	lineageTag: 960afaec-04e2-4fbc-8a66-4a04af649e36
 
 	column date_dim_id
 		dataType: int64
 		formatString: 0
-		lineageTag: 3b7c81a1-dc8f-4979-b61d-fc60fb1b65de
+		lineageTag: 796faa1b-c8a9-4648-bc12-b36410ae0585
 		summarizeBy: none
 		sourceColumn: date_dim_id
 
@@ -13,7 +13,7 @@ table DATEVIEW
 	column date_actual
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 485532c1-5547-4400-a9a8-7adf7853e1a8
+		lineageTag: 0cf37349-f722-4372-a271-322850404c84
 		summarizeBy: none
 		sourceColumn: date_actual
 
@@ -23,7 +23,7 @@ table DATEVIEW
 
 	column day_name
 		dataType: string
-		lineageTag: c9189170-c343-4df4-84d6-611299a1be94
+		lineageTag: 700f7459-93b5-42d6-ad0c-4850f13abf00
 		summarizeBy: none
 		sourceColumn: day_name
 
@@ -32,7 +32,7 @@ table DATEVIEW
 	column day_of_week
 		dataType: int64
 		formatString: 0
-		lineageTag: 41ecae55-3aa2-4af6-bbbd-d21b2936ee8f
+		lineageTag: 6f2b4b9e-e94d-45f6-8e2e-de8cdae6e2a2
 		summarizeBy: none
 		sourceColumn: day_of_week
 
@@ -41,7 +41,7 @@ table DATEVIEW
 	column day_of_month
 		dataType: int64
 		formatString: 0
-		lineageTag: 73985753-4c36-4bf7-bfdf-83083c06a776
+		lineageTag: e9fd1ada-cf3b-4a81-821f-7c1aaec6f10f
 		summarizeBy: none
 		sourceColumn: day_of_month
 
@@ -50,7 +50,7 @@ table DATEVIEW
 	column day_of_quarter
 		dataType: int64
 		formatString: 0
-		lineageTag: 7f25dd52-1b7b-4453-af7d-15340fe0ef60
+		lineageTag: 3e34d9a7-f25e-4b27-abf6-d0fd6fc5dfff
 		summarizeBy: none
 		sourceColumn: day_of_quarter
 
@@ -59,7 +59,7 @@ table DATEVIEW
 	column day_of_year
 		dataType: int64
 		formatString: 0
-		lineageTag: 708328a1-73e6-48e7-bdef-27ec55d9bc77
+		lineageTag: 4c821aad-bb37-4bd0-8eb6-ccd3b165a5bd
 		summarizeBy: none
 		sourceColumn: day_of_year
 
@@ -68,7 +68,7 @@ table DATEVIEW
 	column week_of_month
 		dataType: int64
 		formatString: 0
-		lineageTag: 0f4c0bd7-c917-4858-9cb3-2f41a58177da
+		lineageTag: 02e93601-0f92-402a-9373-da9586a6c738
 		summarizeBy: none
 		sourceColumn: week_of_month
 
@@ -77,7 +77,7 @@ table DATEVIEW
 	column week_of_year
 		dataType: int64
 		formatString: 0
-		lineageTag: 35ec2046-b9b3-4287-b91f-d3d3c3a7d8b2
+		lineageTag: d52dcc29-3fa6-4dfc-a99a-dc68d64c342c
 		summarizeBy: none
 		sourceColumn: week_of_year
 
@@ -86,7 +86,7 @@ table DATEVIEW
 	column week_of_year_conv
 		dataType: int64
 		formatString: 0
-		lineageTag: be060875-49b1-4be0-89cd-7a588c4740a7
+		lineageTag: 5c23aaff-c250-492e-87fb-9115fba5ff62
 		summarizeBy: none
 		sourceColumn: week_of_year_conv
 
@@ -94,7 +94,7 @@ table DATEVIEW
 
 	column week_year
 		dataType: string
-		lineageTag: 6445db3a-af41-4bf7-988b-bd2a7cbe90da
+		lineageTag: 832f5ef7-0104-46b3-8eab-ebd4087eb5e4
 		summarizeBy: none
 		sourceColumn: week_year
 
@@ -103,7 +103,7 @@ table DATEVIEW
 	column month_actual
 		dataType: int64
 		formatString: 0
-		lineageTag: 70b8e851-a49f-4c16-804b-94aa192c3112
+		lineageTag: 504821c3-b3f8-48e0-b10c-fe7dd75960ae
 		summarizeBy: none
 		sourceColumn: month_actual
 
@@ -111,7 +111,7 @@ table DATEVIEW
 
 	column month_name
 		dataType: string
-		lineageTag: a6de338a-5359-48aa-a8a9-0b13dc50d70f
+		lineageTag: 3ba73833-823a-41e5-a95f-f1b516725378
 		summarizeBy: none
 		sourceColumn: month_name
 		sortByColumn: month_actual
@@ -123,7 +123,7 @@ table DATEVIEW
 	column quarter_actual
 		dataType: int64
 		formatString: 0
-		lineageTag: f9300970-9b2c-45ed-968f-4e572166bc2a
+		lineageTag: 0a29713e-7edf-4e17-ae42-51c2ad97552d
 		summarizeBy: none
 		sourceColumn: quarter_actual
 
@@ -131,7 +131,7 @@ table DATEVIEW
 
 	column quarter_name
 		dataType: string
-		lineageTag: 763c9d64-fc95-4480-b415-667e304e7a72
+		lineageTag: e487dc79-a3a7-4c62-966a-413fb6a5813f
 		summarizeBy: none
 		sourceColumn: quarter_name
 
@@ -139,7 +139,7 @@ table DATEVIEW
 
 	column quarter
 		dataType: string
-		lineageTag: f1b12cde-a465-4cf3-bed2-91921b704514
+		lineageTag: 922ef308-8ea8-43d5-b470-73965ad6cc95
 		summarizeBy: none
 		sourceColumn: quarter
 
@@ -148,7 +148,7 @@ table DATEVIEW
 	column year_actual
 		dataType: int64
 		formatString: 0
-		lineageTag: 22ac3f58-2160-4707-a591-648033d83bc8
+		lineageTag: e7820d11-4767-4804-aa08-1d74ca03879d
 		summarizeBy: none
 		sourceColumn: year_actual
 
@@ -157,7 +157,7 @@ table DATEVIEW
 	column first_day_of_week
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 0d2f7a91-a72d-4a5d-850b-15a31a2b77a2
+		lineageTag: 4a1eb6ee-7c64-451b-ba4d-1a5cc5048aa1
 		summarizeBy: none
 		sourceColumn: first_day_of_week
 
@@ -168,7 +168,7 @@ table DATEVIEW
 	column last_day_of_week
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: bb56acc3-8d4f-43eb-9789-36481e9f636b
+		lineageTag: 0524518f-e450-401f-9e27-a571509efbe2
 		summarizeBy: none
 		sourceColumn: last_day_of_week
 
@@ -179,7 +179,7 @@ table DATEVIEW
 	column first_day_of_month
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: d3e5a8d3-bd9b-4af9-9864-07d10be1ab7c
+		lineageTag: 2f1b3f60-e334-4615-bd7e-c2d94d2b031f
 		summarizeBy: none
 		sourceColumn: first_day_of_month
 
@@ -190,7 +190,7 @@ table DATEVIEW
 	column last_day_of_month
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: fd433e49-def9-4990-87fc-96aa81c24623
+		lineageTag: 82956a13-6322-45c9-b1f3-0002d61d3e07
 		summarizeBy: none
 		sourceColumn: last_day_of_month
 
@@ -201,7 +201,7 @@ table DATEVIEW
 	column first_day_of_quarter
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: f88eb296-5862-49b9-a40b-b6232a387251
+		lineageTag: 580bb2b1-1b82-4b3a-a9dc-9fec7d5967d7
 		summarizeBy: none
 		sourceColumn: first_day_of_quarter
 
@@ -212,7 +212,7 @@ table DATEVIEW
 	column last_day_of_quarter
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 2e9b9a3a-bff9-46fd-aeae-7ba30958371f
+		lineageTag: 98fb325d-89d3-4a94-ad63-8056264eb618
 		summarizeBy: none
 		sourceColumn: last_day_of_quarter
 
@@ -223,7 +223,7 @@ table DATEVIEW
 	column first_day_of_year
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 86dddcce-b9f6-41f7-a9bf-f8be5bb1a1aa
+		lineageTag: e6d72934-3dc9-4acb-8669-22ddcbec0983
 		summarizeBy: none
 		sourceColumn: first_day_of_year
 
@@ -234,7 +234,7 @@ table DATEVIEW
 	column last_day_of_year
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 898b5b58-1a0a-4194-acde-6706089f0362
+		lineageTag: 87543a66-dc74-470a-b187-61e2d39d6351
 		summarizeBy: none
 		sourceColumn: last_day_of_year
 
@@ -244,7 +244,7 @@ table DATEVIEW
 
 	column mmyyyy
 		dataType: string
-		lineageTag: 60402161-4dd3-47f9-b3df-6d6621afa502
+		lineageTag: de8aeb81-7604-4aae-8b45-37fafb1fb891
 		summarizeBy: none
 		sourceColumn: mmyyyy
 
@@ -253,7 +253,7 @@ table DATEVIEW
 	column yyyymm
 		dataType: int64
 		formatString: 0
-		lineageTag: 9f08a30d-0a0e-43d4-b6db-4809abe5962e
+		lineageTag: d39856b6-77b7-4f04-972a-6f76880c2ab2
 		summarizeBy: none
 		sourceColumn: yyyymm
 
@@ -261,7 +261,7 @@ table DATEVIEW
 
 	column mmddyyyy
 		dataType: string
-		lineageTag: fc55ddec-8b0e-48e4-a06d-cfde6ad4d73b
+		lineageTag: c6865304-1a46-4630-9498-7ba944626409
 		summarizeBy: none
 		sourceColumn: mmddyyyy
 
@@ -270,7 +270,7 @@ table DATEVIEW
 	column weekend_indr
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: 5b2ca4bc-97b7-451b-a6b0-68c13a4aa525
+		lineageTag: 03727971-a449-429e-a293-bedab0d0c3a9
 		summarizeBy: none
 		sourceColumn: weekend_indr
 
@@ -279,7 +279,7 @@ table DATEVIEW
 	column is_today
 		dataType: int64
 		formatString: 0
-		lineageTag: 9622c98c-1b32-4eaf-91e4-a787967b68ae
+		lineageTag: 48f40154-a017-4c15-b76d-ba72e876a214
 		summarizeBy: none
 		sourceColumn: is_today
 
@@ -288,7 +288,7 @@ table DATEVIEW
 	column is_yesterday
 		dataType: int64
 		formatString: 0
-		lineageTag: 423c3622-80b8-4a11-b085-390a6cfafed5
+		lineageTag: f9762535-70ba-4bc3-b3cf-6e20f8f6bce6
 		summarizeBy: none
 		sourceColumn: is_yesterday
 
@@ -297,7 +297,7 @@ table DATEVIEW
 	column is_this_week
 		dataType: int64
 		formatString: 0
-		lineageTag: 8453ce3e-857e-40b7-9e2a-74292b93f568
+		lineageTag: 76ae700c-f2e3-4896-a9bc-9a749fe92aaa
 		summarizeBy: none
 		sourceColumn: is_this_week
 
@@ -305,7 +305,7 @@ table DATEVIEW
 
 	column last_or_thisweek
 		dataType: string
-		lineageTag: 5fb908a2-cfb0-43e8-a443-04fc43d0a5e4
+		lineageTag: d74754e0-4108-4f52-860d-9a45742f78aa
 		summarizeBy: none
 		sourceColumn: last_or_thisweek
 
@@ -314,7 +314,7 @@ table DATEVIEW
 	column is_this_month
 		dataType: int64
 		formatString: 0
-		lineageTag: 86187699-62c9-48df-b95e-3035085a1ede
+		lineageTag: 37e5adbf-937f-490d-9b60-6bf1ae37f14d
 		summarizeBy: none
 		sourceColumn: is_this_month
 
@@ -323,7 +323,7 @@ table DATEVIEW
 	column is_last_month
 		dataType: int64
 		formatString: 0
-		lineageTag: 3ec3e311-6615-462d-88f9-f310813e209e
+		lineageTag: 12697560-985a-451f-a680-c8555d72f172
 		summarizeBy: none
 		sourceColumn: is_last_month
 
@@ -331,7 +331,7 @@ table DATEVIEW
 
 	column last_or_thismonth
 		dataType: string
-		lineageTag: 1bc0e972-c347-4623-ab81-d8908255a9a9
+		lineageTag: f759c52b-1e61-4b3a-98ba-e2c2c395bfe8
 		summarizeBy: none
 		sourceColumn: last_or_thismonth
 
@@ -340,7 +340,7 @@ table DATEVIEW
 	column is_this_quarter
 		dataType: int64
 		formatString: 0
-		lineageTag: 35c04b05-82c3-4203-b6cb-a7ccfc49bbfc
+		lineageTag: 8c1f5384-fe77-4ff6-bfd1-bad7abbf4f3d
 		summarizeBy: none
 		sourceColumn: is_this_quarter
 
@@ -349,7 +349,7 @@ table DATEVIEW
 	column is_this_year
 		dataType: int64
 		formatString: 0
-		lineageTag: 44eaf43d-66bc-436b-b2be-551945461783
+		lineageTag: c51af348-f46c-4194-8ef6-1c4efb2d3828
 		summarizeBy: none
 		sourceColumn: is_this_year
 
@@ -358,7 +358,7 @@ table DATEVIEW
 	column is_last_two_year
 		dataType: int64
 		formatString: 0
-		lineageTag: d5568ac5-f68a-40cb-94ca-a1db6a5c2e15
+		lineageTag: 1ae374dd-e6cd-4719-a304-3b434c0d8bf6
 		summarizeBy: none
 		sourceColumn: is_last_two_year
 
@@ -367,7 +367,7 @@ table DATEVIEW
 	column is_past
 		dataType: int64
 		formatString: 0
-		lineageTag: 00260ca0-b624-440e-b975-caa7e74a8aa3
+		lineageTag: b8f1abc8-595c-4632-9205-0a684ee9e5b9
 		summarizeBy: none
 		sourceColumn: is_past
 
@@ -376,37 +376,33 @@ table DATEVIEW
 	column is_before_next_month
 		dataType: int64
 		formatString: 0
-		lineageTag: 520c9c0a-0150-4346-becf-98e7992221f1
+		lineageTag: 1d90181b-92ed-48eb-87bb-eb74ffd31d03
 		summarizeBy: none
 		sourceColumn: is_before_next_month
 
 		annotation SummarizationSetBy = Automatic
 
-	hierarchy 'Dato Hiraki'
-		lineageTag: 26d8652d-0ac1-4cc5-a190-270662cbdc64
+	hierarchy 'Dato Hierarki'
+		lineageTag: 7f0e97cd-a7e5-4c3a-b896-76da43637fdf
 
 		level År
-			lineageTag: 4cc1b48c-1e31-4e75-9678-9081762fac8d
+			lineageTag: d53cea11-bde7-4add-b191-a60dbd447943
 			column: year_actual
 
 		level Måned
-			lineageTag: b9e9757a-5977-4e9e-b31d-7018e951a1af
+			lineageTag: 3d59c9a5-6934-4fc0-b032-4077f8ffd38a
 			column: month_name
 
 		level Dato
-			lineageTag: a24e099a-9dd0-4ba2-b2da-3f7d7a08167c
+			lineageTag: 86465a2a-6dc3-47bc-ac76-3afc6bedfa8c
 			column: date_actual
 
 	partition DATEVIEW = m
 		mode: import
 		source =
 				let
-				    Kilde = PostgreSQL.Database("localhost:5432", "circlek"),
+				    Kilde = PostgreSQL.Database("localhost:55432", "cph_airport"),
 				    default_data_date_view = Kilde{[Schema="default_data",Item="date_view"]}[Data]
 				in
 				    default_data_date_view
-
-	changedProperty = Name
-
-	annotation PBI_ResultType = Table
 

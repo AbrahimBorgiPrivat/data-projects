@@ -8,20 +8,18 @@ model Model
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBIDesktopVersion = 2.146.1133.0 (25.08)+c8010d55d1db76eda03c968b03481610e96a1ef7
-
-annotation PBI_QueryOrder = ["AIRCRAFT_MODELS","AIRPORTS","FLIGHTS","PASSPORTS","TICKETS","DATEVIEW"]
+annotation PBI_QueryOrder = ["AIRCRAFT_MODELS","FLIGHTS","TICKETS","PASSPORTS","AIRPORTS","DATEVIEW"]
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-ref table AIRCRAFT_MODELS
-ref table AIRPORTS
-ref table FLIGHTS
-ref table PASSPORTS
-ref table TICKETS
 ref table _MEASURES
-ref table DATEVIEW
 ref table '_CUSTOMTABLE - NUMBERS'
+ref table AIRCRAFT_MODELS
+ref table FLIGHTS
+ref table TICKETS
+ref table PASSPORTS
+ref table AIRPORTS
+ref table DATEVIEW
 
 ref cultureInfo da-DK
 

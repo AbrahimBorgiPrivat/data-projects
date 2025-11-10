@@ -1,0 +1,22 @@
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.csproj.AssemblyReference.cache
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.AssemblyInfoInputs.cache
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.AssemblyInfo.cs
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.sourcelink.json
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\bin\Release\netstandard2.0\TabularEditorCLITool.deps.json
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\bin\Release\netstandard2.0\TabularEditorCLITool.dll
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\bin\Release\netstandard2.0\TabularEditorCLITool.pdb
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.dll
+C:\Users\Bruger\Documents\projekter\GamMa - Reporting\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.pdb
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\bin\Release\netstandard2.0\TabularEditorCLITool.deps.json
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\bin\Release\netstandard2.0\TabularEditorCLITool.dll
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\bin\Release\netstandard2.0\TabularEditorCLITool.pdb
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.csproj.AssemblyReference.cache
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.AssemblyInfoInputs.cache
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.AssemblyInfo.cs
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.sourcelink.json
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.dll
+C:\Users\Bruger\Documents\projekter\DATA PROJECTS\src\workspace-serve\TabularEditorCLITool\obj\Release\netstandard2.0\TabularEditorCLITool.pdb

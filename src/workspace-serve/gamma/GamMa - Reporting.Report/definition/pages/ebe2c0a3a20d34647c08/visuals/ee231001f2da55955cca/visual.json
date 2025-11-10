@@ -222,11 +222,22 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'Fyraftenscafe'"
+                    "Value": "'IT'"
                   }
                 }
               ],
-              "isToggled": true
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'IT'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
             }
           ]
         }
@@ -279,7 +290,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "83.5965195231094D"
+                  "Value": "96.0706449300098D"
                 }
               }
             }
@@ -300,6 +311,34 @@
           },
           "selector": {
             "metadata": "_MEASURES - CUSTOM.REALISERET"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.09360302827498D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_MEASURES - CUSTOM.FORECAST - NOT BU"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "146.2471320261627D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GAMMA - POSTERINGSGRUPPE.posting_group"
           }
         }
       ],

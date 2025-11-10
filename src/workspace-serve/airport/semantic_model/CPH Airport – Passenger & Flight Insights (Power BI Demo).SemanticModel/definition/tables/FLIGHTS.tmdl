@@ -1,9 +1,9 @@
 table FLIGHTS
-	lineageTag: fd5d482c-c837-4b29-936f-b4b79760e21b
+	lineageTag: 44e65ee8-d45d-4774-886c-e058f533c1c2
 
 	column transaction_id
 		dataType: string
-		lineageTag: 100befe4-0a8a-48ea-93e0-faac6b31d8de
+		lineageTag: 173b8765-844a-4d91-a6a4-2e0f09e6ee1a
 		summarizeBy: none
 		sourceColumn: transaction_id
 
@@ -11,108 +11,32 @@ table FLIGHTS
 
 	column flight_number
 		dataType: string
-		lineageTag: 10d9a2dc-2525-4adc-a679-c67168653171
+		lineageTag: c51914bc-ad09-469d-b5e9-434c17e0b598
 		summarizeBy: none
 		sourceColumn: flight_number
 
 		annotation SummarizationSetBy = Automatic
 
-	column airline
-		dataType: string
-		lineageTag: 9f609ba6-6740-478d-a780-8bd801e32529
-		summarizeBy: none
-		sourceColumn: airline
-
-		annotation SummarizationSetBy = Automatic
-
-	column destination
-		dataType: string
-		lineageTag: 9f10d21c-bd51-43ef-96d1-6f9da82ad1df
-		summarizeBy: none
-		sourceColumn: destination
-
-		annotation SummarizationSetBy = Automatic
-
-	column scheduled_local
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 36f45f3d-2f7b-46ed-bf93-7c569a824a61
-		summarizeBy: none
-		sourceColumn: scheduled_local
-
-		annotation SummarizationSetBy = Automatic
-
-	column runway_local
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: ff811d66-71e5-47fb-8b2a-761486955948
-		summarizeBy: none
-		sourceColumn: runway_local
-
-		annotation SummarizationSetBy = Automatic
-
-	column status
-		dataType: string
-		lineageTag: cf0effa3-8a64-44da-a8c5-7ed06fd413e5
-		summarizeBy: none
-		sourceColumn: status
-
-		annotation SummarizationSetBy = Automatic
-
-	column terminal
-		dataType: string
-		lineageTag: 85436cfe-ee2e-4111-a41b-22d9d19eb3ff
-		summarizeBy: none
-		sourceColumn: terminal
-
-		annotation SummarizationSetBy = Automatic
-
-	column gate
-		dataType: string
-		lineageTag: 4f29a7d3-501d-45d9-900f-44154ee54eb5
-		summarizeBy: none
-		sourceColumn: gate
-
-		annotation SummarizationSetBy = Automatic
-
-	column aircraft_model
-		dataType: string
-		lineageTag: f632bf13-24f4-41e6-86dc-9fb004671412
-		summarizeBy: none
-		sourceColumn: aircraft_model
-
-		annotation SummarizationSetBy = Automatic
-
-	column aircraft_reg
-		dataType: string
-		lineageTag: 064277e1-8dd0-49f5-b8ba-79204e44b9c1
-		summarizeBy: none
-		sourceColumn: aircraft_reg
-
-		annotation SummarizationSetBy = Automatic
-
-	column dep_delay_minutes
-		dataType: double
-		lineageTag: 9c758ee4-8f99-43ad-87b5-e9d00d12dc1c
-		summarizeBy: sum
-		sourceColumn: dep_delay_minutes
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column scheduled_utc
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 056f0de1-904a-4530-97ed-5628121f9d40
+		lineageTag: f29ade6e-5f60-4291-9308-2f63eb0ab8bb
 		summarizeBy: none
 		sourceColumn: scheduled_utc
 
 		annotation SummarizationSetBy = Automatic
 
+	column airline
+		dataType: string
+		lineageTag: d74842dc-d254-44e6-b157-bdd56dcceb10
+		summarizeBy: none
+		sourceColumn: airline
+
+		annotation SummarizationSetBy = Automatic
+
 	column airline_iata
 		dataType: string
-		lineageTag: 726100e3-89ba-4d2f-9ba6-63c1c63e04e7
+		lineageTag: cdc1863a-4bbe-4dee-8b4d-79d5663a1ce4
 		summarizeBy: none
 		sourceColumn: airline_iata
 
@@ -120,15 +44,23 @@ table FLIGHTS
 
 	column airline_icao
 		dataType: string
-		lineageTag: 53ac9058-781a-4019-9545-9d1fe7947cb3
+		lineageTag: 742e144b-99fe-4bb6-a910-31f9f2057dd2
 		summarizeBy: none
 		sourceColumn: airline_icao
 
 		annotation SummarizationSetBy = Automatic
 
+	column destination
+		dataType: string
+		lineageTag: 88ca3f75-b72b-4cbe-8f62-3a2c7d0a5733
+		summarizeBy: none
+		sourceColumn: destination
+
+		annotation SummarizationSetBy = Automatic
+
 	column destination_iata
 		dataType: string
-		lineageTag: 2f8471c1-4cd3-4592-8253-d4c6fd8836e8
+		lineageTag: bfb82b43-380b-4dfa-a8a0-c2a2accbd949
 		summarizeBy: none
 		sourceColumn: destination_iata
 
@@ -136,16 +68,25 @@ table FLIGHTS
 
 	column destination_icao
 		dataType: string
-		lineageTag: a52592da-01fa-4fce-92f0-e0082bfae525
+		lineageTag: 01f4e4d7-d57b-463b-887e-d2aa87c205a4
 		summarizeBy: none
 		sourceColumn: destination_icao
+
+		annotation SummarizationSetBy = Automatic
+
+	column scheduled_local
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fbc63a4c-1f04-41f3-b5cd-b7b6940416fc
+		summarizeBy: none
+		sourceColumn: scheduled_local
 
 		annotation SummarizationSetBy = Automatic
 
 	column scheduled_date
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 176fda5b-fa7a-46d9-b092-6adfb26f1741
+		lineageTag: b5d35675-af20-4937-a9c5-895291a2e64b
 		summarizeBy: none
 		sourceColumn: scheduled_date
 
@@ -156,7 +97,7 @@ table FLIGHTS
 	column revised_utc
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 55df36fa-391f-4a29-b58f-2ec4043c1925
+		lineageTag: 2cc129a5-745e-4fa6-9585-95be147b8f0e
 		summarizeBy: none
 		sourceColumn: revised_utc
 
@@ -165,33 +106,94 @@ table FLIGHTS
 	column revised_local
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 95618d13-d25b-4cc6-b489-09a57014a044
+		lineageTag: 6ed74a95-c277-4785-a765-f24fbe420c5e
 		summarizeBy: none
 		sourceColumn: revised_local
 
 		annotation SummarizationSetBy = Automatic
 
+	column dep_delay_minutes
+		dataType: double
+		lineageTag: ae26d69c-37d7-4e54-b051-0c931156cf2b
+		summarizeBy: sum
+		sourceColumn: dep_delay_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column runway_utc
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 88852d1e-2908-4762-8e77-8ecad06d5f5b
+		lineageTag: 89f3b9a5-29fa-463e-9102-f5bcdf72b9cf
 		summarizeBy: none
 		sourceColumn: runway_utc
 
 		annotation SummarizationSetBy = Automatic
 
+	column runway_local
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2ed97147-0cb5-4519-9572-b0c933462245
+		summarizeBy: none
+		sourceColumn: runway_local
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: b662d62e-cd0c-497d-9494-06d4b2a4f834
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
 	column status_da
 		dataType: string
-		lineageTag: b2f1336d-59f0-4680-8bd6-852d53b2a1ca
+		lineageTag: 4d32fcdb-faa5-40bf-9353-035b53928ccc
 		summarizeBy: none
 		sourceColumn: status_da
 
 		annotation SummarizationSetBy = Automatic
 
-	column Seats = RELATED(AIRCRAFT_MODELS[seats])
+	column terminal
+		dataType: string
+		lineageTag: 34902f8c-9aab-4678-8535-617b2d2b86a0
+		summarizeBy: none
+		sourceColumn: terminal
+
+		annotation SummarizationSetBy = Automatic
+
+	column gate
+		dataType: string
+		lineageTag: 15bf6c48-355a-4b0e-aa0c-c32312dbc20e
+		summarizeBy: none
+		sourceColumn: gate
+
+		annotation SummarizationSetBy = Automatic
+
+	column aircraft_model
+		dataType: string
+		lineageTag: f8296195-06eb-4749-8613-3b829945e671
+		summarizeBy: none
+		sourceColumn: aircraft_model
+
+		annotation SummarizationSetBy = Automatic
+
+	column aircraft_reg
+		dataType: string
+		lineageTag: ad768c44-9d7b-42cf-b4c6-25d27aeb64a6
+		summarizeBy: none
+		sourceColumn: aircraft_reg
+
+		annotation SummarizationSetBy = Automatic
+
+	column seats
+		dataType: int64
 		formatString: 0
-		lineageTag: a6fe4fb7-8cf6-4aea-97a6-5219feb913e1
+		lineageTag: 37edfaa9-6c16-4f41-9499-e27f3efe6a1f
 		summarizeBy: sum
+		sourceColumn: seats
 
 		annotation SummarizationSetBy = Automatic
 
@@ -199,10 +201,8 @@ table FLIGHTS
 		mode: import
 		source =
 				let
-				    Kilde = PostgreSQL.Database("localhost:5432", "cph_airport"),
+				    Kilde = PostgreSQL.Database("localhost:55432", "cph_airport"),
 				    cph_airport_flights_view = Kilde{[Schema="cph_airport",Item="flights_view"]}[Data]
 				in
 				    cph_airport_flights_view
-
-	annotation PBI_ResultType = Table
 

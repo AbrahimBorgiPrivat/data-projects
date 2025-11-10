@@ -1,6 +1,6 @@
 FROM python:3.11-slim
 WORKDIR /app
-COPY service/aiport/etl/service_create_table_views_from_sql/requirements.txt ./requirements.txt
+COPY service/airport/etl/service_create_table_views_from_sql/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY service/airport/etl/service_create_table_views_from_sql/app ./app
 COPY libraries/classes ./libraries/classes

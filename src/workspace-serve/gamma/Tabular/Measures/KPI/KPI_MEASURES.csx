@@ -1,5 +1,5 @@
 #r "netstandard"
-#r ".\src\workspace-serve\gamma\Tabular\TabularEditorCLITool\bin\Release\netstandard2.0\TabularEditorCLITool.dll"
+#r ".\src\workspace-serve\TabularEditorCLITool\bin\Release\netstandard2.0\TabularEditorCLITool.dll"
 using TabularEditorCLITool;
 
 var calctable = MeasureBuilder.CheckTable(Model, "_MEASURES - CUSTOM");

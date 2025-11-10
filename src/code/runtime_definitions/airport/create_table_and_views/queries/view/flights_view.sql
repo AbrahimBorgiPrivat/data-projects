@@ -1,32 +1,37 @@
 CREATE OR REPLACE VIEW cph_airport.flights_view
  AS
- SELECT transaction_id,
-    flight_number,
-    scheduled_utc,
-    airline,
-    airline_iata,
-    airline_icao,
-    destination,
-    destination_iata,
-    destination_icao,
-    scheduled_local,
-    scheduled_local::date AS scheduled_date,
-    revised_utc,
-    revised_local,
-    EXTRACT(epoch FROM runway_local - scheduled_local) / 60::numeric AS dep_delay_minutes,
-    runway_utc,
-    runway_local,
-    status,
+ SELECT flights.transaction_id,
+    flights.flight_number,
+    flights.scheduled_utc,
+    flights.airline,
+    flights.airline_iata,
+    flights.airline_icao,
+    flights.destination,
+    flights.destination_iata,
+    flights.destination_icao,
+    flights.scheduled_local,
+    flights.scheduled_local::date AS scheduled_date,
+    flights.revised_utc,
+    flights.revised_local,
+    EXTRACT(epoch FROM flights.runway_local - flights.scheduled_local) / 60::numeric AS dep_delay_minutes,
+    flights.runway_utc,
+    flights.runway_local,
+    flights.status,
         CASE
-            WHEN status = ANY (ARRAY['Canceled'::text, 'CanceledUncertain'::text, 'Unknown'::text]) THEN 'Aflyst'::text
-            WHEN status = 'Boarding'::text THEN 'Boarding'::text
-            WHEN status = 'Delayed'::text THEN 'Forsinket'::text
-            WHEN status = 'Departed'::text THEN 'Afgået'::text
-            WHEN status = 'Expected'::text THEN 'Forventet'::text
+            WHEN flights.status = ANY (ARRAY['Canceled'::text, 'CanceledUncertain'::text, 'Unknown'::text]) THEN 'Aflyst'::text
+            WHEN flights.status = 'Boarding'::text THEN 'Boarding'::text
+            WHEN flights.status = 'Delayed'::text THEN 'Forsinket'::text
+            WHEN flights.status = 'Departed'::text THEN 'Afgået'::text
+            WHEN flights.status = 'Expected'::text THEN 'Forventet'::text
             ELSE 'Aflyst'::text
         END AS status_da,
-    terminal,
-    gate,
-    aircraft_model,
-    aircraft_reg
-   FROM cph_airport.flights;
+    flights.terminal,
+    flights.gate,
+    flights.aircraft_model,
+    flights.aircraft_reg,
+        CASE
+            WHEN amod.seats IS NULL THEN 180::bigint
+            ELSE amod.seats
+        END AS seats
+   FROM cph_airport.flights
+     LEFT JOIN cph_airport.aircraft_models_view amod ON amod.aircraft_model = flights.aircraft_model;

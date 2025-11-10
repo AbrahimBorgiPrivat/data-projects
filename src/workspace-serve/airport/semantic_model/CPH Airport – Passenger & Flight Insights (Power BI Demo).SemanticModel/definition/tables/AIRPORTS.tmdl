@@ -1,9 +1,17 @@
 table AIRPORTS
-	lineageTag: 62de697c-1dc7-4c47-be49-8831c4dabfd8
+	lineageTag: 2731194f-0781-45d2-89dc-50d05b6070e8
+
+	column iata
+		dataType: string
+		lineageTag: 007c4078-6930-4055-8ef6-bd2cf99c43f2
+		summarizeBy: none
+		sourceColumn: iata
+
+		annotation SummarizationSetBy = Automatic
 
 	column name
 		dataType: string
-		lineageTag: 1f466f72-4b35-4d29-ad35-98a03f4fc207
+		lineageTag: 2e16451c-e5ff-49df-a156-80aea7aa59ce
 		summarizeBy: none
 		sourceColumn: name
 
@@ -11,7 +19,7 @@ table AIRPORTS
 
 	column city
 		dataType: string
-		lineageTag: 57bb6989-b7d8-4a6b-8d49-4853af2dbbde
+		lineageTag: eaec78a7-8ac9-46b9-83e0-698804cdfcff
 		summarizeBy: none
 		sourceColumn: city
 
@@ -19,7 +27,7 @@ table AIRPORTS
 
 	column country
 		dataType: string
-		lineageTag: f8b85005-4c4f-4737-897a-86b51dc99179
+		lineageTag: f1f7aeb5-0798-432c-a55c-6a0883da4dff
 		summarizeBy: none
 		sourceColumn: country
 
@@ -27,7 +35,7 @@ table AIRPORTS
 
 	column country_code
 		dataType: string
-		lineageTag: 283aa4bc-8645-42f8-bbf5-467212699bdb
+		lineageTag: 5fcb7360-7f1b-436e-82c5-dff87fa60c90
 		summarizeBy: none
 		sourceColumn: country_code
 
@@ -35,7 +43,7 @@ table AIRPORTS
 
 	column latitude
 		dataType: double
-		lineageTag: af53ab13-c955-4f43-8464-3303ea7f9ffe
+		lineageTag: 20742809-32e8-476d-94ce-8d66e461e71d
 		dataCategory: Latitude
 		summarizeBy: none
 		sourceColumn: latitude
@@ -46,7 +54,7 @@ table AIRPORTS
 
 	column longitude
 		dataType: double
-		lineageTag: 57d740e7-58f8-49ef-8ef8-3f05060837a4
+		lineageTag: 85a01b34-e1ef-471c-a48f-bbb7cb4bf693
 		dataCategory: Longitude
 		summarizeBy: none
 		sourceColumn: longitude
@@ -58,7 +66,7 @@ table AIRPORTS
 	column world_area_code
 		dataType: int64
 		formatString: 0
-		lineageTag: e28e708c-2eb1-4d17-b7c1-fbb78f1f781b
+		lineageTag: a4f21ad4-6ae5-47a6-9805-3aedd35e944e
 		summarizeBy: none
 		sourceColumn: world_area_code
 
@@ -67,7 +75,7 @@ table AIRPORTS
 	column city_name_geo_name_id
 		dataType: int64
 		formatString: 0
-		lineageTag: 2902bcf1-16d7-4ad3-a3a4-a626424d98db
+		lineageTag: d46f8cac-1e3b-4525-ba11-4241adecaf9e
 		summarizeBy: none
 		sourceColumn: city_name_geo_name_id
 
@@ -76,17 +84,9 @@ table AIRPORTS
 	column country_name_geo_name_id
 		dataType: int64
 		formatString: 0
-		lineageTag: 88c29b68-4518-4fa2-8a44-98f34d3e09d4
+		lineageTag: ebce1132-731b-4f06-be10-2757cb87f7cb
 		summarizeBy: none
 		sourceColumn: country_name_geo_name_id
-
-		annotation SummarizationSetBy = Automatic
-
-	column iata
-		dataType: string
-		lineageTag: 45cc85a7-942a-40cc-bb4c-b9886c84a6ec
-		summarizeBy: none
-		sourceColumn: iata
 
 		annotation SummarizationSetBy = Automatic
 
@@ -94,10 +94,8 @@ table AIRPORTS
 		mode: import
 		source =
 				let
-				    Kilde = PostgreSQL.Database("localhost:5432", "cph_airport"),
+				    Kilde = PostgreSQL.Database("localhost:55432", "cph_airport"),
 				    cph_airport_airports_view = Kilde{[Schema="cph_airport",Item="airports_view"]}[Data]
 				in
 				    cph_airport_airports_view
-
-	annotation PBI_ResultType = Table
 

@@ -57,8 +57,8 @@
       "accept": "application/json"
     },
     "endpoint_template": "Iata/CPH/{date_from}/{date_to}",
-    "start_time": "2025-11-01T00:00:00",
-    "days": 2,
+    "start_time": "2025-10-20T00:00:00",
+    "days": 11,
     "interval_hours": 12,
     "params": {
       "direction": "Departure",

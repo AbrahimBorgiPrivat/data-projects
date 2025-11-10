@@ -8,5 +8,5 @@
                 "db_type":"DB_TYPE"},
         "sql_queries": ["airport/create_table_and_views/queries/schema/cph_airport.sql",
                 "airport/create_table_and_views/queries/table/flights.sql",
-                "airport/create_table_and_views/queries/view/flights.sql"]
+                "airport/create_table_and_views/queries/view/flights_view.sql"]
 }
