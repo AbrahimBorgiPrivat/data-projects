@@ -1,0 +1,67 @@
+table PROGRAMS
+	lineageTag: 426b5861-42b9-41f4-bf9e-f15fc6160389
+
+	column program_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9f1b4cec-7fcf-4cfd-bfa8-78f76dccaf54
+		summarizeBy: none
+		sourceColumn: program_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		lineageTag: c0e3e81e-0efb-4b2b-87c4-94e9af2ed961
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: 5aed997f-e9af-4a00-98b4-db4e32ca6757
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column seasons
+		dataType: int64
+		formatString: 0
+		lineageTag: 846747e0-9ad1-4f7b-8380-ceeb23cbf701
+		summarizeBy: none
+		sourceColumn: seasons
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		lineageTag: f73288ed-1779-4b1f-9ef7-5bf930047d30
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column image
+		dataType: string
+		lineageTag: bcc9d72a-d462-434c-b8c9-cc4ba0c45177
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: image
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PROGRAMS = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    tv_one_programs_view = Kilde{[Schema="tv_one",Item="programs_view"]}[Data]
+				in
+				    tv_one_programs_view
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

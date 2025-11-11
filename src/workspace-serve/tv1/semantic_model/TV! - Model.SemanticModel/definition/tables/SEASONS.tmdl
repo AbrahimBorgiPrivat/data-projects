@@ -1,0 +1,51 @@
+table SEASONS
+	lineageTag: 820f3505-7f80-48ea-9ae8-5f08f067e055
+
+	column season_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7dffdcc2-b690-4be1-bf41-af9d8d65fd7c
+		summarizeBy: none
+		sourceColumn: season_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column program_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 913cabd4-b9dd-4d56-b1c1-6424177aee20
+		summarizeBy: none
+		sourceColumn: program_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column season
+		dataType: int64
+		formatString: 0
+		lineageTag: 61626585-621f-4874-9a58-55257f8c53e2
+		summarizeBy: sum
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		lineageTag: e571f61d-488f-4902-ae9d-ecfa364a3291
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SEASONS = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    tv_one_seasons_view = Kilde{[Schema="tv_one",Item="seasons_view"]}[Data]
+				in
+				    tv_one_seasons_view
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

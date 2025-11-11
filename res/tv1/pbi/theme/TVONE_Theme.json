@@ -1,0 +1,42 @@
+{
+  "name": "TV1Theme",
+  "dataColors": [
+    "#D60000",  
+    "#000000",  
+    "#4A4A4A",  
+    "#E53935",  
+    "#9E9E9E",  
+    "#FFCDD2",  
+    "#C62828",  
+    "#F5F5F5"
+  ],
+  "good": "#2E7D32",
+  "neutral": "#9E9E9E",
+  "bad": "#C62828",
+  "maximum": "#D60000",
+  "center": "#4A4A4A",
+  "minimum": "#F5F5F5",
+  "null": "#FFFFFF",
+  "background": "#FFFFFF",
+  "foreground": "#000000",
+  "tableAccent": "#D60000",
+  "textClasses": {
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 9
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10
+    },
+    "title": {
+      "fontFace": "Segoe UI",
+      "fontSize": 12
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 10
+    }
+  }
+}
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "TV! - Model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "436dcaea-0f00-49fb-8fd4-e55bb5a24762"
+  }
+}

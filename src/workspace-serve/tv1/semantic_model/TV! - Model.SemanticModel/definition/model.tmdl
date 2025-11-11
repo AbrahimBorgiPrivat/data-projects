@@ -1,0 +1,25 @@
+model Model
+	culture: da-DK
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: da-DK
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["DATEVIEW","STREAMING","EPISODES","PROGRAMS","SEASONS","SEGMENTATIONS","SESSIONS","USERS"]
+
+ref table DATEVIEW
+ref table STREAMING
+ref table EPISODES
+ref table PROGRAMS
+ref table SEASONS
+ref table SEGMENTATIONS
+ref table SESSIONS
+ref table USERS
+
+ref cultureInfo da-DK
+

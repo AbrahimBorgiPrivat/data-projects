@@ -1,0 +1,57 @@
+table SEGMENTATIONS
+	lineageTag: 488a39c7-1d8d-4651-a09e-f760e1c904e6
+
+	column segment_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f8d3e95-929b-4871-8923-50a80dd5801a
+		summarizeBy: none
+		sourceColumn: segment_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column segment_key
+		dataType: string
+		lineageTag: c55d305d-0361-44e8-9f57-304507419402
+		summarizeBy: none
+		sourceColumn: segment_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 65d68cfd-71fa-443c-8be8-87773d1dd5c0
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: a450caeb-8ed8-4362-bfeb-d968148ca54e
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column activity_level
+		dataType: string
+		lineageTag: 758dd047-2bea-45c8-b8b6-e00f9a8538f6
+		summarizeBy: none
+		sourceColumn: activity_level
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SEGMENTATIONS = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    tv_one_segmentation_view = Kilde{[Schema="tv_one",Item="segmentation_view"]}[Data]
+				in
+				    tv_one_segmentation_view
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

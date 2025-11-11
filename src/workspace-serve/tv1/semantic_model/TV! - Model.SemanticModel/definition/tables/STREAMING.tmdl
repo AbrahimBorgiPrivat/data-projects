@@ -1,0 +1,106 @@
+table STREAMING
+	lineageTag: e3241323-76ee-420f-bb36-57b674c082a5
+
+	column tracking_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f442a1c-ba4b-4bb5-9d8a-45321b246ddf
+		summarizeBy: sum
+		sourceColumn: tracking_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 381395a5-48dc-4533-ade1-89457f9c0803
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		lineageTag: d047af1d-73f5-4e85-9240-59c1d10f0805
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f4e90ee6-e627-4bbe-9098-d2dac91fb70f
+		summarizeBy: none
+		sourceColumn: event_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column episode_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 0cfff1cc-f71a-4b6c-83ea-5f4148aa21bd
+		summarizeBy: none
+		sourceColumn: episode_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform
+		dataType: string
+		lineageTag: edee98f0-66e3-4030-82e7-81aea3f33a1c
+		summarizeBy: none
+		sourceColumn: platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column episode_start_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b7647a88-2be9-4b66-b758-eabbe377468a
+		summarizeBy: none
+		sourceColumn: episode_start_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column episode_end_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5d367e19-efa4-49bb-9d5f-ee0d38d62f82
+		summarizeBy: none
+		sourceColumn: episode_end_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column finished
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 476c94b0-1765-4e24-b336-dc42d085bcc4
+		summarizeBy: none
+		sourceColumn: finished
+
+		annotation SummarizationSetBy = Automatic
+
+	column watched_minutes
+		dataType: double
+		lineageTag: 4ddcb1f4-4d40-4352-9b4e-02b9ca6d327a
+		summarizeBy: sum
+		sourceColumn: watched_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition STREAMING = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    tv_one_episodes_streamed_view = Kilde{[Schema="tv_one",Item="episodes_streamed_view"]}[Data]
+				in
+				    tv_one_episodes_streamed_view
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

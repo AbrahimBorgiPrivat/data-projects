@@ -1,0 +1,102 @@
+table EPISODES
+	lineageTag: c189cb6e-dae1-41f8-a2ca-d3c79f7d9261
+
+	column episode_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ae135a61-7e98-4e3b-a80d-ad7677d5275f
+		summarizeBy: none
+		sourceColumn: episode_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column program_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3173e098-14a2-4d66-bdc8-06260cbed687
+		summarizeBy: sum
+		sourceColumn: program_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column season_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 27c67fba-d28c-4eef-8089-564adb1bd1aa
+		summarizeBy: none
+		sourceColumn: season_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column duration_interval
+		dataType: double
+		lineageTag: 468f466c-0db9-4de2-ab75-cadab968e0c1
+		summarizeBy: sum
+		sourceColumn: duration_interval
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column title
+		dataType: string
+		lineageTag: 96d8b854-16a5-4c6e-a5fe-c165342f2cc4
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column episode_nr
+		dataType: int64
+		formatString: 0
+		lineageTag: 87aed8e9-d51e-47a4-8293-cea60cee2d33
+		summarizeBy: sum
+		sourceColumn: episode_nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column details
+		dataType: string
+		lineageTag: 97d4ed3b-9709-4fb6-bfe6-2e2cf14830fa
+		summarizeBy: none
+		sourceColumn: details
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		lineageTag: 80b8c670-be3e-4679-a786-e87131d0b5e3
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: deef5fa6-8a7d-4fe4-aff5-4d022ee42a8a
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column image
+		dataType: string
+		lineageTag: 7594256b-b731-47cc-8034-9360a68d9a71
+		summarizeBy: none
+		sourceColumn: image
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EPISODES = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    tv_one_episodes_view = Kilde{[Schema="tv_one",Item="episodes_view"]}[Data]
+				in
+				    tv_one_episodes_view
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

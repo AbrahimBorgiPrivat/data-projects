@@ -1,0 +1,68 @@
+table USERS
+	lineageTag: 67510a35-db6b-421b-9f2a-71a7b7fb00b8
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9fbe1065-c60f-45f2-b63c-8634c5013321
+		summarizeBy: none
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group
+		dataType: string
+		lineageTag: 583e0f8a-bd50-4480-84f8-c1d9d405d390
+		summarizeBy: none
+		sourceColumn: age_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column household_size
+		dataType: int64
+		formatString: 0
+		lineageTag: 7654d675-9d57-4975-90d2-7c40a8691334
+		summarizeBy: sum
+		sourceColumn: household_size
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 1f98f7eb-9f44-467e-b787-4a69c0b9c352
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column children_under5
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f5b23f0d-2a72-4f7a-bf3f-b9dd33d78fcf
+		summarizeBy: none
+		sourceColumn: children_under5
+
+		annotation SummarizationSetBy = Automatic
+
+	column segment_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e943186-63f0-420e-8459-373ca164c372
+		summarizeBy: none
+		sourceColumn: segment_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition USERS = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    tv_one_users_view = Kilde{[Schema="tv_one",Item="users_view"]}[Data]
+				in
+				    tv_one_users_view
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+
