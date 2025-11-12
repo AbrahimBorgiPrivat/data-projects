@@ -4,11 +4,22 @@ Dette repository fungerer som samlingspunkt for et antal data- og analyseskabelo
 
 ---
 
-## 📊 Projekter
+## Projekter
 
-- **[GamMa – Data & Rapportering](docs/gamma/)**   
-  Automatiseret databehandling og rapportering for GamMa-foreningen.  
+### **[GamMa -- Data & Rapportering](docs/gamma/)**
 
+Automatiseret databehandling og rapportering for GamMa-foreningen.
+
+![GamMa Rapport -- P&L](res/gamma/pbi/P&L.png)
+
+------------------------------------------------------------------------
+
+### **[TV ONE -- Simulering, Data & Rapportering](docs/tv1/)**
+
+Simulering af streaming- og brugeradfærd, opbygning af datamodel i
+PostgreSQL og levering af rapportering via Power BI og Tabular Editor.
+
+![TV ONE -- Simuleringsoversigt](res/tv1/pbi/OVERVIEW-Page.png)
 ---
 
 ## Indhold
