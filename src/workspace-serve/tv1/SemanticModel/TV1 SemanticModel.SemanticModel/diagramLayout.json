@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 0,
-            "y": 97.22385118397267
+            "y": 142.55962795993167
           },
           "nodeIndex": "PROGRAMS",
           "size": {
@@ -23,7 +23,7 @@
         {
           "location": {
             "x": 384.93548643839546,
-            "y": 90.876504128277247
+            "y": 136.21228090423625
           },
           "nodeIndex": "EPISODES",
           "size": {
@@ -35,7 +35,7 @@
         {
           "location": {
             "x": 173,
-            "y": 464.36743792512118
+            "y": 509.70321470108019
           },
           "nodeIndex": "SEASONS",
           "size": {
@@ -47,7 +47,7 @@
         {
           "location": {
             "x": 692.19912783867142,
-            "y": 90.671553551918009
+            "y": 136.007330327877
           },
           "nodeIndex": "STREAMING",
           "nodeLineageTag": "e3241323-76ee-420f-bb36-57b674c082a5",
@@ -59,8 +59,8 @@
         },
         {
           "location": {
-            "x": 975.04222483322565,
-            "y": 418.86825139472376
+            "x": 1028.0422248332256,
+            "y": 399.20402817068276
           },
           "nodeIndex": "SESSIONS",
           "nodeLineageTag": "5d2f9fdb-3890-447a-8c5a-c02ed9b469a6",
@@ -72,10 +72,11 @@
         },
         {
           "location": {
-            "x": 1106.6923763647285,
-            "y": 92.750372275365521
+            "x": 1019.6923763647285,
+            "y": 37.086149051324526
           },
           "nodeIndex": "USERS",
+          "nodeLineageTag": "67510a35-db6b-421b-9f2a-71a7b7fb00b8",
           "size": {
             "height": 224,
             "width": 234
@@ -85,7 +86,7 @@
         {
           "location": {
             "x": 708.69237636472849,
-            "y": 494.04605128934821
+            "y": 539.38182806530722
           },
           "nodeIndex": "DATEVIEW",
           "nodeLineageTag": "a0f203ab-c706-42d5-bb89-531de2b46ace",
@@ -97,10 +98,11 @@
         },
         {
           "location": {
-            "x": 1413.5402981708455,
-            "y": 98.671806719745291
+            "x": 1337.5402981708455,
+            "y": 6.0075834957042957
           },
           "nodeIndex": "SEGMENTATIONS",
+          "nodeLineageTag": "488a39c7-1d8d-4651-a09e-f760e1c904e6",
           "size": {
             "height": 200,
             "width": 234
@@ -109,19 +111,33 @@
         },
         {
           "location": {
-            "x": 1697.5402981708455,
-            "y": 281.91110005268774
+            "x": 1371.5402981708455,
+            "y": 289.24687682864675
           },
           "nodeIndex": "_MEASURES",
+          "nodeLineageTag": "e6d63244-f352-4117-867b-65c24970d5af",
           "size": {
             "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1370.6282170303487,
+            "y": 509.57613710779049
+          },
+          "nodeIndex": "_PARAMETER - MEASURES",
+          "nodeLineageTag": "bb208275-99fb-4cc4-8339-656dca5e870e",
+          "size": {
+            "height": 152,
             "width": 234
           },
           "zIndex": 0
         }
       ],
       "name": "Alle tabeller",
-      "zoomValue": 100,
+      "zoomValue": 89.1925905205695,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
