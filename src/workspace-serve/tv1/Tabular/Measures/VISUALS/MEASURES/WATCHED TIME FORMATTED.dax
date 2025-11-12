@@ -1,0 +1,14 @@
+
+VAR TotalMinutes = CALCULATE(SUM(STREAMING[watched_minutes]))
+VAR Days = INT(DIVIDE(TotalMinutes, 1440))                // 1440 min = 1 day
+VAR Hours = INT(DIVIDE(MOD(TotalMinutes, 1440), 60))      // Remaining hours
+VAR Minutes = MOD(TotalMinutes, 60)                       // Remaining minutes
+RETURN
+SWITCH(
+    TRUE(),
+    Days > 0, 
+        FORMAT(Days, "00") & " d. " & FORMAT(Hours, "00") & " t." & FORMAT(Minutes, "00") & " m." ,
+    Hours > 0, 
+        FORMAT(Hours, "00") & " t." & FORMAT(Minutes, "00") & " m.",
+    FORMAT(Minutes, "00") & " m."
+)

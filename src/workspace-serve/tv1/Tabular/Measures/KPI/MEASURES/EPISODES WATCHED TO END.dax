@@ -1,0 +1,1 @@
+CALCULATE(COUNT(STREAMING[episode_id]),STREAMING[finished])

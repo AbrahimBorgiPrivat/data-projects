@@ -1,0 +1,117 @@
+table SESSIONS
+	lineageTag: 5d2f9fdb-3890-447a-8c5a-c02ed9b469a6
+
+	column session_tracking_id
+		dataType: int64
+		formatString: 0
+		lineageTag: affbada8-7c2c-466a-9bd7-104803133702
+		summarizeBy: sum
+		sourceColumn: session_tracking_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ac2b734d-e1d8-47e4-a22d-1c9a105881f8
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_start_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c83fd491-38a5-4d8d-9360-373864ec5199
+		summarizeBy: none
+		sourceColumn: session_start_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform
+		dataType: string
+		lineageTag: 8dcaa766-b33e-4906-a73b-cd35da6b776e
+		summarizeBy: none
+		sourceColumn: platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 36b53e5c-7c17-4e57-990c-b7a0f43503d4
+		summarizeBy: none
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_start_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fa6369c4-56ab-441f-a3b3-8f650aca3697
+		summarizeBy: none
+		sourceColumn: session_start_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column last_end_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2f5d7c3b-d76c-486a-a8ab-c6ec3298c61a
+		summarizeBy: none
+		sourceColumn: last_end_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_duration_min
+		dataType: double
+		lineageTag: db6c5bed-fd68-49cc-80ca-d289a5cbbaa7
+		summarizeBy: sum
+		sourceColumn: session_duration_min
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column episodes_in_session
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f4626bb-47f4-4b2f-9efa-a3a1c4321c0e
+		summarizeBy: sum
+		sourceColumn: episodes_in_session
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_duration_group
+		dataType: string
+		lineageTag: 729978d0-11e8-473b-83df-10230fa57b89
+		summarizeBy: none
+		sourceColumn: session_duration_group
+		sortByColumn: session_duration_group_order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_duration_group_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 6392c0c6-d8a9-4641-a27e-30d474d283be
+		summarizeBy: sum
+		sourceColumn: session_duration_group_order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SESSIONS = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "tv_one_db"),
+				    tv_one_sessions_view = Kilde{[Schema="tv_one",Item="sessions_view"]}[Data]
+				in
+				    tv_one_sessions_view
+
+	annotation PBI_ResultType = Table
+

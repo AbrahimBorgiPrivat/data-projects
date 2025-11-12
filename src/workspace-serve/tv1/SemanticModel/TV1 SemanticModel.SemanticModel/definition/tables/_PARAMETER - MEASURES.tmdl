@@ -1,0 +1,63 @@
+/// {
+/// ("Sessioner", NAMEOF('_MEASURES'[SESSIONS]), 0),
+/// ("Minutter pr. Session", NAMEOF('_MEASURES'[MINUTES WATCHED - AVG]), 1),
+/// ("Minutter Total", NAMEOF('_MEASURES'[MINUTES WATCHED]), 2),
+/// ("Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS]), 3),
+/// ("Andel Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS PERC]), 4),
+/// ("Episoder pr. Session", NAMEOF('_MEASURES'[EPISODES WATCHED PR. SESSION]), 5),
+/// ("Andel Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END PERC]), 6),
+/// ("Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END]), 7),
+/// ("Sete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED]), 8),
+/// ("Brugere", NAMEOF('_MEASURES'[USERS]), 9),
+/// ("Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS]), 10),
+/// ("Andel Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS PERC]), 11)
+/// }
+table '_PARAMETER - MEASURES'
+	lineageTag: bb208275-99fb-4cc4-8339-656dca5e870e
+
+	column Name
+		dataType: string
+		lineageTag: 94ffbc55-e451-426f-b077-15603d60b4b0
+		sourceColumn: [Value1]
+		sortByColumn: Order
+
+		relatedColumnDetails
+			groupByColumn: Field
+
+	column Field
+		dataType: string
+		isHidden
+		lineageTag: 5669d9b6-78f9-4ce1-8fad-88dad2677eed
+		sourceColumn: [Value2]
+		sortByColumn: Order
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+	column Order
+		dataType: int64
+		isHidden
+		lineageTag: bf700fb5-b1ea-4d93-9620-90f26940a20f
+		sourceColumn: [Value3]
+
+	partition '_PARAMETER - MEASURES' = calculated
+		mode: import
+		source =
+				{
+				("Sessioner", NAMEOF('_MEASURES'[SESSIONS]), 0),
+				    ("Minutter pr. Session", NAMEOF('_MEASURES'[MINUTES WATCHED - AVG]), 1),
+				    ("Minutter Total", NAMEOF('_MEASURES'[MINUTES WATCHED]), 2),
+				    ("Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS]), 3),
+				    ("Andel Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS PERC]), 4),
+				    ("Episoder pr. Session", NAMEOF('_MEASURES'[EPISODES WATCHED PR. SESSION]), 5),
+				    ("Andel Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END PERC]), 6),
+				    ("Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END]), 7),
+				    ("Sete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED]), 8),
+				    ("Brugere", NAMEOF('_MEASURES'[USERS]), 9),
+				    ("Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS]), 10),
+				    ("Andel Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS PERC]), 11)
+				}
+

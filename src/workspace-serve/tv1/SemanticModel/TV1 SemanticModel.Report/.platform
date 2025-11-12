@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TV1 SemanticModel"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "de1f7b22-d1c4-4a1c-8c50-825f12efd838"
+  }
+}

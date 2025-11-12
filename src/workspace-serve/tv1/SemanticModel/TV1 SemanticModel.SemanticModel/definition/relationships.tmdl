@@ -1,0 +1,39 @@
+relationship AutoDetected_fe818c8a-7b00-4a8f-afa5-70ce16b6bf36
+	crossFilteringBehavior: bothDirections
+	fromColumn: STREAMING.session_id
+	toColumn: SESSIONS.session_id
+
+relationship AutoDetected_1ef7ed81-20d7-440e-a77f-a583e271df2e
+	isActive: false
+	fromColumn: STREAMING.user_id
+	toColumn: USERS.user_id
+
+relationship AutoDetected_a6a3fcfc-8ac4-4348-ab13-f6b9ed493c03
+	fromColumn: SESSIONS.user_id
+	toColumn: USERS.user_id
+
+relationship AutoDetected_69a0580d-61ff-497b-9a0e-32e3fe6c33ac
+	fromColumn: STREAMING.episode_id
+	toColumn: EPISODES.episode_id
+
+relationship AutoDetected_eb93407a-cf32-4331-a7ab-e9528c0f362f
+	fromColumn: SEASONS.program_id
+	toColumn: PROGRAMS.program_id
+
+relationship AutoDetected_5c27b0ce-a235-45a1-a05b-4387cedce55d
+	fromColumn: EPISODES.season_id
+	toColumn: SEASONS.season_id
+
+relationship AutoDetected_c652d5ab-c36d-4815-8fe3-5624bd216535
+	fromColumn: USERS.segment_id
+	toColumn: SEGMENTATIONS.segment_id
+
+relationship 6939013f-846b-57f4-eedc-8ebcb2d92aa9
+	isActive: false
+	fromColumn: EPISODES.program_id
+	toColumn: PROGRAMS.program_id
+
+relationship f2898144-d47a-58c2-b710-7d7d79d72d4f
+	fromColumn: SESSIONS.session_start_date
+	toColumn: DATEVIEW.date_actual
+

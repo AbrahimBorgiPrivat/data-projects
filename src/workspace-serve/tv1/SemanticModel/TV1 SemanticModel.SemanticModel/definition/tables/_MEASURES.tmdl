@@ -1,0 +1,159 @@
+table _MEASURES
+	lineageTag: e6d63244-f352-4117-867b-65c24970d5af
+
+	/// CALCULATE(COUNT(SESSIONS[session_id]))
+	measure SESSIONS = CALCULATE(COUNT(SESSIONS[session_id]))
+		formatString: #,0
+		displayFolder: KPI\SESSIONS
+		lineageTag: 18534251-f18a-4993-bc4f-d5f39eaab389
+		dataCategory: true
+
+	/// CALCULATE(DISTINCTCOUNT(SESSIONS[user_id]))
+	measure 'ACTIVE USERS' = CALCULATE(DISTINCTCOUNT(SESSIONS[user_id]))
+		formatString: #,0
+		displayFolder: KPI\USERS
+		lineageTag: 4ece4f8e-0754-4da6-bfc8-7a60b6a47a46
+		dataCategory: true
+
+	/// CALCULATE(SUM(STREAMING[watched_minutes]))
+	measure 'MINUTES WATCHED' = CALCULATE(SUM(STREAMING[watched_minutes]))
+		formatString: 0
+		displayFolder: KPI\SESSIONS\EPISODES
+		lineageTag: 18550c41-cace-4735-a0af-ff6be90290f6
+		dataCategory: true
+
+	/// CALCULATE(COUNT(SESSIONS[session_id]),SESSIONS[episodes_in_session]>0)
+	measure 'STREAMING SESSIONS' = CALCULATE(COUNT(SESSIONS[session_id]),SESSIONS[episodes_in_session]>0)
+		formatString: #,0
+		displayFolder: KPI\SESSIONS\STREAMING
+		lineageTag: 32bf74d0-fbb9-4dd7-9bf5-1ae45ee348d5
+		dataCategory: true
+
+	/// 0.9
+	measure 'STREAMING SESSIONS - TARGET' = 0.9
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\SESSIONS\STREAMING
+		lineageTag: b29d1198-3b07-4823-8e8b-1707a09f851d
+		dataCategory: true
+
+	/// 
+	/// VAR TotalMinutes = CALCULATE(SUM(STREAMING[watched_minutes]))
+	/// VAR Days = INT(DIVIDE(TotalMinutes, 1440))                // 1440 min = 1 day
+	/// VAR Hours = INT(DIVIDE(MOD(TotalMinutes, 1440), 60))      // Remaining hours
+	/// VAR Minutes = MOD(TotalMinutes, 60)                       // Remaining minutes
+	/// RETURN
+	/// SWITCH(
+	/// TRUE(),
+	/// Days > 0,
+	/// FORMAT(Days, "00") & " d. " & FORMAT(Hours, "00") & " t." & FORMAT(Minutes, "00") & " m." ,
+	/// Hours > 0,
+	/// FORMAT(Hours, "00") & " t." & FORMAT(Minutes, "00") & " m.",
+	/// FORMAT(Minutes, "00") & " m."
+	/// )
+	measure 'WATCHED TIME FORMATTED' = ```
+			
+			VAR TotalMinutes = CALCULATE(SUM(STREAMING[watched_minutes]))
+			VAR Days = INT(DIVIDE(TotalMinutes, 1440))                // 1440 min = 1 day
+			VAR Hours = INT(DIVIDE(MOD(TotalMinutes, 1440), 60))      // Remaining hours
+			VAR Minutes = MOD(TotalMinutes, 60)                       // Remaining minutes
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    Days > 0, 
+			        FORMAT(Days, "00") & " d. " & FORMAT(Hours, "00") & " t." & FORMAT(Minutes, "00") & " m." ,
+			    Hours > 0, 
+			        FORMAT(Hours, "00") & " t." & FORMAT(Minutes, "00") & " m.",
+			    FORMAT(Minutes, "00") & " m."
+			)
+			```
+		displayFolder: VISUALS\TEXT
+		lineageTag: b28fa499-46fc-440b-960e-3f9b93fa0f8f
+		dataCategory: true
+
+	/// [SESSIONS W EPISODES - TARGET]*[SESSIONS]
+	measure 'SESSIONS KPI' = [STREAMING SESSIONS - TARGET]*[SESSIONS]
+		formatString: #,0
+		displayFolder: KPI\SESSIONS\STREAMING
+		lineageTag: 96e32318-4859-4388-80af-35e652669880
+		dataCategory: true
+
+	/// DIVIDE([SESSIONS W. EPISODES],[SESSIONS],1)
+	measure 'STREAMING SESSIONS PERC' = DIVIDE([STREAMING SESSIONS],[SESSIONS],1)
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\SESSIONS\STREAMING
+		lineageTag: 67f49afe-c46d-40ef-9bdf-4977260f2ad2
+		dataCategory: true
+
+	/// CALCULATE(DISTINCTCOUNT(SESSIONS[user_id]))
+	measure USERS = CALCULATE(DISTINCTCOUNT(SESSIONS[user_id]))
+		formatString: #,0
+		displayFolder: KPI\USERS
+		lineageTag: d6b62ddb-dfea-418e-ae53-a6035bdfa5e9
+		dataCategory: true
+
+	/// DIVIDE([ACTIVE USERS],[USERS],1)
+	measure 'ACTIVE USERS PERC' = DIVIDE([ACTIVE USERS],[USERS],1)
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\USERS
+		lineageTag: 774d2d97-c42b-4d88-9b48-a80054aaef4c
+		dataCategory: true
+
+	/// SELECTEDVALUE(PROGRAMS[image])
+	measure 'PROGRAM IMAGE' = SELECTEDVALUE(PROGRAMS[image])
+		displayFolder: VISUALS\URL IMG
+		lineageTag: 77c6524f-b5f3-48e3-8707-e78ba5b5f7e6
+		dataCategory: ImageUrl
+
+	/// DIVIDE([MINUTES_WATCHED],[SESSIONS W. EPISODES],BLANK())
+	measure 'MINUTES WATCHED - AVG' = DIVIDE([MINUTES WATCHED],[STREAMING SESSIONS],BLANK())
+		formatString: 0
+		displayFolder: KPI\SESSIONS\EPISODES
+		lineageTag: 6c868d51-5683-4cf7-ba3b-883612affc30
+		dataCategory: true
+
+	/// CALCULATE(COUNT(STREAMING[episode_id]))
+	measure 'EPISODES WATCHED' = CALCULATE(COUNT(STREAMING[episode_id]))
+		formatString: #,0
+		displayFolder: KPI\SESSIONS\EPISODES
+		lineageTag: 8a94e20c-008a-4208-a05a-a99109642235
+		dataCategory: true
+
+	/// DIVIDE([EPISODES WATCHED],[SESSIONS W. EPISODES],0)
+	measure 'EPISODES WATCHED PR. SESSION' = DIVIDE([EPISODES WATCHED],[STREAMING SESSIONS],0)
+		formatString: 0
+		displayFolder: KPI\SESSIONS\EPISODES
+		lineageTag: efd45ede-b7ba-4ca7-803b-a7e5370da1d7
+		dataCategory: true
+
+	/// CALCULATE(COUNT(STREAMING[episode_id]),STREAMING[finished])
+	measure 'EPISODES WATCHED TO END' = CALCULATE(COUNT(STREAMING[episode_id]),STREAMING[finished])
+		formatString: #,0
+		displayFolder: KPI\SESSIONS\EPISODES
+		lineageTag: 3b67db68-b170-407f-99d6-8371dc0a27bb
+		dataCategory: true
+
+	/// DIVIDE([EPISODES WATCHED TO END],[EPISODES WATCHED],1)
+	measure 'EPISODES WATCHED TO END PERC' = DIVIDE([EPISODES WATCHED TO END],[EPISODES WATCHED],1)
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\SESSIONS\EPISODES
+		lineageTag: 1166586d-03ff-4fd2-a8dc-d16ed7656fb5
+		dataCategory: true
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: c3e79820-f40d-4234-aed5-2bc139b7c253
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _MEASURES = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 31c8b286f65740b38be9097d373e4811
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
