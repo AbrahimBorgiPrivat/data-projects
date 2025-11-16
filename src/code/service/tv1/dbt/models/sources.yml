@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: tv_one
+    description: "Main schema containing all TV ONE streaming and user data"
+    schema: tv_one
+    tables:
+      - name: tracking
+        description: "All tracking events such as sessions and episode starts"
+      - name: users
+        description: "User information including demographics and segment IDs"
+      - name: episodes
+        description: "Episode metadata (title, duration, etc.)"
+      - name: programs
+        description: "Programs and categories"
+      - name: seasons
+        description: "Season-level metadata"
+      - name: segmentation
+        description: "Audience segments and behavioral profiles"
+
+  - name: default_data
+    description: "Shared utility schema (date dimension, etc.)"
+    schema: default_data
+    tables:
+      - name: d_date
+        description: "Date dimension table used for time-based reporting"

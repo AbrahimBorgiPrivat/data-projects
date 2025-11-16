@@ -1,0 +1,30 @@
+name: "tv1_dbt"                
+version: "1.0"
+config-version: 2              
+
+profile: "tv1_dbt"
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+analysis-paths: ["analysis"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  tv1_dbt:
+    marts:
+      +schema: tv1_marts
+      +materialized: view
+      +tags: ["marts"]
+    staging:
+      +schema: tv1_staging
+      +materialized: view
+      +tags: ["staging"]
+
+vars:
+  report_schema: "tv_one"
+  project_owner: "Abrahim Borgi"
