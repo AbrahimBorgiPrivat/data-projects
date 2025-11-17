@@ -18,7 +18,7 @@ models:
   tv1_dbt:
     marts:
       +schema: tv1_marts
-      +materialized: view
+      +materialized: table
       +tags: ["marts"]
     staging:
       +schema: tv1_staging
