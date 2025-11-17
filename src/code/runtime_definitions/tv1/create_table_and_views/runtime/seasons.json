@@ -7,6 +7,5 @@
                 "port":"POSTGRES_PORT",
                 "db_type":"DB_TYPE"},
 "sql_queries": ["tv1/create_table_and_views/queries/schema/tv_one_schema.sql",
-                "tv1/create_table_and_views/queries/table/seasons.sql",
-                "tv1/create_table_and_views/queries/view/seasons_view.sql"]
+                "tv1/create_table_and_views/queries/table/seasons.sql"]
 }

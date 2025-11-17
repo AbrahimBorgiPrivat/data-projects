@@ -7,6 +7,5 @@
                 "port":"POSTGRES_PORT",
                 "db_type":"DB_TYPE"},
 "sql_queries": ["tv1/create_table_and_views/queries/schema/deafult_data.sql",
-                "tv1/create_table_and_views/queries/table/d_date.sql",
-                "tv1/create_table_and_views/queries/view/date_view.sql"]
+                "tv1/create_table_and_views/queries/table/d_date.sql"]
 }
