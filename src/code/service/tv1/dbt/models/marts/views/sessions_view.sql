@@ -1,6 +1,6 @@
 {{ config(
     materialized = 'view',
-    tags = ['marts', 'segmentation']
+    tags = ['marts', 'sessions']
 ) }}
 
 SELECT

@@ -1,0 +1,28 @@
+{{ config(
+    materialized = 'incremental',
+    unique_key   = 'episode_id',
+    incremental_strategy = 'merge',
+    tags = ['marts', 'programs'],
+    post_hook = [
+        "CREATE INDEX IF NOT EXISTS idx_dim__episode_id ON {{ this }} (episode_id)",
+        "CREATE INDEX IF NOT EXISTS idx_dim__program_id ON {{ this }} (program_id)",
+        "CREATE INDEX IF NOT EXISTS idx_dim__season_id ON {{ this }} (season_id)"
+    ]
+) }}
+
+SELECT
+    episode_id,
+    program_id,
+    season_id,
+        CASE
+            WHEN TRIM(BOTH FROM split_part(details, '|'::text, 2)) ~~ '%m'::text THEN make_interval(mins => regexp_replace(TRIM(BOTH FROM split_part(details, '|'::text, 2)), '[^0-9]'::text, ''::text, 'g'::text)::integer)
+            WHEN TRIM(BOTH FROM split_part(details, '|'::text, 2)) ~~ '%s'::text THEN make_interval(secs => regexp_replace(TRIM(BOTH FROM split_part(details, '|'::text, 2)), '[^0-9]'::text, ''::text, 'g'::text)::integer::double precision)
+            ELSE NULL::interval
+        END AS duration_interval,
+    title,
+    regexp_replace(title, '^(\d+)\..*'::text, '\1'::text)::integer AS episode_nr,
+    details,
+    url,
+    description,
+    image
+FROM {{ ref('stg_episodes') }}
