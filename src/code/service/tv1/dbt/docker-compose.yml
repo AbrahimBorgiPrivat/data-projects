@@ -1,7 +1,6 @@
 services:
   dbt_tv1:
     image: ghcr.io/dbt-labs/dbt-postgres:latest
-    container_name: dbt_tv1
     working_dir: /usr/app
     env_file:
       - ../.env                  
@@ -12,8 +11,22 @@ services:
     volumes:
       - ./:/usr/app                 
     networks:
-      - data_network
-    command: ["bash"]               
+      - data_network           
+    
+  dbt_run:
+    extends:
+      service: dbt_tv1
+    command: ["run"]
+
+  dbt_test:
+    extends:
+      service: dbt_tv1
+    command: ["test"]
+
+  dbt_build:
+    extends:
+      service: dbt_tv1
+    command: ["build"]
 
 networks:
   data_network:
