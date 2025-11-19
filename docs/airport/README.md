@@ -7,7 +7,7 @@ i PostgreSQL, og levere rapportering via Power BI og Tabular Editor.
 
 Oversigt                               |Check In Tider                         | Udnyttelsesrate
 :-------------------------------------:|:-------------------------------------:|:-------------------------------------:
-![](res/airport/pbi/img/PBIPage1.png)  |![](res/airport/pbi/img/PBIPage2.png)  |![](res/airport/pbi/img/PBIPage2.png)
+![](/res/airport/pbi/img/PBIPage1.png)  |![](/res/airport/pbi/img/PBIPage2.png)  |![](/res/airport/pbi/img/PBIPage2.png)
 
 
 ------------------------------------------------------------------------
