@@ -1,0 +1,156 @@
+table TICKETS
+	lineageTag: 450abd56-68d4-4541-b105-b0c540f6f07a
+
+	column unique_id
+		dataType: string
+		lineageTag: fb939c2f-d797-4c18-bc9f-b2855ee039b6
+		summarizeBy: none
+		sourceColumn: unique_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column transaction_id
+		dataType: string
+		lineageTag: c9bd54fd-be44-42ee-bc4c-ffd3ca56ecc7
+		summarizeBy: none
+		sourceColumn: transaction_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seat_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 419ec338-f4ff-4739-bffb-f60ce4c571d3
+		summarizeBy: sum
+		sourceColumn: seat_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column passport_number
+		dataType: string
+		lineageTag: 935b5497-9fd6-4555-ab96-ba1279691c1c
+		summarizeBy: none
+		sourceColumn: passport_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column check_in_type
+		dataType: string
+		lineageTag: cbce866c-931d-42bc-8ed3-7e4f21996088
+		summarizeBy: none
+		sourceColumn: check_in_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column checkin_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bbb67818-50a5-4b90-aa9a-7942ce03db96
+		summarizeBy: none
+		sourceColumn: checkin_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column passed_security_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 186f65b5-9a2f-46b3-8484-104593980ca8
+		summarizeBy: none
+		sourceColumn: passed_security_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column scheduled_local
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 85644e36-0bcf-4ff6-9eb8-399deb7020a4
+		summarizeBy: none
+		sourceColumn: scheduled_local
+
+		annotation SummarizationSetBy = Automatic
+
+	column check_in_time_bef_sched
+		dataType: double
+		lineageTag: ec0e0bae-a4a1-44e4-85dc-be44af459a1e
+		summarizeBy: sum
+		sourceColumn: check_in_time_bef_sched
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sek_time_bef_sched
+		dataType: double
+		lineageTag: 63cac371-6b76-488d-917b-9e70d1585c4d
+		summarizeBy: sum
+		sourceColumn: sek_time_bef_sched
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column check_in_hour
+		dataType: double
+		lineageTag: facf9586-8abf-40d6-a88d-cea5c95f1f3e
+		summarizeBy: sum
+		sourceColumn: check_in_hour
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column check_in_before_schedule_hour
+		dataType: int64
+		formatString: 0
+		lineageTag: 58b54eea-6596-4c02-9f37-27f83c577ba5
+		summarizeBy: sum
+		sourceColumn: check_in_before_schedule_hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column check_in_before_schedule_min
+		dataType: int64
+		formatString: 0
+		lineageTag: 955febe2-59a2-4480-a054-bdcd61ef03cd
+		summarizeBy: sum
+		sourceColumn: check_in_before_schedule_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column passed_security_hour
+		dataType: double
+		lineageTag: 93cd8a21-0500-40f8-ac65-b6c7bad3966a
+		summarizeBy: sum
+		sourceColumn: passed_security_hour
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column passed_security_before_schedule_hour
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ca3d9a7-25f4-460d-aeeb-67cb06a77639
+		summarizeBy: sum
+		sourceColumn: passed_security_before_schedule_hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column passed_security_before_schedule_min
+		dataType: int64
+		formatString: 0
+		lineageTag: c03c0101-59e6-4d02-b68f-92308884cb3c
+		summarizeBy: sum
+		sourceColumn: passed_security_before_schedule_min
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TICKETS = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "cph_airport"),
+				    cph_airport_ticket_view = Kilde{[Schema="cph_airport",Item="ticket_view"]}[Data]
+				in
+				    cph_airport_ticket_view
+

@@ -1,0 +1,20 @@
+relationship AutoDetected_719c5368-069f-464c-9c24-6cc4760eca17
+	fromColumn: FLIGHTS.aircraft_model
+	toColumn: AIRCRAFT_MODELS.aircraft_model
+
+relationship AutoDetected_029ffe89-b104-4614-8d7d-bf08ff4d72d9
+	fromColumn: TICKETS.transaction_id
+	toColumn: FLIGHTS.transaction_id
+
+relationship AutoDetected_618dc0a9-dd6e-462b-994f-a08c65567665
+	fromColumn: TICKETS.passport_number
+	toColumn: PASSPORTS.passport_number
+
+relationship 8adb797e-1830-ef1a-a0d1-f2622376a072
+	fromColumn: FLIGHTS.destination_iata
+	toColumn: AIRPORTS.iata
+
+relationship b9632f9b-5c57-cd1f-9169-4c3976432e0c
+	fromColumn: FLIGHTS.scheduled_date
+	toColumn: DATEVIEW.date_actual
+

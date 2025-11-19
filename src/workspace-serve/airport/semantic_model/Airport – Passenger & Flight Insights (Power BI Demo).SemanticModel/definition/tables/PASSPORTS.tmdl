@@ -1,0 +1,36 @@
+table PASSPORTS
+	lineageTag: 490be463-40d3-4399-a6eb-50552be3ca4e
+
+	column passport_number
+		dataType: string
+		lineageTag: 605d1ea9-7e67-4e94-ae8f-79bafcb97c03
+		summarizeBy: none
+		sourceColumn: passport_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 70166324-a56e-4dc0-9eeb-82ee01131b2e
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 6820e3ed-f261-4ddf-9dcb-d5c922262037
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PASSPORTS = m
+		mode: import
+		source =
+				let
+				    Kilde = PostgreSQL.Database("localhost:55432", "cph_airport"),
+				    cph_airport_passport_view = Kilde{[Schema="cph_airport",Item="passport_view"]}[Data]
+				in
+				    cph_airport_passport_view
+

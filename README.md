@@ -17,6 +17,13 @@ Dette repository fungerer som samlingspunkt for et antal data- og analyseskabelo
 
   ![GamMa Rapport -- P&L](res/gamma/pbi/P&L.png)
 
+- **[Airport Project - Simulering, Data & Rapportering](docs/airport/)**   
+  Simulering af streaming- og brugeradfærd, opbygge en datamodel og levere rapportering via Power BI og Tabular Editor. 
+
+Oversigt                               |  Check In Tider                         | Udnyttelsesrate
+:-------------------------------------:|:---------------------------------------:|:----------------------------------------:
+![](res/airport/pbi/img/PBIPage1.png)  |  ![](res/airport/pbi/img/PBIPage2.png)  |  ![](res/airport/pbi/img/PBIPage2.png)
+
 ---
 
 ## Indhold
@@ -34,15 +41,13 @@ Hvert projekt (fx **GamMa** og **TV1 Case**) har sin egen dokumentation, ressour
 │
 ├── /docs
 │   ├── /gamma
-│   ├── /circlek-case
-│   ├── /drtv-case
-│   └── /shared-libs
+│   ├── /airport
+│   └── /tv1
 │
 ├── /res
 │   ├── /gamma
-│   ├── /circlek-case
-│   ├── /drtv-case
-│   └── /shared-libs
+│   ├── /airport
+│   └── /tv1
 │
 ├── /src
 │   ├── /code
@@ -54,18 +59,18 @@ Hvert projekt (fx **GamMa** og **TV1 Case**) har sin egen dokumentation, ressour
 │   │   │
 │   │   ├── /runtime_definitions
 │   │   │   ├── /gamma
-│   │   │   ├── /circlek-case
-│   │   │   └── /drtv-case
+│   │   │   ├── /airport
+│   │   │   └── /tv1
 │   │   │
 │   │   └── /services
 │   │       ├── /gamma
-│   │       ├── /circlek-case
-│   │       └── /drtv-case
+│   │       ├── /airport
+│   │       └── /tv1
 │   │
 │   └── /workspace-serve
 │       ├── /gamma
-│       ├── /circlek-case
-│       └── /drtv-case
+│       ├── /airport
+│       └── /tv1
 │
 └── README.txt
 ```
@@ -88,6 +93,7 @@ Denne struktur sikrer:
 ## Teknologi og rammer
 
 - Python til data-generering, simulation, ETL og modellering.
+- DBT til transformationer i PostgreSQL databasen
 - PostgreSQL som database i containeriseret miljø.
 - Docker (samt evt. Docker Compose) til at orkestrere services og miljøer.
 - Power BI (eller tilsvarende) til rapportering og dashboarding.

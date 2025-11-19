@@ -5,6 +5,8 @@ TV ONE-projektet er et selvstændigt data- og rapporteringssetup under
 Formålet er at simulere streaming- og brugeradfærd, opbygge en datamodel
 i PostgreSQL, og levere rapportering via Power BI og Tabular Editor.
 
+![TV ONE -- Simuleringsoversigt](res/tv1/pbi/OVERVIEW-Page.png)
+
 ------------------------------------------------------------------------
 
 ## 🎯 Formål
@@ -32,12 +34,14 @@ i PostgreSQL, og levere rapportering via Power BI og Tabular Editor.
     │   └── JSON-filer med definitioner for simuleringer og tabeller
     │
     ├── /src/code/service/tv1
-    │   ├── /etl/service_simulations         → Genererer simulerede data
-    │   ├── /etl/service_streaming_sessions  → Opretter sessionsdata og logs
-    │   └── ... (flere services kan tilføjes)
+    │   ├── /dbt                                 → Opbygger stage og mart 
+    │   └── /etl
+    │       ├── /service_simulations             → Genererer simulerede data
+    │       ├── /etl/service_streaming_sessions  → Opretter sessionsdata og logs
+    │       └── ... (flere services kan tilføjes)
     │
     └── /src/workspace-serve/tv1
-        ├── /Tabular     → Power BI semantisk model og DAX-measures
+        ├── /Tabular       → Power BI semantisk model og DAX-measures
         └── /SemanticModel → TMDL-modeller, visuals og metadata
 
 ------------------------------------------------------------------------
@@ -48,6 +52,7 @@ i PostgreSQL, og levere rapportering via Power BI og Tabular Editor.
   --------------------------------- -----------------------------------------
   **Python (pandas, SQLAlchemy)**   Data-generering og ETL-pipelines
   **PostgreSQL**                    Primær database for simulerede data
+  **DBT**                           Opbygning af Staging og Marts som bruges i semantisk model 
   **Docker / Docker Compose**       Kørsel og orkestrering af services
   **Tabular Editor 2**              Oprettelse af KPI-measures og parametre
   **Power BI Desktop**              Visualisering og analyse af resultater
