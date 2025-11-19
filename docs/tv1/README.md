@@ -47,16 +47,15 @@ i PostgreSQL, og levere rapportering via Power BI og Tabular Editor.
 ------------------------------------------------------------------------
 
 ## ⚙️ Teknologi
-
-  Komponent                         Formål
-  --------------------------------- -----------------------------------------
-  **Python (pandas, SQLAlchemy)**   Data-generering og ETL-pipelines
-  **PostgreSQL**                    Primær database for simulerede data
-  **DBT**                           Opbygning af Staging og Marts som bruges i semantisk model 
-  **Docker / Docker Compose**       Kørsel og orkestrering af services
-  **Tabular Editor 2**              Oprettelse af KPI-measures og parametre
-  **Power BI Desktop**              Visualisering og analyse af resultater
-  **.env-filer**                    Miljøvariabler til database og services
+| Komponent | Formål |
+| --------------------------------- | ----------------------------------------- |
+|  **Python (pandas, SQLAlchemy)** |  Data-generering og ETL-pipelines          |
+|  **PostgreSQL**                  |  Primær database for simulerede data       |
+|  **DBT**                         |  Opbygning af Staging og Marts som bruges i semantisk model |
+|  **Docker / Docker Compose**     |  Kørsel og orkestrering af services        |
+|  **Tabular Editor 2**            |  Oprettelse af KPI-measures og parametre   |
+|  **Power BI Desktop**            |  Visualisering og analyse af resultater    |
+|  **.env-filer**                  |  Miljøvariabler til database og services   |
 
 ------------------------------------------------------------------------
 
