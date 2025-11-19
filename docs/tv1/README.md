@@ -90,7 +90,7 @@ i PostgreSQL, og levere rapportering via Power BI og Tabular Editor.
 
 -   **Simulering:** Genererer brugere, sessioner og afspilninger ud fra
     realistiske mønstre.\
--   **ETL:** Skriver data til PostgreSQL med runtime-definitioner for
+-   **ETL:** Skriver data til PostgreSQL, dbt med runtime-definitioner for
     struktur.\
 -   **Rapportering:** Power BI benytter den semantiske model med KPI'er
     som *Sessions*, *Minutter set* og *Aktive brugere*.\
