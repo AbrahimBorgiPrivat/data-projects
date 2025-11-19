@@ -1,0 +1,3 @@
+VAR median_time = [MEDIAN CHECKIN UNTIL TRAVEL (MIN)]
+VAR ret_val = DIVIDE(median_time,60,0)
+RETURN ret_val

@@ -1,0 +1,5 @@
+VAR seats_per_row = [SEATS VISUAL SEATS PER ROW]
+VAR num_seats = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+VAR x_val = MOD(num_seats-1,seats_per_row)+1
+VAR ret_val = IF(x_val<=seats_per_row/2,x_val,x_val+1)
+RETURN ret_val 

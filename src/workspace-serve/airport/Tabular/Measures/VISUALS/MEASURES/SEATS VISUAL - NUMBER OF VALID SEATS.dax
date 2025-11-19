@@ -1,0 +1,4 @@
+VAR sel_seat = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+VAR med_seats = [MEDIAN SEATS]
+VAR ret_val = IF(sel_seat<=med_seats,1,0)
+RETURN ret_val

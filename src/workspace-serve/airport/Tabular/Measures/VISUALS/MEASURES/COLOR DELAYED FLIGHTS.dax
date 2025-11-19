@@ -1,0 +1,3 @@
+VAR kpi_goal = [KPI DELAYED PLANES]
+VAR ret_val = IF([NOT DELAYED FLIGHTS (%)]<kpi_goal,"#FF0000","#63AD4E")
+RETURN ret_val

@@ -1,0 +1,3 @@
+VAR median_time = CALCULATE(MEDIAN(FLIGHTS[dep_delay_minutes]))
+VAR ret_val = DIVIDE(median_time,60,0)
+RETURN ret_val

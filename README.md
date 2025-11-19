@@ -20,9 +20,9 @@ Dette repository fungerer som samlingspunkt for et antal data- og analyseskabelo
 - **[Airport Project - Simulering, Data & Rapportering](docs/airport/)**   
   Simulering af streaming- og brugeradfærd, opbygge en datamodel og levere rapportering via Power BI og Tabular Editor. 
 
-Oversigt                               |  Check In Tider                         | Udnyttelsesrate
-:-------------------------------------:|:---------------------------------------:|:----------------------------------------:
-![](res/airport/pbi/img/PBIPage1.png)  |  ![](res/airport/pbi/img/PBIPage2.png)  |  ![](res/airport/pbi/img/PBIPage2.png)
+Oversigt                               |Check In Tider                         | Udnyttelsesrate
+:-------------------------------------:|:-------------------------------------:|:-------------------------------------:
+![](res/airport/pbi/img/PBIPage1.png)  |![](res/airport/pbi/img/PBIPage2.png)  |![](res/airport/pbi/img/PBIPage2.png)
 
 ---
 

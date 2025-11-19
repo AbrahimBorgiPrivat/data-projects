@@ -1,0 +1,4 @@
+VAR median_time = CALCULATE(MEDIAN(TICKETS[passed_security_before_schedule_min]))
+VAR median_time_hour = ROUNDDOWN(DIVIDE(median_time,60,0),0)
+VAR ret_val = median_time_hour & ":" & median_time-60*median_time_hour
+RETURN ret_val

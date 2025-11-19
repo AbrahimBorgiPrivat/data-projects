@@ -1,0 +1,3 @@
+VAR kpi_meas = [KPI SECURITY]
+VAR ret_val = [PASSENGERS THROUGH SEQ]*kpi_meas
+RETURN ret_val

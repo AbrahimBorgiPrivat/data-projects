@@ -1,0 +1,3 @@
+VAR goodtime = 60
+VAR ret_val = CALCULATE(COUNT(TICKETS[unique_id]),TICKETS[passed_security_before_schedule_min] <> BLANK() && TICKETS[passed_security_before_schedule_min] > goodtime)
+RETURN ret_val

@@ -1,23 +1,23 @@
 /// {
 /// ("Sessioner", NAMEOF('_MEASURES'[SESSIONS]), 0),
-/// ("Minutter pr. Session", NAMEOF('_MEASURES'[MINUTES WATCHED - AVG]), 1),
-/// ("Minutter Total", NAMEOF('_MEASURES'[MINUTES WATCHED]), 2),
-/// ("Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS]), 3),
-/// ("Andel Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS PERC]), 4),
-/// ("Episoder pr. Session", NAMEOF('_MEASURES'[EPISODES WATCHED PR. SESSION]), 5),
-/// ("Andel Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END PERC]), 6),
-/// ("Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END]), 7),
-/// ("Sete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED]), 8),
-/// ("Brugere", NAMEOF('_MEASURES'[USERS]), 9),
-/// ("Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS]), 10),
-/// ("Andel Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS PERC]), 11)
+///     ("Minutter pr. Session", NAMEOF('_MEASURES'[MINUTES WATCHED - AVG]), 1),
+///     ("Minutter Total", NAMEOF('_MEASURES'[MINUTES WATCHED]), 2),
+///     ("Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS]), 3),
+///     ("Andel Streaming Sessioner", NAMEOF('_MEASURES'[STREAMING SESSIONS PERC]), 4),
+///     ("Episoder pr. Session", NAMEOF('_MEASURES'[EPISODES WATCHED PR. SESSION]), 5),
+///     ("Andel Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END PERC]), 6),
+///     ("Færdigsete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED TO END]), 7),
+///     ("Sete Episoder", NAMEOF('_MEASURES'[EPISODES WATCHED]), 8),
+///     ("Brugere", NAMEOF('_MEASURES'[USERS]), 9),
+///     ("Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS]), 10),
+///     ("Andel Aktive Brugere", NAMEOF('_MEASURES'[ACTIVE USERS PERC]), 11)
 /// }
 table '_PARAMETER - MEASURES'
-	lineageTag: bb208275-99fb-4cc4-8339-656dca5e870e
+	lineageTag: 23141177-80ea-45f4-8b20-d00f0d87a6aa
 
 	column Name
 		dataType: string
-		lineageTag: 94ffbc55-e451-426f-b077-15603d60b4b0
+		lineageTag: 9b8a5016-d20d-47e4-9df2-aa1dbbb73a19
 		sourceColumn: [Value1]
 		sortByColumn: Order
 
@@ -27,20 +27,16 @@ table '_PARAMETER - MEASURES'
 	column Field
 		dataType: string
 		isHidden
-		lineageTag: 5669d9b6-78f9-4ce1-8fad-88dad2677eed
+		lineageTag: d871a3c2-e1c5-461b-a6d7-7ffcb2fd1e54
 		sourceColumn: [Value2]
 		sortByColumn: Order
 
-		extendedProperty ParameterMetadata =
-				{
-				  "version": 3,
-				  "kind": 2
-				}
+		extendedProperty ParameterMetadata = {"version":3,"kind":2}
 
 	column Order
 		dataType: int64
 		isHidden
-		lineageTag: bf700fb5-b1ea-4d93-9620-90f26940a20f
+		lineageTag: 052999d5-9acf-4d4d-9476-3280cb7c5f1e
 		sourceColumn: [Value3]
 
 	partition '_PARAMETER - MEASURES' = calculated

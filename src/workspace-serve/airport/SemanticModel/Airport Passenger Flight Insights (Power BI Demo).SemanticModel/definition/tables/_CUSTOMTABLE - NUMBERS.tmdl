@@ -1,0 +1,17 @@
+/// GENERATESERIES(1,1000,1)
+table '_CUSTOMTABLE - NUMBERS'
+	lineageTag: 68d65a11-b13d-4b51-8cd4-455d5bfeedbd
+
+	column SEATS = [Value]
+		dataType: int64
+		lineageTag: 8ff5a9a2-0f18-47cb-87ba-0aaed18d82db
+
+	column Value
+		lineageTag: bf42f606-c8ec-46b8-a2c4-7c73607feb88
+		isNameInferred
+		sourceColumn: [Value]
+
+	partition '_CUSTOMTABLE - NUMBERS' = calculated
+		mode: import
+		source = GENERATESERIES(1,1000,1)
+

@@ -1,0 +1,3 @@
+VAR kpi_goal = [KPI SEAT RATE]
+VAR ret_val = IF([SEATS USAGE RATE - AVG]<kpi_goal,"#FF0000","#63AD4E")
+RETURN ret_val

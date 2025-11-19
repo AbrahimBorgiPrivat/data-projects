@@ -1,0 +1,461 @@
+table _MEASURES
+	lineageTag: 0d477fb9-6d6e-4d3b-ad23-c82557111047
+
+	/// CALCULATE(COUNT(TICKETS[unique_id]))
+	measure PASSENGERS = CALCULATE(COUNT(TICKETS[unique_id]))
+		formatString: #,0
+		displayFolder: KPI\PASSENGERS
+		lineageTag: b4a7b618-28bc-4c65-8034-7383c0b20dbc
+		dataCategory: true
+
+	/// CALCULATE(COUNT(FLIGHTS[transaction_id]))
+	measure FLIGHTS = CALCULATE(COUNT(FLIGHTS[transaction_id]))
+		formatString: #,0
+		displayFolder: KPI\FLIGHTS
+		lineageTag: 8d0975f6-0da1-4450-9bc9-dcb66f74a30e
+		dataCategory: true
+
+	/// DIVIDE([PASSENGERS],[FLIGHTS],0)
+	measure 'AVG. PASSENGERS' = DIVIDE([PASSENGERS],[FLIGHTS],0)
+		formatString: 0
+		displayFolder: KPI\PASSENGERS
+		lineageTag: 2cd0a0eb-807e-4f56-8890-06a8052022ac
+		dataCategory: true
+
+	/// VAR DelayMin = 30
+	/// VAR ret_val = CALCULATE([FLIGHTS], FLIGHTS[dep_delay_minutes]>DelayMin)
+	/// RETURN ret_val
+	measure 'DELAYED FLIGHTS' =
+			VAR DelayMin = 30
+			VAR ret_val = CALCULATE([FLIGHTS], FLIGHTS[dep_delay_minutes]>DelayMin)
+			RETURN ret_val
+		formatString: #,0
+		displayFolder: KPI\FLIGHTS
+		lineageTag: 2ce23332-0083-46bc-9094-fb1c5576c357
+		dataCategory: true
+
+	/// VAR DelayMin = 30
+	/// VAR ret_val = CALCULATE([FLIGHTS DEPARTED], FLIGHTS[dep_delay_minutes]<=DelayMin)
+	/// RETURN ret_val
+	measure 'NOT DELAYED FLIGHTS' =
+			VAR DelayMin = 30
+			VAR ret_val = CALCULATE([FLIGHTS DEPARTED], FLIGHTS[dep_delay_minutes]<=DelayMin)
+			RETURN ret_val
+		formatString: #,0
+		displayFolder: KPI\FLIGHTS
+		lineageTag: f1ef8b33-5a81-42cd-850a-fda678525f63
+		dataCategory: true
+
+	/// CALCULATE([FLIGHTS],FLIGHTS[status]= "Departed")
+	measure 'FLIGHTS DEPARTED' = CALCULATE([FLIGHTS],FLIGHTS[status]= "Departed")
+		formatString: #,0
+		displayFolder: KPI\FLIGHTS
+		lineageTag: 3fd4a87f-755b-4c3d-973d-0efa2ed5ab52
+		dataCategory: true
+
+	/// CALCULATE(COUNT(TICKETS[unique_id]),FLIGHTS[status]="Departed")
+	measure 'PASSENGERS DEPARTED' = CALCULATE(COUNT(TICKETS[unique_id]),FLIGHTS[status]="Departed")
+		formatString: #,0
+		displayFolder: KPI\PASSENGERS
+		lineageTag: 18c43249-ef0f-475d-9f1d-264c773337f2
+		dataCategory: true
+
+	/// VAR kpi_meas = [KPI DELAYED PLANES]
+	/// VAR ret_val = [FLIGHTS DEPARTED]*kpi_meas
+	/// RETURN ret_val
+	measure 'KPI DELAYED PLANES (NUMBER)' =
+			VAR kpi_meas = [KPI DELAYED PLANES]
+			VAR ret_val = [FLIGHTS DEPARTED]*kpi_meas
+			RETURN ret_val
+		formatString: 0
+		displayFolder: KPI\KPIs
+		lineageTag: a384afe7-3602-4a97-ac69-eb035c6c0ad2
+		dataCategory: true
+
+	/// DIVIDE([NOT DELAYED FLIGHTS],[FLIGHTS DEPARTED],0)
+	measure 'NOT DELAYED FLIGHTS (%)' = DIVIDE([NOT DELAYED FLIGHTS],[FLIGHTS DEPARTED],0)
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\FLIGHTS
+		lineageTag: 7b21dad1-29b3-4b92-ac52-faedd72636cd
+		dataCategory: true
+
+	/// VAR kpi_goal = [KPI DELAYED PLANES]
+	/// VAR ret_val = IF([NOT DELAYED FLIGHTS (%)]<kpi_goal,"#FF0000","#63AD4E")
+	/// RETURN ret_val
+	measure 'COLOR DELAYED FLIGHTS' =
+			VAR kpi_goal = [KPI DELAYED PLANES]
+			VAR ret_val = IF([NOT DELAYED FLIGHTS (%)]<kpi_goal,"#FF0000","#63AD4E")
+			RETURN ret_val
+		displayFolder: VISUALS\COLORS
+		lineageTag: be949764-115c-4de8-9307-9065d23f69d7
+		dataCategory: custom_text
+
+	/// 0.85
+	measure 'KPI DELAYED PLANES' = 0.85
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\KPIs
+		lineageTag: 6b5c96ea-3f13-4a1b-8b11-e767cbb7c1f2
+		dataCategory: true
+
+	/// VAR median_time = [MEDIAN CHECKIN UNTIL TRAVEL (MIN)]
+	/// VAR ret_val = DIVIDE(median_time,60,0)
+	/// RETURN ret_val
+	measure 'MEDIAN CHECKIN UNTIL TRAVEL (HOUR)' =
+			VAR median_time = [MEDIAN CHECKIN UNTIL TRAVEL (MIN)]
+			VAR ret_val = DIVIDE(median_time,60,0)
+			RETURN ret_val
+		formatString: 0.00
+		displayFolder: KPI\TIME
+		lineageTag: a4592733-68ac-41ae-9343-aa349db16fd6
+		dataCategory: true
+
+	/// VAR median_time = [MEDIAN SECURITY UNTIL TRAVEL (MIN)]
+	/// VAR ret_val = DIVIDE(median_time,60,0)
+	/// RETURN ret_val
+	measure 'MEDIAN SECURITY UNTIL TRAVEL (HOUR)' =
+			VAR median_time = [MEDIAN SECURITY UNTIL TRAVEL (MIN)]
+			VAR ret_val = DIVIDE(median_time,60,0)
+			RETURN ret_val
+		formatString: 0.00
+		displayFolder: KPI\TIME
+		lineageTag: eea795b8-94eb-4808-88fa-df038e030ef8
+		dataCategory: true
+
+	/// VAR median_time = CALCULATE(MEDIAN(FLIGHTS[dep_delay_minutes]))
+	/// VAR ret_val = DIVIDE(median_time,60,0)
+	/// RETURN ret_val
+	measure 'MEDIAN DELAY' =
+			VAR median_time = CALCULATE(MEDIAN(FLIGHTS[dep_delay_minutes]))
+			VAR ret_val = DIVIDE(median_time,60,0)
+			RETURN ret_val
+		formatString: 0.00
+		displayFolder: KPI\TIME
+		lineageTag: ffdcd8c1-defe-4375-8305-7eff4dbbcb2b
+		dataCategory: true
+
+	/// 0.8
+	measure 'KPI SECURITY' = 0.8
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\KPIs
+		lineageTag: ff255d5f-0085-4f9e-9445-204a3e1ebdfa
+		dataCategory: true
+
+	/// CALCULATE(COUNT(TICKETS[unique_id]),TICKETS[passed_security_before_schedule_min] <> BLANK())
+	measure 'PASSENGERS THROUGH SEQ' = CALCULATE(COUNT(TICKETS[unique_id]),TICKETS[passed_security_before_schedule_min] <> BLANK())
+		formatString: #,0
+		displayFolder: KPI\PASSENGERS
+		lineageTag: 56201e35-f3ef-4d72-9740-4deaff493bbc
+		dataCategory: true
+
+	/// VAR goodtime = 60
+	/// VAR ret_val = CALCULATE(COUNT(TICKETS[unique_id]),TICKETS[passed_security_before_schedule_min] <> BLANK() && TICKETS[passed_security_before_schedule_min] > goodtime)
+	/// RETURN ret_val
+	measure 'PASSENGERS THROUGH SEQ IN GOOD TIME' =
+			VAR goodtime = 60
+			VAR ret_val = CALCULATE(COUNT(TICKETS[unique_id]),TICKETS[passed_security_before_schedule_min] <> BLANK() && TICKETS[passed_security_before_schedule_min] > goodtime)
+			RETURN ret_val
+		formatString: #,0
+		displayFolder: KPI\PASSENGERS
+		lineageTag: deda9bfb-ee4c-44cb-a8d9-7c6510ddccb2
+		dataCategory: true
+
+	/// DIVIDE([PASSENGERS THROUGH SEQ IN GOOD TIME],[PASSENGERS THROUGH SEQ],0)
+	measure 'PASSENGERS THROUGH SEQ IN GOOD TIME (%)' = DIVIDE([PASSENGERS THROUGH SEQ IN GOOD TIME],[PASSENGERS THROUGH SEQ],0)
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\PASSENGERS
+		lineageTag: 73f716d6-8a8a-438a-9c67-28f82ab64adf
+		dataCategory: true
+
+	/// VAR kpi_meas = [KPI SECURITY]
+	/// VAR ret_val = [PASSENGERS THROUGH SEQ]*kpi_meas
+	/// RETURN ret_val
+	measure 'KPI PASSENGER THROUGH IN GOOD TIME (NUMBER)' =
+			VAR kpi_meas = [KPI SECURITY]
+			VAR ret_val = [PASSENGERS THROUGH SEQ]*kpi_meas
+			RETURN ret_val
+		formatString: 0
+		displayFolder: KPI\KPIs
+		lineageTag: 9ba13f4e-d6e3-4161-815a-b0b021090bb1
+		dataCategory: true
+
+	/// VAR kpi_goal = [KPI SECURITY]
+	/// VAR ret_val = IF([PASSENGERS THROUGH SEQ IN GOOD TIME (%)]<kpi_goal,"#FF0000","#63AD4E")
+	/// RETURN ret_val
+	measure 'COLOR PASSENGER SEQURITY' =
+			VAR kpi_goal = [KPI SECURITY]
+			VAR ret_val = IF([PASSENGERS THROUGH SEQ IN GOOD TIME (%)]<kpi_goal,"#FF0000","#63AD4E")
+			RETURN ret_val
+		displayFolder: VISUALS\COLORS
+		lineageTag: a6513ca8-7e2b-46bb-a2e2-2b50d100ee35
+		dataCategory: custom_text
+
+	/// VAR median_time = CALCULATE(MEDIAN(TICKETS[check_in_before_schedule_min]))
+	/// VAR median_time_hour = ROUNDDOWN(DIVIDE(median_time,60,0),0)
+	/// VAR ret_val = median_time_hour & ":" & median_time-60*median_time_hour
+	/// RETURN ret_val
+	measure 'MEDIAN CHECKIN UNTIL TRAVEL (TEXT)' =
+			VAR median_time = CALCULATE(MEDIAN(TICKETS[check_in_before_schedule_min]))
+			VAR median_time_hour = ROUNDDOWN(DIVIDE(median_time,60,0),0)
+			VAR ret_val = median_time_hour & ":" & median_time-60*median_time_hour
+			RETURN ret_val
+		displayFolder: VISUALS\TEXT
+		lineageTag: 6f987b42-ee5e-4e73-94ff-8b6bcd78182f
+		dataCategory: true
+
+	/// VAR median_time = CALCULATE(MEDIAN(TICKETS[passed_security_before_schedule_min]))
+	/// VAR median_time_hour = ROUNDDOWN(DIVIDE(median_time,60,0),0)
+	/// VAR ret_val = median_time_hour & ":" & median_time-60*median_time_hour
+	/// RETURN ret_val
+	measure 'MEDIAN SECURITY UNTIL TRAVEL (TEXT)' =
+			VAR median_time = CALCULATE(MEDIAN(TICKETS[passed_security_before_schedule_min]))
+			VAR median_time_hour = ROUNDDOWN(DIVIDE(median_time,60,0),0)
+			VAR ret_val = median_time_hour & ":" & median_time-60*median_time_hour
+			RETURN ret_val
+		displayFolder: VISUALS\TEXT
+		lineageTag: 694cfd86-b73b-45d6-8f60-235b1d91ccaa
+		dataCategory: true
+
+	/// [MEDIAN CHECKIN UNTIL TRAVEL (HOUR)]-[MEDIAN SECURITY UNTIL TRAVEL (HOUR)]
+	measure 'MEDIAN CHECKIN UNTIL SECURITY' = [MEDIAN CHECKIN UNTIL TRAVEL (HOUR)]-[MEDIAN SECURITY UNTIL TRAVEL (HOUR)]
+		formatString: 0.00
+		displayFolder: KPI\TIME
+		lineageTag: d55c9c15-c6f7-407a-83fd-371e8081c584
+		dataCategory: true
+
+	/// [MEDIAN CHECKIN UNTIL TRAVEL (HOUR)]+[MEDIAN DELAY]
+	measure 'MEDIAN CHECKIN UNTIL ACTUAL TRAVEL' = [MEDIAN CHECKIN UNTIL TRAVEL (HOUR)]+[MEDIAN DELAY]
+		formatString: 0.00
+		displayFolder: KPI\TIME
+		lineageTag: e1d7312f-e7ab-45c2-a0af-5de74b761a80
+		dataCategory: true
+
+	/// [MEDIAN CHECKIN UNTIL ACTUAL TRAVEL]+3
+	measure 'TIDSREJSE X-AXIS BOARDER' = [MEDIAN CHECKIN UNTIL ACTUAL TRAVEL]+3
+		formatString: #,0
+		displayFolder: VISUALS\NUMBERS
+		lineageTag: e4ca13ac-6285-48fa-a998-abfa40665d2e
+		dataCategory: true
+
+	/// VAR median_time = CALCULATE(MEDIAN(FLIGHTS[dep_delay_minutes]))
+	/// VAR median_time_hour = ROUNDDOWN(DIVIDE(median_time,60,0),0)
+	/// VAR ret_val = median_time_hour & ":" & median_time-60*median_time_hour
+	/// RETURN ret_val
+	measure 'MEDIAN DELAY (TEXT)' =
+			VAR median_time = CALCULATE(MEDIAN(FLIGHTS[dep_delay_minutes]))
+			VAR median_time_hour = ROUNDDOWN(DIVIDE(median_time,60,0),0)
+			VAR ret_val = median_time_hour & ":" & median_time-60*median_time_hour
+			RETURN ret_val
+		displayFolder: VISUALS\TEXT
+		lineageTag: 942fc018-c054-47f9-b0c7-241ad57e9b78
+		dataCategory: true
+
+	/// CALCULATE(MEDIAN(TICKETS[check_in_before_schedule_min]))
+	measure 'MEDIAN CHECKIN UNTIL TRAVEL (MIN)' = CALCULATE(MEDIAN(TICKETS[check_in_before_schedule_min]))
+		formatString: 0.00
+		displayFolder: KPI\TIME
+		lineageTag: 19b0a307-4e3b-4f1f-84bf-f0782952dc63
+		dataCategory: true
+
+	/// CALCULATE(MEDIAN(TICKETS[passed_security_before_schedule_min]))
+	measure 'MEDIAN SECURITY UNTIL TRAVEL (MIN)' = CALCULATE(MEDIAN(TICKETS[passed_security_before_schedule_min]))
+		formatString: 0.00
+		displayFolder: KPI\TIME
+		lineageTag: ee2f2387-e929-4c7f-89e2-0a276d26a2c6
+		dataCategory: true
+
+	/// CALCULATE(SUM(FLIGHTS[seats]))
+	measure SEATS = CALCULATE(SUM(FLIGHTS[seats]))
+		formatString: #,0
+		displayFolder: KPI\FLIGHTS\SEATS
+		lineageTag: 9ad1229b-2aff-4839-99ef-ec211f8643a1
+		dataCategory: true
+
+	/// DIVIDE([PASSENGERS],[SEATS],1)
+	measure 'SEATS USAGE RATE' = DIVIDE([PASSENGERS],[SEATS],1)
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\FLIGHTS\SEATS
+		lineageTag: e0dab1e5-14fe-447e-9762-cba2b8d86a64
+		dataCategory: true
+
+	/// VAR su = SUMX( KEEPFILTERS(VALUES('FLIGHTS'[transaction_id])),
+	/// CALCULATE([SEATS USAGE RATE])
+	/// )
+	/// VAR n_flights = [FLIGHTS]
+	/// VAR ret_val = DIVIDE(su,n_flights,0)
+	/// RETURN ret_val
+	measure 'SEATS USAGE RATE - AVG' =
+			VAR su = SUMX( KEEPFILTERS(VALUES('FLIGHTS'[transaction_id])),
+			                CALCULATE([SEATS USAGE RATE])
+			            )
+			VAR n_flights = [FLIGHTS]
+			VAR ret_val = DIVIDE(su,n_flights,0)
+			RETURN ret_val
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\FLIGHTS\SEATS
+		lineageTag: d8de2c9b-11ea-43bc-9d13-01c48aa0b4d9
+		dataCategory: true
+
+	/// 1
+	measure 'CONSTANT ONE' = 1
+		formatString: #,0
+		displayFolder: VISUALS\NUMBERS
+		lineageTag: 7e2edc38-9e3f-491e-9aaa-47871413c7b6
+		dataCategory: true
+
+	/// 0.75
+	measure 'KPI SEAT RATE' = 0.75
+		formatString: 0 %;-0 %;0 %
+		displayFolder: KPI\KPIs
+		lineageTag: f506b3a1-0981-4e7d-9fdb-b397aef9bd4f
+		dataCategory: true
+
+	/// VAR kpi_goal = [KPI SEAT RATE]
+	/// VAR ret_val = IF([SEATS USAGE RATE - AVG]<kpi_goal,"#FF0000","#63AD4E")
+	/// RETURN ret_val
+	measure 'COLOR CAPACITY RATE' =
+			VAR kpi_goal = [KPI SEAT RATE]
+			VAR ret_val = IF([SEATS USAGE RATE - AVG]<kpi_goal,"#FF0000","#63AD4E")
+			RETURN ret_val
+		displayFolder: VISUALS\COLORS
+		lineageTag: e70db243-80ef-4e98-99d0-bafcab9c4c84
+		dataCategory: custom_text
+
+	/// VAR seats_per_row = [SEATS VISUAL SEATS PER ROW]
+	/// VAR num_seats = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+	/// VAR median_seats = [MEDIAN SEATS]
+	/// VAR y_val = ROUNDUP(DIVIDE(num_seats,seats_per_row),0)
+	/// VAR ret_val = IF(y_val<=ROUNDUP(DIVIDE(median_seats,seats_per_row),0)/2,y_val,y_val+1)
+	/// RETURN -ret_val
+	measure 'SEATS VISUAL Y VALUE' =
+			VAR seats_per_row = [SEATS VISUAL SEATS PER ROW]
+			VAR num_seats = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+			VAR median_seats = [MEDIAN SEATS]
+			VAR y_val = ROUNDUP(DIVIDE(num_seats,seats_per_row),0)
+			VAR ret_val = IF(y_val<=ROUNDUP(DIVIDE(median_seats,seats_per_row),0)/2,y_val,y_val+1)
+			RETURN -ret_val
+		formatString: #,0
+		displayFolder: VISUALS\NUMBERS
+		lineageTag: 277bcba2-3a82-4cf0-9971-dd080fe3d1ef
+		dataCategory: true
+
+	/// VAR seats_per_row = [SEATS VISUAL SEATS PER ROW]
+	/// VAR num_seats = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+	/// VAR x_val = MOD(num_seats-1,seats_per_row)+1
+	/// VAR ret_val = IF(x_val<=seats_per_row/2,x_val,x_val+1)
+	/// RETURN ret_val
+	measure 'SEATS VISUAL X VALUE' = ```
+			VAR seats_per_row = [SEATS VISUAL SEATS PER ROW]
+			VAR num_seats = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+			VAR x_val = MOD(num_seats-1,seats_per_row)+1
+			VAR ret_val = IF(x_val<=seats_per_row/2,x_val,x_val+1)
+			RETURN ret_val 
+			```
+		formatString: #,0
+		displayFolder: VISUALS\NUMBERS
+		lineageTag: 3f02a795-b235-4094-81e7-cc1993e1d4d9
+		dataCategory: true
+
+	/// CALCULATE(MEDIAN(FLIGHTS[seats]))
+	measure 'MEDIAN SEATS' = CALCULATE(MEDIAN(FLIGHTS[seats]))
+		formatString: #,0
+		displayFolder: KPI\FLIGHTS\SEATS
+		lineageTag: 3b62758f-516f-45de-a737-7dd72d12540a
+		dataCategory: true
+
+	/// VAR sel_seat = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+	/// VAR med_seats = [MEDIAN SEATS]
+	/// VAR ret_val = IF(sel_seat<=med_seats,1,0)
+	/// RETURN ret_val
+	measure 'SEATS VISUAL - NUMBER OF VALID SEATS' =
+			VAR sel_seat = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+			VAR med_seats = [MEDIAN SEATS]
+			VAR ret_val = IF(sel_seat<=med_seats,1,0)
+			RETURN ret_val
+		formatString: #,0
+		displayFolder: VISUALS\NUMBERS
+		lineageTag: 5a317d7a-658c-4957-874c-15a1e15c045b
+		dataCategory: true
+
+	/// VAR seats_per_row = [SEATS VISUAL SEATS PER ROW]
+	/// VAR median_seats = [MEDIAN SEATS]
+	/// VAR ret_val = ROUNDUP(DIVIDE(median_seats,seats_per_row),0)
+	/// RETURN -ret_val-2
+	measure 'SEATS VISUAL MIN Y VALUE' =
+			VAR seats_per_row = [SEATS VISUAL SEATS PER ROW]
+			VAR median_seats = [MEDIAN SEATS]
+			VAR ret_val = ROUNDUP(DIVIDE(median_seats,seats_per_row),0)
+			RETURN -ret_val-2
+		formatString: #,0
+		displayFolder: VISUALS\NUMBERS
+		lineageTag: eccfdf42-7f52-4958-99b6-ba8c6f87bbc9
+		dataCategory: true
+
+	/// VAR median_seats = [MEDIAN SEATS]
+	/// VAR ret_val =
+	/// SWITCH(
+	/// TRUE(),
+	/// median_seats <= 50, 4,       -- Small props / bizjets (e.g. ATR42, Saab 340)
+	/// median_seats <= 100, 6,      -- Regional jets (CRJ / E-Jets)
+	/// median_seats <= 150, 6,      -- Small narrowbody (A319, 737-700 → 3+3)
+	/// median_seats <= 250, 8,      -- Large narrowbody/small widebody (A321, 757 → 3+3 or 2+3+2)
+	/// median_seats <= 350, 12,      -- Widebody (767, A330, 787 → 3+3+3)
+	/// median_seats > 350, 12       -- Very large (777, A350, A380 → 3+4+3 / 3+5+3)
+	/// )
+	/// RETURN
+	/// ret_val
+	measure 'SEATS VISUAL SEATS PER ROW' =
+			VAR median_seats = [MEDIAN SEATS]
+			VAR ret_val =
+			    SWITCH(
+			        TRUE(),
+			        median_seats <= 50, 4,       -- Small props / bizjets (e.g. ATR42, Saab 340)
+			        median_seats <= 100, 6,      -- Regional jets (CRJ / E-Jets)
+			        median_seats <= 150, 6,      -- Small narrowbody (A319, 737-700 → 3+3)
+			        median_seats <= 250, 8,      -- Large narrowbody/small widebody (A321, 757 → 3+3 or 2+3+2)
+			        median_seats <= 350, 12,      -- Widebody (767, A330, 787 → 3+3+3)
+			        median_seats > 350, 12       -- Very large (777, A350, A380 → 3+4+3 / 3+5+3)
+			    )
+			RETURN
+			    ret_val
+		formatString: #,0
+		displayFolder: VISUALS\NUMBERS
+		lineageTag: e195c9f9-c018-4ec3-bd65-f4b63983f7ba
+		dataCategory: true
+
+	/// [SEATS VISUAL SEATS PER ROW]+3
+	measure 'SEATS VISUAL MAX X VALUE' = [SEATS VISUAL SEATS PER ROW]+3
+		formatString: #,0
+		displayFolder: VISUALS\NUMBERS
+		lineageTag: 44f575b6-c2d7-4068-899f-8b3a2f8421c5
+		dataCategory: true
+
+	/// VAR sel_seat = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+	/// VAR med_seats = [MEDIAN SEATS]
+	/// VAR ret_val = IF(DIVIDE(sel_seat,med_seats,0)>[SEATS USAGE RATE - AVG],"#0A1E3F","#63AD4E")
+	/// RETURN ret_val
+	measure 'COLOR SEAT VISUAL' =
+			VAR sel_seat = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+			VAR med_seats = [MEDIAN SEATS]
+			VAR ret_val = IF(DIVIDE(sel_seat,med_seats,0)>[SEATS USAGE RATE - AVG],"#0A1E3F","#63AD4E")
+			RETURN ret_val
+		displayFolder: VISUALS\COLORS
+		lineageTag: be8ab6ca-f119-418e-b5e7-211d859d1036
+		dataCategory: custom_text
+
+	column DoNotUse
+		isHidden
+		formatString: 0
+		lineageTag: c669c787-35e3-4816-9476-d1c1ae9be1f8
+		summarizeBy: sum
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _MEASURES = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = de1bdc2be9394eb59d0594e1b562e37d
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

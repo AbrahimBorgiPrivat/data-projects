@@ -1,0 +1,1 @@
+CALCULATE(COUNT(TICKETS[unique_id]),TICKETS[passed_security_before_schedule_min] <> BLANK())

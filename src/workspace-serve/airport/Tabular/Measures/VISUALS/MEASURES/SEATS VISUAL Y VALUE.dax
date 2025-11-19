@@ -1,0 +1,6 @@
+VAR seats_per_row = [SEATS VISUAL SEATS PER ROW]
+VAR num_seats = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+VAR median_seats = [MEDIAN SEATS]
+VAR y_val = ROUNDUP(DIVIDE(num_seats,seats_per_row),0)
+VAR ret_val = IF(y_val<=ROUNDUP(DIVIDE(median_seats,seats_per_row),0)/2,y_val,y_val+1)
+RETURN -ret_val

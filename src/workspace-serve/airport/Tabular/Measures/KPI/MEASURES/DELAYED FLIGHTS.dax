@@ -1,0 +1,3 @@
+VAR DelayMin = 30
+VAR ret_val = CALCULATE([FLIGHTS], FLIGHTS[dep_delay_minutes]>DelayMin)
+RETURN ret_val

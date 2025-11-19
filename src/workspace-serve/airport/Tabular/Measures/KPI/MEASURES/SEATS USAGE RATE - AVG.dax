@@ -1,0 +1,6 @@
+VAR su = SUMX( KEEPFILTERS(VALUES('FLIGHTS'[transaction_id])),
+                CALCULATE([SEATS USAGE RATE])
+            )
+VAR n_flights = [FLIGHTS]
+VAR ret_val = DIVIDE(su,n_flights,0)
+RETURN ret_val

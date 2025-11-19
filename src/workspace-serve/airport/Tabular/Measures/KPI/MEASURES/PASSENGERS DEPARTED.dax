@@ -1,0 +1,1 @@
+CALCULATE(COUNT(TICKETS[unique_id]),FLIGHTS[status]="Departed")

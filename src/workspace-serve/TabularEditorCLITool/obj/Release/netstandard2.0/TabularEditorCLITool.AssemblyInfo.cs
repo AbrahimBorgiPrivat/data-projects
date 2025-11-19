@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TabularEditorCLITool")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0dbc3ff4837cf5327e811c1c150dfc3a0d3d48ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+456573aba8f40a440d7be26b8124122e26433f47")]
 [assembly: System.Reflection.AssemblyProductAttribute("TabularEditorCLITool")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TabularEditorCLITool")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

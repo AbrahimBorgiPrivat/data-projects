@@ -1,0 +1,1 @@
+CALCULATE(MEDIAN(TICKETS[passed_security_before_schedule_min]))

@@ -1,0 +1,4 @@
+VAR sel_seat = CALCULATE(SELECTEDVALUE('_CUSTOMTABLE - NUMBERS'[SEATS]))
+VAR med_seats = [MEDIAN SEATS]
+VAR ret_val = IF(DIVIDE(sel_seat,med_seats,0)>[SEATS USAGE RATE - AVG],"#0A1E3F","#63AD4E")
+RETURN ret_val

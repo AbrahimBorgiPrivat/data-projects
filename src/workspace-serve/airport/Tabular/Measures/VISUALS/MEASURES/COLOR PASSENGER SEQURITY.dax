@@ -1,0 +1,3 @@
+VAR kpi_goal = [KPI SECURITY]
+VAR ret_val = IF([PASSENGERS THROUGH SEQ IN GOOD TIME (%)]<kpi_goal,"#FF0000","#63AD4E")
+RETURN ret_val

@@ -1,0 +1,13 @@
+VAR median_seats = [MEDIAN SEATS]
+VAR ret_val =
+    SWITCH(
+        TRUE(),
+        median_seats <= 50, 4,       -- Small props / bizjets (e.g. ATR42, Saab 340)
+        median_seats <= 100, 6,      -- Regional jets (CRJ / E-Jets)
+        median_seats <= 150, 6,      -- Small narrowbody (A319, 737-700 → 3+3)
+        median_seats <= 250, 8,      -- Large narrowbody/small widebody (A321, 757 → 3+3 or 2+3+2)
+        median_seats <= 350, 12,      -- Widebody (767, A330, 787 → 3+3+3)
+        median_seats > 350, 12       -- Very large (777, A350, A380 → 3+4+3 / 3+5+3)
+    )
+RETURN
+    ret_val

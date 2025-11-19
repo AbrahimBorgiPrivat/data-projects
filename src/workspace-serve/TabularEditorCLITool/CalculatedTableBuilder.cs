@@ -59,7 +59,7 @@ namespace TabularEditorCLITool
                 try { col.DataType = formatType; } catch { }
             }
         }
-        public static dynamic Create(
+        public static dynamic Create_from_list(
             dynamic model,
             string tableName,
             List<string[]> entries,
@@ -92,7 +92,7 @@ namespace TabularEditorCLITool
             var dax = "{\n" + string.Join(",\n    ", lines) + "\n}";
             var table = model.AddCalculatedTable(tableName, dax);
             table.Description = description ?? dax;
-
+            
             for (int i = 0; i < colNames.Count; i++)
             {
                 string colName = colNames[i];
@@ -100,6 +100,44 @@ namespace TabularEditorCLITool
                 AddColumnWithType(model, tableName, colName, formatType, $"[Value{i + 1}]");
             }
 
+            Console.WriteLine($"Created calculated table '{tableName}' with {colNames.Count} columns.");
+            return table;
+        }
+        public static dynamic Create(
+            dynamic model,
+            string tableName,
+            string dax,
+            List<string> colNames,
+            List<string> formats,
+            string description = null)
+        {
+            if (formats.Count != colNames.Count)
+                throw new Exception("colNames must have the same number of elements as formats.");
+
+            var tables = ((IEnumerable<dynamic>)model.Tables).ToList();
+            var existing = tables.FirstOrDefault(t => t.Name == tableName);
+            if (existing != null)
+            {
+                existing.Delete();
+                Console.WriteLine($"Deleted existing table '{tableName}'.");
+            }
+            var table = model.AddCalculatedTable(tableName, dax);
+            table.Description = description ?? dax;
+            if (colNames.Count == 1)
+            {
+                string colName = colNames[0];
+                string formatType = formats[0];
+                AddColumnWithType(model, tableName, colName, formatType, $"[Value]");
+            } 
+            else 
+            {
+                for (int i = 0; i < colNames.Count; i++)
+                {
+                    string colName = colNames[i];
+                    string formatType = formats[i];
+                    AddColumnWithType(model, tableName, colName, formatType, $"[Value{i + 1}]");
+                }
+            }
             Console.WriteLine($"Created calculated table '{tableName}' with {colNames.Count} columns.");
             return table;
         }

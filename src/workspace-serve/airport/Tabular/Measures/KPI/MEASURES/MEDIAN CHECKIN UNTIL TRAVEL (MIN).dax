@@ -1,0 +1,1 @@
+CALCULATE(MEDIAN(TICKETS[check_in_before_schedule_min]))
