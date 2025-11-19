@@ -3,6 +3,8 @@
 GamMa-projektet er et selvstændigt data- og rapporteringssetup under **data-projects**-samlingen.  
 Formålet er at automatisere behandling af medlems- og betalingsdata, skabe grundlag for rapportering, og sikre en genbrugelig dataplatform for GamMa-foreningen.
 
+![GamMa Rapport -- P&L](/res/gamma/pbi/P&L.png)
+
 ---
 
 ## 🎯 Formål
@@ -28,9 +30,12 @@ Formålet er at automatisere behandling af medlems- og betalingsdata, skabe grun
 │   └── Konfigurationsfiler (JSON) der definerer jobs og queries
 │
 ├── /src/code/services/gamma
-│   ├── /etl/service_client_to_csv  → Docker-service der eksporterer data til CSV
-│   ├── /etl/service_client_to_client
-│   └── ... (flere services kan tilføjes)
+│   ├── /dbt                       → Opbygger stage og mart 
+│   ├── /budibase                  → Writeback applicationen 'budibase'
+│   └── /etl
+│        │ /service_client_to_csv  → Docker-service der eksporterer data til CSV
+│        │ /etl/service_client_to_client  → Docker-service der ingester data fra andre clienter (databaser)
+│        └── ... (flere services kan tilføjes)
 │
 └── /src/workspace-serve/gamma
     └── Power BI-arbejdsfiler og dashboards
@@ -44,9 +49,11 @@ Formålet er at automatisere behandling af medlems- og betalingsdata, skabe grun
 |------------|--------|
 | **Python (pandas, SQLAlchemy)** | ETL, data-forberedelse og eksport |
 | **PostgreSQL** | Primær database (kører som container) |
+| **Budibase** | Writeback Application selfhostet |
+| **DBT** |  Opbygning af Staging og Marts som bruges i semantisk model | 
 | **Docker / Docker Compose** | Kørsel og orkestrering af services |
 | **Power BI / Tabular Editor** | Rapportering og semantisk modellering |
-| **.env-filer** | Miljøvariabler til database- og servicekonfiguration |
+| **Tabular Editor 2** |  Oprettelse af KPI-measures og parametre |
 | **CSV-eksporter** | Backup og manuel upload af datakopier |
 
 ---

@@ -5,7 +5,7 @@ TV ONE-projektet er et selvstændigt data- og rapporteringssetup under
 Formålet er at simulere streaming- og brugeradfærd, opbygge en datamodel
 i PostgreSQL, og levere rapportering via Power BI og Tabular Editor.
 
-![TV ONE -- Simuleringsoversigt](res/tv1/pbi/OVERVIEW-Page.png)
+![TV ONE -- Simuleringsoversigt](/res/tv1/pbi/OVERVIEW-Page.png)
 
 ------------------------------------------------------------------------
 
