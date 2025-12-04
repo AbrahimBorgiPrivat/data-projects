@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "c4c8103223bb9d826f2f",
   "position": {
     "x": 320.65171521708555,
@@ -32,17 +32,22 @@
             },
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "GAMMA - POSTERINGER"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GAMMA - POSTERINGER"
+                        }
+                      },
+                      "Property": "amount"
                     }
                   },
-                  "Property": "amount"
+                  "Function": 0
                 }
               },
               "queryRef": "Sum(GAMMA - POSTERINGER.amount)",
-              "nativeQueryRef": "Beløb",
+              "nativeQueryRef": "Sum af amount",
               "displayName": "Beløb"
             },
             {
@@ -124,6 +129,20 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "GAMMA - ACCOUNT"
+                    }
+                  },
+                  "Property": "context"
+                }
+              },
+              "queryRef": "GAMMA - ACCOUNT.context",
+              "nativeQueryRef": "context"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "GAMMA - POSTERINGER"
                     }
                   },
@@ -133,6 +152,20 @@
               "queryRef": "GAMMA - POSTERINGER.document",
               "nativeQueryRef": "Bilag",
               "displayName": "Bilag"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GAMMA - POSTERINGER"
+                    }
+                  },
+                  "Property": "id"
+                }
+              },
+              "queryRef": "GAMMA - POSTERINGER.id",
+              "nativeQueryRef": "id"
             }
           ]
         }
@@ -353,20 +386,6 @@
           }
         },
         "type": "Categorical"
-      },
-      {
-        "name": "ad06751fe8b78befcb9f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GAMMA - POSTERINGER"
-              }
-            },
-            "Property": "amount"
-          }
-        },
-        "type": "Advanced"
       },
       {
         "name": "7bd327614aa8c2c2e405",

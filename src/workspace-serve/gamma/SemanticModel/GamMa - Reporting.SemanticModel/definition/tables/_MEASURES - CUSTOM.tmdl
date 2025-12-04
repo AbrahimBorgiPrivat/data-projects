@@ -4,26 +4,26 @@ table '_MEASURES - CUSTOM'
 	/// CALCULATE(SUM('GAMMA - POSTERINGER'[amount]))
 	measure REALISERET = CALCULATE(SUM('GAMMA - POSTERINGER'[amount]))
 		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
-		displayFolder: KPI \ REALISERET
+		displayFolder: KPI\REALISERET
 		lineageTag: ddf81ce1-8004-48e4-8d90-dd60e9760a81
 		dataCategory: true
 
 	/// VAR BelongsToLastYear = SELECTEDVALUE('GAMMA - POSTERINGER'[belongs_to_last_year], FALSE)
 	/// RETURN
 	/// IF (
-	///     NOT BelongsToLastYear,
-	///     CALCULATE(
-	///         [REALISERET],
-	///         SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
-	///     ) +
-	///     CALCULATE(
-	///         [REALISERET],
-	///         'GAMMA - POSTERINGER'[belongs_to_last_year] = TRUE
-	///     ),
-	///     CALCULATE(
-	///         [REALISERET],
-	///         SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
-	///     )
+	/// NOT BelongsToLastYear,
+	/// CALCULATE(
+	/// [REALISERET],
+	/// SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+	/// ) +
+	/// CALCULATE(
+	/// [REALISERET],
+	/// 'GAMMA - POSTERINGER'[belongs_to_last_year] = TRUE
+	/// ),
+	/// CALCULATE(
+	/// [REALISERET],
+	/// SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+	/// )
 	/// )
 	measure 'REALISERET - SPLY' =
 			VAR BelongsToLastYear = SELECTEDVALUE('GAMMA - POSTERINGER'[belongs_to_last_year], FALSE)
@@ -44,27 +44,27 @@ table '_MEASURES - CUSTOM'
 			    )
 			)
 		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
-		displayFolder: KPI \ REALISERET
+		displayFolder: KPI\REALISERET
 		lineageTag: 3f5bb046-71e6-48aa-b354-24cce81f31b1
 		dataCategory: true
 
 	/// CALCULATE(SUM('GAMMA - FORECAST'[forecast]))
 	measure FORECAST = CALCULATE(SUM('GAMMA - FORECAST'[forecast]))
 		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
-		displayFolder: KPI \ FC
+		displayFolder: KPI\FC
 		lineageTag: e92c2976-8fc6-477b-a54e-becff1050e45
 		dataCategory: true
 
 	/// CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] <> "BU")
 	measure 'FORECAST - NOT BU' = CALCULATE([FORECAST],'GAMMA - FORECAST'[forecast_type] <> "BU")
 		formatString: #,0\ "kr.";-#,0\ "kr.";#,0\ "kr."
-		displayFolder: KPI \ FC
+		displayFolder: KPI\FC
 		lineageTag: 7275af21-6e77-4ca7-ac3e-deabbd381be7
 		dataCategory: true
 
 	/// CALCULATE (
-	///     DISTINCTCOUNTNOBLANK ( 'GAMMA - POSTERINGER'[user_id] ),
-	///     'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
+	/// DISTINCTCOUNTNOBLANK ( 'GAMMA - POSTERINGER'[user_id] ),
+	/// 'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
 	/// ) + 0
 	measure MEDLEMSBETALINGER =
 			CALCULATE (
@@ -72,13 +72,13 @@ table '_MEASURES - CUSTOM'
 			    'GAMMA - POSTERINGER'[account_number] = "K-3-12-1"
 			) + 0
 		formatString: #,0
-		displayFolder: KPI \ MEDLEMMER
+		displayFolder: KPI\MEDLEMMER
 		lineageTag: a283487a-e716-440f-95b2-858375eddce5
 		dataCategory: true
 
 	/// TOTALYTD(
-	///     [MEDLEMSBETALINGER],
-	///     'DEFAULT DATA - DATE VIEW'[date_actual]
+	/// [MEDLEMSBETALINGER],
+	/// 'DEFAULT DATA - DATE VIEW'[date_actual]
 	/// )
 	measure 'MEDLEMSBETALINGER YTD' =
 			TOTALYTD(
@@ -86,27 +86,27 @@ table '_MEASURES - CUSTOM'
 			    'DEFAULT DATA - DATE VIEW'[date_actual]
 			)
 		formatString: #,0
-		displayFolder: KPI \ MEDLEMMER
+		displayFolder: KPI\MEDLEMMER
 		lineageTag: dfbd8a83-ad88-4ee1-9147-06818c5198bd
 		dataCategory: true
 
 	/// CALCULATE(
-	///         [MEDLEMSBETALINGER],
-	///         SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
-	///     )
+	/// [MEDLEMSBETALINGER],
+	/// SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+	/// )
 	measure 'MEDLEMSBETALINGER - SPLY' =
 			CALCULATE(
 			        [MEDLEMSBETALINGER],
 			        SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
 			    )
 		formatString: #,0
-		displayFolder: KPI \ MEDLEMMER
+		displayFolder: KPI\MEDLEMMER
 		lineageTag: 11b22dd5-8ff0-43df-af50-4bc2fa00fdef
 		dataCategory: true
 
 	/// TOTALYTD(
-	///     [MEDLEMSBETALINGER YTD],
-	///     SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
+	/// [MEDLEMSBETALINGER YTD],
+	/// SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
 	/// )
 	measure 'MEDLEMSBETALINGER YTD - SPLY' =
 			TOTALYTD(
@@ -114,20 +114,20 @@ table '_MEASURES - CUSTOM'
 			    SAMEPERIODLASTYEAR('DEFAULT DATA - DATE VIEW'[date_actual])
 			)
 		formatString: #,0
-		displayFolder: KPI \ MEDLEMMER
+		displayFolder: KPI\MEDLEMMER
 		lineageTag: ad80c6f0-6054-4954-87cb-9c9272f39dad
 		dataCategory: true
 
 	/// CALCULATE([MEDLEMSBETALINGER],'GAMMA - POSTERINGER'[member_context]="NEW OR RELIVE")
 	measure 'NEW_REWON MEMBERS' = CALCULATE([MEDLEMSBETALINGER],'GAMMA - POSTERINGER'[member_context]="NEW OR RELIVE")
 		formatString: #,0
-		displayFolder: KPI \ MEDLEMMER
+		displayFolder: KPI\MEDLEMMER
 		lineageTag: 4a6514c2-0e3a-4fe4-8856-5c5fe14c41fd
 		dataCategory: true
 
 	/// TOTALYTD(
-	///     [NEW_REWON MEMBERS],
-	///     'DEFAULT DATA - DATE VIEW'[date_actual]
+	/// [NEW_REWON MEMBERS],
+	/// 'DEFAULT DATA - DATE VIEW'[date_actual]
 	/// )
 	measure 'NEW_REWON MEMBERS - YTD' =
 			TOTALYTD(
@@ -135,20 +135,20 @@ table '_MEASURES - CUSTOM'
 			    'DEFAULT DATA - DATE VIEW'[date_actual]
 			)
 		formatString: #,0
-		displayFolder: KPI \ MEDLEMMER
+		displayFolder: KPI\MEDLEMMER
 		lineageTag: ac292254-2851-41c3-b547-955fc951d18e
 		dataCategory: true
 
 	/// CALCULATE([MEDLEMSBETALINGER],'GAMMA - POSTERINGER'[member_context]="RESIGNING")
 	measure RESIGNING_MEMBERS = CALCULATE([MEDLEMSBETALINGER],'GAMMA - POSTERINGER'[member_context]="RESIGNING")
 		formatString: #,0
-		displayFolder: KPI \ MEDLEMMER
+		displayFolder: KPI\MEDLEMMER
 		lineageTag: 0e1ec6b1-9ccb-41ed-a4de-5ba11cc46ec5
 		dataCategory: true
 
 	/// TOTALYTD(
-	///     [RESIGNING_MEMBERS],
-	///     'DEFAULT DATA - DATE VIEW'[date_actual]
+	/// [RESIGNING_MEMBERS],
+	/// 'DEFAULT DATA - DATE VIEW'[date_actual]
 	/// )
 	measure 'RESIGNING_MEMBERS - YTD' =
 			TOTALYTD(
@@ -156,7 +156,7 @@ table '_MEASURES - CUSTOM'
 			    'DEFAULT DATA - DATE VIEW'[date_actual]
 			)
 		formatString: #,0
-		displayFolder: KPI \ MEDLEMMER
+		displayFolder: KPI\MEDLEMMER
 		lineageTag: 569a8efc-7b09-4dd0-9451-1dd38e18aa94
 		dataCategory: true
 

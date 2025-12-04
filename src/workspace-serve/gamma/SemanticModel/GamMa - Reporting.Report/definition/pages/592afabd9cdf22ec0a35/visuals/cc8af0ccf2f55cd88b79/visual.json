@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "cc8af0ccf2f55cd88b79",
   "position": {
     "x": 10,
@@ -89,7 +89,7 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'Arrangement'"
+                    "Value": "'Kontigent'"
                   }
                 }
               ],
